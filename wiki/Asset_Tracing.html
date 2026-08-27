@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Following the money through bank and wire records, source documents, shell-company detection, beneficial ownership and cross-border recovery.">
+<title>Asset Tracing - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li class="active-page"><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Asset Tracing</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <p><b>Asset tracing</b> is the investigative process of following the money — reconstructing the movement of funds and property from a known point (a fraud, a bribe, a laundering scheme) to where the value ultimately resides, so that it can be identified, frozen, and recovered. It is the operational counterpart to <a href="Money_Laundering.html">money laundering</a>: where laundering breaks the trail, asset tracing rebuilds it. The discipline combines document analysis, <a href="Analytical_Methods.html">analytical methods</a>, <a href="OSINT.html">open-source intelligence</a>, and legal instruments for obtaining records across borders.<sup class="ref">[1]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Following the money</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Bank and wire record analysis</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Source documents</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Shell-company detection and beneficial ownership</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Cross-border recovery and MLATs</a></li>
+<li><span class="tocnumber">6</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Following the money</h2>
+<p>The premise of asset tracing is that money leaves a trail. Every transfer, deposit, purchase, and title change generates a record somewhere, and even a deliberately layered scheme must at some point connect the illicit source to a real beneficiary who wants to use the funds. The investigator works forward from the source of the funds or backward from a suspected asset, building a chain of transactions in which each link is supported by a document. Because laundering is designed to defeat this reconstruction, tracing is frequently combined with the indirect <a href="Net_Worth_Method.html">net worth method</a>, which measures the wealth that lands with a subject regardless of the path it took — a useful cross-check when the transactional trail goes cold.<sup class="ref">[1]</sup></p>
+<p>Two legal concepts shape what tracing can achieve. <b>Following</b> the money means tracking the same physical or electronic funds as they move; <b>tracing</b> in the strict legal sense allows an investigator to follow value into a <i>substitute</i> asset — when stolen funds are used to buy a house, the claim can attach to the house. This matters for recovery, because assets are rarely sitting in the account they first landed in by the time an investigation matures. Tracing is used both in criminal proceedings (to support confiscation and forfeiture of the proceeds of crime) and in civil litigation (to recover misappropriated funds for victims and creditors), and the standard of proof and available remedies differ between the two. In either setting the investigator's product is a documented, link-by-link narrative that a court can follow and that survives challenge.</p>
+
+<h2 id="s2">2 Bank and wire record analysis</h2>
+<p>Bank records are the backbone of most traces. Account statements establish the flow of funds; wire-transfer records (including SWIFT messages and Fedwire data) reveal counterparties, correspondent banks, and cross-border movement. The investigator reconstructs the <b>flow of funds</b> — mapping which account fed which, in what amounts, and on what dates — and looks for the hallmarks of layering: rapid pass-through transfers, round-dollar movements, transfers to and from shell entities, and structuring below the <b>$10,000</b> reporting threshold that triggers a <a href="Money_Laundering.html">Currency Transaction Report</a>. <a href="Analytical_Methods.html">Link and network analysis</a> is central here, visualizing accounts and entities as a graph so that pass-through nodes and ultimate destinations stand out. Suspicious Activity Reports filed by institutions can provide investigative leads, and subpoenaed transaction data feeds the same graph.</p>
+<p>The analytical challenge is that layering produces a large, noisy graph in which the meaningful path is buried among ordinary business flows. Investigators therefore triage: they prioritize round-dollar and same-day pass-through transfers, transactions that leave an account almost as fast as they arrive, funds routed to jurisdictions with weak transparency, and counterparties with no evident commercial relationship to the account holder. Timing analysis — matching the moment funds leave one account to when they appear in another — helps establish links that the accounts themselves do not label. Where an institution's own monitoring flagged the activity, the resulting Suspicious Activity Report can name counterparties and describe the pattern that first drew attention, giving the investigator a starting thread to pull.</p>
+
+<h2 id="s3">3 Source documents</h2>
+<p>Statements summarize; <b>source documents</b> prove. Tracing relies on the primary records behind each transaction, because these tie a movement of money to a specific person and instruction. Key source documents include:</p>
+<table class="wikitable">
+<tr><th>Document</th><th>What it establishes</th></tr>
+<tr><td>Signature cards</td><td>Who is authorized on an account — identifying the real controllers behind nominee or shell accounts</td></tr>
+<tr><td>Cancelled checks</td><td>Payer, payee, endorsements, and the bank of deposit — linking a payment to its ultimate recipient</td></tr>
+<tr><td>Deposit tickets / slips</td><td>The composition of a deposit (cash vs. checks) and its date, exposing structuring and co-mingling</td></tr>
+<tr><td>Wire-transfer records</td><td>Originator, beneficiary, intermediary banks, and reference details across borders</td></tr>
+<tr><td>Account-opening documents</td><td>Beneficial-owner declarations, identification, and the customer due-diligence file</td></tr>
+</table>
+<p>Endorsements on cancelled checks and the deposit history behind them frequently break a scheme open, revealing that a "vendor" payment was in fact endorsed over to an insider or deposited into a personal account. These records are the same class of primary evidence that must be preserved under a documented <a href="Chain_of_Custody.html">chain of custody</a> to survive challenge in court.</p>
+
+<h2 id="s4">4 Shell-company detection and beneficial ownership</h2>
+<p>Layering typically runs value through <b>shell companies</b> — entities with no genuine operations that exist to hold assets, issue false invoices, and hide who ultimately benefits. Detecting them combines transactional signals (no employees or premises, round-number invoicing, funds that arrive and leave the same day, addresses shared with other shells or with an insider) and corporate-registry research. The investigative goal is to pierce the structure to the <b>beneficial owner</b> — the natural person who ultimately owns or controls the entity. Beneficial-ownership data has historically been a key tracing resource, but its availability shifted sharply in the United States: after litigation and an interim rule, a FinCEN final rule of August 2026 permanently removed beneficial-ownership reporting for U.S. companies and U.S. persons, leaving only certain foreign-registered entities as reporting companies.<sup class="ref">[2]</sup> Investigators increasingly supplement registry data with <a href="OSINT.html">open-source intelligence</a> — corporate filings, leaks, litigation records, and name-screening tools — to reconstruct ownership that formal registers no longer capture.<sup class="ref">[3]</sup></p>
+
+<h2 id="s5">5 Cross-border recovery and MLATs</h2>
+<p>Laundered funds rarely stay in one jurisdiction, so recovery is inherently international. Once assets are located abroad, investigators pursue <b>freezing (restraint) orders</b> and, ultimately, <b>confiscation or forfeiture</b> and repatriation. Obtaining foreign evidence and enforcement generally proceeds through <b>Mutual Legal Assistance Treaties (MLATs)</b> — bilateral or multilateral agreements under which one state formally requests another to gather evidence, serve process, freeze accounts, or enforce a confiscation order. MLAT requests are powerful but slow and formal, which is why investigators front-load open-source and informal channels — and faster law-enforcement cooperation such as the Egmont Group network of financial intelligence units — to build the picture before a treaty request is made. Timing is critical: assets that are not restrained early can be moved again or dissipated while a formal request works through diplomatic channels, so investigators often pursue urgent freezing orders in parallel with the slower evidence-gathering process. International bodies such as the OSCE have published compendiums of good practice on financial investigations and asset recovery, particularly in the context of proceeds-generating crimes like <a href="Human_Trafficking_Finance.html">human trafficking</a>.<sup class="ref">[1]</sup> Where the trail runs through digital assets, tracing continues on-chain under <a href="Cryptocurrency_Tracing.html">cryptocurrency tracing</a>, with exchange attribution and law-enforcement cooperation substituting for the bank subpoena.</p>
+
+<p class="hatnote">See also: <a href="Money_Laundering.html">Money Laundering</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, <a href="Net_Worth_Method.html">Net Worth Method</a>, <a href="Analytical_Methods.html">Analytical Methods</a>, <a href="AML_Law.html">AML Law</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>OSCE. "Following the Money: Compendium of Resources and Good Practices on Financial Investigations Related to Trafficking in Human Beings." 2019.</li>
+<li>FinCEN. Final rule on Beneficial Ownership Information reporting, effective Aug 14, 2026. <a class="external" href="https://www.federalregister.gov/documents/2026/08/14/2026-16576/beneficial-ownership-information-reporting-requirement-revision">federalregister.gov</a></li>
+<li>Basel Institute on Governance. "Quick Guide to Open-Source Intelligence" (QG 17), 2020; Basel Open Intelligence. <a class="external" href="https://baselgovernance.org/basel-open-intelligence">baselgovernance.org</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Following_the_Money.html">Following the Money</a> | <a href="Category_Asset_Recovery.html">Asset Recovery</a> | <a href="Category_Financial_Investigation.html">Financial Investigation</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

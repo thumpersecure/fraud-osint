@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The identification, collection, preservation, analysis and presentation of digital evidence in fraud and investigative work.">
+<title>Digital Forensics - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li class="active-page"><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Digital Forensics</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox"><tr><th class="ibtitle" colspan="2">Digital Forensics</th></tr>
+<tr><td class="iblabel">Field</td><td>Forensic science</td></tr>
+<tr><td class="iblabel">Core process</td><td>Collection, preservation, analysis, presentation</td></tr>
+<tr><td class="iblabel">Key standards</td><td>ISO/IEC 27037, NIST SP 800-86, SWGDE</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Chain_of_Custody.html">Chain of Custody</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a></td></tr>
+</table>
+
+<p><b>Digital forensics</b> (also called computer forensics in its narrowest sense) is the branch of forensic science concerned with the identification, collection, preservation, analysis and presentation of data held on digital devices and networks, carried out in a manner that keeps the evidence admissible in legal or regulatory proceedings. In fraud and financial-crime investigation it supplies much of the underlying record: emails, accounting files, transaction logs, deleted documents, chat histories and metadata that corroborate or refute allegations. Because digital evidence is fragile and easily altered, the discipline is defined less by clever recovery techniques than by <i>rigour and documentation</i> — the ability to show a court exactly what was found, where, and that it was not changed in the process.<sup class="ref">[1]</sup></p>
+
+<p>Digital forensics is a companion discipline to <a href="Forensic_Accounting.html">forensic accounting</a> and <a href="OSINT.html">open-source intelligence</a>: forensic accountants interpret the financial substance of recovered records, while OSINT practitioners work from publicly available data. Digital forensics, by contrast, typically works from data lawfully seized or lawfully accessed, and is bound tightly to the <a href="Chain_of_Custody.html">chain of custody</a> and to the rules of <a href="Evidence_and_Testimony.html">evidence and testimony</a>.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">The four phases</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Forensic imaging and write-blocking</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Hashing and integrity verification</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Analysis techniques</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Sub-fields</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Standards and frameworks</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Limitations</a></li>
+<li><span class="tocnumber">8</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 The four phases</h2>
+<p>Most digital-forensic models, and the ISO/IEC standards that formalise them, describe an investigation as a sequence of four phases. The order matters: an error in an early phase — an unrecorded seizure, an unverified copy — can render everything that follows inadmissible.<sup class="ref">[2]</sup></p>
+
+<h3>1.1 Collection (identification and acquisition)</h3>
+<p>The first phase is to identify potential sources of evidence — computers, phones, servers, cloud accounts, removable media, network appliances — and to acquire the data from them. Investigators must distinguish between <i>volatile</i> data, which is lost when a device is powered down (running processes, network connections, encryption keys and the contents of memory), and <i>non-volatile</i> data on disks and flash storage. Because seizure itself can alter a device, every action is logged: who did what, when, and with which tool.</p>
+
+<h3>1.2 Preservation</h3>
+<p>Once acquired, evidence must be preserved unchanged. This means creating a verified forensic copy, storing originals securely, and documenting an unbroken <a href="Chain_of_Custody.html">chain of custody</a>. All subsequent examination is performed on working copies, never on the original media.</p>
+
+<h3>1.3 Analysis</h3>
+<p>Analysis is the interpretive phase — recovering deleted files, reconstructing timelines, searching for keywords, correlating artefacts across devices, and extracting the specific facts relevant to the investigation. It is the phase most visible to the public but, procedurally, the least distinctive: its value depends entirely on the integrity established earlier.</p>
+
+<h3>1.4 Presentation</h3>
+<p>Finally, findings are documented in a <a href="Report_Writing.html">report</a> and, where necessary, presented as testimony. The presentation must translate technical findings into terms a trier of fact can follow, and must survive scrutiny under the applicable <a href="Evidence_and_Testimony.html">admissibility standards</a>.</p>
+
+<h2 id="s2">2 Forensic imaging and write-blocking</h2>
+<p>A <b>forensic image</b> is a <i>bit-by-bit</i> (sector-by-sector) copy of a storage device — not a file copy. Unlike an ordinary backup, which copies only visible files, a bit-stream image captures every sector, including unallocated space, file slack, and the residue of deleted files. This is what makes recovery of deleted material possible.<sup class="ref">[3]</sup></p>
+
+<p>To guarantee the original is not modified during imaging, examiners use a <b>write-blocker</b> — a hardware or software device that permits reads from the suspect drive but physically or logically blocks any write. Because merely mounting a modern operating-system drive can update access timestamps and journal files, imaging without a write-blocker risks changing the very evidence being preserved, and can supply an opposing party with grounds to challenge admissibility.</p>
+
+<table class="wikitable">
+<tr><th>Copy type</th><th>What it captures</th><th>Forensic use</th></tr>
+<tr><td>File copy / backup</td><td>Visible, allocated files only</td><td>Not sufficient — misses deleted and slack data</td></tr>
+<tr><td>Logical image</td><td>A selected file system or partition</td><td>Targeted acquisitions, large arrays</td></tr>
+<tr><td>Bit-stream (physical) image</td><td>Every sector including unallocated space</td><td>Standard forensic acquisition</td></tr>
+</table>
+
+<h2 id="s3">3 Hashing and integrity verification</h2>
+<p>Integrity is proven mathematically through <b>cryptographic hashing</b>. A hash function (historically MD5, and now SHA-1 or the SHA-2 family such as SHA-256) reduces an arbitrary amount of data to a fixed-length value; changing even a single bit produces a wildly different hash. An examiner hashes the original media, hashes the forensic image, and shows the two values match — demonstrating that the copy is faithful. The hash is recorded again at each later stage, so any tampering is detectable.<sup class="ref">[3]</sup></p>
+
+<p>MD5 and SHA-1 are now considered cryptographically weak against deliberate collision attacks, and modern practice favours SHA-256. For the routine purpose of detecting accidental change or corruption, however, older hashes remain in wide use, and many tools compute more than one hash simultaneously (general knowledge). The recorded hash values are a central part of the <a href="Chain_of_Custody.html">chain of custody</a>.</p>
+
+<h2 id="s4">4 Analysis techniques</h2>
+<p>Several recurring techniques appear across almost every digital-forensic examination:</p>
+<ul>
+<li><b>Data carving</b> — recovering files from unallocated space by recognising file signatures (header and footer byte patterns) rather than relying on the file system's directory. Carving can recover documents and images long after they were "deleted", because deletion usually only unlinks the file rather than overwriting its contents.<sup class="ref">[4]</sup></li>
+<li><b>Keyword and search analysis</b> — indexing the entire image and searching for names, account numbers, phrases, or regular-expression patterns (for example, patterns matching credit-card or SSN formats) relevant to the allegations.</li>
+<li><b>Timeline analysis</b> — reconstructing a chronological sequence of events from file timestamps, log entries, browser history, and system artefacts, so that activity can be placed at a particular time and often attributed to a particular user account.</li>
+<li><b>Artefact analysis</b> — interpreting operating-system, browser, and application traces (registry entries, link files, cache, and logs) that reveal what a user did.</li>
+</ul>
+<p>In fraud work these techniques feed directly into the <a href="Analytical_Methods.html">analytical methods</a> of forensic accounting and, when large financial data sets are recovered, into tests such as <a href="Benfords_Law.html">Benford's Law</a>.</p>
+
+<h2 id="s5">5 Sub-fields</h2>
+<p>Digital forensics has diversified into a set of overlapping specialisms, each with its own tools and pitfalls.<sup class="ref">[4]</sup></p>
+<table class="wikitable">
+<tr><th>Sub-field</th><th>Focus</th><th>Typical evidence</th></tr>
+<tr><td>Computer forensics</td><td>Desktops, laptops, servers, storage</td><td>Documents, deleted files, OS artefacts</td></tr>
+<tr><td>Mobile forensics</td><td>Phones and tablets</td><td>Messages, call logs, location data, app data</td></tr>
+<tr><td>Cloud forensics</td><td>Remote hosted services and accounts</td><td>Webmail, storage, SaaS logs; jurisdiction issues</td></tr>
+<tr><td>Network forensics</td><td>Traffic and network devices</td><td>Packet captures, flow records, firewall/IDS logs</td></tr>
+<tr><td>Memory forensics</td><td>Volatile RAM</td><td>Running processes, keys, injected malware</td></tr>
+<tr><td>Malware forensics</td><td>Malicious code</td><td>Behaviour, indicators of compromise, attribution</td></tr>
+</table>
+<p>Cloud and mobile forensics are the fastest-changing areas: cloud data may sit in another country's jurisdiction and cannot simply be imaged, while mobile operating systems encrypt storage by default, so acquisition increasingly depends on vendor tools and on lawful access to the device while unlocked. Memory forensics has grown in importance because sophisticated intrusions and some financial malware operate largely in RAM and leave little on disk.</p>
+
+<h2 id="s6">6 Standards and frameworks</h2>
+<p>To keep results defensible and reproducible, practitioners follow published standards rather than ad-hoc method:</p>
+<ul>
+<li><b>ISO/IEC 27037:2012</b> — international guidance on the identification, collection, acquisition and preservation of digital evidence, emphasising three qualities an investigation must demonstrate: <i>auditability</i>, <i>repeatability</i> and <i>reproducibility</i>.<sup class="ref">[5]</sup></li>
+<li><b>NIST SP 800-86</b> — the U.S. National Institute of Standards and Technology's <i>Guide to Integrating Forensic Techniques into Incident Response</i>, which frames the process as collection, examination, analysis and reporting.<sup class="ref">[2]</sup></li>
+<li><b>SWGDE</b> — the Scientific Working Group on Digital Evidence, which publishes best-practice documents widely cited in U.S. courts.<sup class="ref">[5]</sup></li>
+</ul>
+<p>Adherence to these standards is also what allows expert testimony about digital evidence to satisfy the reliability requirements discussed in <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>, including the amended Federal Rule of Evidence 702.</p>
+
+<h2 id="s7">7 Limitations</h2>
+<p>Digital forensics is powerful but not infallible. Encryption may make data unrecoverable without a key; anti-forensic techniques can wipe or falsify artefacts; timestamps can be manipulated; and attribution of activity to a specific <i>person</i> (as opposed to an account or device) often requires corroborating evidence. Cloud and cross-border data raise legal-access questions that technique alone cannot resolve. For these reasons digital-forensic findings are usually presented as one strand of evidence, woven together with financial analysis, documentary review and <a href="Interviewing.html">interviews</a>, rather than as standalone proof.</p>
+
+<p class="hatnote">See also: <a href="Chain_of_Custody.html">Chain of Custody</a>, <a href="Document_Examination.html">Document Examination</a>, <a href="Report_Writing.html">Report Writing</a>, <a href="OSINT_Tools.html">OSINT Tools</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Dubey, Bhatt &amp; Negi. "Digital forensics techniques and trends." International Arab Journal of Information Technology 20(4), 2023.</li>
+<li>NIST. "SP 800-86: Guide to Integrating Forensic Techniques into Incident Response." 2006. <a class="external" href="https://csrc.nist.gov/pubs/sp/800/86/final">https://csrc.nist.gov/pubs/sp/800/86/final</a></li>
+<li>Maras, M.-H. "Computer Forensics: Cybercriminals, Laws, and Evidence." 2014.</li>
+<li>Cellebrite (2024); Magnet Forensics (2022) — practitioner guidance on mobile and multi-source acquisition and carving.</li>
+<li>ISO/IEC 27037:2012, "Guidelines for identification, collection, acquisition and preservation of digital evidence"; SWGDE best-practice publications.</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Investigation_Technique.html">Investigation Technique</a> | <a href="Category_Digital_Evidence.html">Digital Evidence</a> | <a href="Category_Forensics.html">Forensics</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="BSA, CTRs and SARs, FATF&#x27;s 40 Recommendations, AMLA 2020, the Corporate Transparency Act and the Aug 2026 FinCEN rule, plus SOX, FCPA, RICO, CFAA and more.">
+<title>Anti-Money-Laundering Law - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li class="active-page"><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Anti-Money-Laundering Law</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox"><tr><th class="ibtitle" colspan="2">Anti-Money-Laundering Law</th></tr>
+<tr><td class="iblabel">Foundational US statute</td><td>Bank Secrecy Act (1970)</td></tr>
+<tr><td class="iblabel">Regulator</td><td>FinCEN (U.S. Treasury)</td></tr>
+<tr><td class="iblabel">International standard-setter</td><td>FATF (est. 1989)</td></tr>
+<tr><td class="iblabel">Major 2026 change</td><td>FinCEN final rule ending US-company BOI reporting</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Money_Laundering.html">Money Laundering</a>, <a href="Asset_Tracing.html">Asset Tracing</a></td></tr>
+</table>
+
+<p><b>Anti-money-laundering (AML) law</b> is the framework of statutes, regulations and international standards designed to detect, deter and punish the laundering of criminal proceeds and the financing of terrorism. It works chiefly by imposing obligations on financial institutions and other businesses — customer identification, record-keeping, and the reporting of cash and suspicious transactions — and by criminalising the movement and concealment of illicit funds. AML law is the legal engine behind much of the practical work described in <a href="Money_Laundering.html">Money Laundering</a>, <a href="Asset_Tracing.html">Asset Tracing</a> and <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>.<sup class="ref">[1]</sup></p>
+
+<p>Money laundering is conventionally described in three stages — <b>placement</b> (introducing illicit cash into the financial system), <b>layering</b> (moving it through complex transactions to obscure its origin), and <b>integration</b> (returning it to the criminal as apparently legitimate wealth). This model, derived from FATF and endorsed by bodies such as FinCEN and the UNODC, frames both how laundering works and where the law intervenes.<sup class="ref">[2]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">The Bank Secrecy Act</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">CTRs and SARs</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">FATF and the 40 Recommendations</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">AMLA 2020</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Corporate Transparency Act and the 2026 rule</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Related statutes</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 The Bank Secrecy Act</h2>
+<p>The <b>Bank Secrecy Act (BSA)</b>, enacted in 1970, is the foundational U.S. AML statute. It requires financial institutions to keep records and file reports that have a "high degree of usefulness" in criminal, tax and regulatory investigations, and it established the recordkeeping and reporting regime on which all later U.S. AML law builds. The BSA is administered by the Financial Crimes Enforcement Network (<b>FinCEN</b>), a bureau of the U.S. Department of the Treasury. Related early legislation, the Money Laundering Control Act of 1986, made money laundering itself a federal crime.<sup class="ref">[1]</sup></p>
+
+<h2 id="s2">2 CTRs and SARs</h2>
+<p>Two reporting obligations sit at the heart of the BSA regime:</p>
+<ul>
+<li>The <b>Currency Transaction Report (CTR)</b> — a financial institution must file a CTR (FinCEN Form 112) for any cash transaction, or series of cash transactions, exceeding <b>$10,000</b> in a single business day. The report must generally be filed within 15 days and the records retained for five years.<sup class="ref">[3]</sup></li>
+<li>The <b>Suspicious Activity Report (SAR)</b> — institutions must report transactions that appear suspicious regardless of amount, including <i>structuring</i>: breaking a large transaction into smaller pieces specifically to stay under the $10,000 CTR threshold. Structuring is itself a crime, and SARs are a primary intelligence source for investigators.</li>
+</ul>
+<table class="wikitable">
+<tr><th>Report</th><th>Trigger</th><th>Threshold</th><th>Key detail</th></tr>
+<tr><td>CTR (Form 112)</td><td>Cash transaction(s)</td><td>&gt; $10,000 / business day</td><td>File within 15 days; retain 5 years</td></tr>
+<tr><td>SAR</td><td>Suspicious activity</td><td>No dollar threshold</td><td>Covers structuring and other red flags</td></tr>
+</table>
+<p>The deliberate splitting of transactions to evade the CTR threshold is one of the classic <a href="Red_Flags.html">red flags</a> and a recurring feature of the <b>placement</b> stage of laundering.</p>
+
+<h2 id="s3">3 FATF and the 40 Recommendations</h2>
+<p>The <b>Financial Action Task Force (FATF)</b>, established in 1989, is the intergovernmental body that sets the global AML and counter-terrorist-financing (CFT) standard. Its <b>40 Recommendations</b> — first issued in 1990, comprehensively revised in 2012, and amended through 2025 (including February 2025 changes to Recommendation 1 aimed at financial inclusion) — constitute the internationally recognised benchmark against which national AML regimes are assessed. Countries are evaluated for compliance and effectiveness, and those with strategic deficiencies may be placed on FATF's monitoring lists, with real consequences for their access to the global financial system.<sup class="ref">[2]</sup></p>
+
+<p>Because FATF standards drive national law across jurisdictions, they underpin the customer-due-diligence, beneficial-ownership and reporting obligations that investigators encounter worldwide, and they inform cross-border <a href="Asset_Tracing.html">asset tracing</a>.</p>
+
+<h2 id="s4">4 AMLA 2020</h2>
+<p>The <b>Anti-Money Laundering Act of 2020 (AMLA)</b>, enacted as part of the FY2021 National Defense Authorization Act and effective January 1, 2021, was the most significant overhaul of U.S. AML law in decades. Among its many provisions, AMLA created a <b>whistleblower program</b> offering awards of up to <b>30 percent</b> of monetary sanctions collected in successful enforcement actions, mirroring the incentive structure of the SEC whistleblower regime and materially strengthening the government's ability to surface AML violations. AMLA also expanded FinCEN's authorities and set in motion the beneficial-ownership reporting regime later implemented under the Corporate Transparency Act.<sup class="ref">[1]</sup></p>
+
+<h2 id="s5">5 Corporate Transparency Act and the 2026 rule</h2>
+<p>The <b>Corporate Transparency Act (CTA)</b> was enacted to combat the use of anonymous shell companies by requiring many entities to report their <b>beneficial ownership information (BOI)</b> — the real human owners behind a company — to FinCEN. The CTA's implementation, however, was turbulent, marked by litigation over its constitutionality and a series of shifting deadlines and interim rules.<sup class="ref">[4]</sup></p>
+
+<p>The turning point came in 2026. Following that litigation and an interim final rule issued <b>March 26, 2025</b>, FinCEN adopted a <b>final rule on August 11, 2026</b> (effective <b>August 14, 2026</b>) that <b>permanently removes the BOI reporting requirement for all U.S. companies and U.S. persons</b>. Under the final rule, only foreign entities registered to do business in the United States remain "reporting companies," and even then they report only their beneficial owners who are non-U.S. persons. FinCEN further indicated it would delete previously collected U.S.-person BOI. The practical effect is that the domestic beneficial-ownership registry, once expected to cover tens of millions of U.S. entities, no longer applies to them.<sup class="ref">[4]</sup></p>
+
+<div class="notebox">This is a major and recent change. Older guidance describing broad BOI reporting duties for U.S. LLCs and corporations no longer reflects the law as of August 14, 2026; the reporting obligation now reaches only certain foreign-registered entities. Investigators should treat the domestic BOI registry as effectively wound down for U.S. companies.</div>
+
+<table class="wikitable">
+<tr><th>Milestone</th><th>Date</th><th>Effect</th></tr>
+<tr><td>CTA enacted</td><td>2021 (via AMLA/NDAA)</td><td>Created BOI reporting obligation</td></tr>
+<tr><td>Interim final rule</td><td>Mar 26, 2025</td><td>Narrowed scope amid litigation</td></tr>
+<tr><td>FinCEN final rule</td><td>Aug 11, 2026 (eff. Aug 14, 2026)</td><td>Ends BOI reporting for US companies/persons; only foreign entities remain</td></tr>
+</table>
+
+<h2 id="s6">6 Related statutes</h2>
+<p>AML enforcement rarely stands alone; investigators and prosecutors draw on a wider arsenal of financial-crime and integrity statutes, several of which overlap with money-laundering conduct.<sup class="ref">[5]</sup></p>
+<table class="wikitable">
+<tr><th>Statute</th><th>Year</th><th>Core content</th></tr>
+<tr><td>False Claims Act</td><td>1863</td><td>Liability for defrauding the government; <i>qui tam</i> suits let whistleblowers sue on the government's behalf and share in recoveries</td></tr>
+<tr><td>Bank Secrecy Act</td><td>1970</td><td>Recordkeeping and reporting (CTR/SAR) foundation of US AML</td></tr>
+<tr><td>RICO</td><td>1970</td><td>Racketeer Influenced and Corrupt Organizations Act; targets patterns of racketeering by criminal enterprises</td></tr>
+<tr><td>FCPA</td><td>1977</td><td>Foreign Corrupt Practices Act; prohibits bribery of foreign officials and mandates accurate books, records and internal controls</td></tr>
+<tr><td>CFAA</td><td>1986</td><td>Computer Fraud and Abuse Act; criminalises unauthorised access to computers</td></tr>
+<tr><td>SOX</td><td>2002</td><td>Sarbanes&ndash;Oxley Act; CEO/CFO certification of financial statements and internal-control requirements after Enron and WorldCom</td></tr>
+<tr><td>UK Bribery Act</td><td>2010</td><td>Four offences including bribing, being bribed, bribing a foreign official, and corporate failure to prevent bribery</td></tr>
+</table>
+<p>Several of these connect directly to other topics in this wiki: SOX and the FCPA's books-and-records provisions bear on <a href="Financial_Statement_Fraud.html">financial statement fraud</a>; the FCPA and UK Bribery Act are central to <a href="Anti_Corruption_OSINT.html">anti-corruption investigation</a>; and the False Claims Act's <i>qui tam</i> mechanism, like AMLA's bounty, shows how whistleblower incentives have become a recurring tool of financial-crime enforcement. RICO's reach over "patterns of racketeering" frequently sweeps in money-laundering counts, tying the AML regime back into broader organised-crime prosecution.</p>
+
+<p>Because AML obligations turn on documented facts — reports filed, records kept, ownership disclosed — enforcement depends heavily on the evidentiary discipline covered in <a href="Evidence_and_Testimony.html">Evidence and Testimony</a> and on preserving records under a sound <a href="Chain_of_Custody.html">chain of custody</a>. For the underlying mechanics of how illicit funds move, see <a href="Money_Laundering.html">Money Laundering</a>.</p>
+
+<p class="hatnote">See also: <a href="Money_Laundering.html">Money Laundering</a>, <a href="Asset_Tracing.html">Asset Tracing</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, <a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Brief: "AML law &amp; evidence standards (verified 2026)" — BSA (1970), AMLA 2020 whistleblower bounty (up to 30%), FinCEN. <a class="external" href="https://www.fincen.gov/">https://www.fincen.gov/</a></li>
+<li>FATF. "The FATF Recommendations" (est. 1989; 40 Recommendations, 1990/2012, amended through 2025 incl. Feb 2025 Rec 1). <a class="external" href="https://www.fatf-gafi.org/en/topics/fatf-recommendations.html">https://www.fatf-gafi.org/en/topics/fatf-recommendations.html</a></li>
+<li>FinCEN. Currency Transaction Report (Form 112), cash &gt; $10,000/business day, file in 15 days, retain 5 years; SAR / structuring. Brief: AML law &amp; evidence standards.</li>
+<li>FinCEN. "Beneficial Ownership Information Reporting Requirement Revision," final rule, Federal Register, Aug 14, 2026 (eff. Aug 14, 2026; interim rule Mar 26, 2025). <a class="external" href="https://www.federalregister.gov/documents/2026/08/14/2026-16576/beneficial-ownership-information-reporting-requirement-revision">https://www.federalregister.gov/documents/2026/08/14/2026-16576/...</a></li>
+<li>Statutes named inline: SOX 2002; FCPA 1977; RICO 1970; CFAA 1986; False Claims Act 1863 (qui tam); UK Bribery Act 2010. Brief: AML law &amp; evidence standards; AICPA "Essentials of Forensic Accounting" (2015).</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Legal.html">Legal</a> | <a href="Category_AML.html">AML</a> | <a href="Category_Financial_Crime.html">Financial Crime</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

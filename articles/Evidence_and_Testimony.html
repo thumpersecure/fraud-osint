@@ -1,0 +1,89 @@
+<!--meta title="Evidence and Testimony" desc="Rules of evidence and expert-witness law: Frye, the Daubert trilogy, FRE 702 and its 2023 amendment, and standards of proof." cats="Legal, Investigation Technique, Expert Testimony"-->
+<table class="infobox"><tr><th class="ibtitle" colspan="2">Evidence and Testimony</th></tr>
+<tr><td class="iblabel">Domain</td><td>Law of evidence</td></tr>
+<tr><td class="iblabel">Key rule</td><td>Federal Rule of Evidence 702</td></tr>
+<tr><td class="iblabel">Landmark cases</td><td>Frye (1923); Daubert trilogy (1993&ndash;1999)</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Chain_of_Custody.html">Chain of Custody</a>, <a href="Report_Writing.html">Report Writing</a></td></tr>
+</table>
+
+<p><b>Evidence and testimony</b> is the body of legal rules governing what a court will accept as proof and how expert opinion may be presented. For the fraud examiner, forensic accountant or digital investigator, this is the frame that determines whether painstaking work will actually be heard: analysis that violates the rules of evidence, or expert opinion that fails the reliability threshold, may be excluded no matter how sound it is. Understanding these rules shapes how investigators collect evidence, maintain the <a href="Chain_of_Custody.html">chain of custody</a>, and write their <a href="Report_Writing.html">reports</a>.<sup class="ref">[1]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Core rules of evidence</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Frye and the Daubert trilogy</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">FRE 702 and the 2023 amendment</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Standards of proof</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Testifying vs consulting experts</a></li>
+<li><span class="tocnumber">6</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Core rules of evidence</h2>
+<p>Four foundational concepts recur across the rules of evidence:</p>
+<ul>
+<li><b>Relevance</b> — evidence is admissible only if it tends to make a fact of consequence more or less probable. Even relevant evidence may be excluded if its probative value is substantially outweighed by unfair prejudice or confusion.</li>
+<li><b>Hearsay</b> — an out-of-court statement offered to prove the truth of what it asserts is generally inadmissible, because the original speaker cannot be cross-examined. Numerous exceptions exist, the most important for financial investigation being the <i>business-records</i> exception, which admits records kept in the ordinary course of business when a custodian lays the foundation.</li>
+<li><b>Best evidence</b> — to prove the content of a writing, recording or photograph, the original (or a reliable duplicate) is generally required, rather than testimony about what it said. This rule bears directly on how <a href="Document_Examination.html">documents</a> and <a href="Digital_Forensics.html">digital records</a> are produced in court.</li>
+<li><b>Authentication</b> — before an item is admitted, its proponent must show it is what they claim it to be. For physical and digital evidence this is supplied by the <a href="Chain_of_Custody.html">chain of custody</a>; a break in that chain undermines authentication and can lead to exclusion.</li>
+</ul>
+
+<h2 id="s2">2 Frye and the Daubert trilogy</h2>
+<p>The admissibility of <i>expert</i> and scientific testimony has its own history, running through a series of landmark U.S. cases.<sup class="ref">[2]</sup></p>
+
+<h3>2.1 Frye (1923)</h3>
+<p><i>Frye v. United States</i> established the <b>general-acceptance</b> test: scientific evidence is admissible only if the technique it rests on is generally accepted in the relevant scientific community. The Frye standard is comparatively deferential to the field's own consensus, and it still governs in a number of U.S. states that never adopted the federal approach.</p>
+
+<h3>2.2 Daubert v. Merrell Dow (1993)</h3>
+<p><i>Daubert v. Merrell Dow Pharmaceuticals</i> superseded Frye in the federal courts, holding that under the Federal Rules of Evidence the trial judge is a <b>gatekeeper</b> who must independently assess the reliability and relevance of proposed expert testimony rather than defer to general acceptance alone. The Court set out several non-exclusive <b>factors</b> for evaluating reliability:</p>
+<table class="wikitable">
+<tr><th>Daubert factor</th><th>Question it asks</th></tr>
+<tr><td>Testability</td><td>Can the theory or technique be (and has it been) tested?</td></tr>
+<tr><td>Peer review and publication</td><td>Has it been subjected to peer review?</td></tr>
+<tr><td>Error rate</td><td>What is the known or potential rate of error?</td></tr>
+<tr><td>General acceptance</td><td>Is it accepted in the relevant community? (now one factor among several)</td></tr>
+</table>
+<p>General acceptance thus survives as one consideration rather than the sole test.</p>
+
+<h3>2.3 Joiner (1997)</h3>
+<p><i>General Electric Co. v. Joiner</i> held that a trial court's decision to admit or exclude expert testimony is reviewed only for <b>abuse of discretion</b>, giving the gatekeeping judge substantial latitude. It also made clear that a court may exclude an opinion where there is too great an <i>analytical gap</i> between the data relied on and the conclusion drawn — the reasoning, not just the method, must hold together.</p>
+
+<h3>2.4 Kumho Tire (1999)</h3>
+<p><i>Kumho Tire Co. v. Carmichael</i> extended the Daubert gatekeeping duty beyond "scientific" evidence to <b>all expert testimony</b>, including technical and other specialised knowledge — engineering, accounting, digital forensics and the like. Together, Daubert, Joiner and Kumho Tire are known as the <b>"Daubert trilogy."</b><sup class="ref">[2]</sup></p>
+
+<h2 id="s3">3 FRE 702 and the 2023 amendment</h2>
+<p>These cases are now codified and refined in <b>Federal Rule of Evidence 702</b>, the rule governing testimony by expert witnesses. In its long-standing form, Rule 702 permits a qualified expert to testify if the testimony rests on sufficient facts or data, is the product of reliable principles and methods, and those principles and methods have been reliably applied to the facts of the case.<sup class="ref">[3]</sup></p>
+
+<p>An <b>amendment effective December 1, 2023</b> tightened the rule in two significant ways:</p>
+<ul>
+<li>It makes explicit that the proponent of expert testimony must establish its admissibility to the court by a <b>preponderance of the evidence</b> — clarifying that the reliability requirements are a threshold the judge must find satisfied, not merely questions of weight for the jury.</li>
+<li>It sharpens Rule 702(d) so that the expert's opinion must <b>reflect a reliable application</b> of the principles and methods to the facts. The practical effect is that judges are now directed to scrutinise the <i>conclusion itself</i> — whether the expert's opinion actually follows from a reliable application of the method — and not merely to check that the methodology is generally sound.<sup class="ref">[3]</sup></li>
+</ul>
+<p>For the forensic accountant or digital examiner, the 2023 amendment reinforces a discipline the field already valued: state your methods, apply them faithfully, do not overstate conclusions, and make sure each opinion is genuinely supported by the data. See <a href="Report_Writing.html">Report Writing</a> for how this shapes the written work product, and <a href="Digital_Forensics.html">Digital Forensics</a> for why adherence to published standards (ISO/IEC 27037, NIST SP 800-86) matters to reliability.</p>
+
+<div class="notebox">The 2023 amendment did not change the Daubert framework so much as re-anchor it: several courts had drifted toward treating reliability questions as going only to weight. The amended rule restores them as gatekeeping questions the judge must decide by a preponderance.</div>
+
+<h2 id="s4">4 Standards of proof</h2>
+<p>The <b>standard of proof</b> is the degree of certainty a party must reach to prevail, and it differs sharply between civil and criminal matters:</p>
+<table class="wikitable">
+<tr><th>Standard</th><th>Rough meaning</th><th>Where used</th></tr>
+<tr><td>Preponderance of the evidence</td><td>More likely than not (&gt;50%)</td><td>Most civil cases; and the admissibility threshold under FRE 702</td></tr>
+<tr><td>Clear and convincing evidence</td><td>Substantially more probable than not</td><td>Certain civil issues (e.g. fraud in some contexts)</td></tr>
+<tr><td>Beyond a reasonable doubt</td><td>Near-certainty; no reasonable doubt remains</td><td>Criminal cases</td></tr>
+</table>
+<p>The gap matters to investigators because the same underlying facts may readily support civil liability yet fall short of a criminal conviction. A fraud proven "more likely than not" can ground a civil judgment or regulatory action while the higher criminal bar remains unmet.</p>
+
+<h2 id="s5">5 Testifying vs consulting experts</h2>
+<p>Litigation distinguishes two roles an expert may play:</p>
+<ul>
+<li>A <b>testifying expert</b> is retained to form and express opinions in court. Their work — including the facts and data considered and, in many jurisdictions, draft materials — is generally <i>discoverable</i> by the opposing party, and they are subject to cross-examination and to the Rule 702 / Daubert gatekeeping described above.</li>
+<li>A <b>consulting expert</b> assists the legal team behind the scenes and does not testify. Their work is ordinarily protected as attorney work product and is largely shielded from discovery.</li>
+</ul>
+<p>The distinction has practical consequences for how a forensic accountant is engaged and how candidly interim findings can be shared, and it is one reason engagement letters (see <a href="Report_Writing.html">Report Writing</a>) specify the expert's role at the outset. A forensic professional must also observe the applicable professional standards and codes of conduct — the AICPA and ACFE codes among them — which govern independence, competence and the duty not to misrepresent.<sup class="ref">[1]</sup></p>
+
+<p class="hatnote">See also: <a href="Chain_of_Custody.html">Chain of Custody</a>, <a href="Report_Writing.html">Report Writing</a>, <a href="Forensic_Accounting.html">Forensic Accounting</a>, <a href="Digital_Forensics.html">Digital Forensics</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>AICPA / Crain, Hopwood, Pacini &amp; Young. "Essentials of Forensic Accounting." 2015 (FRE 702&ndash;706; testifying vs consulting experts; professional standards).</li>
+<li>Frye v. United States (1923); Daubert v. Merrell Dow Pharmaceuticals (1993); General Electric Co. v. Joiner (1997); Kumho Tire Co. v. Carmichael (1999) — the "Daubert trilogy."</li>
+<li>Federal Rule of Evidence 702, as amended effective December 1, 2023 (preponderance standard for admissibility; 702(d) "reliable application"). Brief: AML law &amp; evidence standards. <a class="external" href="https://www.law.cornell.edu/wex/daubert_standard">https://www.law.cornell.edu/wex/daubert_standard</a></li>
+</ol>

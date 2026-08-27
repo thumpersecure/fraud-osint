@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ratio, vertical, horizontal, benchmarking, data mining, link and regression analysis used to detect financial fraud.">
+<title>Analytical Methods in Fraud Examination - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li class="active-page"><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Analytical Methods in Fraud Examination</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <p><b>Analytical methods</b> are the quantitative and comparative techniques a <a href="Forensic_Accounting.html">forensic accountant</a> or fraud examiner applies to financial and operational data to identify anomalies, test relationships, and generate the <a href="Red_Flags.html">red flags</a> that warrant deeper investigation. Rather than proving fraud outright, these techniques narrow a large population of transactions to a small, high-risk subset. They are most powerful in combination: a ratio that drifts, a common-size line that swells, and a trend that reverses often point to the same underlying scheme. Analytical procedures are also a required part of audit planning and review under professional auditing standards, which is one reason they sit at the heart of <a href="Financial_Statement_Fraud.html">financial statement fraud</a> detection.<sup class="ref">[1]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Ratio analysis</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Vertical (common-size) analysis</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Horizontal (trend) analysis</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Benchmarking</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Data mining and digital analysis</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Link and network analysis</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Regression and predictive analytics</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Choosing a method</a></li>
+<li><span class="tocnumber">9</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Ratio analysis</h2>
+<p><b>Ratio analysis</b> expresses one financial figure as a proportion of another so that performance and structure can be compared across periods, entities, and industries independent of absolute size. In fraud work, the value of a ratio lies less in its level than in its <i>movement</i>: an abrupt or inexplicable change, or a divergence from an industry peer, is the signal. Ratios fall into liquidity, leverage, and profitability families.</p>
+<table class="wikitable">
+<tr><th>Ratio</th><th>Formula</th><th>Measures</th><th>Fraud signal</th></tr>
+<tr><td>Current ratio</td><td>Current assets / current liabilities</td><td>Short-term liquidity</td><td>Sudden swings may mask misclassified or fictitious current assets</td></tr>
+<tr><td>Quick (acid-test) ratio</td><td>(Current assets − inventory) / current liabilities</td><td>Liquidity excluding inventory</td><td>Divergence from current ratio can flag inflated or phantom inventory</td></tr>
+<tr><td>Debt-to-equity</td><td>Total liabilities / shareholders' equity</td><td>Leverage / solvency</td><td>Off-balance-sheet debt or hidden liabilities distort it (see <a href="Financial_Statement_Fraud.html">Enron, Lehman</a>)</td></tr>
+<tr><td>Gross / net profit margin</td><td>Gross (or net) profit / net sales</td><td>Profitability</td><td>Margins rising against industry trend can indicate revenue inflation or understated cost of sales</td></tr>
+<tr><td>Return on assets (ROA)</td><td>Net income / total assets</td><td>Efficiency of asset use</td><td>Improbably stable or rising ROA amid falling peers suggests manipulation</td></tr>
+</table>
+<p>A worked example: the collapse of Enron was foreshadowed by leverage and profitability figures that could only be reconciled by ignoring liabilities parked in unconsolidated special-purpose entities, and later analysis showed how conventional ratios had been engineered to preserve credit ratings.<sup class="ref">[2]</sup> Ratio analysis is therefore usually the first pass, generating questions that vertical and horizontal analysis then localize. A single ratio in isolation is weak evidence; the diagnostic power comes from reading ratios together and over time, since a genuine business change tends to move several ratios in a coherent direction while manipulation often improves one figure while quietly distorting a related one — for example, margins that rise even as receivables balloon and cash from operations lags reported earnings.</p>
+
+<h2 id="s2">2 Vertical (common-size) analysis</h2>
+<p><b>Vertical analysis</b>, also called <b>common-size analysis</b>, restates every line item as a percentage of a base figure within the same period — typically total assets on the balance sheet and net sales on the income statement. The result is a structural profile that is comparable across firms of very different scale and across time. If cost of goods sold historically runs at 62% of sales and then falls to 54% without an operational cause, the common-size statement isolates exactly where the distortion lives. Because vertical analysis removes the effect of growth, it complements horizontal analysis, which is built to capture growth.</p>
+
+<h2 id="s3">3 Horizontal (trend) analysis</h2>
+<p><b>Horizontal analysis</b> compares each line item across successive periods, expressing change as an absolute amount and a percentage, and often indexing a base year to 100 so that multi-year trajectories are visible. Fraud frequently reveals itself as a broken trend: receivables growing far faster than sales (a classic sign of fictitious or premature revenue), or reserves that decline smoothly quarter after quarter to smooth earnings. Trend analysis over a long horizon is especially useful because most manipulation schemes are unsustainable and eventually bend a curve that had been stable for years. Because horizontal and vertical analysis answer different questions — <i>how has it changed?</i> versus <i>how is it composed?</i> — examiners run both on the same statements.</p>
+
+<h2 id="s4">4 Benchmarking</h2>
+<p><b>Benchmarking</b> compares an entity's ratios, common-size structure, and trends against external reference points: industry averages, direct competitors, or the entity's own budget and prior guidance. An outlier is not proof of fraud, but it reframes the question. Benchmarking is what turns a raw ratio into a red flag, because a 54% cost ratio is unremarkable until a sector median of 62% makes it anomalous. Good benchmarking controls for industry, size, and business model; comparing a discount retailer to a luxury brand manufactures false anomalies. It is standard practice in occupational-fraud risk assessment, where organizations lose an estimated 5% of revenue annually and comparison against peers helps size expected versus reported performance.<sup class="ref">[3]</sup></p>
+
+<h2 id="s5">5 Data mining and digital analysis</h2>
+<p><b>Data mining</b> applies automated techniques to large transaction populations to surface patterns, associations, and outliers that manual review would miss. In fraud examination it commonly includes duplicate-payment detection, gap and sequence testing on invoice or check numbers, keyword searches over journal-entry descriptions, stratification of amounts, and same-day/same-vendor clustering. A related and widely cited digital-analysis technique is <a href="Benfords_Law.html">Benford's Law</a>, which tests whether the leading digits of a natural, unconstrained dataset follow their expected logarithmic frequencies; departures can flag fabricated or manipulated figures.<sup class="ref">[4]</sup> Journal-entry testing — targeting entries posted late, by unexpected users, to round amounts, or just below approval thresholds — is a risk-based data-mining discipline in its own right.<sup class="ref">[5]</sup></p>
+
+<h2 id="s6">6 Link and network analysis</h2>
+<p><b>Link analysis</b> (also network analysis) maps the relationships among entities — people, accounts, companies, addresses, phone numbers, transactions — as a graph of nodes and edges. It excels where fraud hides in <i>connections</i> rather than in any single record: undisclosed related-party dealings, collusive vendor rings, shell-company webs, and the layered transfers of <a href="Money_Laundering.html">money laundering</a>. Investigators use it to reveal that a "vendor" shares an address with an employee, or that funds flow through a chain of accounts back to their origin. Link analysis is a shared toolset with <a href="OSINT.html">open-source intelligence</a> and <a href="Asset_Tracing.html">asset tracing</a>, where graph tools visualize beneficial-ownership and payment networks. It is qualitative in emphasis but increasingly automated over structured transaction data.</p>
+
+<h2 id="s7">7 Regression and predictive analytics</h2>
+<p><b>Regression analysis</b> models the statistical relationship between a dependent variable and one or more predictors, allowing an examiner to estimate an expected value and measure how far actual results deviate. If payroll, freight, or warranty expense should track a known driver, regression quantifies the "normal" relationship and flags periods where the residual is implausibly large. <b>Predictive analytics</b> generalizes this idea with classification and machine-learning models — logistic regression, decision trees, random forests, and neural networks — trained to score transactions or accounts by fraud likelihood. Recent scholarship pairs traditional indicators with these methods, including hybrids that combine <a href="Benfords_Law.html">Benford's Law</a> features with machine learning and reframed detection models such as the "fraud detection triangle."<sup class="ref">[6]</sup> Deep-learning approaches to fraud detection are an active research area, though they raise interpretability and false-positive concerns that keep human judgment central.<sup class="ref">[7]</sup></p>
+
+<h2 id="s8">8 Choosing a method</h2>
+<p>No single method is decisive; the examiner sequences them. Ratio, vertical, and horizontal analysis are the low-cost first screen applied to any set of financial statements. Benchmarking supplies the external context that converts an unusual figure into a genuine anomaly. Data mining and digital analysis such as Benford's Law scale the screen to millions of transactions. Link analysis is chosen when the suspected scheme is relational — collusion, related parties, laundering — and regression or predictive analytics when enough historical data exists to model an expectation and score deviations. Analytical results are leads, not verdicts; they direct where documents are pulled, interviews are conducted, and the <a href="Net_Worth_Method.html">net worth method</a> or <a href="Asset_Tracing.html">asset tracing</a> is applied to build admissible proof.</p>
+
+<p class="hatnote">See also: <a href="Benfords_Law.html">Benford's Law</a>, <a href="Red_Flags.html">Red Flags</a>, <a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a>, <a href="Net_Worth_Method.html">Net Worth Method</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Colbert, J. "What the 10 New Auditing Standards Mean for Forensic Accountants." <i>Forensic Examiner</i> 16(4), 2007. (analytical procedures in auditing standards)</li>
+<li>Healy, P.M. &amp; Palepu, K.G. "The Fall of Enron." <i>Journal of Economic Perspectives</i> 17(2):3–26, 2003. <a class="external" href="https://doi.org/10.1257/089533003765888403">doi:10.1257/089533003765888403</a></li>
+<li>Association of Certified Fraud Examiners. "Occupational Fraud 2024: A Report to the Nations." 2024. <a class="external" href="https://www.acfe.com/-/media/files/acfe/pdfs/rttn/2024/2024-report-to-the-nations.pdf">acfe.com</a></li>
+<li>Gorenc, M. "Benford's Law as a Useful Tool to Determine Fraud in Financial Statements." 2019. <a class="external" href="https://doi.org/10.26493/1854-4231.14.19-31">doi:10.26493/1854-4231.14.19-31</a></li>
+<li>Lanza, R. &amp; Gilbert, S. "A Risk Based Approach to Journal Entry Testing." <i>Journal of Accountancy</i> 204(1), 2007.</li>
+<li>Gepp, A. et al. "Fraud Detection Triangle" (with Benford's Law). <i>Accounting &amp; Finance</i>, 2024. <a class="external" href="https://doi.org/10.1111/acfi.13192">doi:10.1111/acfi.13192</a></li>
+<li>"Deep learning for financial fraud detection: a systematic literature review." arXiv:2502.00201, 2025. <a class="external" href="https://arxiv.org/abs/2502.00201">arxiv.org/abs/2502.00201</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Analytical_Methods.html">Analytical Methods</a> | <a href="Category_Forensic_Accounting.html">Forensic Accounting</a> | <a href="Category_Fraud_Detection.html">Fraud Detection</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

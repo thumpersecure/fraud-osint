@@ -1,0 +1,58 @@
+<!--meta title="Intelligence Cycle" desc="The ODNI five-to-six phase process that turns raw information into finished intelligence, applied to OSINT" cats="OSINT, Intelligence, Investigation Methods"-->
+<p>The <b>intelligence cycle</b> is the structured, repeating process by which raw information is turned into finished intelligence that answers a decision-maker's question. As articulated by the United States Office of the Director of National Intelligence (ODNI), the cycle is not a single event but a continuous loop, in which the product of one round shapes the questions asked in the next.<sup class="ref">[1]</sup> Its central lesson is that <b>intelligence is a process, not an object</b>: a report is intelligence only because of the disciplined workflow that produced it, and the same workflow applies whether the underlying sources are classified or entirely open. Applied to <a href="OSINT.html">open-source intelligence</a>, the cycle supplies the discipline that prevents open collection from collapsing into an undirected accumulation of data.</p>
+
+<table class="infobox"><tr><th class="ibtitle" colspan="2">Intelligence Cycle</th></tr>
+<tr><td class="iblabel">Origin</td><td>ODNI / US Intelligence Community</td></tr>
+<tr><td class="iblabel">Phases</td><td>Five core, plus feedback (often counted as six)</td></tr>
+<tr><td class="iblabel">Shape</td><td>Circular / iterative</td></tr>
+<tr><td class="iblabel">Applies to</td><td>All source types, including <a href="OSINT.html">OSINT</a></td></tr>
+</table>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Intelligence as a process</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">The phases</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Applied to OSINT</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Fusion with confidential and whistleblower sources</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">See also</a></li>
+<li><span class="tocnumber">6</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Intelligence as a process</h2>
+<p>A common error, especially among newcomers to <a href="OSINT.html">OSINT</a>, is to equate intelligence with the data itself — to imagine that finding a document or a dataset <i>is</i> the intelligence. In fact a cache of raw material is only an input. Intelligence is what results when that material has been directed at a defined question, collected against a plan, processed into usable form, analysed for meaning, and delivered to whoever must act on it. Treating intelligence as a process, rather than as a thing to be found, guards against two failure modes: aimless collection that produces volume without answers, and premature conclusions drawn from a single unverified source.</p>
+
+<h2 id="s2">2 The phases</h2>
+<p>The ODNI model is usually rendered as five core phases arranged in a circle, with <b>feedback</b> frequently counted as a sixth so that the model becomes an explicit loop.<sup class="ref">[1]</sup> The phases run as follows:</p>
+<table class="wikitable">
+<tr><th>#</th><th>Phase</th><th>What happens</th><th>OSINT example</th></tr>
+<tr><td>1</td><td><b>Planning &amp; Direction</b></td><td>The requirement is defined: what question must be answered, for whom, by when, and within what legal and ethical bounds. Priorities and scope are set.</td><td>"Identify undisclosed assets and connected companies of subject X." Scope, jurisdictions and <a href="OSINT_Ethics.html">authorisation</a> agreed.</td></tr>
+<tr><td>2</td><td><b>Collection</b></td><td>Information is gathered from the chosen sources against the plan.</td><td>Pulling corporate registries, property records, social-media traces and domain data using <a href="OSINT_Tools.html">OSINT tools</a>.</td></tr>
+<tr><td>3</td><td><b>Processing &amp; Exploitation</b></td><td>Raw collection is converted into a usable form — translated, decoded, de-duplicated, normalised, structured.</td><td>Extracting entities from documents, geolocating images, structuring transaction lists for analysis.</td></tr>
+<tr><td>4</td><td><b>Analysis &amp; Production</b></td><td>Processed information is evaluated, corroborated and interpreted; patterns and inferences are drawn and written up.</td><td>Link-analysis reveals a nominee network; findings assessed for reliability and compiled into a report.</td></tr>
+<tr><td>5</td><td><b>Dissemination</b></td><td>The finished product is delivered to the decision-maker in a fit-for-purpose form.</td><td>An investigative memorandum handed to counsel, compliance or law enforcement — see <a href="Report_Writing.html">report writing</a>.</td></tr>
+<tr><td>6</td><td><b>Feedback</b></td><td>The recipient's response and any new questions re-enter the cycle, refining direction for the next iteration.</td><td>Counsel asks a follow-up on one entity, re-tasking collection.</td></tr>
+</table>
+<p>Rendered as a simple loop, the flow is:</p>
+<pre>Planning &amp; Direction
+   -&gt; Collection
+      -&gt; Processing &amp; Exploitation
+         -&gt; Analysis &amp; Production
+            -&gt; Dissemination
+               -&gt; Feedback ---(re-tasks)---&gt; Planning &amp; Direction</pre>
+<p>The arrow from feedback back to planning is what makes the model a <i>cycle</i> rather than a pipeline. Real investigations seldom traverse the phases once and cleanly; findings at the analysis stage routinely expose gaps that send the investigator back to collection, and dissemination almost always generates fresh requirements. Some agencies collapse the model into five phases and others expand it into six or seven, but the substance is stable: a requirement drives collection, collection is refined into analysis, analysis is delivered, and the response re-tasks the whole loop. The exact count of boxes matters less than the recognition that each phase depends on the discipline of the one before it — undirected collection produces unusable analysis, and analysis without a clear requirement produces a report no one asked for.</p>
+
+<h2 id="s3">3 Applied to OSINT</h2>
+<p>The cycle maps directly onto open-source work and imposes needed discipline on it. <b>Planning and direction</b> counters the risk of <i>infoxication</i> — being overwhelmed by the sheer abundance of public data — by fixing a specific question and a defined scope before any collection begins. <b>Collection</b> in OSINT means harvesting from open sources across the surface and deep web using the catalogue of <a href="OSINT_Tools.html">tools</a> and <a href="OSINT_Disciplines.html">sub-disciplines</a> such as SOCMINT and GEOINT. <b>Processing and exploitation</b> is often the most laborious stage: open data arrives messy, duplicated and in many formats, and must be normalised before it can be analysed. <b>Analysis and production</b> is where the maxim that "extracting patterns is power" is realised — the analyst corroborates, weighs reliability, and draws the inference that the raw data alone cannot yield. <b>Dissemination</b> ties OSINT back to the wider investigation through disciplined <a href="Report_Writing.html">report writing</a> and preservation of a defensible <a href="Chain_of_Custody.html">chain of custody</a>.</p>
+
+<h2 id="s4">4 Fusion with confidential and whistleblower sources</h2>
+<p>OSINT is rarely used in isolation. Its greatest value in fraud and <a href="Money_Laundering.html">money-laundering</a> investigation often lies in <b>fusion</b> — combining open-source findings with confidential inputs such as a whistleblower tip, a suspicious-activity report, or internal records available only under <a href="AML_Law.html">legal authority</a>. A whistleblower allegation, for instance, may point to a specific transaction or counterparty; OSINT can then independently corroborate the surrounding facts — the existence of a shell company, the ownership of a property, the timing of a filing — lending the confidential lead the external verification it needs to withstand scrutiny. Conversely, an anomaly first surfaced through open data may acquire meaning only when set against a confidential internal document. In each case the intelligence cycle provides the common framework: confidential and open inputs enter at the collection stage, are reconciled during processing and analysis, and are assessed together before dissemination. This fusion is also where the <a href="OSINT_Ethics.html">ethical</a> line matters most, because the handling of tips, informants and privileged material carries obligations that public data alone does not.</p>
+
+<p>A practical benefit of running the cycle explicitly is <b>auditability</b>. When each phase is documented — the requirement that was set, the sources tasked, the processing applied, the reliability assigned to each finding, and the product delivered — the resulting intelligence can be defended after the fact. This matters acutely in fraud and financial-crime work, where an OSINT product may end up supporting a report to a regulator, a filing in litigation, or a referral to <a href="AML_Law.html">law enforcement</a>, and must therefore withstand challenge to its method as well as its conclusions. The cycle thus does double duty: it organises the work and it creates the record that makes the work defensible, reinforcing the disciplined <a href="Report_Writing.html">report writing</a> and <a href="Chain_of_Custody.html">chain-of-custody</a> practices that close out an investigation.</p>
+
+<h2 id="s5">5 See also</h2>
+<p class="hatnote">See also: <a href="OSINT.html">OSINT</a>, <a href="OSINT_Tools.html">OSINT Tools</a>, <a href="OSINT_Disciplines.html">OSINT Disciplines</a>, <a href="OSINT_Ethics.html">OSINT Ethics</a>, <a href="Report_Writing.html">Report Writing</a>, <a href="Asset_Tracing.html">Asset Tracing</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Office of the Director of National Intelligence. "How the IC Works" (the intelligence cycle). <a class="external" href="https://www.intelligence.gov/how-the-ic-works">intelligence.gov/how-the-ic-works</a></li>
+<li>Basel Institute on Governance. "Quick guide to open-source intelligence (OSINT)." Quick Guide 17, 2020. <a class="external" href="https://baselgovernance.org/sites/default/files/2021-01/qg17_open-source_intelligence_en.pdf">baselgovernance.org</a></li>
+</ol>

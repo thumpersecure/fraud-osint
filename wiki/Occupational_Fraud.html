@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fraud committed by employees against their own organizations; ACFE Report to the Nations statistics, profiles, detection, and prevention.">
+<title>Occupational Fraud - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li class="active-page"><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Occupational Fraud</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Occupational fraud (ACFE 2024)</th></tr>
+<tr><td class="iblabel">Revenue lost/yr</td><td>~5% of revenue</td></tr>
+<tr><td class="iblabel">Median loss/case</td><td>$145,000</td></tr>
+<tr><td class="iblabel">Mean loss/case</td><td>&gt; $1.5 million</td></tr>
+<tr><td class="iblabel">Median detection time</td><td>12 months</td></tr>
+<tr><td class="iblabel">Detected by tips</td><td>43% (3&times; next method)</td></tr>
+<tr><td class="iblabel">Study basis</td><td>1,921 cases, 138 countries</td></tr>
+</table>
+
+<p><b>Occupational fraud</b> is fraud committed by individuals against the organizations that employ them. The Association of Certified Fraud Examiners (ACFE) defines it as "the use of one's occupation for personal enrichment through the deliberate misuse or misapplication of the employing organization's resources or assets."<sup class="ref">[1]</sup> It is the central subject of <a href="Forensic_Accounting.html">forensic accounting</a> and is catalogued by the ACFE <a href="Fraud_Tree.html">fraud tree</a> into corruption, asset misappropriation, and financial statement fraud, while the <a href="Fraud_Triangle.html">fraud triangle</a> explains the pressure, opportunity, and rationalization that give rise to it.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Definition and scope</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Report to the Nations: headline statistics</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Perpetrator profiles</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Detection channels</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Prevention</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Wider context</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Definition and scope</h2>
+<p>Occupational fraud is distinguished from external fraud (committed by outsiders such as customers, vendors, or unrelated criminals) by the insider's position of trust. That trust supplies the <a href="Fraud_Triangle.html">opportunity</a> and often the means of concealment. The category spans everything from a cashier skimming currency to a chief financial officer falsifying earnings, and it is the most common and most costly form of fraud most organizations will ever face. The authoritative empirical source is the ACFE's biennial <a class="external" href="https://www.acfe.com/-/media/files/acfe/pdfs/rttn/2024/2024-report-to-the-nations.pdf"><i>Report to the Nations</i></a>, whose 2024 (13th) edition analyzed 1,921 real cases investigated by Certified Fraud Examiners across 138 countries and territories.<sup class="ref">[1]</sup></p>
+<p>Three elements are common to virtually all occupational fraud: the activity is <b>clandestine</b>; it <b>violates the perpetrator's fiduciary duty</b> to the organization; and it is <b>committed for direct or indirect financial benefit</b> to the perpetrator, at a cost to the employer. These elements distinguish occupational fraud both from honest error, which lacks intent, and from external theft, which lacks the breach of trust. The forms it takes are enumerated by the ACFE <a href="Fraud_Tree.html">fraud tree</a>, and the conditions that give rise to it are described by the <a href="Fraud_Triangle.html">fraud triangle</a>; this article focuses on the empirical picture, who commits it, how it is found, and how it is prevented.</p>
+
+<h2 id="s2">2 Report to the Nations: headline statistics</h2>
+<p>The 2024 report's most-cited findings are:<sup class="ref">[1]</sup></p>
+<ul>
+<li>Organizations lose an estimated <b>5% of revenue</b> to fraud each year.</li>
+<li>The <b>median loss per case is $145,000</b>; the <b>mean exceeds $1.5 million</b>, reflecting a small number of very large frauds pulling the average well above the median. Total losses in the studied cases exceeded <b>$3.1 billion</b>.</li>
+<li>The <b>median time to detection is 12 months</b>; longer-running schemes cause disproportionately larger losses.</li>
+<li><b>Tips are the #1 detection method, catching 43% of frauds</b>, roughly three times the next most effective channel, and more than half of tips come from employees.</li>
+</ul>
+<p>By category, <a href="Fraud_Tree.html">asset misappropriation</a> is most frequent (89% of cases, $120,000 median), corruption is next (48% of cases, $200,000 median), and <a href="Financial_Statement_Fraud.html">financial statement fraud</a> is rarest but costliest (5% of cases, $766,000 median). The category percentages exceed 100% because some cases involve multiple scheme types.<sup class="ref">[1]</sup></p>
+
+<h2 id="s3">3 Perpetrator profiles</h2>
+<p>The ACFE data support several durable generalizations about who commits occupational fraud.<sup class="ref">[1]</sup> Losses rise with the perpetrator's authority: frauds by owners and executives, though less frequent than those by lower-level employees, produce the largest median losses because senior insiders can more readily override controls. Longer tenure and higher position correlate with larger schemes, as does <b>collusion</b>, cases involving two or more perpetrators are markedly costlier than those committed by a single person, because collusion defeats the segregation-of-duties controls that would otherwise catch a lone actor. A striking and consistent finding is that most perpetrators are <b>first-time offenders with no prior fraud charges or convictions</b>, consistent with Cressey's portrait of the "trusted violator" who crosses the line under a <a href="Fraud_Triangle.html">non-sharable pressure</a> rather than a career criminal. Certain departments recur as high-risk, with operations, accounting, sales, executive management, and customer service accounting for a large share of cases, reflecting where money, authority, and record-keeping concentrate.</p>
+<p>The reports also track <b>behavioral warning signs</b> displayed by perpetrators, most commonly living beyond one's means and financial difficulties, followed by unusually close association with vendors or customers, control issues (an unwillingness to share duties), and defensiveness. These behavioral <a href="Red_Flags.html">red flags</a> are often observable before the financial evidence surfaces.</p>
+
+<h2 id="s4">4 Detection channels</h2>
+<p>Because tips dominate detection, organizations that provide reporting mechanisms suffer smaller and shorter frauds. The ACFE consistently finds that entities with <b>hotlines</b> detect fraud earlier and lose less than those without.<sup class="ref">[1]</sup> Other detection channels include internal audit, management review, and account reconciliation, plus a nontrivial share discovered by external audit or simply by accident. The relative weakness of external audit as a first-line detector reinforces the <a href="Forensic_Accounting.html">distinction between auditing and fraud examination</a>: a financial-statement audit is not designed to catch most occupational frauds, and the ACFE consistently finds only a small percentage of schemes are first uncovered by external audit. Modern detection increasingly layers <a href="Analytical_Methods.html">analytical methods</a>, <a href="Benfords_Law.html">Benford's Law</a> digit testing, and data analytics on top of human tips. Because the median scheme runs for a full year before discovery, the practical objective of a detection program is not merely to catch fraud but to <b>compress the detection window</b>: the longer a scheme runs, the larger its cumulative loss, so proactive monitoring that shortens the interval by even a few months materially reduces exposure.</p>
+
+<h2 id="s5">5 Prevention</h2>
+<p>Prevention concentrates on the leg of the <a href="Fraud_Triangle.html">fraud triangle</a> an organization can control: <b>opportunity</b>. Effective anti-fraud programs combine:<sup class="ref">[2]</sup></p>
+<ul>
+<li><b>Internal controls</b> &mdash; segregation of duties, authorization limits, mandatory vacations and job rotation, and independent reconciliations.</li>
+<li><b>Reporting mechanisms</b> &mdash; anonymous hotlines and whistleblower protections, the single most cost-effective control given that tips lead detection.</li>
+<li><b>Tone at the top and a code of conduct</b> &mdash; visible ethical leadership and consistent discipline, which attack rationalization.</li>
+<li><b>Proactive monitoring and data analytics</b> &mdash; continuous transaction testing and anomaly detection to shorten the 12-month detection window.</li>
+<li><b>Fraud-awareness training</b> &mdash; helping employees recognize and report <a href="Red_Flags.html">red flags</a>.</li>
+<li><b>Pre-employment screening and vendor due diligence</b> &mdash; verifying backgrounds and identifying undisclosed relationships before granting trust.</li>
+</ul>
+<p>The ACFE data show these controls pay for themselves. Organizations with anti-fraud controls in place, hotlines, proactive data monitoring, management review, and formal fraud-risk assessments, experience both <b>lower losses</b> and <b>faster detection</b> than those without them, and the presence of controls at the time a scheme begins is associated with smaller ultimate damage.<sup class="ref">[1]</sup> The economic logic is straightforward: prevention that attacks opportunity lowers the probability a scheme starts, while detection that shortens the twelve-month median window lowers the loss conditional on a scheme having started. No program eliminates fraud entirely, because pressure and rationalization lie largely outside the organization's control, but a layered program measurably shifts the odds. Effective governance also depends on a credible <b>response</b>: consistent investigation and discipline of confirmed fraud reinforces the deterrent value of every other control and undercuts the "everyone gets away with it" rationalization.</p>
+<p>Regulatory frameworks reinforce these controls. In the United States the <b>Sarbanes-Oxley Act (2002)</b> mandates internal-control assessments and whistleblower protections, and statutes such as the False Claims Act reward insiders who report fraud against the government.<sup class="ref">[3]</sup></p>
+
+<h2 id="s6">6 Wider context</h2>
+<p>Occupational fraud is one slice of a much larger financial-crime picture. Industry estimates place global illicit financial flows in the trillions of dollars: the Nasdaq Verafin <i>Global Financial Crime Report</i> estimated more than <b>$3.1 trillion</b> in illicit funds moving through the financial system in 2023, rising to an estimated <b>$4.4 trillion</b> for 2025, with combined bank-fraud and scam losses of about <b>$579 billion</b> in 2025.<sup class="ref">[4]</sup> Payments-fraud surveys likewise report that a large majority of organizations are targeted each year, with business email compromise a leading vector.<sup class="ref">[5]</sup> These trends, and the growing role of AI in both attack and defense, are treated in <a href="Emerging_Trends.html">Emerging Trends</a>, while investigative techniques appear across <a href="Money_Laundering.html">Money Laundering</a>, <a href="Asset_Tracing.html">Asset Tracing</a>, and <a href="OSINT.html">OSINT</a>.</p>
+
+<p class="hatnote">See also: <a href="Fraud_Tree.html">Fraud Tree</a>, <a href="Fraud_Triangle.html">Fraud Triangle</a>, <a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a>, <a href="Red_Flags.html">Red Flags</a>, <a href="Case_Studies.html">Case Studies</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>ACFE (2024). <i>Occupational Fraud 2024: A Report to the Nations</i> (13th ed.; 1,921 cases, 138 countries). <a class="external" href="https://www.acfe.com/-/media/files/acfe/pdfs/rttn/2024/2024-report-to-the-nations.pdf">acfe.com</a></li>
+<li>Houck, M., et al. (2006). "Forensic Accounting as an Investigative Tool." <i>CPA Journal</i> 76(8); Moyes, G. D. (2008), "CPAs' Perceptions of Red Flags Used in Detecting Fraud," <i>Icfai Journal of Audit Practice</i> 5(1).</li>
+<li>AICPA Essentials (Crain, Hopwood, Pacini &amp; Young, 2015), citing the Sarbanes-Oxley Act (2002) and the False Claims Act.</li>
+<li>Nasdaq Verafin, <i>Global Financial Crime Report</i> (2024 and 2026 editions). <a class="external" href="https://verafin.com/nasdaq-verafin-global-financial-crime-report/">verafin.com</a></li>
+<li>Association for Financial Professionals, <i>Payments Fraud and Control Survey</i> (2025 and 2026 editions). <a class="external" href="https://www.financialprofessionals.org/training-resources/resources/survey-research-economic-data/details/payments-fraud">financialprofessionals.org</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Forensic_Accounting_Core.html">Forensic Accounting Core</a> | <a href="Category_Fraud_Theory.html">Fraud Theory</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

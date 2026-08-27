@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Blockchain analytics for following crypto funds: clustering, heuristics, exchange attribution, tools, privacy coins and mixers.">
+<title>Cryptocurrency Tracing - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li class="active-page"><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Cryptocurrency Tracing</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox"><tr><th class="ibtitle" colspan="2">Cryptocurrency Tracing</th></tr>
+<tr><td class="iblabel">Field</td><td>Blockchain analytics / forensic accounting</td></tr>
+<tr><td class="iblabel">Core methods</td><td>Address clustering, transaction heuristics, exchange attribution</td></tr>
+<tr><td class="iblabel">Leading tools</td><td>Chainalysis, Elliptic, TRM Labs (all active)</td></tr>
+<tr><td class="iblabel">Notable exit</td><td>CipherTrace — key products shut by Mastercard, Mar 2024</td></tr>
+<tr><td class="iblabel">Obfuscation</td><td>Privacy coins, mixers/tumblers, chain-hopping</td></tr>
+</table>
+
+<p><b>Cryptocurrency tracing</b> applies the logic of <a href="Asset_Tracing.html">asset tracing</a> to blockchains: it follows the movement of digital assets across public ledgers to identify counterparties, cluster addresses under common control, and attribute funds to real-world entities such as exchanges. Because most major blockchains (Bitcoin, Ethereum) are pseudonymous rather than anonymous — every transaction is permanently public — they are in some respects easier to trace than cash, provided the investigator can connect on-chain addresses to off-chain identities. The field, known as <b>blockchain analytics</b>, has become a standard component of <a href="Money_Laundering.html">money-laundering</a> and fraud investigations.<sup class="ref">[1]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">How tracing works</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Tools and the CipherTrace shutdown</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Privacy coins, mixers and chain-hopping</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">FTX, Binance and enforcement relevance</a></li>
+<li><span class="tocnumber">5</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 How tracing works</h2>
+<p>Tracing rests on three linked techniques. <b>Address clustering</b> groups the many addresses that a single actor controls into one entity, most commonly via the <i>common-input-ownership heuristic</i>: when several addresses jointly fund one transaction, they are presumed to share an owner. <b>Heuristics</b> then refine the picture — change-address detection identifies which output returns to the sender, and behavioral patterns distinguish exchanges, mixers, and merchant wallets. <b>Exchange attribution</b> is the step that connects the pseudonymous graph to identity: when traced funds reach a regulated exchange that performs Know-Your-Customer (KYC) checks, investigators can, with legal process, obtain the account holder's identity. In effect, the launderer's need to eventually cash out through a regulated on-ramp or off-ramp is the choke point that makes blockchain tracing work, mirroring how <a href="Asset_Tracing.html">conventional asset tracing</a> relies on the point where value re-enters the banking system. Investigators combine on-chain analysis with <a href="OSINT.html">open-source intelligence</a> — forum posts, leaked databases, and address labels — to strengthen attribution.</p>
+<p>A crucial distinction is between <i>pseudonymity</i> and <i>anonymity</i>. On a transparent blockchain, an address is a pseudonym: it does not name its owner, but every transaction it makes is public and permanent, so a single confirmed link between an address and an identity can retroactively expose the entire history of funds that passed through it. This "unmasking" property is what makes public blockchains, in some respects, more traceable than cash — cash leaves no ledger at all. The analytics firms maintain large, continuously updated databases of address labels (exchanges, mixers, darknet markets, sanctioned entities, ransomware wallets) built from their own research, subpoena returns, undercover transactions, and public data. The quality of a trace depends heavily on the quality of this labeling, which is why attribution is both the most valuable and the most contestable part of the process — a point underscored by the reliability concerns that surrounded the CipherTrace shutdown discussed below.</p>
+
+<h2 id="s2">2 Tools and the CipherTrace shutdown</h2>
+<p>A small number of specialist firms dominate blockchain analytics. <b>Chainalysis</b> (its Reactor investigation tool and KYT transaction-monitoring product) is the market leader; <b>Elliptic</b> (UK-based) and <b>TRM Labs</b> are the other principal providers. All three remain active and are widely used by law enforcement, regulators, and financial institutions.<sup class="ref">[1]</sup></p>
+<p>The most notable recent departure from the field is <b>CipherTrace</b>. Acquired by Mastercard in 2021, CipherTrace's key products — Armada, Inspector, and Sentry — were <b>shut down by Mastercard in March 2024</b> after the underlying data was reportedly characterized internally as "unverifiable" and "unauditable," effectively ending the product line and leaving Chainalysis and its peers to consolidate the market.<sup class="ref">[2]</sup> The episode is a caution that blockchain-analytics conclusions are only as reliable as the labeling and attribution data behind them, and that vendor claims warrant the same scrutiny an examiner would apply to any expert method under evidentiary standards.</p>
+
+<h2 id="s3">3 Privacy coins, mixers and chain-hopping</h2>
+<p>Launderers use several techniques to defeat tracing:</p>
+<ul>
+<li><b>Privacy coins</b> — cryptocurrencies engineered to obscure transaction details. <b>Monero (XMR)</b> conceals sender, receiver, and amount by default using ring signatures, stealth addresses, and confidential transactions, making conventional clustering largely ineffective. <b>Zcash (ZEC)</b> offers optional shielded transactions using zero-knowledge proofs, though many Zcash transfers are transparent in practice.</li>
+<li><b>Mixers / tumblers</b> — services that pool many users' funds and redistribute them to break the link between input and output addresses. Some are custodial services; others are non-custodial smart contracts. Mixers are a primary layering tool and have themselves been targets of sanctions and prosecution.</li>
+<li><b>Chain-hopping</b> — rapidly converting funds across different blockchains and assets (for example Bitcoin → a stablecoin → Monero → back) to force investigators to follow the trail across multiple ledgers, each requiring different tooling and often crossing a privacy coin that severs the chain.</li>
+</ul>
+<p>These map directly onto the <b>layering</b> stage of <a href="Money_Laundering.html">money laundering</a>, and defeating them relies on catching errors — a reused address, a KYC on-ramp, a timing correlation — rather than on brute-force ledger analysis alone.</p>
+<p>Privacy technology has produced an ongoing arms race. Against mixers, investigators use timing and amount analysis to correlate deposits with withdrawals, and sanctions and prosecutions have driven several major mixing services offline. Against privacy coins, direct on-chain tracing is often impossible, so investigators concentrate on the boundaries — the moments when value converts from a transparent asset into Monero and back, or when a privacy coin is deposited to or withdrawn from a KYC exchange. Stablecoins add a further wrinkle: because many are issued by centralized entities capable of freezing addresses, funds that pass through them are exposed to a form of intervention that fully decentralized assets are not. The practical lesson for examiners is that few schemes are perfectly opaque end to end; the trail typically survives at the seams between systems, and patience at those seams, not raw computing power, is what recovers the thread.</p>
+
+<h2 id="s4">4 FTX, Binance and enforcement relevance</h2>
+<p>High-profile cases have made crypto tracing central to modern financial-crime enforcement. The 2022 collapse of the exchange <b>FTX</b> — a multi-billion-dollar fraud involving the misuse of customer funds — turned on reconstructing flows between FTX and its affiliated trading firm, exactly the kind of entity-to-entity mapping blockchain analytics supports, and the ability to trace on-chain movements aided both the criminal case and asset recovery for creditors. <b>Binance</b>, the largest exchange, entered a landmark U.S. settlement in 2023 over Bank Secrecy Act and sanctions failures, underscoring that exchanges are the regulated choke points on which tracing depends and that AML compliance at the on/off-ramp is now vigorously enforced.<sup class="ref">[3]</sup> Together these cases illustrate the field's dual role: tracing serves both to build criminal and regulatory cases and to recover assets for victims, in tandem with the <a href="AML_Law.html">AML regime</a> and cross-border tools described under <a href="Asset_Tracing.html">asset tracing</a>. They also mark a shift in perception: early assumptions that cryptocurrency was inherently untraceable have given way to a record of high-profile recoveries — funds clawed back from ransomware operators, darknet markets, and collapsed exchanges — that has made blockchain analytics a routine investigative expectation rather than a novelty. Each enforcement success, however, pushes sophisticated actors toward privacy coins and non-custodial tools, keeping the tracing field in continuous evolution alongside the obfuscation methods it is built to defeat. (Case-specific details here are drawn from general public knowledge and are noted as secondary where not independently sourced in the project briefs.)</p>
+
+<p class="hatnote">See also: <a href="Money_Laundering.html">Money Laundering</a>, <a href="Asset_Tracing.html">Asset Tracing</a>, <a href="OSINT_Tools.html">OSINT Tools</a>, <a href="AML_Law.html">AML Law</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Chainalysis (Reactor / KYT), Elliptic, TRM Labs — active blockchain-analytics providers. (project brief on crypto tracing)</li>
+<li>Fortune. "Mastercard shuts down CipherTrace products." March 13, 2024. <a class="external" href="https://fortune.com/crypto/2024/03/13/mastercard-ciphertrace-blockchain-analytics-chainalysis-bitcoin-fog/">fortune.com</a></li>
+<li>FTX collapse (2022) and Binance BSA/sanctions settlement (2023). (general public knowledge; secondary)</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Following_the_Money.html">Following the Money</a> | <a href="Category_Blockchain.html">Blockchain</a> | <a href="Category_Financial_Investigation.html">Financial Investigation</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

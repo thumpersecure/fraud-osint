@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The forensic report as work product: narrative report, workpapers, scope and limiting conditions, engagement letters, and clarity for the trier of fact.">
+<title>Report Writing - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li class="active-page"><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Report Writing</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox"><tr><th class="ibtitle" colspan="2">Forensic Report Writing</th></tr>
+<tr><td class="iblabel">Output</td><td>Narrative report + workpapers</td></tr>
+<tr><td class="iblabel">Audience</td><td>Client, counsel, the trier of fact</td></tr>
+<tr><td class="iblabel">Governs</td><td>Scope, assumptions, limiting conditions</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Evidence_and_Testimony.html">Evidence and Testimony</a>, <a href="Forensic_Accounting.html">Forensic Accounting</a></td></tr>
+</table>
+
+<p>The <b>forensic report</b> is the principal deliverable of a fraud or forensic-accounting engagement, and in legal contexts it is treated as the examiner's <b>work product</b>. It communicates what was done, what was found, and what it means, in a form that a client, opposing counsel, and ultimately a <a href="Evidence_and_Testimony.html">trier of fact</a> can rely on. Because the report may be scrutinised in litigation and support expert testimony, it is written to a higher standard of clarity, precision and traceability than an ordinary business document: every conclusion must be supported, and every reader must be able to see how the examiner got there.<sup class="ref">[1]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">The report as work product</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Narrative, workpapers and supporting documentation</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Scope, assumptions and limiting conditions</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Engagement letters</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Clarity for the trier of fact</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Visual quantification</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 The report as work product</h2>
+<p>A forensic report is not a marketing document or a persuasive brief; it is a factual, defensible account. Its authority comes from being <i>reproducible</i>: another qualified professional, given the same data and the report's description of methods, should be able to follow the reasoning and reach the same conclusions. This traceability is exactly what the <a href="Evidence_and_Testimony.html">amended Federal Rule of Evidence 702</a> now emphasises — that an opinion reflect a reliable <i>application</i> of methods to the facts — so the report is, in effect, the written proof that the examiner's conclusions are earned rather than asserted.<sup class="ref">[1]</sup></p>
+
+<h2 id="s2">2 Narrative, workpapers and supporting documentation</h2>
+<p>A forensic engagement typically produces three connected layers of output:</p>
+<ul>
+<li>The <b>narrative report</b> — the readable document that states the engagement's purpose, scope, procedures performed, findings, and (where the engagement calls for them) conclusions or opinions. It is written for a non-specialist reader and cross-references the underlying support.</li>
+<li>The <b>workpapers</b> — the examiner's detailed working record: analyses, schedules, reconciliations, calculations, notes, and the reasoning behind each step. Workpapers are the bridge between raw evidence and the narrative's conclusions and are where a reviewer or opposing expert tests the work.</li>
+<li>The <b>supporting documentation</b> — the source evidence itself: bank statements, invoices, contracts, ledgers, emails, <a href="Interviewing.html">interview</a> records and <a href="Digital_Forensics.html">forensic exhibits</a> — retained under a documented <a href="Chain_of_Custody.html">chain of custody</a> and indexed so any figure in the report can be traced back to its origin.</li>
+</ul>
+
+<table class="wikitable">
+<tr><th>Layer</th><th>Contents</th><th>Primary reader</th></tr>
+<tr><td>Narrative report</td><td>Purpose, scope, procedures, findings</td><td>Client, counsel, court</td></tr>
+<tr><td>Workpapers</td><td>Analyses, schedules, calculations, reasoning</td><td>Reviewer, opposing expert</td></tr>
+<tr><td>Supporting documentation</td><td>Source evidence and exhibits</td><td>Auditor of the trail</td></tr>
+</table>
+
+<h2 id="s3">3 Scope, assumptions and limiting conditions</h2>
+<p>A defensible report is explicit about its own boundaries. Three elements are standard:</p>
+<ul>
+<li><b>Scope</b> — a precise statement of what the engagement did and did <i>not</i> cover: which entities, accounts, periods and questions were examined. A clearly bounded scope prevents the report from being read as saying more than it does.</li>
+<li><b>Assumptions</b> — the facts or conditions taken as given (for example, that the records provided are complete and authentic). Stating assumptions lets the reader see what the conclusions depend on.</li>
+<li><b>Limiting conditions</b> — the constraints on the work: data that was unavailable, procedures not performed, reliance on the work of others, and the fact that an examination is not a guarantee of detecting all fraud. These limits protect the examiner and, more importantly, keep the reader from over-relying on the findings.</li>
+</ul>
+<p>Honest scope and limiting conditions are not hedging; they are part of what makes an opinion admissible and credible under the reliability standards discussed in <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>.</p>
+
+<h2 id="s4">4 Engagement letters</h2>
+<p>The engagement letter is the contract that frames the entire assignment, and it should be settled <i>before</i> substantive work begins. It typically defines the parties, the objective and scope of the engagement, the professional's role (for instance whether they are retained as a <a href="Evidence_and_Testimony.html">testifying or consulting</a> expert), independence and confidentiality terms, deliverables, fees, and the standards under which the work will be performed. A well-drafted engagement letter aligns expectations, establishes the examiner's independence, and later serves as the reference point for what the report was and was not meant to address.<sup class="ref">[1]</sup></p>
+
+<h2 id="s5">5 Clarity for the trier of fact</h2>
+<p>The ultimate audience of many forensic reports is a judge or jury with no accounting or technical background. Clarity is therefore a professional obligation, not a stylistic preference. Effective reports use plain language, define technical terms on first use, present findings in a logical order, separate fact from opinion, and avoid jargon and unexplained acronyms. The goal is that a non-expert can understand not only <i>what</i> the examiner concluded but <i>why</i>, and can weigh it accordingly. A report that only another forensic accountant can follow has failed at its core task of informing the trier of fact.</p>
+
+<h2 id="s6">6 Visual quantification</h2>
+<p>Well-chosen visuals make complex financial findings comprehensible. Charts, graphs, timelines, flow-of-funds diagrams and pivot tables can convey a pattern — a spike in payments to a shell vendor, a chain of transfers, an unusual distribution of amounts — far more effectively than prose or a dense table. Pivot tables are especially useful for summarising large transaction sets by dimensions such as vendor, employee, date or amount, and for surfacing the anomalies that <a href="Analytical_Methods.html">analytical methods</a> and tests such as <a href="Benfords_Law.html">Benford's Law</a> identify. Visuals must be accurate, labelled, sourced to the underlying data, and free of distortion; a misleading chart undermines the credibility of the whole report. Used honestly, visual quantification is one of the most powerful tools for making a quantitative finding land with a lay audience.<sup class="ref">[2]</sup></p>
+
+<div class="notebox">A guiding principle: every number in the narrative should be traceable to a workpaper, and every workpaper to a source document. If a reader cannot follow that trail, the report is not yet finished.</div>
+
+<p class="hatnote">See also: <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>, <a href="Chain_of_Custody.html">Chain of Custody</a>, <a href="Forensic_Accounting.html">Forensic Accounting</a>, <a href="Analytical_Methods.html">Analytical Methods</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>AICPA / Crain, Hopwood, Pacini &amp; Young. "Essentials of Forensic Accounting." 2015 (report writing, engagement letters, work product, SSCS No.1).</li>
+<li>Houck, Kranacher, Morris, Riley, Robertson &amp; Wells. "Forensic Accounting as an Investigative Tool." CPA Journal 76(8), 2006 (communicating findings; visual presentation).</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Investigation_Technique.html">Investigation Technique</a> | <a href="Category_Reporting.html">Reporting</a> | <a href="Category_Legal.html">Legal</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

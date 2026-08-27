@@ -1,0 +1,79 @@
+<!--meta title="Human Trafficking Finance" desc="Financial and OSINT investigation of human trafficking for labour and sexual exploitation." cats="Applied Domains, OSINT, Money Laundering"-->
+<table class="infobox"><tr><th class="ibtitle" colspan="2">Human Trafficking Finance</th></tr>
+<tr><td class="iblabel">Domain</td><td>Financial investigation of trafficking in human beings (THB)</td></tr>
+<tr><td class="iblabel">Exploitation types</td><td>Labour, sexual, and mixed exploitation</td></tr>
+<tr><td class="iblabel">Core doctrine</td><td>Parallel financial investigation (FATF)</td></tr>
+<tr><td class="iblabel">Key methods</td><td>Net-worth, bank-deposit, expenditure; Warrack 360 Model</td></tr>
+<tr><td class="iblabel">Evidence sources</td><td>Mobile &amp; cloud forensics, OSINT on ads, crypto tracing</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Money_Laundering.html">Money Laundering</a>, <a href="OSINT.html">OSINT</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></td></tr>
+</table>
+
+<p><b>Human trafficking finance</b> is the application of <a href="Forensic_Accounting.html">forensic-accounting</a> and <a href="OSINT.html">open-source intelligence</a> techniques to detect, disrupt, and prove trafficking in human beings (THB) for labour or sexual exploitation. Trafficking is a profit-driven crime: the International Labour Organization estimates that forced labour generates enormous illicit annual profits, which means that following the money is both a route to identifying offenders and a route to identifying and protecting victims.<sup class="ref">[1]</sup> The dominant doctrine, promoted by the Financial Action Task Force (FATF) and reflected in OSCE and UNODC guidance, is the <b>parallel financial investigation</b> — running a money-focused inquiry alongside the traditional criminal case rather than after it.<sup class="ref">[2]</sup><sup class="ref">[3]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Parallel financial investigations</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Indirect proof methods</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">The Warrack 360 Model</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Red-flag taxonomies</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Mobile and cloud forensics</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">OSINT on advertisements</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Cryptocurrency tracing</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Victim-centred approach</a></li>
+<li><span class="tocnumber">9</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Parallel financial investigations</h2>
+<p>FATF defines a <b>parallel financial investigation</b> as running, alongside a conventional trafficking investigation, a dedicated inquiry into the financial dealings of the suspected network.<sup class="ref">[2]</sup> The rationale is threefold. First, financial records are harder to intimidate than witnesses: bank statements, remittances, and property registrations persist even when a frightened victim recants. Second, the money trail can reveal the full scale and structure of a network — recruiters, transporters, and controllers — that a single victim's account cannot. Third, financial evidence supports asset confiscation, denying traffickers the proceeds and funding victim compensation.</p>
+<p>OSCE's compendium <i>Following the Money</i> operationalises this doctrine for THB specifically, cataloguing how proceeds move through cash-intensive front businesses, money-service bureaux, and informal value-transfer systems, and how <a href="AML_Law.html">anti-money-laundering</a> reporting can seed a trafficking case.<sup class="ref">[3]</sup> Europol's threat assessments similarly stress that follow-the-money work is central to dismantling organised trafficking groups operating across the EU.<sup class="ref">[4]</sup></p>
+
+<h2 id="s2">2 Indirect proof methods</h2>
+<p>Because traffickers rarely keep honest books, investigators rely on the same <b>indirect (circumstantial) proof</b> methods used against tax evaders and organised crime — the lineage that runs back to the <a href="Net_Worth_Method.html">net-worth method</a> pioneered against Al Capone (see <a href="Case_Studies.html">Case Studies</a>).<sup class="ref">[3]</sup></p>
+<table class="wikitable">
+<tr><th>Method</th><th>Logic</th><th>Application to THB</th></tr>
+<tr><td><b>Net-worth</b></td><td>Measure change in assets minus liabilities over time; unexplained increases imply hidden income.</td><td>A controller's property, vehicles, and cash accumulation exceed any declared legitimate income.</td></tr>
+<tr><td><b>Bank-deposit</b></td><td>Total deposits, adjusted for transfers and known sources, approximate income.</td><td>Structured cash deposits and third-party pass-through accounts reveal exploitation proceeds.</td></tr>
+<tr><td><b>Expenditure</b></td><td>Spending in excess of known income implies undisclosed income.</td><td>Rent on multiple flats, advertising spend, travel, and luxury purchases inconsistent with declared earnings.</td></tr>
+</table>
+<p>These methods pair naturally with <a href="Analytical_Methods.html">analytical procedures</a> and, where ledgers exist, digit-frequency tests such as <a href="Benfords_Law.html">Benford's Law</a>, which the training literature cites as a useful screen for fabricated financial figures.<sup class="ref">[5]</sup></p>
+
+<h2 id="s3">3 The Warrack 360 Model</h2>
+<p>The <b>Warrack 360 Model</b> is a structured framework taught in EU anti-trafficking financial-investigation curricula for building a complete, 360-degree financial picture of a trafficking subject and network.<sup class="ref">[3]</sup> Rather than examining a single account in isolation, the model directs the investigator to assemble every financial facet around the subject — declared income, banking, property, business interests, cash flows, remittances, and lifestyle — and to reconcile them against one another. Contradictions between any two facets (for example lavish expenditure against nil declared income) become leads. The 360 framing is complementary to the indirect-proof methods above: net-worth, bank-deposit, and expenditure analyses each populate a segment of the circle, and the model's value is in forcing coverage of all of them so that no funding stream is overlooked.</p>
+
+<h2 id="s4">4 Red-flag taxonomies</h2>
+<p>Financial-intelligence bodies publish <b>red-flag taxonomies</b> to help banks and investigators recognise trafficking. The training literature groups them into three families.<sup class="ref">[3]</sup></p>
+<ul>
+<li><b>Behavioural indicators</b> — an account holder who is accompanied and appears controlled, never speaks for themselves, or whose transactions are directed by a third party; reluctance or inability to explain fund flows.</li>
+<li><b>KYC / customer-profile indicators</b> — multiple accounts opened at the same address; a single controller as signatory on many "workers'" accounts; identity documents that appear coached or shared; a mismatch between stated occupation and account activity.</li>
+<li><b>Transactional indicators</b> — frequent structured cash deposits below reporting thresholds; wages routed straight back to a controller; payments to online-advertising and classified platforms, adult-content sites, transport, and short-let accommodation; clustered late-night activity.</li>
+</ul>
+<p>These map onto the general forensic <a href="Red_Flags.html">red-flag</a> concept but are tuned to the trafficking context, where the victim is frequently the nominal account holder while the perpetrator holds control.</p>
+
+<h2 id="s5">5 Mobile and cloud forensics</h2>
+<p>A defining feature of modern trafficking investigations is that <b>victims and offenders live on their phones</b>: recruitment, control, advertising, and payment all pass through mobile devices and cloud accounts.<sup class="ref">[6]</sup> <a href="Digital_Forensics.html">Digital-forensic</a> extraction of a seized handset can recover chat logs, contact networks, geolocation history, photographs (with EXIF metadata), advertising drafts, and links to payment and crypto wallets. Cloud forensics extends this to backups, synced messages, and stored media that may survive even after a device is wiped.</p>
+<p>The EU course draws on vendor and academic sources — including practitioner guidance from Cellebrite and Magnet Forensics and the surveys of Dubey, Bhatt &amp; Negi and Maras — to stress lawful acquisition, preservation of <a href="Chain_of_Custody.html">chain of custody</a>, and the analysis of communications to reconstruct the network and corroborate victim testimony.<sup class="ref">[6]</sup><sup class="ref">[7]</sup> Because a phone often contains both the evidence of exploitation and the victim's private life, extraction must be scoped and handled with the victim-centred safeguards described below.</p>
+
+<h2 id="s6">6 OSINT on advertisements</h2>
+<p>Much sexual-exploitation and labour-exploitation activity is advertised in the open, on escort directories, classified sites, and job boards, making <a href="OSINT.html">OSINT</a> a powerful entry point.<sup class="ref">[3]</sup> Investigators apply <b>natural-language processing (NLP)</b> to detect the <b>obfuscated lexicons</b> traffickers use to signal availability, control, or coercion while evading keyword filters — deliberately misspelled terms, emoji codes, and coded phrasing. Academic work such as Perez &amp; Rivas and Volodko, Cockbain &amp; Kleinberg demonstrates machine-learning classification of trafficking-linked advertisements from these linguistic signals.<sup class="ref">[8]</sup><sup class="ref">[9]</sup></p>
+<p><b>Reverse image search</b> is a second pillar: the same victim photograph reused across multiple ads, cities, or phone numbers links otherwise separate postings into a single network and can reveal movement over time. Phone numbers, payment handles, and boilerplate ad text act as further pivots. All such collection is subject to <a href="OSINT_Ethics.html">OSINT ethics</a> and to victim-protection constraints, since the subjects of the imagery are often themselves the victims.</p>
+
+<h2 id="s7">7 Cryptocurrency tracing</h2>
+<p>Traffickers increasingly move value in cryptocurrency to advertise, pay associates, and launder proceeds. <a href="Cryptocurrency_Tracing.html">Cryptocurrency tracing</a> follows funds across the public ledger, clustering addresses, identifying exchange deposit points where identity can be compelled, and flagging mixers and privacy tools.<sup class="ref">[3]</sup> Because the blockchain is an immutable public record, crypto flows can corroborate the fiat-side net-worth and expenditure analyses and connect advertising payments to controllers. The technique integrates with the broader <a href="Asset_Tracing.html">asset-tracing</a> and <a href="Money_Laundering.html">money-laundering</a> workflow.</p>
+
+<h2 id="s8">8 Victim-centred approach</h2>
+<p>Throughout, EU, OSCE, and UNODC guidance insists on a <b>victim-centred approach</b>: the financial investigation exists to protect and compensate victims, not merely to convict.<sup class="ref">[3]</sup><sup class="ref">[10]</sup> In practice this means avoiding actions that expose or endanger a victim, treating device data with sensitivity to privacy and trauma, using financial evidence to reduce reliance on repeated victim testimony, and directing confiscated assets toward restitution. UNODC's global reporting and the ILO's economics of forced labour underscore both the scale of the problem and the centrality of the victim's welfare to any legitimate investigation.<sup class="ref">[1]</sup><sup class="ref">[10]</sup></p>
+
+<p class="hatnote">See also: <a href="Money_Laundering.html">Money Laundering</a>, <a href="Asset_Tracing.html">Asset Tracing</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, <a href="Digital_Forensics.html">Digital Forensics</a>, <a href="OSINT.html">OSINT</a>, <a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>ILO / Francavilla, Lyon &amp; De Cock. "Profits and Poverty: The Economics of Forced Labour." 2024.</li>
+<li>FATF. Guidance on the financial flows of human trafficking (parallel financial investigation doctrine). (via EU anti-trafficking course, Ch. 9)</li>
+<li>EU Specialised Training Course Toolkit, Ch. 9 — Financial investigation &amp; OSINT for THB. 2024. (course material)</li>
+<li>Europol. "Tackling Threats, Addressing Challenges" (EMSC). 2024.</li>
+<li>Gorenc, M. "Benford's Law as a Useful Tool to Determine Fraud in Financial Statements." DOI 10.26493/1854-4231.14.19-31.</li>
+<li>Cellebrite (2024); Magnet Forensics (2022) — mobile &amp; cloud forensic guidance (via EU course).</li>
+<li>Dubey, Bhatt &amp; Negi. "Digital forensics techniques and trends." Int. Arab J. IT 20(4). 2023; Maras, "Computer Forensics." 2014.</li>
+<li>Perez &amp; Rivas. NLP detection of trafficking advertisements. 2023. arXiv:2311.13118.</li>
+<li>Volodko, Cockbain &amp; Kleinberg. Machine learning on trafficking-linked online content. 2020.</li>
+<li>UNODC. "Global Report on Trafficking in Persons 2020." 2020.</li>
+</ol>

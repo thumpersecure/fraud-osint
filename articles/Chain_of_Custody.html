@@ -1,0 +1,69 @@
+<!--meta title="Chain of Custody" desc="Unbroken chronological documentation of evidence from acquisition to court, and why gaps make evidence inadmissible." cats="Investigation Technique, Digital Evidence, Legal"-->
+<table class="infobox"><tr><th class="ibtitle" colspan="2">Chain of Custody</th></tr>
+<tr><td class="iblabel">Domain</td><td>Evidence handling</td></tr>
+<tr><td class="iblabel">Purpose</td><td>Prove evidence is authentic and unaltered</td></tr>
+<tr><td class="iblabel">Failure mode</td><td>Gaps &rarr; inadmissibility</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Digital_Forensics.html">Digital Forensics</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a></td></tr>
+</table>
+
+<p>The <b>chain of custody</b> is the unbroken, chronological documentation showing the seizure, custody, control, transfer, analysis and disposition of a piece of evidence — from the moment it is acquired until it is presented in court and beyond. It records <i>who</i> handled the item, <i>when</i>, <i>why</i>, and <i>what</i> was done to it, so that the party offering the evidence can prove it is the same item that was collected and that it has not been altered, substituted or tampered with.<sup class="ref">[1]</sup></p>
+
+<p>Chain of custody is a requirement of the rules of <a href="Evidence_and_Testimony.html">evidence</a> and a central pillar of <a href="Digital_Forensics.html">digital forensics</a>, but it applies to every kind of evidence — a paper document, a hard drive, a blood sample, a seized ledger. For fraud and financial-crime investigators it is the discipline that converts a recovered file or a boxed set of records into something a court will accept.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Definition and purpose</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Why gaps make evidence inadmissible</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Maintaining the chain</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Digital evidence specifics</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Relationship to testimony</a></li>
+<li><span class="tocnumber">6</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Definition and purpose</h2>
+<p>The purpose of the chain of custody is <b>authentication</b>: to establish that the item offered in evidence is what its proponent claims it to be, and that it is in substantially the same condition as when it was collected. Under the rules of evidence, a party cannot simply produce a document or a disk and assert its relevance; it must first lay a foundation showing where the item came from and how it was handled. The chain of custody is that foundation.<sup class="ref">[2]</sup></p>
+
+<p>A complete chain answers four questions for every stage of an item's life: who had it, from when to when, for what purpose, and how it was stored or secured in the interim. Each transfer between custodians is a link; if every link is documented and every custodian can account for the item while it was in their care, the chain is unbroken.</p>
+
+<h2 id="s2">2 Why gaps make evidence inadmissible</h2>
+<p>A <b>gap</b> in the chain — an unexplained period during which an item's whereabouts or handling is undocumented — opens the door to the argument that the evidence could have been altered, contaminated or swapped. Opposing counsel does not have to prove that tampering actually occurred; it is often enough to show that it <i>could</i> have, and that the proponent cannot rule it out. Faced with such doubt, a court may exclude the evidence entirely, or admit it while allowing the jury to give it little weight.<sup class="ref">[1]</sup></p>
+
+<p>This is why chain-of-custody failures are so damaging: they rarely turn on whether the underlying data is genuine, but on whether the investigator can <i>prove</i> it is genuine. A technically flawless forensic image is worthless in court if the investigator cannot account for the drive between seizure and imaging. In digital forensics the standard formulation from ISO/IEC 27037 captures the same idea in three words — an investigation must be <b>auditable</b>, <b>repeatable</b> and <b>reproducible</b>.<sup class="ref">[3]</sup></p>
+
+<div class="notebox">A broken chain of custody does not merely weaken evidence; it can make otherwise decisive evidence legally invisible. Investigators treat custody documentation as being as important as the analysis itself.</div>
+
+<h2 id="s3">3 Maintaining the chain</h2>
+<p>Maintaining an unbroken chain is a matter of disciplined, repetitive procedure rather than technical sophistication. Standard practices include:</p>
+<ul>
+<li><b>Labelling and unique identifiers</b> — every item receives a unique evidence number, tag or barcode at the point of collection, along with a description, date, time and location.</li>
+<li><b>Custody logs</b> — a written or electronic log records every person who takes possession of the item and every transfer, with signatures, dates and reasons. Nothing changes hands without an entry.</li>
+<li><b>Cryptographic hashes</b> — for digital evidence, a hash value (MD5, SHA-1 or SHA-256) is computed at acquisition and re-verified at each stage, giving mathematical proof that the data has not changed. See <a href="Digital_Forensics.html">Digital Forensics</a>.</li>
+<li><b>Multiple copies</b> — investigators create verified forensic copies and preserve the original in secure storage; routine work is done on copies so the original is touched as little as possible.</li>
+<li><b>Work on images, not originals</b> — all analysis is performed on a working copy of a forensic image. The original media is sealed and stored, its hash on record, ready to be re-imaged if a copy is ever challenged.</li>
+<li><b>Secure storage</b> — evidence is kept in access-controlled storage (a safe, a locked evidence room, or an access-logged server), and the storage itself is part of the documented chain.</li>
+</ul>
+
+<table class="wikitable">
+<tr><th>Practice</th><th>What it proves</th></tr>
+<tr><td>Unique labelling</td><td>The item is identifiable and not confused with another</td></tr>
+<tr><td>Custody log with signatures</td><td>Every handler and transfer is accounted for</td></tr>
+<tr><td>Hash verification</td><td>The data is bit-for-bit unchanged</td></tr>
+<tr><td>Work on copies only</td><td>The original is preserved for independent re-examination</td></tr>
+<tr><td>Access-controlled storage</td><td>No unauthorised access during custody</td></tr>
+</table>
+
+<h2 id="s4">4 Digital evidence specifics</h2>
+<p>Digital evidence poses a particular challenge because it can be altered invisibly and without leaving obvious traces. Merely opening a file or booting a suspect computer can change timestamps and system state. The chain-of-custody answer is procedural: acquire with a <a href="Digital_Forensics.html">write-blocker</a>, hash immediately, image bit-by-bit, and thereafter work only on verified copies. The hash recorded at acquisition becomes the anchor of the entire chain — if the same hash can be reproduced later, the data demonstrably has not changed. These practices are codified in ISO/IEC 27037, NIST SP 800-86 and SWGDE guidance.<sup class="ref">[3]</sup></p>
+
+<p>Cloud and third-party data complicate matters: the investigator may never have physical custody of the storage, so the chain must instead document the request, the provider's export process, and the receipt and hashing of the exported data. Business records obtained from a bank or a company are handled similarly, with a custodian's declaration standing in for physical seizure.</p>
+
+<h2 id="s5">5 Relationship to testimony</h2>
+<p>The chain of custody ultimately exists to support <a href="Evidence_and_Testimony.html">testimony</a>. At trial, a witness — often the investigator or an evidence custodian — will testify to how the item was collected and handled, and the custody log supports that account. If the evidence is analysed by a <a href="Report_Writing.html">forensic examiner</a>, that examiner's report and testimony rest on the assumption that what they analysed is authentic; the chain of custody is what makes that assumption defensible. A well-kept chain therefore protects not only the evidence but the credibility of everyone who touched it.</p>
+
+<p class="hatnote">See also: <a href="Digital_Forensics.html">Digital Forensics</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>, <a href="Document_Examination.html">Document Examination</a>, <a href="Report_Writing.html">Report Writing</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Maras, M.-H. "Computer Forensics: Cybercriminals, Laws, and Evidence." 2014 (chain-of-custody and admissibility).</li>
+<li>AICPA. Federal Rules of Evidence 901 (authentication) and related foundation requirements, as cited in Crain, Hopwood, Pacini &amp; Young, "Essentials of Forensic Accounting," 2015.</li>
+<li>ISO/IEC 27037:2012, "Guidelines for identification, collection, acquisition and preservation of digital evidence" (auditability, repeatability, reproducibility); NIST SP 800-86. <a class="external" href="https://csrc.nist.gov/pubs/sp/800/86/final">https://csrc.nist.gov/pubs/sp/800/86/final</a></li>
+</ol>

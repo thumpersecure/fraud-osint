@@ -1,0 +1,69 @@
+<!--meta title="Document Examination" desc="Physical and questioned-document forensics: microscopy, spectral imaging, indented-impression and ink-dating analysis, and forgery detection." cats="Investigation Technique, Forensics, Document Analysis"-->
+<table class="infobox"><tr><th class="ibtitle" colspan="2">Document Examination</th></tr>
+<tr><td class="iblabel">Also called</td><td>Questioned-document examination (QDE)</td></tr>
+<tr><td class="iblabel">Object</td><td>Physical and electronic documents</td></tr>
+<tr><td class="iblabel">Aims</td><td>Authenticate, date, attribute, detect alteration</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Digital_Forensics.html">Digital Forensics</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a></td></tr>
+</table>
+
+<p><b>Document examination</b> — in its classical form <b>questioned-document examination</b> — is the forensic discipline that determines the authenticity, origin, authorship and history of a document, and detects alteration or forgery. It spans two increasingly connected domains: the <i>physical</i> analysis of paper, ink and impressions, and the <i>electronic</i> analysis of digital documents through their metadata and hidden content. In fraud investigation it is used to expose forged signatures, altered contracts, backdated agreements, fabricated invoices and manipulated financial records.<sup class="ref">[1]</sup></p>
+
+<p>The discipline sits alongside <a href="Digital_Forensics.html">digital forensics</a> and, like it, depends on strict <a href="Chain_of_Custody.html">chain of custody</a> and on methods that will survive scrutiny under the <a href="Evidence_and_Testimony.html">reliability standards</a> for expert testimony.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Physical examination and microscopy</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Spectral and hyperspectral imaging</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Indented-impression analysis</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Ink dating and chemistry</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Signature and forgery analysis</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Electronic documents: metadata and steganography</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Physical examination and microscopy</h2>
+<p>The starting point is direct optical examination. Under magnification — from a simple loupe to a stereomicroscope — an examiner studies the way ink sits on paper, the sequence in which crossing lines were written, printing-process artefacts, erasures, and mechanical alterations. Microscopy can reveal, for example, that two entries on a ledger were made with different pens, or that a figure was overwritten. It also distinguishes genuine printing (offset, laser, inkjet) from photocopies and reveals the tell-tale toner or dot patterns each process leaves behind (general knowledge).</p>
+
+<h2 id="s2">2 Spectral and hyperspectral imaging</h2>
+<p>Many features invisible under ordinary light appear under other parts of the spectrum. <b>Ultraviolet (UV)</b> illumination makes security features, optical brighteners in paper, and some alterations fluoresce, and can reveal where an original coating has been disturbed. <b>Infrared (IR)</b> imaging exploits the fact that visually similar inks often differ in their IR absorption or luminescence: an addition made with a different ink, though the same colour to the eye, can stand out sharply in the infrared, exposing insertions and alterations.<sup class="ref">[2]</sup></p>
+
+<p><b>Hyperspectral imaging</b> extends this idea by capturing an image across many narrow spectral bands at once, producing a spectral "fingerprint" for each point on the page. This allows inks that are indistinguishable to the eye and even to conventional IR to be separated, and can help establish that different portions of a document were written with different inks — a common indicator of alteration or of text added after the fact.</p>
+
+<h2 id="s3">3 Indented-impression analysis</h2>
+<p>When someone writes on a pad of paper, the pressure of the pen leaves latent indentations on the sheets beneath. <b>Indented-impression analysis</b> recovers this writing from a page that appears blank. The classic instrument is the electrostatic detection device (ESDA), which develops the indentations without damaging the document, allowing an examiner to read what was written on a now-missing page above — often revealing the true sequence in which pages of a set were prepared, or content the author never intended to be recovered (general knowledge).</p>
+
+<h2 id="s4">4 Ink dating and chemistry</h2>
+<p>A frequent question in fraud cases is <i>when</i> an entry was made — whether a document was genuinely signed on its stated date or backdated. Ink dating attacks this through chemistry. Analytical methods include:</p>
+<ul>
+<li><b>Thin-layer chromatography (TLC)</b> — separates the dyes and components of an ink, giving a compositional profile that can distinguish one ink formulation from another.</li>
+<li><b>High-performance liquid chromatography (HPLC)</b> — a more sensitive separation technique used to measure ink components and, in some approaches, the ageing of solvents in the ink over time.</li>
+<li><b>Mass spectrometry</b> — identifies the specific chemical constituents of an ink with high precision, often coupled to a chromatographic separation.</li>
+<li><b>Raman and infrared (IR) spectroscopy</b> — non-destructive vibrational techniques that characterise inks and pigments in place, useful for comparing whether two marks share the same formulation.</li>
+</ul>
+<p>Two broad strategies exist: <i>static</i> comparison, which asks whether an ink's formulation is consistent with (or existed at) the claimed date, and <i>dynamic</i> analysis, which measures the ongoing evaporation or drying of solvents to estimate how long ago a line was written. Ink dating is genuinely difficult and contested; results are usually expressed as ranges or consistency findings rather than exact dates, and examiners are careful to state these limits — a caution reinforced by the <a href="Evidence_and_Testimony.html">Daubert</a> reliability standard.<sup class="ref">[2]</sup></p>
+
+<table class="wikitable">
+<tr><th>Technique</th><th>What it measures</th><th>Destructive?</th></tr>
+<tr><td>TLC</td><td>Ink dye/component profile</td><td>Yes (small sample)</td></tr>
+<tr><td>HPLC</td><td>Component quantities; solvent ageing</td><td>Yes (small sample)</td></tr>
+<tr><td>Mass spectrometry</td><td>Precise chemical composition</td><td>Usually (sample)</td></tr>
+<tr><td>Raman / IR spectroscopy</td><td>Molecular fingerprint of ink/pigment</td><td>No (in situ)</td></tr>
+</table>
+
+<h2 id="s5">5 Signature and forgery analysis</h2>
+<p>Signature examination compares a questioned signature against known genuine specimens (exemplars). Examiners assess line quality, pen pressure, rhythm, letter forms, proportions and connecting strokes. Forgeries tend to betray themselves through hesitation, tremor, pen lifts, blunt starts and stops, and slavish tracing — signs that the writer was <i>drawing</i> rather than writing fluently. Common forgery types include <i>simulation</i> (copying a genuine signature freehand), <i>tracing</i> (following an underlying image), and <i>freehand</i> or blind forgery (inventing a signature). The reliability of handwriting comparison has itself been examined under evidentiary standards, and modern examiners frame their conclusions probabilistically and support them with documented features rather than bare assertion.</p>
+
+<h2 id="s6">6 Electronic documents: metadata and steganography</h2>
+<p>Documents are now overwhelmingly born-digital, and their examination increasingly overlaps with <a href="Digital_Forensics.html">digital forensics</a>. Two areas are central:</p>
+<ul>
+<li><b>Metadata detection</b> — office documents, PDFs and images carry embedded metadata: creation and modification dates, author names, software versions, revision history, and (in photographs) camera and GPS data. This hidden record frequently contradicts a document's apparent history — for instance, showing that a "contract dated 2019" was actually created last month, or that several supposedly independent invoices were authored by the same account within minutes of one another. Metadata is a powerful and easily overlooked route to detecting backdating and fabrication.</li>
+<li><b>Steganography detection</b> — steganography conceals data <i>within</i> another file (hiding information in the low-order bits of an image, for example). Detection tools look for the statistical signatures that hidden payloads leave behind. In fraud and broader criminal investigation this matters where documents or images are used as covert carriers of exfiltrated data.</li>
+</ul>
+<p>Because electronic evidence is fragile, examiners recover and analyse it from forensic copies under a documented <a href="Chain_of_Custody.html">chain of custody</a>, and record the hash values that prove nothing was altered.</p>
+
+<p class="hatnote">See also: <a href="Digital_Forensics.html">Digital Forensics</a>, <a href="Chain_of_Custody.html">Chain of Custody</a>, <a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Dubey, Bhatt &amp; Negi. "Digital forensics techniques and trends." International Arab Journal of Information Technology 20(4), 2023.</li>
+<li>AICPA / Crain, Hopwood, Pacini &amp; Young. "Essentials of Forensic Accounting." 2015 (document examination and admissibility under Daubert).</li>
+</ol>

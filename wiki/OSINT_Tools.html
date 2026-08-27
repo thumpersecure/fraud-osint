@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Reference catalogue of open-source intelligence tools by category, with a comparison table and prose on tool types">
+<title>OSINT Tools - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li class="active-page"><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">OSINT Tools</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <p>This article is a reference catalogue of widely used <b><a href="OSINT.html">open-source intelligence</a> tools</b>. The tools listed automate or accelerate one or more phases of the <a href="Intelligence_Cycle.html">intelligence cycle</a> — chiefly collection and processing — but none of them performs analysis in the human sense. A guiding principle throughout OSINT practice is that <b>tools assist, they do not replace, the analyst's judgement</b>: a collector can find a username on four hundred sites, but only the investigator can decide which matches are the same person and what that means for the case. The catalogue below is organised first as a comparison table and then as prose describing the main categories.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Comparison table</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">People and identity search</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Domain, IP and infrastructure recon</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Image and geolocation</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Social media</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Archives and preservation</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Cryptocurrency and blockchain</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">See also</a></li>
+<li><span class="tocnumber">9</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Comparison table</h2>
+<table class="wikitable">
+<tr><th>Tool</th><th>Category</th><th>What it does</th><th>URL</th></tr>
+<tr><td><b>Maltego</b></td><td>Link analysis</td><td>Graphs relationships between entities (people, domains, emails, companies) using automated "transforms" that pull and connect data.</td><td><a class="external" href="https://www.maltego.com">maltego.com</a></td></tr>
+<tr><td><b>SpiderFoot</b></td><td>Automated recon</td><td>Runs automated reconnaissance against a target across 200+ data sources, aggregating results into a single graph.</td><td><a class="external" href="https://github.com/smicallef/spiderfoot">github.com/smicallef/spiderfoot</a></td></tr>
+<tr><td><b>theHarvester</b></td><td>Domain / email recon</td><td>Gathers emails, subdomains, hostnames and names from 40+ public sources.</td><td><a class="external" href="https://github.com/laramies/theHarvester">github.com/laramies/theHarvester</a></td></tr>
+<tr><td><b>Shodan</b></td><td>Infrastructure</td><td>Search engine for internet-connected devices and services; finds exposed servers, cameras, industrial systems.</td><td><a class="external" href="https://www.shodan.io">shodan.io</a></td></tr>
+<tr><td><b>Epieos</b></td><td>Email / phone lookup</td><td>Silent lookup of an email or phone number, surfacing a linked Google account, Maps reviews and connected services without alerting the target.</td><td><a class="external" href="https://epieos.com">epieos.com</a></td></tr>
+<tr><td><b>Sherlock</b></td><td>Username enumeration</td><td>Hunts a username across 400+ social and web platforms to map an individual's online footprint.</td><td><a class="external" href="https://github.com/sherlock-project/sherlock">github.com/sherlock-project/sherlock</a></td></tr>
+<tr><td><b>Google Images</b></td><td>Reverse image</td><td>General reverse-image search; broad coverage, good for common objects and web-published photos.</td><td><a class="external" href="https://images.google.com">images.google.com</a></td></tr>
+<tr><td><b>Yandex Images</b></td><td>Reverse image</td><td>Reverse-image search widely regarded as strongest for faces and places.</td><td><a class="external" href="https://yandex.com/images">yandex.com/images</a></td></tr>
+<tr><td><b>TinEye</b></td><td>Reverse image</td><td>Reverse-image search specialised in finding the earliest / original source of an image.</td><td><a class="external" href="https://tineye.com">tineye.com</a></td></tr>
+<tr><td><b>Wayback Machine</b></td><td>Archives</td><td>Serves historical snapshots of web pages, preserving content that has since changed or been deleted.</td><td><a class="external" href="https://web.archive.org">web.archive.org</a></td></tr>
+<tr><td><b>Chainalysis</b></td><td>Crypto tracing</td><td>Market-leading blockchain analytics (Reactor, KYT). See <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>.</td><td><a class="external" href="https://www.chainalysis.com">chainalysis.com</a></td></tr>
+<tr><td><b>Elliptic</b></td><td>Crypto tracing</td><td>UK-based blockchain analytics and wallet screening. See <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>.</td><td><a class="external" href="https://www.elliptic.co">elliptic.co</a></td></tr>
+<tr><td><b>TRM Labs</b></td><td>Crypto tracing</td><td>Blockchain intelligence for compliance and investigation. See <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>.</td><td><a class="external" href="https://www.trmlabs.com">trmlabs.com</a></td></tr>
+</table>
+
+<h2 id="s2">2 People and identity search</h2>
+<p>People-search tooling maps an individual's presence across the internet from a single seed identifier — a name, email, phone number or username. <b>Sherlock</b> takes a username and checks hundreds of platforms for an account of the same handle, quickly sketching a subject's online footprint; because handle reuse is common but not universal, its output is a set of <i>candidates</i> the analyst must still confirm. <b>Epieos</b> works from an email address or phone number and silently reveals connected services — notably a linked Google account and any Google Maps reviews — without contacting or alerting the target, which keeps the enquiry firmly on the passive side of the <a href="OSINT_Ethics.html">passive/active line</a>. In fraud work these tools help attribute anonymous accounts, connect a suspect to a shell company's registration contact, or corroborate a whistleblower's identification of a counterparty during <a href="Intelligence_Cycle.html">fusion</a>.</p>
+
+<h2 id="s3">3 Domain, IP and infrastructure recon</h2>
+<p>Infrastructure tooling investigates the technical footprint behind a website, email or online scheme. <b>theHarvester</b> aggregates emails, subdomains and hostnames from dozens of public sources, useful for mapping the reach of an organisation or a fraudulent operation. <b>SpiderFoot</b> automates broad reconnaissance against a target across more than two hundred sources and assembles the results into a single graph, functioning as an orchestration layer over many smaller lookups. <b>Shodan</b>, a search engine for internet-connected devices, surfaces exposed servers and services and can reveal the hosting infrastructure common to a cluster of fraudulent sites. Because some infrastructure probing edges toward active interaction with a target's systems, analysts must keep these tools on the lawful side of <a href="OSINT_Ethics.html">passive reconnaissance</a> and obtain authorisation before anything more intrusive.</p>
+
+<h2 id="s4">4 Image and geolocation</h2>
+<p>Reverse-image search establishes where else a photograph appears, when it first surfaced, and where it was taken. The three principal engines have complementary strengths: <b>Google Images</b> offers broad general coverage; <b>Yandex Images</b> is widely regarded as the strongest for faces and places; and <b>TinEye</b> specialises in finding an image's earliest, original source — decisive when testing whether a "recent" photo is in fact recycled. Running the same image through all three is standard practice because each indexes a different slice of the web. Combined with the geolocation and imagery techniques discussed under <a href="OSINT_Disciplines.html">GEOINT and IMINT</a>, reverse-image search can place a subject at a location and time, exposing false alibis or confirming the setting of an advertisement in a trafficking enquiry.</p>
+
+<h2 id="s5">5 Social media</h2>
+<p>Social-media monitoring — the discipline of <a href="OSINT_Disciplines.html">SOCMINT</a> — draws on both purpose-built collectors and the manual review of public profiles. <b>Maltego</b> is frequently the analytical hub here: its "transforms" pull data about people, accounts, domains and organisations and render the relationships as an explorable graph, turning scattered social traces into a visible network. In <a href="Occupational_Fraud.html">occupational-fraud</a> cases, public social media can reveal lifestyle inconsistent with declared income — a behavioural <a href="Red_Flags.html">red flag</a> — while in trafficking and organised-fraud cases it can expose the connections between actors. All such collection is bounded by platform terms of service and data-protection law, discussed in <a href="OSINT_Ethics.html">OSINT ethics</a>.</p>
+
+<h2 id="s6">6 Archives and preservation</h2>
+<p>Because online content is mutable, preservation tooling is essential to defensible OSINT. The <b>Wayback Machine</b> serves archived snapshots of web pages, allowing an investigator to demonstrate what a page said on a given date even after it has been edited or removed — a capability that supports the evidentiary <a href="Chain_of_Custody.html">chain of custody</a> and protects findings against later deletion. Archiving a source at the moment of collection, rather than relying on a live URL that may vanish, is a basic discipline of the processing phase of the <a href="Intelligence_Cycle.html">intelligence cycle</a>.</p>
+
+<h2 id="s7">7 Cryptocurrency and blockchain</h2>
+<p>Public blockchains are themselves open sources, and a dedicated class of analytics tools treats the ledger as data to be traced. <b>Chainalysis</b> (with its Reactor investigation and KYT transaction-monitoring products) is the market leader; <b>Elliptic</b> (UK) and <b>TRM Labs</b> are the other major active platforms. These tools cluster addresses, attribute wallets to services, and follow value across the chain. Notably, <b>CipherTrace</b> — once a leading competitor — was acquired by Mastercard in 2021, and Mastercard shut down its key products (Armada, Inspector, Sentry) in March 2024 after the underlying data was called unverifiable and unauditable, leaving it effectively defunct.<sup class="ref">[1]</sup> The methods, tooling and caveats of this area are covered in depth in <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, which links back to broader <a href="Asset_Tracing.html">asset tracing</a> and <a href="Money_Laundering.html">money-laundering</a> investigation.</p>
+
+<p>A recurring theme across every category above is that the commercial and open-source landscape is <b>volatile</b>. Tools are acquired, merged, deprecated or shut down — the CipherTrace episode being a prominent example — and free tools frequently change their access terms, introduce rate limits, or disappear when a maintainer moves on. An investigator who anchors a methodology to a single proprietary tool risks being stranded when it changes; the durable skills are the underlying techniques (link analysis, reverse-image search, infrastructure enumeration, archival preservation), which can be re-implemented across whatever tools happen to be available. This is a further reason the discipline insists that tools serve the method, not the reverse.</p>
+
+<h3>Selecting and combining tools</h3>
+<p>No single tool answers a real investigative question. In practice an enquiry chains several together: a username found through <b>Sherlock</b> is enriched by <b>Epieos</b>, cross-referenced against infrastructure surfaced by <b>theHarvester</b> and <b>SpiderFoot</b>, visualised in <b>Maltego</b>, its images run through reverse-image engines, and every source preserved in the <b>Wayback Machine</b> as it is collected. The analyst's skill lies in sequencing these steps under the <a href="Intelligence_Cycle.html">intelligence cycle</a> and in judging which outputs are reliable enough to act on. Automated aggregation is a convenience, not a conclusion — the same caution that runs through all of <a href="OSINT.html">OSINT</a>. Whichever tools are used, their operation remains bounded by the legal and ethical limits set out in <a href="OSINT_Ethics.html">OSINT ethics</a>, particularly the line between passive and active reconnaissance that some infrastructure and social-collection tools can silently cross.</p>
+
+<h2 id="s8">8 See also</h2>
+<p class="hatnote">See also: <a href="OSINT.html">OSINT</a>, <a href="Intelligence_Cycle.html">Intelligence Cycle</a>, <a href="OSINT_Disciplines.html">OSINT Disciplines</a>, <a href="OSINT_Ethics.html">OSINT Ethics</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, <a href="Asset_Tracing.html">Asset Tracing</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Fortune Crypto (2024). "Mastercard shuts down CipherTrace blockchain analytics products." <a class="external" href="https://fortune.com/crypto/2024/03/13/mastercard-ciphertrace-blockchain-analytics-chainalysis-bitcoin-fog/">fortune.com</a></li>
+<li>Basel Institute on Governance. "Quick guide to open-source intelligence (OSINT)." Quick Guide 17, 2020. <a class="external" href="https://baselgovernance.org/sites/default/files/2021-01/qg17_open-source_intelligence_en.pdf">baselgovernance.org</a></li>
+<li>Tool project pages, as linked in the comparison table above (Maltego, SpiderFoot, theHarvester, Shodan, Epieos, Sherlock, TinEye, Internet Archive).</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_OSINT.html">OSINT</a> | <a href="Category_Tools.html">Tools</a> | <a href="Category_Investigation_Methods.html">Investigation Methods</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

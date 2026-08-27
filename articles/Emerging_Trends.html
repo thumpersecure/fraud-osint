@@ -1,0 +1,62 @@
+<!--meta title="Emerging Trends" desc="AI in fraud detection, AI-driven attacks, crypto fraud, deepfakes, and the 2026 CTA/BOI rollback." cats="Emerging Trends, Analytical Methods, AML Law"-->
+<table class="infobox"><tr><th class="ibtitle" colspan="2">Emerging Trends in Fraud &amp; OSINT</th></tr>
+<tr><td class="iblabel">Focus</td><td>2024&ndash;2026 developments</td></tr>
+<tr><td class="iblabel">Detection side</td><td>Deep learning, Benford + ML, real-time monitoring</td></tr>
+<tr><td class="iblabel">Attack side</td><td>AI-driven fraud, deepfakes, BEC, crypto</td></tr>
+<tr><td class="iblabel">2025 scale</td><td>$4.4T illicit; $579.4B fraud &amp; scam losses</td></tr>
+<tr><td class="iblabel">Regulatory shift</td><td>2026 CTA/BOI reporting rollback</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Analytical_Methods.html">Analytical Methods</a>, <a href="Benfords_Law.html">Benford's Law</a>, <a href="AML_Law.html">AML Law</a></td></tr>
+</table>
+
+<p>This article surveys <b>emerging trends</b> in fraud, forensic accounting, and OSINT for 2024&ndash;2026. Two forces dominate: <b>artificial intelligence</b>, which is simultaneously the most powerful new detection tool and the engine of a new wave of attacks, and a shifting <b>regulatory landscape</b>, most notably the 2026 rollback of beneficial-ownership reporting under the Corporate Transparency Act. Throughout, the recurring professional caution is to keep a <b>human in the loop</b>: machine models surface leads, but a qualified investigator must interpret, verify, and testify to them.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">AI and machine learning in fraud detection</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">The AI-driven attack surge</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Blockchain and cryptocurrency fraud</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Deepfakes and business email compromise</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Real-time monitoring and human-in-the-loop</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">The 2026 CTA / BOI rollback</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">See also</a></li>
+<li><span class="tocnumber">8</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 AI and machine learning in fraud detection</h2>
+<p>Machine learning has moved from research to routine practice in fraud detection. A growing body of systematic literature reviews (SLRs) surveys <b>deep-learning</b> approaches — neural networks that learn fraud patterns from large transaction datasets — with recent surveys catalouging architectures, datasets, and open problems.<sup class="ref">[1]</sup> These methods complement, rather than replace, classical <a href="Analytical_Methods.html">analytical procedures</a>: they excel at flagging anomalies at scale but require careful handling of class imbalance (fraud is rare) and explainability (a flag a court cannot understand is of limited value).</p>
+<p>A notable hybrid trend combines the century-old <a href="Benfords_Law.html">Benford's Law</a> digit test with machine learning. Benford's Law screens for unnatural digit distributions in reported figures; feeding Benford-derived features into ML classifiers improves detection of fabricated numbers, as recent work (Gepp et al.'s "Fraud Detection Triangle" and Benford + ML studies) demonstrates.<sup class="ref">[2]</sup> The pairing exemplifies the wider pattern of augmenting well-understood, defensible forensic tests with statistical learning rather than discarding them.</p>
+
+<h2 id="s2">2 The AI-driven attack surge</h2>
+<p>The same technology arms offenders. The 2026 Nasdaq Verafin Global Financial Crime Report (2025 data) found that <b>90% of surveyed institutions report increased AI-driven attacks</b>, against a backdrop of escalating scale.<sup class="ref">[3]</sup></p>
+<table class="wikitable">
+<tr><th>Metric (Verafin 2026, 2025 data)</th><th>Figure</th></tr>
+<tr><td>Illicit funds flowing globally</td><td><b>$4.4 trillion</b> (up $1.3T since 2023; ~19.2% CAGR)</td></tr>
+<tr><td>Combined bank-fraud + scam losses, 2025</td><td><b>$579.4 billion</b></td></tr>
+<tr><td>Institutions reporting more AI-driven attacks</td><td><b>90%</b></td></tr>
+</table>
+<p>These figures mark a sharp rise from the 2024 edition (2023 data), which reported over $3.1 trillion in illicit funds and roughly $485&ndash;500 billion in fraud and bank-fraud losses.<sup class="ref">[3]</sup> AI lowers the cost and raises the quality of attacks: generative models draft convincing phishing and pretext messages at scale, synthesise voices and faces, and help offenders defeat identity checks. The AFP Payments Fraud surveys corroborate the threat environment, with a large majority of organisations hit each year and business email compromise consistently ranked the leading vector.<sup class="ref">[4]</sup></p>
+
+<h2 id="s3">3 Blockchain and cryptocurrency fraud</h2>
+<p>Cryptocurrency remains a major and evolving fraud surface — as both a target (exchange collapses and thefts) and a laundering rail. The recent case record (see <a href="Case_Studies.html">Case Studies</a>) — <b>FTX</b>, <b>Celsius</b>, and <b>Binance</b>'s AML failures — illustrates the range, from outright misappropriation of customer funds to systemic compliance breakdown. On the detection side, the public and immutable nature of most blockchains is a forensic advantage: <a href="Cryptocurrency_Tracing.html">cryptocurrency tracing</a> clusters addresses, follows funds to exchange off-ramps where identity can be compelled, and flags mixers and privacy tools. The trend is toward integrating on-chain analytics with traditional <a href="Asset_Tracing.html">asset tracing</a> and <a href="Money_Laundering.html">money-laundering</a> analysis, so that fiat and crypto flows are examined as one continuous trail.</p>
+
+<h2 id="s4">4 Deepfakes and business email compromise</h2>
+<p>The convergence of generative AI with <b>business email compromise (BEC)</b> is among the most consequential emerging threats. Traditional BEC — impersonating an executive or vendor to redirect a payment — is now augmented by <b>deepfake audio and video</b>, in which a synthesised voice or face of a trusted person authorises a fraudulent transfer, defeating the "call to confirm" control that once caught such fraud.<sup class="ref">[3]</sup> Because BEC is repeatedly identified as the top payments-fraud vector, defences increasingly emphasise out-of-band verification through independently held contact details, callback procedures resistant to spoofing, and staff training that assumes voice and video can be faked. Deepfakes also threaten <a href="OSINT.html">OSINT</a> and <a href="Anti_Corruption_OSINT.html">anti-corruption</a> work, where fabricated media can be planted to mislead investigators — reinforcing the discipline of verification.</p>
+
+<h2 id="s5">5 Real-time monitoring and human-in-the-loop</h2>
+<p>As attacks accelerate, detection is moving from periodic review toward <b>real-time monitoring</b>: models score transactions as they occur and hold or flag suspicious activity before funds leave. This is a direct response to speed — instant payments and crypto settle in seconds, compressing the window for intervention. Yet the profession's consistent caution is to keep a <b>human in the loop</b>. Automated models generate false positives, can embed bias, and cannot exercise judgment about intent or context; a qualified investigator must review alerts, decide on escalation, and ultimately stand behind conclusions in a <a href="Report_Writing.html">report</a> or as an <a href="Evidence_and_Testimony.html">expert witness</a>. Under the 2023 amendment to Federal Rule of Evidence 702, courts scrutinise whether an expert's opinion reflects a <i>reliable application</i> of a method to the facts — a standard that an unexplained black-box output cannot meet on its own.<sup class="ref">[5]</sup> The trend is therefore not full automation but <b>augmentation</b>: machines for scale and speed, humans for judgment and accountability.</p>
+
+<h2 id="s6">6 The 2026 CTA / BOI rollback</h2>
+<p>A major 2026 regulatory shift concerns <b>beneficial-ownership information (BOI)</b> reporting under the Corporate Transparency Act (CTA). The CTA had required US companies to report their beneficial owners to FinCEN, a measure long sought by anti-money-laundering advocates to pierce shell-company anonymity. After litigation and an interim rule (26 March 2025), FinCEN issued a <b>final rule on 11 August 2026 (effective 14 August 2026)</b> that <b>permanently removes BOI reporting for all US companies and US persons</b>; only foreign entities registered to do business in the US remain reporting companies (and only as to their non-US-person owners), and FinCEN is deleting previously collected US-person BOI.<sup class="ref">[6]</sup></p>
+<p>The practical consequence for investigators is significant: a domestic beneficial-ownership registry that might have accelerated <a href="Asset_Tracing.html">asset tracing</a> and <a href="Anti_Corruption_OSINT.html">anti-corruption</a> due diligence will not, for US entities, exist. The rollback shifts weight back onto traditional investigative methods — <a href="OSINT.html">OSINT</a>, public records, the <a href="Net_Worth_Method.html">net-worth method</a>, and <a href="AML_Law.html">Bank Secrecy Act</a> reporting (CTRs and SARs) — to identify hidden ownership. It is a reminder that the tools available to fraud investigators depend heavily on a policy environment that can move in either direction.</p>
+
+<h2 id="s7">7 See also</h2>
+<p class="hatnote">See also: <a href="Analytical_Methods.html">Analytical Methods</a>, <a href="Benfords_Law.html">Benford's Law</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, <a href="AML_Law.html">AML Law</a>, <a href="Case_Studies.html">Case Studies</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Deep-learning fraud-detection systematic literature reviews. 2025. arXiv:2502.00201; arXiv:2506.10842.</li>
+<li>Gepp, A. et al. "Fraud Detection Triangle" (Benford + ML). Accounting &amp; Finance, 2024. DOI 10.1111/acfi.13192; Benford + ML (ODU, 2025).</li>
+<li>Nasdaq Verafin. "Global Financial Crime Report" 2026 ed. (2025 data): $4.4T illicit; $579.4B losses; 90% report more AI attacks. <a class="external" href="https://verafin.com/nasdaq-verafin-global-financial-crime-report/">verafin.com</a>. 2024 ed.: <a class="external" href="https://verafin.com/2024/02/a-3-1-trillion-financial-crime-epidemic/">$3.1T epidemic</a>.</li>
+<li>AFP. "Payments Fraud and Control Survey" 2025/2026 (BEC #1 vector). <a class="external" href="https://www.financialprofessionals.org/training-resources/resources/survey-research-economic-data/details/payments-fraud">financialprofessionals.org</a>.</li>
+<li>Federal Rule of Evidence 702, 2023 amendment (eff. 1 Dec 2023) — reliable application standard. <a class="external" href="https://www.law.cornell.edu/wex/daubert_standard">law.cornell.edu</a>.</li>
+<li>FinCEN. "Beneficial Ownership Information Reporting Requirement Revision," final rule, 11 Aug 2026 (eff. 14 Aug 2026). <a class="external" href="https://www.federalregister.gov/documents/2026/08/14/2026-16576/beneficial-ownership-information-reporting-requirement-revision">federalregister.gov</a>.</li>
+</ol>

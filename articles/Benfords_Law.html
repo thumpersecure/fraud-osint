@@ -1,0 +1,72 @@
+<!--meta title="Benford's Law" desc="The leading-digit law and its use in detecting fabricated or manipulated financial data." cats="Analytical Methods, Digital Analysis, Fraud Detection"-->
+<table class="infobox"><tr><th class="ibtitle" colspan="2">Benford's Law</th></tr>
+<tr><td class="iblabel">Also known as</td><td>First-digit law, Newcomb–Benford law, law of anomalous numbers</td></tr>
+<tr><td class="iblabel">Formula</td><td>P(d) = log<sub>10</sub>(1 + 1/d)</td></tr>
+<tr><td class="iblabel">First digit "1"</td><td>≈ 30.1%</td></tr>
+<tr><td class="iblabel">Named for</td><td>Frank Benford (1938)</td></tr>
+<tr><td class="iblabel">First noted by</td><td>Simon Newcomb (1881)</td></tr>
+<tr><td class="iblabel">Fraud use</td><td>Digital analysis of unconstrained financial data</td></tr>
+</table>
+
+<p><b>Benford's Law</b> (the <b>first-digit law</b>) is the empirical observation that in many naturally occurring collections of numbers, the leading digit is not uniformly distributed. Instead, the digit <b>1</b> appears as the first significant digit about 30.1% of the time, <b>2</b> about 17.6%, and so on in decreasing probability down to <b>9</b>, which leads only about 4.6% of the time. Because honest financial data drawn from real economic processes tends to conform to this distribution, a marked departure can indicate that figures have been invented, rounded, or manipulated. This makes Benford's Law a widely taught tool of <b>digital analysis</b> within <a href="Analytical_Methods.html">analytical methods</a> for fraud detection.<sup class="ref">[1]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">The law and its formula</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">History</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Application to fraud detection</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Requirements for a valid test</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Limitations</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Recent research</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 The law and its formula</h2>
+<p>For the leading digit <code>d</code> (where d ∈ {1, 2, …, 9}), Benford's Law gives the expected probability as:</p>
+<pre>P(d) = log10(1 + 1/d)</pre>
+<p>The logarithm is base 10. The intuition is that data spanning several orders of magnitude spends proportionally more "time" with a leading 1 than with a leading 9 as it grows multiplicatively — a set of values distributed uniformly on a logarithmic scale produces exactly this pattern. The expected frequencies for each first digit are:</p>
+<table class="wikitable">
+<tr><th>First digit d</th><th>P(d) = log<sub>10</sub>(1 + 1/d)</th><th>Expected frequency</th></tr>
+<tr><td>1</td><td>log10(2)</td><td>30.1%</td></tr>
+<tr><td>2</td><td>log10(3/2)</td><td>17.6%</td></tr>
+<tr><td>3</td><td>log10(4/3)</td><td>12.5%</td></tr>
+<tr><td>4</td><td>log10(5/4)</td><td>9.7%</td></tr>
+<tr><td>5</td><td>log10(6/5)</td><td>7.9%</td></tr>
+<tr><td>6</td><td>log10(7/6)</td><td>6.7%</td></tr>
+<tr><td>7</td><td>log10(8/7)</td><td>5.8%</td></tr>
+<tr><td>8</td><td>log10(9/8)</td><td>5.1%</td></tr>
+<tr><td>9</td><td>log10(10/9)</td><td>4.6%</td></tr>
+</table>
+<p>The frequencies sum to 1. Analogous laws exist for the second digit (which is more nearly uniform), for first-two-digit combinations (10 through 99), and for last digits, all of which examiners use to localize anomalies more precisely than the first digit alone. The first-two-digit test is especially useful in fraud work: it produces 90 expected frequencies rather than 9, so a spike at a specific pair — say, an over-representation of amounts beginning "49" just below a $5,000 approval limit — points directly at threshold-driven manipulation that a first-digit test alone would blur.</p>
+
+<h2 id="s2">2 History</h2>
+<p>The phenomenon was first documented by the astronomer and mathematician <b>Simon Newcomb</b> in 1881, who noticed that the early pages of logarithm tables — those beginning with low digits — were far more worn than the later pages, and inferred that numbers beginning with 1 occur more often. Newcomb even stated the logarithmic frequencies, but his note attracted little attention.<sup class="ref">[2]</sup> The law was rediscovered and popularized in 1938 by the physicist <b>Frank Benford</b>, who tested more than 20,000 numbers drawn from disparate sources — river drainage areas, physical constants, street addresses, populations, and figures from newspapers — and found the same leading-digit distribution recurring across them. The law now carries his name, though it is sometimes credited as the Newcomb–Benford law in recognition of the earlier observation.<sup class="ref">[2]</sup></p>
+
+<h2 id="s3">3 Application to fraud detection</h2>
+<p>Benford's Law entered fraud examination because <i>fabricated</i> numbers rarely obey it. When a person invents figures — padding an expense report, manufacturing invoices, or smoothing earnings — they tend to distribute leading digits too evenly, to over-use middle digits that "look random," or to cluster values just under psychological or approval thresholds. A Benford test compares the observed first-digit distribution of a dataset (for example, all disbursements, journal-entry amounts, or reported account balances) against the expected distribution and measures the goodness of fit, commonly with a chi-square statistic or the mean absolute deviation. Digits that appear far more or far less often than predicted flag a stratum of transactions for manual review. The technique is attractive because it is cheap, scalable to entire transaction populations, and difficult for a fraudster to defeat without knowing the law. In practice it is one screen among several in <a href="Analytical_Methods.html">analytical methods</a>, and its hits are treated as leads that direct sampling, not as proof of wrongdoing.<sup class="ref">[1]</sup></p>
+
+<h2 id="s4">4 Requirements for a valid test</h2>
+<p>Benford's Law only applies to data that meets certain conditions. Applying it to unsuitable data produces false alarms and false comfort in equal measure. Generally accepted requirements are:</p>
+<ul>
+<li><b>Large sample</b> — commonly cited as more than 500 data points, and ideally many thousands, so that the expected small-percentage digits are populated.</li>
+<li><b>Unconstrained values</b> — the numbers must not be assigned or bounded by external rules. Sequentially assigned invoice or check numbers, ZIP codes, telephone numbers, and prices set at $X.99 do not conform.</li>
+<li><b>Spanning several orders of magnitude</b> — the data should range from small to large (e.g., from single dollars to millions), not cluster in a narrow band such as amounts between $40 and $60.</li>
+<li><b>No built-in minimum or maximum</b> — imposed floors or ceilings (like a $10,000 reporting threshold) distort the leading-digit distribution.</li>
+<li><b>Result of a natural or multiplicative process</b> — combinations of many numbers (transaction totals, populations, market values) conform better than tightly engineered figures.</li>
+</ul>
+<p>Disbursement amounts, general-ledger balances, and reported financial-statement line items typically satisfy these conditions, which is why the law is most often used against them.</p>
+
+<h2 id="s5">5 Limitations</h2>
+<p>Benford's Law is a screening tool, not a test of guilt. Conformity does not prove data is clean — a sophisticated manipulator who understands the law can craft figures that conform — and non-conformity does not prove fraud, because legitimate data can fail the test for benign reasons: too small a sample, a constrained range, price points, assigned numbers, or a genuinely unusual but honest business. Statistically, with very large datasets even trivial and lawful deviations become "significant," inflating false positives; with small datasets the test lacks power. It is also blind to schemes that do not alter the leading-digit profile, such as a small number of large fictitious transactions buried in a huge conforming population. For these reasons the law is deployed alongside ratio, trend, and <a href="Analytical_Methods.html">link analysis</a>, and any hit is corroborated with source documents before conclusions are drawn.<sup class="ref">[1]</sup></p>
+
+<h2 id="s6">6 Recent research</h2>
+<p>Contemporary scholarship continues to validate and extend Benford-based detection. Gorenc (2019) examined the law specifically as a tool to determine fraud in financial statements, testing its diagnostic value on reported figures.<sup class="ref">[1]</sup> More recent work integrates Benford features into broader models: Gepp and colleagues (2024) situate Benford's Law within a reframed "fraud detection triangle," combining the digit test with other indicators for stronger predictive performance,<sup class="ref">[3]</sup> and studies pairing Benford's Law with machine-learning classifiers report improved discrimination between fraudulent and legitimate records over either approach alone.<sup class="ref">[4]</sup> These developments position the first-digit law less as a stand-alone verdict and more as a feature within modern <a href="Analytical_Methods.html">predictive analytics</a> for fraud.</p>
+
+<p class="hatnote">See also: <a href="Analytical_Methods.html">Analytical Methods</a>, <a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a>, <a href="Red_Flags.html">Red Flags</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Gorenc, M. "Benford's Law as a Useful Tool to Determine Fraud in Financial Statements." 2019. <a class="external" href="https://doi.org/10.26493/1854-4231.14.19-31">doi:10.26493/1854-4231.14.19-31</a></li>
+<li>Newcomb, S. "Note on the Frequency of Use of the Different Digits in Natural Numbers." 1881; Benford, F. "The Law of Anomalous Numbers." 1938. (historical origin; general knowledge)</li>
+<li>Gepp, A. et al. "Fraud Detection Triangle" (with Benford's Law). <i>Accounting &amp; Finance</i>, 2024. <a class="external" href="https://doi.org/10.1111/acfi.13192">doi:10.1111/acfi.13192</a></li>
+<li>"Benford's Law and machine learning for financial-statement fraud detection." Old Dominion University, 2025. (Benford + ML)</li>
+</ol>

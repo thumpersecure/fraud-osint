@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Landmark and recent financial-fraud cases and the forensic techniques that exposed them.">
+<title>Case Studies - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li class="active-page"><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Case Studies</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <p>This <b>hub article</b> surveys landmark and recent financial-fraud cases, each summarised with the detection or <a href="Forensic_Accounting.html">forensic-accounting</a> angle that exposed it and its ultimate outcome. Cases are grouped into <b>classic</b> matters that shaped the profession and its laws, and <b>recent</b> matters (2020&ndash;2025) spanning corporate, crypto, and family-office fraud. Each entry links to the technique pages most relevant to how it was detected or proven. Figures are stated as reported in the source briefs; several carry <b>corrections</b> noted below to avoid the commonly repeated overstatements.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Summary table</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Classic cases</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Recent cases (2020&ndash;2025)</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Corrections and cautions</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">See also</a></li>
+<li><span class="tocnumber">6</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Summary table</h2>
+<table class="wikitable">
+<tr><th>Case</th><th>Year</th><th>Approx. amount</th><th>Detection / forensic angle</th><th>Outcome</th></tr>
+<tr><td><b>Al Capone</b></td><td>1931</td><td>~$60M/yr income</td><td><a href="Net_Worth_Method.html">Net-worth / indirect method</a> (IRS Intelligence Unit)</td><td>Convicted; 11 years</td></tr>
+<tr><td><b>Enron</b></td><td>2001</td><td>Off-balance-sheet SPEs</td><td><a href="Financial_Statement_Fraud.html">Financial-statement fraud</a>; hidden debt</td><td>Bankruptcy; SOX 2002; Andersen collapsed</td></tr>
+<tr><td><b>WorldCom</b></td><td>2002</td><td>~$3.85B (later &gt;$11B)</td><td>Internal audit; capitalised expenses</td><td>Bankruptcy; Sullivan pleaded guilty</td></tr>
+<tr><td><b>HealthSouth</b></td><td>2003</td><td>~$2.7B inflation</td><td>Earnings-inflation scheme</td><td>15 execs guilty; Scrushy acquitted</td></tr>
+<tr><td><b>Madoff</b></td><td>2008</td><td>~$64.8B notional</td><td><a href="Analytical_Methods.html">Impossibility analysis</a> (Markopolos)</td><td>150 years; ~$17&ndash;20B principal lost</td></tr>
+<tr><td><b>Lehman Brothers</b></td><td>2008</td><td>~$50B "Repo 105"</td><td>Examiner report; off-balance-sheet</td><td>Largest US bankruptcy</td></tr>
+<tr><td><b>Theranos</b></td><td>2022</td><td>&gt;$140M wire</td><td>Investor / product fraud</td><td>Holmes convicted; 135 months</td></tr>
+<tr><td><b>Wirecard</b></td><td>2020</td><td>&euro;1.9B fake cash</td><td>Audit refusal; forged bank certs</td><td>Collapse; Braun arrested; Marsalek fugitive</td></tr>
+<tr><td><b>FTX / SBF</b></td><td>2022&ndash;24</td><td>~$8B customer funds</td><td>Controls "complete failure" (Ray III)</td><td>Convicted 7 counts; 25 years</td></tr>
+<tr><td><b>Binance / CZ</b></td><td>2023&ndash;24</td><td>$4.3B resolution</td><td>BSA/<a href="AML_Law.html">AML</a> + sanctions failures</td><td>Guilty; $50M fine; 4 months</td></tr>
+<tr><td><b>Archegos / Hwang</b></td><td>2024</td><td>~$36B; banks &gt;$10B loss</td><td>Swap-based manipulation</td><td>Convicted; 18 years</td></tr>
+<tr><td><b>Celsius / Mashinsky</b></td><td>2024&ndash;25</td><td>~$20B deposits</td><td>Token manipulation; misleading customers</td><td>Guilty; 12 years</td></tr>
+</table>
+
+<h2 id="s2">2 Classic cases</h2>
+<p>The classic cases are studied less for their headline numbers than for what each taught the profession. Capone established that income can be proven <i>indirectly</i> when direct records are absent. Enron, WorldCom, HealthSouth, and Lehman are the canon of <a href="Financial_Statement_Fraud.html">financial-statement fraud</a> — showing, respectively, how off-balance-sheet vehicles, expense capitalisation, top-down earnings targets, and quarter-end window-dressing distort the picture investors see. Madoff and Theranos broaden the lens from cooked books to fabricated <i>substance</i>: a fund that never traded and a device that never worked. Read together, they map the detection controls — indirect proof, internal audit, whistle-blower tips, analytical impossibility tests, and independent examiners — that a modern investigator deploys.</p>
+<h3>Al Capone (1931)</h3>
+<p>The prosecution of Al Capone is the foundational case for indirect-proof forensic accounting. Capone earned roughly $60 million a year in illegal income yet filed no returns. The IRS Intelligence Unit, led by Elmer Irey with agent Frank Wilson, applied the <a href="Net_Worth_Method.html">net-worth / indirect method</a> — reconstructing income from spending and asset accumulation rather than from books that did not exist. Capone was convicted on 17 October 1931 and sentenced to eleven years, establishing techniques still used against organised crime and, today, <a href="Human_Trafficking_Finance.html">human-trafficking finance</a>.<sup class="ref">[1]</sup></p>
+
+<h3>Enron (2001)</h3>
+<p>Enron hid debt and losses in off-balance-sheet special-purpose entities orchestrated by CFO Andrew Fastow, a paradigm <a href="Financial_Statement_Fraud.html">financial-statement fraud</a>. It filed for Chapter 11 on 2 December 2001 in what was then the largest US bankruptcy, and auditor Arthur Andersen was convicted over document shredding and collapsed. Enron directly produced the Sarbanes-Oxley Act of 2002, reshaping <a href="Forensic_Accounting.html">forensic accounting</a> and internal control.<sup class="ref">[1]</sup><sup class="ref">[2]</sup></p>
+
+<h3>WorldCom (2002)</h3>
+<p>CFO Scott Sullivan capitalised roughly $3.85 billion (ultimately more than $11 billion) of ordinary operating expenses, inflating profit. The fraud was caught internally by VP of Internal Audit <b>Cynthia Cooper</b>, who escalated to the audit committee in June 2002 — a landmark illustration of internal audit and whistle-blowing as detection controls (consistent with the ACFE finding that tips are the leading detection method).<sup class="ref">[1]</sup><sup class="ref">[3]</sup></p>
+
+<h3>HealthSouth (2003)</h3>
+<p>CEO Richard Scrushy directed approximately $2.7 billion of earnings inflation from 1996 to 2002. Fifteen executives, including five CFOs, pleaded guilty; Scrushy himself was acquitted in 2005, a much-studied outcome on the difficulty of proving executive knowledge in accounting fraud.<sup class="ref">[1]</sup><sup class="ref">[4]</sup></p>
+
+<h3>Bernie Madoff (2008)</h3>
+<p>Madoff ran the largest Ponzi scheme in history, with roughly $64.8 billion in <i>notional</i> (fabricated statement) value across 40,000+ investors. Analyst <b>Harry Markopolos</b> proved mathematically that Madoff's claimed returns were impossible and warned the SEC repeatedly from 2000 to 2008, warnings that were ignored — a classic use of <a href="Analytical_Methods.html">analytical procedures</a> to detect fraud that direct audit missed. Madoff was sentenced to 150 years. <b>Correction:</b> the $64.8B is the notional figure on fake statements; actual principal lost is estimated at ~$17&ndash;20B (see &sect;4).<sup class="ref">[1]</sup></p>
+
+<h3>Lehman Brothers (2008)</h3>
+<p>Lehman used an accounting device called <b>"Repo 105"</b> to move roughly $50 billion off its balance sheet at quarter-end, masking leverage from investors. The scheme was documented in the 2,200-page examiner's report by Anton Valukas (11 March 2010), which found auditor Ernst &amp; Young was aware of the practice. Lehman's failure was the largest US bankruptcy and a trigger of the 2008 crisis.<sup class="ref">[1]</sup><sup class="ref">[5]</sup></p>
+
+<h3>Theranos / Elizabeth Holmes (2022)</h3>
+<p>Theranos represented a fraud of technological capability rather than the books: founder Elizabeth Holmes misrepresented the performance of the company's blood-testing devices to investors. She was convicted on 3 January 2022 on four counts of investor fraud (more than $140 million in wire fraud) and sentenced on 18 November 2022 to 135 months. The case underscores that <a href="Red_Flags.html">red flags</a> around unverifiable technical claims are within the forensic investigator's remit.<sup class="ref">[1]</sup></p>
+
+<h2 id="s3">3 Recent cases (2020&ndash;2025)</h2>
+<p>The recent wave concentrates in two arenas: audit-confirmation fraud in traditional finance (Wirecard) and the crypto sector, where the collapse of exchanges and lending platforms exposed an almost total absence of the controls the classic cases had forced onto public companies. A striking through-line is that the crypto failures were caught not by sophisticated analytics but by liquidity runs that revealed missing customer funds — after which forensic teams found, in John Ray III's words on FTX, a "complete failure" of basic record-keeping. These cases are where <a href="Cryptocurrency_Tracing.html">cryptocurrency tracing</a>, <a href="Digital_Forensics.html">digital forensics</a>, and <a href="AML_Law.html">AML</a> enforcement now do the heavy lifting.</p>
+<h3>Wirecard (2020)</h3>
+<p>The German payments firm Wirecard collapsed in June 2020 after &euro;1.9 billion of purported "escrow cash" was found not to exist, supported by forged bank confirmations. Auditor EY refused to sign the 2019 accounts, precipitating the collapse. CEO Markus Braun was arrested; COO <b>Jan Marsalek</b> fled and remains a fugitive with reported Russian-intelligence links. Wirecard is a modern lesson in confirmation fraud and the limits of external audit.<sup class="ref">[1]</sup></p>
+
+<h3>FTX / Sam Bankman-Fried (2022&ndash;24)</h3>
+<p>The crypto exchange FTX collapsed with roughly $8 billion of customer funds missing, commingled with affiliated trading firm Alameda Research. Restructuring officer <b>John J. Ray III</b> — who had overseen the Enron cleanup — called the controls a "complete failure," citing an absence of records, unencrypted private keys, and use of QuickBooks. SBF was convicted on seven counts in November 2023 and sentenced on 28 March 2024 to 25 years plus $11 billion forfeiture. The case links directly to <a href="Cryptocurrency_Tracing.html">cryptocurrency tracing</a> and <a href="Digital_Forensics.html">digital forensics</a>.<sup class="ref">[1]</sup> Forensically, FTX is instructive precisely because the fraud hid in the <i>absence</i> of infrastructure that any public company would take for granted: no reliable ledger existed to falsify, so investigators reconstructed the flow of customer funds into Alameda from bank records, blockchain analysis, and the recollections of insiders who cooperated. It is the mirror image of Enron, where the fraud lived in <i>too much</i> engineered structure; here it lived in the void where controls should have been.</p>
+
+<h3>Binance / Changpeng Zhao (2023&ndash;24)</h3>
+<p>Unlike the others, Binance was a <a href="AML_Law.html">compliance</a> case rather than a theft: the exchange pleaded guilty to Bank Secrecy Act / anti-money-laundering and sanctions violations, having failed to report 100,000+ suspicious transactions. The $4.3 billion resolution, CZ's guilty plea (November 2023), $50 million personal fine, and four-month sentence (April 2024) mark one of the largest AML enforcement actions on record. CZ was pardoned in October 2025.<sup class="ref">[1]</sup></p>
+
+<h3>Archegos / Bill Hwang (2024)</h3>
+<p>Bill Hwang's family office Archegos Capital Management imploded in March 2021, causing bank losses exceeding $10 billion on a portfolio with roughly $36 billion of exposure built through <b>total-return swaps</b> that concealed his positions. Hwang was convicted in July 2024 of racketeering, securities fraud, and market manipulation, and sentenced (20 November 2024) to 18 years — a case turning on <a href="Analytical_Methods.html">analysis</a> of derivative positions and concentration.<sup class="ref">[1]</sup></p>
+
+<h3>Celsius / Alex Mashinsky (2024&ndash;25)</h3>
+<p>The crypto-lending platform Celsius collapsed in 2022 with roughly $20 billion in deposits at stake. Founder Alex Mashinsky was found to have misled customers and manipulated the CEL token while personally pocketing about $48 million. He pleaded guilty in December 2024 and was sentenced on 8 May 2025 to 12 years. <b>Correction:</b> the widely cited "$4.7B" figure is the amount of a Federal Trade Commission settlement, <i>not</i> the size of customer losses (see &sect;4).<sup class="ref">[1]</sup> Celsius also illustrates <b>token manipulation</b> as a distinct forensic problem: because a platform can influence the market price of its own token, apparent asset values on its books may be partly self-manufactured, so an investigator must test whether reserves are genuinely independent of the issuer's own trading. The same skepticism that <a href="Analytical_Methods.html">analytical methods</a> bring to earnings figures applies to crypto balance sheets.</p>
+
+<h3>Common threads across the recent cases</h3>
+<p>Three lessons recur across FTX, Binance, Archegos, and Celsius. First, <b>opacity of structure</b> — commingled accounts, undisclosed swaps, self-issued tokens — is itself a red flag, because complexity that serves no legitimate business purpose usually serves to hide something. Second, <b>speed defeats periodic controls</b>: crypto and derivative positions move faster than quarterly audits, which is a principal driver of the shift toward the real-time monitoring discussed in <a href="Emerging_Trends.html">Emerging Trends</a>. Third, <b>enforcement now spans theft and compliance</b>: Binance was punished not for stealing customer funds but for failing to operate the <a href="AML_Law.html">anti-money-laundering</a> controls that would have surfaced others' crimes — a reminder that the absence of a control can be the offence.</p>
+
+<h2 id="s4">4 Corrections and cautions</h2>
+<p>Popular coverage of these cases repeats several figures that conflate different quantities. Two are corrected here to keep the wiki accurate.</p>
+<table class="wikitable">
+<tr><th>Case</th><th>Commonly cited</th><th>Correction</th></tr>
+<tr><td><b>Madoff</b></td><td>"$65 billion stolen"</td><td>$64.8B is the <b>notional</b> value shown on fabricated statements; actual <b>principal</b> lost is estimated at ~$17&ndash;20B. The difference is fictitious "profit" that never existed.</td></tr>
+<tr><td><b>Celsius</b></td><td>"$4.7 billion loss / fraud"</td><td>$4.7B is the figure from the <b>FTC settlement</b>, not the magnitude of customer losses (~$20B in deposits were at stake).</td></tr>
+</table>
+<p>The general caution: <b>notional, exposure, deposits, losses, settlements, and forfeitures are different measures.</b> A responsible forensic <a href="Report_Writing.html">report</a> states which measure a figure represents. Amounts in the summary table above are labelled accordingly.</p>
+
+<h2 id="s5">5 See also</h2>
+<p class="hatnote">See also: <a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a>, <a href="Net_Worth_Method.html">Net Worth Method</a>, <a href="Analytical_Methods.html">Analytical Methods</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, <a href="AML_Law.html">AML Law</a>, <a href="Emerging_Trends.html">Emerging Trends</a>, <a href="Occupational_Fraud.html">Occupational Fraud</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>BRIEF: Landmark &amp; recent fraud cases (sourced) — case facts, dates, amounts, and corrections. (source brief material)</li>
+<li>Healy, P.M. &amp; Palepu, K.G. "The Fall of Enron." J. Economic Perspectives 17(2):3&ndash;26. 2003. DOI 10.1257/089533003765888403.</li>
+<li>Sullivan, R. "WorldCom: A case study in corporate fraud." Corporate Governance 12(4). 2004.</li>
+<li>Klein, A. "HealthSouth: A case study in corporate fraud." J. Business Ethics 88(2). 2009.</li>
+<li>Valukas, A.R. "Lehman Brothers: Examiner's Report." US Bankruptcy Court, SDNY, 9 vols. 2010 ("Repo 105").</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Case_Studies.html">Case Studies</a> | <a href="Category_Forensic_Accounting.html">Forensic Accounting</a> | <a href="Category_Financial_Statement_Fraud.html">Financial Statement Fraud</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>
