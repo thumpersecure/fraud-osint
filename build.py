@@ -35,6 +35,12 @@ SIDEBAR = [
         ("Analytical Methods", "Analytical_Methods.html"),
         ("Benford's Law", "Benfords_Law.html"),
         ("Net Worth Method", "Net_Worth_Method.html"),
+        ("The ACFE Report to the Nations and Fraud Benchmark Surveys", "ACFE_Report_to_Nations.html"),
+        ("Analytical Fraud-Detection Techniques: Benford's Law and Journal Entry Testing", "Fraud_Detection_Analytics.html"),
+        ("The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF", "AML_Statutory_Framework.html"),
+        ("Anti-Bribery Law: The FCPA and UK Bribery Act", "Anti_Bribery_Statutes.html"),
+        ("Professional Ethics Standards for Forensic Accountants", "Forensic_Accountant_Ethics.html"),
+        ("U.S. Federal Financial Crime Enforcement Agencies", "Federal_Enforcement_Agencies.html"),
     ]),
     ("following the money", [
         ("Money Laundering", "Money_Laundering.html"),
@@ -56,6 +62,24 @@ SIDEBAR = [
         ("Interviewing", "Interviewing.html"),
         ("Evidence and Testimony", "Evidence_and_Testimony.html"),
         ("Report Writing", "Report_Writing.html"),
+        ("Digital Forensics in Human Trafficking Financial Investigations", "Trafficking_Financial_Investigation.html"),
+    ]),
+    ("forensic science standards", [
+        ("The Forensic Science Validity Crisis", "Forensic_Validity_Crisis.html"),
+        ("Daubert, Frye, and Expert Testimony Admissibility", "Daubert_Standard.html"),
+        ("The Brandon Mayfield Misidentification", "Brandon_Mayfield_Case.html"),
+        ("The CSI Effect", "CSI_Effect.html"),
+        ("The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)", "SWG_Standards_Bodies.html"),
+        ("NIST OSAC and the Modern Forensic Standards Ecosystem", "NIST_OSAC.html"),
+        ("International Digital Forensics Standards: ISO, ENFSI, and INTERPOL", "International_Forensic_Standards.html"),
+    ]),
+    ("digital forensics", [
+        ("The Digital Forensic Investigation Lifecycle", "Digital_Forensic_Lifecycle.html"),
+        ("Data Standards for Cyber-Investigation: CASE, UCO, and WANDA", "Data_Standards_Cyber_Investigation.html"),
+        ("Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor", "Digital_Forensics_Tools.html"),
+        ("Video and Multimedia Forensics: Tools and Certification", "Video_Forensics.html"),
+        ("Machine Learning in Digital Forensics and the Explainability Problem", "ML_Forensics_Explainability.html"),
+        ("Cloud, IoT, and Mobile Forensics Challenges", "Cloud_IoT_Forensics.html"),
     ]),
     ("applied", [
         ("Elder Financial Exploitation", "Elder_Financial_Exploitation.html"),
@@ -63,6 +87,11 @@ SIDEBAR = [
         ("Anti-Corruption OSINT", "Anti_Corruption_OSINT.html"),
         ("Case Studies", "Case_Studies.html"),
         ("Emerging Trends", "Emerging_Trends.html"),
+        ("Occupational Stress and Burnout in Forensic Practice", "Forensic_Practitioner_Burnout.html"),
+        ("AI and the Future of Fraud Detection Technology", "AI_Fraud_Detection_Platforms.html"),
+    ]),
+    ("case studies", [
+        ("Major Financial Fraud Case Studies: Enron to Archegos", "Major_Fraud_Case_Studies.html"),
     ]),
 ]
 
@@ -146,12 +175,23 @@ def parse_meta(text):
 REPORT_ORDER = [
     "Forensic_Accounting", "Fraud_Triangle", "Fraud_Tree", "Occupational_Fraud",
     "Financial_Statement_Fraud", "Red_Flags", "Analytical_Methods", "Benfords_Law",
-    "Net_Worth_Method", "Money_Laundering", "Asset_Tracing", "Cryptocurrency_Tracing",
+    "Fraud_Detection_Analytics", "Net_Worth_Method",
+    "ACFE_Report_to_Nations", "Forensic_Accountant_Ethics", "Federal_Enforcement_Agencies",
+    "Anti_Bribery_Statutes", "AML_Statutory_Framework",
+    "Money_Laundering", "Asset_Tracing", "Cryptocurrency_Tracing",
     "AML_Law", "OSINT", "Intelligence_Cycle", "OSINT_Tools", "OSINT_Disciplines",
-    "OSINT_Ethics", "Digital_Forensics", "Chain_of_Custody", "Document_Examination",
+    "OSINT_Ethics",
+    "Forensic_Validity_Crisis", "Daubert_Standard", "Brandon_Mayfield_Case", "CSI_Effect",
+    "SWG_Standards_Bodies", "NIST_OSAC", "International_Forensic_Standards",
+    "Digital_Forensics", "Digital_Forensic_Lifecycle", "Data_Standards_Cyber_Investigation",
+    "Digital_Forensics_Tools", "Video_Forensics", "ML_Forensics_Explainability",
+    "Cloud_IoT_Forensics",
+    "Chain_of_Custody", "Document_Examination",
     "Interviewing", "Evidence_and_Testimony", "Report_Writing",
-    "Elder_Financial_Exploitation", "Human_Trafficking_Finance", "Anti_Corruption_OSINT",
-    "Case_Studies", "Emerging_Trends",
+    "Elder_Financial_Exploitation", "Human_Trafficking_Finance",
+    "Trafficking_Financial_Investigation", "Anti_Corruption_OSINT",
+    "Case_Studies", "Major_Fraud_Case_Studies",
+    "Forensic_Practitioner_Burnout", "AI_Fraud_Detection_Platforms", "Emerging_Trends",
 ]
 
 # Pages that are wiki-furniture, not part of the report narrative.

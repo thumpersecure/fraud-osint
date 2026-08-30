@@ -1,0 +1,93 @@
+<!--meta title="Video and Multimedia Forensics" desc="Axon Investigate, DVR Examiner, and Amped FIVE, and the LEVA/IAI certifications that govern video analysts." cats="Digital Evidence, Investigation Technique, Reference"-->
+
+<p><b>Video and multimedia forensics</b> is the specialized branch of <a href="Digital_Forensics_Tools.html">digital forensics</a> concerned with the recovery, enhancement, and courtroom presentation of video and image evidence, most commonly closed-circuit television (CCTV), digital video recorder (DVR) and network video recorder (NVR) surveillance footage, and body-worn or in-car police camera recordings. The discipline sits at the intersection of forensic science and video engineering: examiners must recover footage from proprietary and often deliberately obscure recording systems, enhance it without introducing artifacts that misrepresent the original content, and document every processing step in a way that survives legal admissibility challenges under standards such as the <a href="Daubert_Standard.html">Daubert standard</a>. This article surveys three named commercial tools that recur across law-enforcement procurement and training materials — Axon Investigate, DVR Examiner, and Amped FIVE — and the two principal certifying bodies for video forensic analysts, the Law Enforcement and Emergency Services Video Association (LEVA) and the International Association for Identification (IAI).</p>
+
+<table class="infobox">
+<tr><th colspan="2">Video Forensics at a Glance</th></tr>
+<tr><td>Recovery tool</td><td>DVR Examiner (DME Forensics / Magnet Forensics)</td></tr>
+<tr><td>Enhancement tool</td><td>Amped FIVE (Amped Software)</td></tr>
+<tr><td>Presentation tool</td><td>Axon Investigate (Axon Enterprise)</td></tr>
+<tr><td>Primary certifications</td><td>LEVA CFVT / CFVA; IAI Forensic Video</td></tr>
+<tr><td>Governing legal standard</td><td><a href="Daubert_Standard.html">Daubert</a> / Frye reliability review</td></tr>
+<tr><td>Related standards body</td><td><a href="NIST_OSAC.html">NIST OSAC</a> (Digital/Multimedia SAC)</td></tr>
+</table>
+
+<div class="toc">
+<div class="toctitle">Contents</div>
+<ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Why Video Evidence Requires a Specialized Workflow</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">DVR Examiner: Forensically Sound Recovery</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Amped FIVE: Enhancement and Defensibility</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Axon Investigate: Timeline Stitching and Court Presentation</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">The Three-Tool Workflow</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">LEVA: Curriculum and Certification</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">The International Association for Identification</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Admissibility and the Case for Process Documentation</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1 Why Video Evidence Requires a Specialized Workflow</h2>
+
+<p>Surveillance video differs from most other categories of <a href="Digital_Forensics_Tools.html">digital evidence</a> in ways that make general-purpose forensic suites poorly suited to it on their own. DVR and NVR systems are typically embedded appliances running proprietary, often password-locked operating systems, storing footage in vendor-specific container formats and codecs rather than standard file systems that a general disk-imaging tool can parse cleanly. Footage is frequently overwritten on a rolling basis within days, and the systems themselves are rarely designed with evidentiary preservation in mind. Once footage is recovered, it commonly requires enhancement — deinterlacing, noise reduction, stabilization, or geometric correction — before an investigator, juror, or witness can reliably interpret what it shows, and any such processing must be documented in enough detail to withstand a defense challenge to its reliability. Finally, real-world video evidence rarely comes from a single camera: reconstructing a sequence of events for a prosecution or civil case typically means synchronizing footage from multiple, unsynchronized camera sources into a single coherent timeline. These three needs — recovery, enhancement, and presentation — map directly onto the three tools discussed below and are widely referenced together in law-enforcement digital-evidence-analyst job postings, such as the Hillsborough County Sheriff's Office's Digital Evidence Analyst position (Job Code W0123), which names DVR Examiner, Amped FIVE, and LEVA/IAI certification among its preferred qualifications.<sup class="ref">[1]</sup></p>
+
+<h2 id="s2">2 DVR Examiner: Forensically Sound Recovery</h2>
+
+<p>DVR Examiner is produced by DME Forensics, which Magnet Forensics acquired in September 2021.<sup class="ref">[2]</sup> The tool performs forensically sound recovery of video and associated metadata directly from standalone DVR and NVR surveillance systems, bypassing the proprietary and often password-protected operating systems those devices run. Rather than attempting to interact with a DVR's native user interface — which may be locked, damaged, or simply incapable of exporting footage in a useful form — DVR Examiner works directly against the device's hard drive, either through a hardware write-blocker connected to the physical drive or against a forensic image of it, applying its own parsing logic to recover video content, including footage that has already been deleted or is no longer accessible through the DVR's own menus, while preserving a documented, defensible chain of custody.</p>
+
+<p>The company was founded in 2012 by Jimmy Schroering, a former examiner in the FBI's Forensic Audio, Video and Image Analysis Unit.<sup class="ref">[2]</sup> That background is frequently cited in company and industry materials as grounding the tool's design in the practical recovery problems federal video examiners encounter in casework, rather than in general-purpose forensic engineering. By the time of the Magnet Forensics acquisition, DVR Examiner was reported to be in use by more than 900 public safety organizations across over 80 countries, reflecting broad adoption among law-enforcement digital evidence units as the standard first step for extracting footage from physical surveillance hardware.<sup class="ref">[2]</sup></p>
+
+<h2 id="s3">3 Amped FIVE: Enhancement and Defensibility</h2>
+
+<p>Amped FIVE, produced by the Italian company Amped Software, is forensic image and video enhancement and analysis software built around a library of more than 140 filters and tools.<sup class="ref">[3]</sup> Its functions span several categories: format conversion between the many proprietary codecs used by surveillance systems; restoration and enhancement operations such as deinterlacing, noise reduction, stabilization, and multi-frame super-resolution; geometric correction, including perspective correction used to make an angled or distorted license plate legible; object tracking; photogrammetric measurement (deriving real-world dimensions, such as a suspect's height, from calibrated video); redaction of faces or other identifying details; and metadata analysis.</p>
+
+<p>The feature most directly relevant to legal admissibility is Amped FIVE's automatic generation of a detailed processing report. Every filter applied, every setting used, and every algorithm invoked during an analysis session is logged automatically into a report intended to make the entire enhancement workflow reproducible and independently reviewable — the same evidentiary property (reproducibility and documented methodology) that underlies the reliability prong of the <a href="Daubert_Standard.html">Daubert</a> framework and Frye-style general-acceptance review in state courts that have not adopted Daubert. Because a video enhancement is only as defensible as an opposing expert's ability to verify that it did not distort or fabricate what the original footage showed, Amped FIVE's report is presented by the company as a tool for meeting that defensibility standard directly, rather than leaving methodology to an examiner's memory or informal notes. Per company materials, Amped FIVE is licensed to more than 1,200 organizations across over 100 countries.<sup class="ref">[3]</sup></p>
+
+<h2 id="s4">4 Axon Investigate: Timeline Stitching and Court Presentation</h2>
+
+<p>Axon Investigate, produced by Axon Enterprise, Inc., is standalone digital video investigation and courtroom-presentation software, distinct from Axon Evidence, the same company's cloud-based digital evidence management system used to store and share body-worn and in-car camera footage.<sup class="ref">[4]</sup> Investigate is purpose-built for detailed, multi-source video analysis and for building court-ready deliverables that can be reviewed offline, without requiring specialized software on the viewing end.</p>
+
+<p>Its core function is stitching multiple, independently sourced video clips — for example, footage from several CCTV cameras covering different angles of the same location, or a mix of surveillance and body-worn camera footage — into a single continuous, time-synchronized timeline. Investigate also supports a synchronized multi-camera "canvas" view for viewing several sources side by side, frame-by-frame navigation and event looping for close examination of a critical moment, and geographic or map overlays that situate footage within a physical location for a jury. Once an analysis is complete, the software can export the assembled timeline as a single self-contained executable file, playable on any PC without installing dedicated software, and it auto-generates PDF reports that embed timing data, analyst annotations, and playable video segments — a format designed specifically for use in depositions and trial presentation.<sup class="ref">[4]</sup></p>
+
+<h2 id="s5">5 The Three-Tool Workflow</h2>
+
+<p>Taken together, Axon Investigate, DVR Examiner, and Amped FIVE illustrate a standard end-to-end video-forensics workflow that recurs across law-enforcement training curricula. Raw CCTV, DVR, NVR, or body-worn-camera footage is first recovered using DVR Examiner, which extracts video and metadata directly from the source hardware while preserving chain of custody. The recovered footage is then enhanced and analyzed using Amped FIVE, whose filter library and automatic processing report make the enhancement both technically effective and legally documentable. Finally, the enhanced footage — often combined with additional camera sources — is assembled into a coherent, defensible multi-source timeline using Axon Investigate, producing the court-ready deliverable that prosecutors, defense counsel, and juries ultimately review. Each stage corresponds to a distinct forensic requirement (defensible acquisition, defensible processing, and legible presentation), and no single tool in the pipeline is designed to fully substitute for the other two.</p>
+
+<h2 id="s6">6 LEVA: Curriculum and Certification</h2>
+
+<p>The Law Enforcement and Emergency Services Video Association (LEVA) is a U.S.-based 501(c)(3) nonprofit organization established in 1989. It began providing specialized forensic video training in 2000 and introduced the discipline's first formal certification program in 2002, making it the field's original certifying body for forensic video analysis.<sup class="ref">[5]</sup></p>
+
+<p>LEVA's core curriculum is organized into four sequential levels:</p>
+
+<table class="wikitable">
+<tr><th>Level</th><th>Course Title</th></tr>
+<tr><td>Level 1</td><td>Forensic Video Analysis &amp; the Law</td></tr>
+<tr><td>Level 2</td><td>Digital Multimedia Evidence Processing</td></tr>
+<tr><td>Level 3</td><td>The Principles of Forensic Video/Image Compare and Contrast</td></tr>
+<tr><td>Level 4</td><td>Advanced Forensic Video Analysis &amp; the Law</td></tr>
+</table>
+
+<p>This curriculum feeds into two distinct certification tracks, differentiated by scope of practice and experience requirements. The <b>Certified Forensic Video Technician (CFVT)</b> credential requires one year of relevant experience and completion of Levels 1 and 2 within three years, and is oriented toward examiners performing evidence processing rather than delivering expert opinion testimony. The <b>Certified Forensic Video Analyst (CFVA)</b> credential is the more advanced track, requiring two years of experience, completion of all four levels within six years, satisfaction of elective requirements, and a case-based interview conducted by LEVA's Certification Committee; it is intended for practitioners who deliver expert courtroom testimony on video analysis. Both certifications require ongoing annual LEVA membership and are subject to a three-year renewal cycle.<sup class="ref">[5]</sup></p>
+
+<h2 id="s7">7 The International Association for Identification</h2>
+
+<p>The International Association for Identification (IAI) was founded in October 1915 in California, originally under the name International Association for Criminal Identification, and is described as the oldest and largest professional forensic-science association in the world, with more than 7,000 members across over 60 countries.<sup class="ref">[6]</sup> While the IAI is best known historically for latent print and crime scene certification, its certification portfolio extends to video forensics as well.</p>
+
+<p>The IAI's Forensic Certification Management Board (FCMB) administers eight certification programs in total: Bloodstain Pattern Analyst, Crime Scene (offered in three tiers — Investigator, Analyst, and Senior Analyst), Footwear, Forensic Art, Forensic Photography, <b>Forensic Video</b>, Latent Print, and Tenprint Fingerprint.<sup class="ref">[6]</sup> In late 2024, the FCMB was accredited by the International Certification Accreditation Council (ICAC), confirming its compliance with <b>ISO/IEC 17024:2012</b>, the international standard governing personnel certification bodies. This accreditation is a notable credibility marker for the IAI's video and other certifications given the increased scrutiny that pattern-based forensic disciplines have faced since the 2009 National Academy of Sciences report and the 2016 PCAST report on feature-comparison methods, both of which found that most forensic disciplines outside nuclear DNA analysis lacked rigorous empirical validation of examiner reliability. The IAI additionally publishes the peer-reviewed <i>Journal of Forensic Identification</i> and hosts an annual conference.<sup class="ref">[6]</sup></p>
+
+<p class="hatnote">See also: <a href="Digital_Forensics_Tools.html">Digital Forensics Tools</a> for the broader landscape of acquisition and analysis software; <a href="Daubert_Standard.html">Daubert Standard</a> for the legal admissibility framework video forensic testimony must satisfy; <a href="NIST_OSAC.html">NIST OSAC</a> for the standards body currently overseeing digital and multimedia forensic standardization in the United States.</p>
+
+<h2 id="s8">8 Admissibility and the Case for Process Documentation</h2>
+
+<p>Video and multimedia forensic conclusions, like other forms of expert testimony, are subject to admissibility review under the <a href="Daubert_Standard.html">Daubert</a> framework in federal court and under Frye's "general acceptance" test in the minority of states that retain it. Both standards ultimately turn on whether a method's reliability can be demonstrated — through testing, known error rates, peer review, or general acceptance in the relevant field — rather than accepted on an examiner's authority alone. This is precisely the design rationale behind Amped FIVE's automatic processing report: a video enhancement that cannot be independently reproduced or reviewed step-by-step is vulnerable to exactly the kind of admissibility challenge that has increasingly targeted other pattern-based forensic disciplines since the 2009 National Academy of Sciences report and the 2016 PCAST report identified widespread gaps in empirical validation across forensic science generally.</p>
+
+<p>The same logic underlies why LEVA and the IAI structure their certifications around documented curricula, tiered experience requirements, and — in the IAI's case — third-party ISO/IEC 17024:2012 accreditation of the certifying body itself, rather than relying on informal, unverified claims of expertise. Within the broader institutional landscape of forensic standards, video and multimedia forensics standardization work in the United States currently sits with the <a href="NIST_OSAC.html">NIST Organization of Scientific Area Committees (OSAC)</a>'s Digital/Multimedia Scientific Area Committee, the successor to the earlier FBI-sponsored Scientific Working Group model. An investigator relying on video forensic evidence — whether recovered with DVR Examiner, enhanced with Amped FIVE, or assembled with Axon Investigate — should treat the underlying processing documentation, and the credentials of the analyst who produced it, as inseparable from the evidentiary weight the footage itself can bear in a legal proceeding.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Hillsborough County Sheriff's Office. "Digital Evidence Analyst" (Job Code W0123), job posting citing DVR Examiner, Amped FIVE, and LEVA/IAI certification as preferred qualifications.</li>
+<li>DME Forensics (a Magnet Forensics company). "DVR Examiner" product documentation. <a class="external" href="https://dvrexaminer.com">https://dvrexaminer.com</a></li>
+<li>Amped Software. "Amped FIVE" product documentation. <a class="external" href="https://ampedsoftware.com">https://ampedsoftware.com</a></li>
+<li>Axon Enterprise, Inc. "Axon Investigate" product page. <a class="external" href="https://www.axon.com/products/investigate">https://www.axon.com/products/investigate</a></li>
+<li>Law Enforcement and Emergency Services Video Association (LEVA International, Inc.). "LEVA Certification Program." <a class="external" href="https://www.leva.org/certification/">https://www.leva.org/certification/</a></li>
+<li>International Association for Identification (IAI). "Certifications." <a class="external" href="https://www.theiai.org/certifications.php">https://www.theiai.org/certifications.php</a></li>
+</ol>

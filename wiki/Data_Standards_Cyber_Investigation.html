@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The competing ontologies built to make digital forensic tool output interoperable, and why none fully solves the problem.">
+<title>Data Standards for Cyber-Investigation: CASE, UCO, and WANDA - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li class="active-page"><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <p>Data standards for cyber-investigation are formal, machine-readable schemas designed to represent digital forensic evidence, tool output, and investigative process in a consistent, tool-independent format. They exist to solve a persistent technical problem in <a href="Digital_Forensics_Tools.html">digital forensics</a>: different forensic tools each produce output in proprietary or inconsistent formats, making it difficult for analysts, or automated systems, to combine, cross-reference, and validate data across tools and cases. Three related efforts — the Unified Cyber Ontology (UCO), the Cyber-investigation Analysis Standard Expression (CASE), and the earlier, narrower WANDA standard — approach this problem from different angles, and a 2020 academic critique argues that none of them, on its own, fully satisfies the reliability requirements that <a href="Daubert_Standard.html">legal admissibility standards</a> and <a href="International_Forensic_Standards.html">international forensic standards</a> demand.</p>
+
+<div class="toc">
+<div class="toctitle">Contents</div>
+<ul>
+<li><span class="tocnumber">1</span> <a href="#s1">The Interoperability Problem</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">UCO: Unified Cyber Ontology</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">CASE: Cyber-investigation Analysis Standard Expression</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">WANDA: A Process-Oriented Precursor</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Stoykova and Franke (2020): The Artefact-Oriented Critique</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">The Proposed WANDA-Based Module for CASE</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Why This Matters for Admissibility</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Current Status and Limitations</a></li>
+</ul>
+</div>
+
+<table class="infobox">
+<tr><th colspan="2">Data Standards at a Glance</th></tr>
+<tr><td><b>UCO</b></td><td>Foundational cybersecurity ontology; broad scope</td></tr>
+<tr><td><b>CASE</b></td><td>Cyber-investigation extension of UCO; artefact-oriented</td></tr>
+<tr><td><b>WANDA</b></td><td>2001–2004 process-oriented standard, built for Daubert</td></tr>
+<tr><td><b>Format</b></td><td>OWL 2 / Turtle (CASE, UCO)</td></tr>
+<tr><td><b>License</b></td><td>Apache-2.0 (CASE, UCO)</td></tr>
+<tr><td><b>Governance</b></td><td>The Linux Foundation, with DFRWS support</td></tr>
+<tr><td><b>Key critique</b></td><td>Stoykova &amp; Franke, SADFE 2020</td></tr>
+</table>
+
+<h2 id="s1">1 The Interoperability Problem</h2>
+<p>A modern digital forensic investigation routinely draws on output from a dozen or more tools: an imaging tool that produces a bit-for-bit disk image, a mobile extraction platform that recovers application artifacts, a video-enhancement suite that generates a processing log, and a memory-forensics utility that flags suspicious processes. Each of these tools was built by a different vendor or open-source project, at a different time, with its own internal data model and export format. Some produce proprietary binary containers; others emit CSV, XML, or plain-text reports with no shared vocabulary for describing what a "file," an "email message," or a "network connection" actually is.</p>
+<p>This fragmentation creates two distinct downstream problems. First, it is difficult for a human analyst to combine outputs from multiple tools into a single coherent timeline or case file without manual, error-prone reformatting. Second, and more consequentially for legal proceedings, it is difficult for anyone — analyst, opposing expert, or court — to independently verify how a given piece of digital evidence was derived, transformed, or interpreted as it moved from raw acquisition through a chain of tool outputs to a final human-readable conclusion. This second problem connects directly to the reliability criteria at the center of the <a href="Daubert_Standard.html">Daubert framework</a>: an expert's methodology must be testable, subject to known error rates, and reproducible. A forensic conclusion built on an unrecorded chain of proprietary tool transformations is difficult to test or reproduce even in principle.</p>
+<p>Ontology-based data standards attempt to solve the first problem — cross-tool combination — directly, by defining a shared, machine-readable vocabulary that any tool vendor can adopt for its output. Whether they also solve the second, process-reliability problem is the central question examined in this article.</p>
+
+<h2 id="s2">2 UCO: Unified Cyber Ontology</h2>
+<p>The <b>Unified Cyber Ontology (UCO)</b> is a community-developed foundational ontology intended to provide a single, consistent model for representing information across the entire cybersecurity domain, not merely cyber-investigation. Its scope extends to network defense, threat intelligence, malware analysis, vulnerability research, and offensive security, rather than each of these subdomains inventing its own incompatible data representation.</p>
+<p>UCO defines general-purpose classes for cyber-relevant objects — items, tools, people, places — and their relationships, along with mechanisms for tracking the provenance of items and actions across an action life-cycle. Because it is deliberately broad, UCO functions as a base layer: other, more specialized ontologies (such as CASE) extend it to add domain-specific vocabulary for their narrower use case.</p>
+<p>UCO is governed under <b>The Linux Foundation</b>, structured as an LF Projects, LLC series, with support from <b>DFRWS</b> (the Digital Forensic Research Workshop, a long-running academic and practitioner community for digital forensics research). Development occurs openly on GitHub.<sup class="ref">[1]</sup></p>
+
+<h2 id="s3">3 CASE: Cyber-investigation Analysis Standard Expression</h2>
+<p>CASE is a domain-specific extension of UCO, purpose-built for cyber-investigations. It is a community-developed, ontology-based specification expressed in <b>W3C OWL 2</b> (Web Ontology Language) using <b>Turtle</b> syntax, a compact, human-readable format for writing RDF (Resource Description Framework) data. The current stable release is v1.5.0, with v1.6.0 and v2.0.0 in development at the time of the underlying research.<sup class="ref">[2]</sup></p>
+<p>CASE's stated goal is to enable automated normalization, combination, interoperability, and validation of heterogeneous information sources produced by different <a href="Digital_Forensics_Tools.html">forensic tools</a>. It achieves this through two central modeling concepts:</p>
+<ul>
+<li><b>Observable Objects</b> — representations of data sources (mobile devices, storage media, memory images) and digital artifacts (files, chat and email messages, documents, multimedia, browser and log history).</li>
+<li><b>Facets</b> — attachable property sets that describe specific characteristics of an Observable Object, allowing the same base object type to be extended with different descriptive detail depending on context.</li>
+</ul>
+<p>Beyond describing artifacts themselves, CASE also models provenance and chain-of-custody structures, tracking investigative actions, actors, tools, and their relationships across the investigation lifecycle. Like UCO, CASE is governed under The Linux Foundation with DFRWS support, and is licensed under the permissive <b>Apache-2.0</b> open-source license, allowing commercial forensic tool vendors to adopt it without licensing friction.</p>
+<p>Despite this broad and actively maintained design, a 2020 academic paper identifies a structural gap in what CASE can represent — one with direct consequences for how digital evidence produced through CASE-compliant tools would hold up under admissibility scrutiny.</p>
+
+<h2 id="s4">4 WANDA: A Process-Oriented Precursor</h2>
+<p>WANDA is a generic, process-oriented data standard originally developed between <b>2001 and 2004</b>, considerably earlier than CASE or UCO, and built for a narrower initial purpose: forensic handwriting analysis and writer identification, specifically the annotation, processing, and storage of digitized handwritten documents. WANDA's defining historical feature is that it was developed <b>explicitly in response to criticisms raised by the <i>Daubert</i> case</b><sup class="ref">[3]</sup> — that is, its designers set out from the start to build a standard that could demonstrate the scientific reproducibility and reliability that <i>Daubert v. Merrell Dow Pharmaceuticals, Inc.</i> (1993) demanded of expert forensic methodology, at a time when much forensic document examination relied on subjective examiner judgment. See <a href="Daubert_Standard.html">Daubert Standard</a> for the underlying legal framework.</p>
+<p>WANDA's core design goal was to let examiners demonstrate that a forensic tool treats all input data consistently, omits no data, and processes everything according to stated forensic objectives — directly countering the risk of subjective, opinion-based evaluation that Daubert's reliability factors were designed to screen out.</p>
+<p>According to Stoykova and Franke (2020), WANDA's key structural advantage is that it is <b>process-oriented</b> rather than artefact-oriented. Concretely, this means WANDA:</p>
+<ul>
+<li>traces back and separately represents <b>human-generated versus machine-generated annotations</b>, so a reviewer can distinguish an examiner's judgment call from an automated processing step;</li>
+<li>documents <b>objective measurements</b> usable for independent algorithm evaluation; and</li>
+<li>separates <b>data, graphical user interfaces, and processing modules</b> for modular quality control, so each component of a tool's pipeline can be tested and validated independently.</li>
+</ul>
+<p>WANDA was never designed to be a general-purpose cyber-investigation data model in the way CASE and UCO are; it originated in a narrower forensic-document context. Its significance for cyber-investigation standards lies in the reproducibility and process-transparency properties it demonstrates, not in its adoption as a general schema.</p>
+
+<h2 id="s5">5 Stoykova and Franke (2020): The Artefact-Oriented Critique</h2>
+<p>Rositsa Stoykova and Katrin Franke's paper, "Standard Representation for Digital Forensic Processing," published in the <i>Proceedings of the 13th International Conference on Systematic Approaches to Digital Forensic Engineering</i> (SADFE 2020), pp. 46–56 (IEEE, DOI 10.1109/SADFE51007.2020.00014), provides the central critical analysis this article draws on.<sup class="ref">[4]</sup></p>
+<p>The paper's central finding is that CASE is <b>"artefact-oriented"</b> and lacks <b>process-level expressivity</b>. In practice, this means CASE can richly describe <i>what</i> a digital artifact is, where it came from, and how it relates to other artifacts and actors in an investigation — but it does not necessarily capture <i>how</i> a tool's internal algorithm transformed raw input data into that artifact. A CASE-compliant record can state that a given file was recovered from a disk image by a named tool at a given time, but it does not, by design, document the algorithmic steps, parameter choices, or intermediate processing states that tool used to arrive at that recovered artifact.</p>
+<p>Stoykova and Franke connect this gap directly to legal reliability standards. They cite <b>EnCase</b> as an example of a "complex tool" whose internal processing and outputs "cannot easily be reversed" — meaning that even a long-established, court-proven forensic suite is not currently required, and its architecture does not readily allow, the kind of transparent, step-by-step processing documentation that a genuinely reproducible scientific methodology would require under <a href="Daubert_Standard.html">Daubert</a>'s reliability factors (testability, known error rate, and standards controlling operation). They similarly discuss open-source tools such as bulk_extractor in terms of the same reliability and validation questions, framed against <b>ISO/IEC 27042</b>, the international standard governing the analysis and interpretation of digital evidence — see <a href="International_Forensic_Standards.html">International Forensic Standards</a> for its continuity, validity, reproducibility, and repeatability requirements.</p>
+<p>The practical consequence is that CASE, as currently specified, is well suited to solving the cross-tool combination problem described in Section 1, but is not, by itself, sufficient to solve the process-reliability problem that admissibility law demands.</p>
+
+<h2 id="s6">6 The Proposed WANDA-Based Module for CASE</h2>
+<p>Having identified this gap, Stoykova and Franke propose integrating a <b>"WANDA-based schema" as a new module within CASE</b>. The intent is for CASE to gain WANDA's process- and reproducibility-documentation strengths — the human/machine annotation distinction, objective algorithm-evaluation measurements, and modular separation of data, interface, and processing components — while retaining CASE's own broader artefact and provenance representation, including its Observable Objects, Facets, and chain-of-custody modeling.</p>
+<p class="hatnote">Note: as of the cited 2020 paper, this integration is a <b>proposal</b>, not an implemented standard. No verified evidence in the underlying research indicates that a WANDA-based module has since been formally adopted into a released CASE specification.</p>
+<p>The proposal illustrates a recurring theme in forensic standards development: a broad, actively governed, industry-adopted schema (CASE) and a narrower, older, more rigorously process-focused schema (WANDA) each solve half of the same underlying problem, and combining their strengths is more straightforward to state as a research recommendation than to execute as a maintained, backward-compatible technical standard with buy-in from tool vendors.</p>
+
+<h2 id="s7">7 Why This Matters for Admissibility</h2>
+<p>The distinction between artefact-oriented and process-oriented representation is not a purely academic modeling concern; it bears directly on how digital evidence is tested in court. Under the <a href="Daubert_Standard.html">Daubert</a> framework and its codification in Federal Rule of Evidence 702, a proponent of expert testimony must show that the testimony is the product of reliable principles and methods, and that those methods were reliably applied to the facts of the case. A forensic tool whose internal processing "cannot easily be reversed," in Stoykova and Franke's phrase, makes it difficult for an opposing expert, or a judge acting as gatekeeper, to independently assess whether the tool's methodology was in fact reliably applied in a given instance.</p>
+<p>International standards move in the same direction as the WANDA-into-CASE proposal, without fully closing the gap on their own. <b>ISO/IEC 27042:2015</b>, discussed at <a href="International_Forensic_Standards.html">International Forensic Standards</a>, requires recording sufficient information about each analytical process so that it can be independently reviewed or reproduced by another qualified examiner — a requirement that aligns conceptually with WANDA's process-transparency goals, but ISO/IEC 27042 is a procedural and quality-assurance standard for laboratories and examiners, not a machine-readable data schema that tool vendors implement. CASE and UCO operate at the data-representation layer; ISO/IEC 27042 operates at the laboratory-process layer. None of the three, individually, gives a court a ready-made, tool-agnostic way to verify that a specific tool's specific algorithmic transformation of specific input data was executed correctly in a specific case.</p>
+
+<h2 id="s8">8 Current Status and Limitations</h2>
+<p>As of the underlying research, UCO and CASE remain the actively governed, community-developed standards in this space, maintained under The Linux Foundation with DFRWS support and licensed Apache-2.0 to encourage broad tool-vendor adoption. WANDA remains a narrower, earlier standard whose main contribution to the present-day discussion is conceptual and historical: it demonstrates that a process-oriented, Daubert-responsive data standard was built once, for a specific forensic sub-discipline, roughly two decades before CASE's artefact-oriented gap was formally identified.</p>
+<p>The Stoykova and Franke critique should be read as a diagnosis and a research proposal, not as evidence that CASE has failed or been superseded. CASE continues to address a real and serious interoperability problem across the fragmented landscape of commercial and open-source <a href="Digital_Forensics_Tools.html">digital forensics tools</a>. What remains unresolved — and what the WANDA-based module proposal was designed to address — is whether any single, widely adopted cyber-investigation data standard can simultaneously satisfy the practical need for cross-tool artifact interoperability and the legal need for process-level reproducibility demanded by <a href="Daubert_Standard.html">admissibility</a> doctrine and by international standards such as <a href="International_Forensic_Standards.html">ISO/IEC 27042</a>. No standard reviewed here fully closes that gap.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Unified Cyber Ontology (UCO) Project. unifiedcyberontology.org; github.com/ucoProject/UCO. <a class="external" href="https://github.com/ucoProject/UCO">https://github.com/ucoProject/UCO</a></li>
+<li>Cyber-investigation Analysis Standard Expression (CASE) Community. caseontology.org; github.com/casework/CASE. <a class="external" href="https://caseontology.org/">https://caseontology.org/</a></li>
+<li>Stoykova, R., &amp; Franke, K. "Standard Representation for Digital Forensic Processing." 2020. <i>Proceedings of the 13th International Conference on Systematic Approaches to Digital Forensic Engineering (SADFE 2020)</i>, pp. 46-56. IEEE. DOI: <a class="external" href="https://doi.org/10.1109/SADFE51007.2020.00014">10.1109/SADFE51007.2020.00014</a></li>
+<li>Daubert v. Merrell Dow Pharmaceuticals, Inc., 509 U.S. 579 (1993).</li>
+<li>International Organization for Standardization / International Electrotechnical Commission. ISO/IEC 27042:2015. 2015. <a class="external" href="https://www.iso.org/standard/44406.html">https://www.iso.org/standard/44406.html</a></li>
+<li>OpenText (formerly Guidance Software). "EnCase Forensic" / "OpenText Forensic (EnCase)." <a class="external" href="https://www.opentext.com/products/forensic">https://www.opentext.com/products/forensic</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Digital_Evidence.html">Digital Evidence</a> | <a href="Category_Digital_Analysis.html">Digital Analysis</a> | <a href="Category_Reference.html">Reference</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

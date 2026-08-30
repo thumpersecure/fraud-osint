@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How confirmation bias in fingerprint &#x27;verification&#x27; led the FBI to wrongly identify an Oregon attorney in the 2004 Madrid bombing.">
+<title>Brandon Mayfield Case - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li class="active-page"><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Brandon Mayfield Case</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <p class="hatnote">See also: <a href="Forensic_Validity_Crisis.html">Forensic Validity Crisis</a> &middot; <a href="SWG_Standards_Bodies.html">SWG Standards Bodies</a> &middot; <a href="Digital_Forensics.html">Digital Forensics</a></p>
+
+<table class="infobox">
+<tr><th colspan="2">Brandon Mayfield Case</th></tr>
+<tr><td>Date of bombing</td><td>March 11, 2004</td></tr>
+<tr><td>Location</td><td>Madrid, Spain (commuter trains)</td></tr>
+<tr><td>Deaths</td><td>191</td></tr>
+<tr><td>Misidentified individual</td><td>Brandon Mayfield, Oregon attorney</td></tr>
+<tr><td>Latent print</td><td>"LFP 17," recovered from a bag of detonators</td></tr>
+<tr><td>Methodology used</td><td>ACE-V (Analysis, Comparison, Evaluation, Verification)</td></tr>
+<tr><td>Arrest date</td><td>May 6, 2004</td></tr>
+<tr><td>Released</td><td>May 20, 2004</td></tr>
+<tr><td>Actual source of print</td><td>Ouhnane Daoud (Algerian national)</td></tr>
+<tr><td>Oversight report</td><td>DOJ OIG, January 2006</td></tr>
+<tr><td>Settlement</td><td>$2 million + formal apology (Nov. 2006)</td></tr>
+</table>
+
+<p>The <b>Brandon Mayfield case</b> is a 2004 wrongful identification in which the U.S. Federal Bureau of Investigation (FBI) erroneously matched a latent fingerprint recovered from the March 11, 2004, Madrid train bombings to Brandon Mayfield, an Oregon attorney with no connection to the attack. Three senior FBI latent print examiners and one court-appointed independent examiner each declared the match a "100 percent" identification using the standard <b>ACE-V</b> (Analysis, Comparison, Evaluation, Verification) methodology. Mayfield was arrested and held for two weeks as a material witness before Spanish authorities identified the print's true source, an Algerian national named Ouhnane Daoud, and the FBI withdrew its identification. The Department of Justice's Office of the Inspector General (OIG) later found the error resulted not from misuse of the USA PATRIOT Act, as widely assumed at the time, but from <b>confirmation bias</b>, <b>circular reasoning</b>, and undue <b>deference to a senior examiner</b> — a methodological and psychological failure inside a discipline long considered infallible. The case is now taught as the canonical illustration of cognitive bias in forensic pattern-matching, cited alongside the broader <a href="Forensic_Validity_Crisis.html">forensic validity crisis</a> documented in the 2009 National Academy of Sciences report and the 2016 PCAST report.</p>
+
+<div class="toc">
+<div class="toctitle">Contents</div>
+<ul>
+<li><span class="tocnumber">1</span> <a href="#s1">The Madrid Bombing and Latent Print LFP 17</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">The FBI Identification via ACE-V</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Arrest and Two-Week Detention</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">The Spanish Dispute and the Match to Ouhnane Daoud</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">The January 2006 DOJ OIG Report</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Root Causes: Confirmation Bias, Circular Reasoning, and Deference</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Not a Patriot Act Failure</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Settlement and Aftermath</a></li>
+<li><span class="tocnumber">9</span> <a href="#s9">Significance for Forensic Standards</a></li>
+<li><span class="tocnumber">10</span> <a href="#s10">Relevance to Digital Forensics and OSINT</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1 The Madrid Bombing and Latent Print LFP 17</h2>
+<p>On March 11, 2004, a coordinated series of bombings on Madrid commuter trains killed 191 people in one of the deadliest terrorist attacks in European history. During the investigation, the Spanish National Police recovered a latent fingerprint from a plastic bag of detonators connected to the attack. That print was designated <b>"LFP 17"</b> (Latent Fingerprint 17) and circulated internationally through Interpol so that partner law-enforcement agencies could search it against their own fingerprint databases.<sup class="ref">[1]</sup></p>
+
+<h2 id="s2">2 The FBI Identification via ACE-V</h2>
+<p>The FBI ran LFP 17 against its Integrated Automated Fingerprint Identification System (IAFIS) database. The search returned a list of candidates, among them Brandon Mayfield, an Oregon attorney and Muslim convert with no known ties to the bombing. Mayfield's prints were on file from an unrelated prior context, and his print became a candidate for comparison.<sup class="ref">[1]</sup></p>
+<p>Fingerprint examination in the United States is governed by a standardized methodology known as <b>ACE-V</b> — Analysis, Comparison, Evaluation, and Verification — codified by the <a href="SWG_Standards_Bodies.html">Scientific Working Group on Friction Ridge Analysis, Study and Technology (SWGFAST)</a>. Under ACE-V, an examiner first analyzes the latent print's quality and features, compares it against a known exemplar, evaluates whether the two prints share a common source, and then a second examiner independently verifies the conclusion. The verification step is intended to function as a check against individual examiner error — but that check depends entirely on the second examiner conducting a genuinely independent, blind review.<sup class="ref">[2]</sup></p>
+<p>In the Mayfield case, three senior FBI latent print examiners applied ACE-V to LFP 17 and each concluded, independently in name, that it was a "100 percent" identification to Mayfield. A fourth examiner — a court-appointed, ostensibly independent expert brought in during subsequent litigation — reviewed the same print and reached the same conclusion. All four examiners were experienced, credentialed practitioners operating within a methodology that had never previously produced a documented misidentification of this magnitude in a case of this profile.<sup class="ref">[1]</sup></p>
+
+<h2 id="s3">3 Arrest and Two-Week Detention</h2>
+<p>On the strength of the FBI's identification, Brandon Mayfield was arrested on <b>May 6, 2004</b>, and held for approximately two weeks as a material witness under provisions of the USA PATRIOT Act. He had no history of involvement with the Madrid attack, and his primary distinguishing characteristics — that he was a Muslim convert and had done unrelated legal work touching on a terrorism-related case — fed public and media speculation about motive that had nothing to do with the physical evidence itself. He was released on <b>May 20, 2004</b>, after the FBI formally withdrew its identification.<sup class="ref">[1]</sup></p>
+
+<h2 id="s4">4 The Spanish Dispute and the Match to Ouhnane Daoud</h2>
+<p>Spanish National Police had disputed the FBI's identification from as early as mid-April 2004, well before Mayfield's arrest, expressing doubt that LFP 17 matched Mayfield's exemplar prints. Spanish authorities continued independently working the print and ultimately matched it to <b>Ouhnane Daoud</b>, an Algerian national with actual ties to the bombing plot. Once the Spanish match to Daoud was confirmed, the FBI withdrew its identification of Mayfield and released him.<sup class="ref">[1]</sup></p>
+<p>The gap between the Spanish police's early doubts and the FBI's continued confidence in its own identification — including through Mayfield's arrest — is itself a documented feature of the case: institutional confidence in an internal conclusion persisted even after an outside agency working the same evidence raised specific, substantive objections.<sup class="ref">[1]</sup></p>
+
+<h2 id="s5">5 The January 2006 DOJ OIG Report</h2>
+<p>The Department of Justice Office of the Inspector General published <i>A Review of the FBI's Handling of the Brandon Mayfield Case</i> (unclassified and redacted) in January 2006. The report is the authoritative post-mortem on the misidentification and remains the primary source for understanding how a well-established, standards-governed forensic discipline could produce a confident but wrong "100 percent" conclusion, verified independently by four separate examiners.<sup class="ref">[3]</sup></p>
+<p>The OIG's central finding was that LFP 17 was an unusually visually similar — but ultimately non-matching — print to Mayfield's known exemplar. The print's inherent ambiguity was real; it was not simply a case of examiners inventing similarities that were not present. But the OIG concluded that the visual similarity alone did not explain the confident, unanimous "100 percent" identification. That required a second, human layer of failure.<sup class="ref">[3]</sup></p>
+
+<h2 id="s6">6 Root Causes: Confirmation Bias, Circular Reasoning, and Deference</h2>
+<p>The OIG identified three interlocking causes, all human and procedural rather than technological:</p>
+<ul>
+<li><b>Confirmation bias.</b> Subsequent examiners in the case knew of the prior examiner's "match" conclusion before conducting their own review. This is a direct violation of the principle of true <b>blind verification</b>, under which a second examiner is supposed to reach an independent conclusion without knowledge of the first examiner's finding. Once an examiner knows what conclusion is expected, ambiguous features in a marginal print are more likely to be interpreted as consistent with that expected conclusion.</li>
+<li><b>Circular reasoning.</b> Rather than functioning as an independent check, each subsequent "verification" effectively reaffirmed the prior conclusion, because each examiner's evaluation was primed by the same expectation. The verification step, intended as a safeguard, instead compounded the original error across four separate examiners.</li>
+<li><b>Deference to a senior examiner.</b> A highly respected, senior FBI latent print examiner made the initial identification. Subsequent examiners — including, per the OIG's analysis, the ostensibly independent court-appointed expert — were influenced by that examiner's stature and reputation, making them less likely to challenge the original conclusion even where their own independent analysis might otherwise have raised doubt.</li>
+</ul>
+<p>These three failures reinforced one another: a genuinely ambiguous print, reviewed by examiners who already knew the expected answer, evaluated under the shadow of a senior colleague's confident prior conclusion, produced not one error but four independently stated but not independently reached "100 percent" identifications.<sup class="ref">[3]</sup></p>
+
+<h2 id="s7">7 Not a Patriot Act Failure</h2>
+<p>Because Mayfield was detained as a material witness under the USA PATRIOT Act, the case was widely discussed at the time — and is still sometimes mischaracterized — as an example of Patriot Act overreach or abuse. The OIG report explicitly found <b>no evidence that the Patriot Act itself was misused</b>. The statutory authority under which Mayfield was held was applied as written; the underlying failure was not legal or statutory but scientific and psychological — a breakdown in the fingerprint identification methodology itself, not in the surveillance or detention powers used to act on that methodology's (wrong) conclusion. This distinction matters for how the case is taught: it is a forensic-methodology case study, not primarily a civil-liberties case study about post-9/11 detention law, even though the detention itself was a serious harm to Mayfield.<sup class="ref">[3]</sup></p>
+
+<h2 id="s8">8 Settlement and Aftermath</h2>
+<p>The U.S. government settled with Brandon Mayfield in <b>November 2006</b> for <b>$2 million</b> and a formal apology. A follow-up OIG report in 2011 assessed the FBI's implementation of the original 2006 report's recommendations, examining what procedural reforms — including changes to verification protocols — the Bureau had actually adopted in the intervening years.<sup class="ref">[3]</sup></p>
+
+<h2 id="s9">9 Significance for Forensic Standards</h2>
+<p>The Mayfield case sits at the center of a broader reckoning with forensic science reliability chronicled on this wiki as the <a href="Forensic_Validity_Crisis.html">Forensic Validity Crisis</a>. The 2009 National Academy of Sciences report, <i>Strengthening Forensic Science in the United States: A Path Forward</i>, found that apart from nuclear DNA analysis, no forensic discipline — including latent fingerprint examination — had been rigorously shown through controlled scientific research to reliably support source conclusions with a known error rate.<sup class="ref">[4]</sup> The 2016 President's Council of Advisors on Science and Technology (PCAST) report went further with respect to fingerprints specifically: it found that only one adequately designed black-box study of latent fingerprint analysis existed at the time, and that its measured false-positive rate was higher than commonly believed — a finding that directly undercuts the "100 percent" certainty language examiners used in the Mayfield case.<sup class="ref">[5]</sup></p>
+<p>The case also directly implicates the standards body governing the discipline. <b>SWGFAST</b> (Scientific Working Group on Friction Ridge Analysis, Study and Technology), covered in detail in <a href="SWG_Standards_Bodies.html">SWG Standards Bodies</a>, is the body that codified the ACE-V methodology and its verification standards — the exact procedures whose breakdown the OIG identified as the proximate cause of the Mayfield misidentification. SWGFAST's functions were later absorbed into NIST's Organization of Scientific Area Committees (OSAC), established in 2014 partly in institutional response to the NAS report's critique of the fragmented, FBI-run Scientific Working Group system that the Mayfield case had already dramatized as inadequate in practice.<sup class="ref">[6]</sup></p>
+
+<h2 id="s10">10 Relevance to Digital Forensics and OSINT</h2>
+<p>Although the Mayfield case involves physical latent-print examination rather than digital evidence, it is routinely taught in <a href="Digital_Forensics.html">digital forensics</a> training and NIST/OSAC materials as the canonical illustration that cognitive bias is a discipline-agnostic failure mode. The specific vulnerability the OIG identified — a second reviewer's "confirmation" being treated as independent evidence when that reviewer was not actually blind to the first conclusion — recurs directly in digital-evidence contexts: a forensic examiner reviewing a colleague's disk-image analysis, an automated tool's output being rubber-stamped rather than independently verified, or a machine-learning classifier's conclusion anchoring a human analyst's subsequent judgment all reproduce the same structural risk. Analysts using OSINT methods to corroborate a hypothesis face an analogous risk when a search is conducted to confirm an existing theory rather than to test it objectively.</p>
+<p>For this reason, the case is used to argue that any evidentiary discipline — physical or digital — should build in genuine blind-verification safeguards wherever a "second opinion" is meant to function as independent corroboration rather than as an echo of the first. It stands, alongside the NAS and PCAST reports, as one of the foundational reference points for understanding why forensic conclusions of any kind must be evaluated against documented error rates and methodological rigor rather than examiner confidence alone.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>U.S. Department of Justice, Office of the Inspector General. "A Review of the FBI's Handling of the Brandon Mayfield Case." 2006. <a class="external" href="https://oig.justice.gov/reports/review-fbis-handling-brandon-mayfield-case-unclassified-and-redacted">oig.justice.gov</a></li>
+<li>Scientific Working Group on Friction Ridge Analysis, Study and Technology (SWGFAST). <i>Journal of Forensic Identification</i>, 51(3), 2001.</li>
+<li>U.S. Department of Justice, Office of the Inspector General. "A Review of the FBI's Handling of the Brandon Mayfield Case." January 2006 (report and 2011 follow-up assessment). <a class="external" href="https://oig.justice.gov/reports/review-fbis-handling-brandon-mayfield-case-unclassified-and-redacted">oig.justice.gov</a></li>
+<li>National Research Council. "Strengthening Forensic Science in the United States: A Path Forward." 2009. National Academies Press. DOI 10.17226/12589. <a class="external" href="https://doi.org/10.17226/12589">doi.org/10.17226/12589</a></li>
+<li>President's Council of Advisors on Science and Technology (PCAST). "Forensic Science in Criminal Courts: Ensuring Scientific Validity of Feature-Comparison Methods." 2016. <a class="external" href="https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/PCAST/pcast_forensic_science_report_final.pdf">obamawhitehouse.archives.gov</a></li>
+<li>National Institute of Standards and Technology (NIST). "Organization of Scientific Area Committees (OSAC) for Forensic Science." <a class="external" href="https://www.nist.gov/organization-scientific-area-committees-forensic-science">nist.gov</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Forensics.html">Forensics</a> | <a href="Category_Case_Study.html">Case Study</a> | <a href="Category_Ethics.html">Ethics</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>
