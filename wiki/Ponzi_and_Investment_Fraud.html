@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ponzi, pyramid, affinity and crypto-investment schemes: how they work, how examiners prove them, and how victims&#x27; losses are clawed back.">
+<title>Ponzi and Investment Fraud - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li class="active-page"><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Ponzi and Investment Fraud</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Ponzi and Investment Fraud</th></tr>
+<tr><td class="iblabel">Core mechanism</td><td>Returns paid to earlier investors from later investors' money, not from real profit</td></tr>
+<tr><td class="iblabel">Variants</td><td>Ponzi; pyramid; affinity; advance-fee; "pig-butchering" crypto investment scams</td></tr>
+<tr><td class="iblabel">Key U.S. statutes</td><td>Securities Act &sect;17(a); Exchange Act &sect;10(b) / Rule 10b-5; 18 U.S.C. &sect;&sect;1341, 1343, 1348; Advisers Act &sect;206</td></tr>
+<tr><td class="iblabel">Landmark cases</td><td>Madoff (2008); Stanford International Bank (2009)</td></tr>
+<tr><td class="iblabel">Largest reported U.S. loss category</td><td>Investment fraud, $8.65 billion (FBI IC3, 2025)</td></tr>
+</table>
+
+<p>A <b>Ponzi scheme</b> is an investment fraud in which purported profits are paid to existing investors out of money contributed by new investors, rather than from any genuine business or trading activity. It collapses when inflows can no longer cover redemptions and promised returns. Closely related are the <b>pyramid scheme</b> (participants are paid mainly for recruiting others), <b>affinity fraud</b> (the offender exploits trust within a religious, ethnic, professional or social group) and the modern <b>crypto-investment scam</b>, often called "pig butchering," in which a victim is groomed over weeks or months and steered to a fake trading platform.<sup class="ref">[1]</sup> In the <a href="Fraud_Tree.html">ACFE fraud tree</a> these sit outside the occupational branches: the victim is an outside investor, not the employer. They are nonetheless the staple of <a href="Forensic_Accounting.html">forensic accounting</a> engagements for receivers, trustees, regulators and prosecutors, because proof rests almost entirely on reconstructing money flows.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Structure and typology</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Landmark cases</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Forensic techniques: proving the scheme</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Worked examples</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Crypto-investment scams (pig butchering)</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Clawbacks, receiverships and distributions</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Detection and red flags</a></li>
+<li><span class="tocnumber">8</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Structure and typology</h2>
+<p>All Ponzi-type frauds share one arithmetic fact: liabilities (what investors believe they are owed) grow faster than any real assets. The scheme survives only while net new deposits remain positive. Three features recur: promised returns that are high, steady and unusually insensitive to markets; opacity about strategy and custody; and a trusted central figure who controls statements, custody or both.<sup class="ref">[1]</sup></p>
+<table class="wikitable">
+<tr><th>Type</th><th>Who is paid, from what</th><th>Typical evidence of the scheme</th></tr>
+<tr><td><b>Ponzi</b></td><td>Earlier investors, from later investors' principal</td><td>No external revenue; bank inflows match outflows; fabricated statements</td></tr>
+<tr><td><b>Pyramid</b></td><td>Participants, from recruitment fees or required purchases</td><td>Compensation tied to recruits, not retail sales to outsiders</td></tr>
+<tr><td><b>Affinity fraud</b></td><td>Either of the above, distributed through a community</td><td>Referral chains inside a church, club or diaspora network; reliance on trust instead of due diligence</td></tr>
+<tr><td><b>Crypto-investment ("pig butchering")</b></td><td>Scam operator, from victim transfers to fake platforms</td><td>Funds routed to operator-controlled wallets; fake dashboards showing profit; withdrawal "taxes" or "fees"</td></tr>
+<tr><td><b>Hybrid / "real but fraudulent"</b></td><td>Some genuine trading, with losses hidden by new money</td><td>Mismatch between trade confirmations and statements; undisclosed losses</td></tr>
+</table>
+
+<h2 id="s2">2 Landmark cases</h2>
+<p><b>Madoff (Bernard L. Madoff Investment Securities).</b> Madoff confessed in December 2008 and pleaded guilty in March 2009 to eleven felonies; he was sentenced to 150 years. The court-appointed trustee under the Securities Investor Protection Act (SIPA), Irving Picard, reports that as of late September 2026 about <b>$15.494 billion</b> has been recovered through litigation and settlements and about <b>$14.799 billion</b> distributed from the customer fund, with seventeen interim distributions made; the trustee describes this as the most successful Ponzi recovery by dollar value and percentage in history.<sup class="ref">[2]</sup> Secondary reporting puts customers' principal losses near $17.5 billion, so recoveries have reached roughly three quarters of principal. The scheme persisted for decades in part because the "split-strike conversion" strategy was never independently verified, trades were not confirmed through a third-party custodian, and the audit was performed by a tiny firm unsuited to the assets involved.</p>
+<p><b>Stanford International Bank.</b> R. Allen Stanford was convicted in 2012 of a roughly $7 billion fraud centered on high-yield certificates of deposit sold by an Antigua-based bank; he received a 110-year sentence. The case illustrates an <i>offshore-affinity</i> variant: marketing to Latin American investors, a claimed portfolio of liquid assets that was largely illiquid or related-party, and a regulator and auditors that did not look through the structure. A court-appointed receiver pursued asset recovery worldwide.</p>
+<p>Both cases are treated alongside other major prosecutions in <a href="Major_Fraud_Case_Studies.html">Major Fraud Case Studies</a>; Madoff also appears in <a href="Case_Studies.html">Case Studies</a>.</p>
+
+<h2 id="s3">3 Forensic techniques: proving the scheme</h2>
+<p>The examiner's central task is to show, with documents, that investor returns were funded by investor capital. The standard toolkit follows.</p>
+<h3>3.1 Source-and-application-of-funds (cash-flow) analysis</h3>
+<p>Obtain every bank, brokerage and payment-processor account the operator controlled, including accounts opened under affiliate or "nominee" names. Normalize each transaction into a ledger and classify it as <i>investor inflow</i>, <i>investor outflow</i> (returns or redemptions), <i>third-party revenue</i> (real trading proceeds, operating-business income), <i>operator expense/transfer</i>, or <i>inter-account transfer</i>. Then compute, month by month: (a) total investor inflows; (b) total payments to investors; (c) legitimate external income. If (c) is small or zero while (b) is large, the "returns" necessarily came from (a). The result is an exhibit showing the scheme was insolvent from a specific date. Evidence produced: a monthly sources-and-uses schedule, a dated insolvency opinion, and a list of tainted payees.</p>
+<h3>3.2 Tracing commingled funds</h3>
+<p>Because inflows and outflows share accounts, tracing rules are needed to decide whose money went where. Common conventions are <b>FIFO</b> (first-in, first-out), <b>pro rata</b>, and the <b>lowest intermediate balance rule (LIBR)</b>: a claimant's traceable interest in a commingled account cannot exceed the lowest balance the account reached between deposit and the date of examination. LIBR is routinely used in receiverships to separate fraudulently obtained funds from the operator's own. See also <a href="Asset_Tracing.html">Asset Tracing</a>.</p>
+<h3>3.3 Reconciling statements to the custodian</h3>
+<p>Compare what investors were told with what third parties can confirm: obtain DTC or custodian records, trade blotters, clearing-firm confirmations and exchange data. A strategy that claims thousands of equity trades must leave a footprint in clearing records and in market volume. Absence of trades, trades outside the day's traded price range, or trade volumes exceeding the market's volume for the security are conclusive indicators of fabrication. Evidence produced: a reconciliation schedule listing claimed holdings versus confirmed holdings.</p>
+<h3>3.4 Return-pattern analytics</h3>
+<p>Fabricated return streams often look <i>too smooth</i>. Useful tests include the proportion of positive months, the correlation with the claimed benchmark (an equity strategy with near-zero or negative correlation to the market is suspicious), the Sharpe ratio, and digit-distribution tests on reported returns (see <a href="Benfords_Law.html">Benford's Law</a>). Autocorrelation of monthly returns can reveal "return smoothing." These tests do not prove fraud, but they justify subpoenas and support a regulator's exam priority.<sup class="ref">[3]</sup></p>
+<h3>3.5 Investor-level reconstruction</h3>
+<p>For each investor, tabulate cash in and cash out from the bank records (not the account statements issued by the scheme). This produces the <b>net investment</b>, the basis for customer claims and for identifying <b>net winners</b> subject to clawback.</p>
+<h3>3.6 Operator lifestyle and insider tracing</h3>
+<p>Apply the <a href="Net_Worth_Method.html">net-worth method</a> to the operator and insiders to quantify personal diversion, and trace transfers to real estate, art, vehicles and family entities. Sales-agent compensation (commissions as a share of funds raised) frequently shows a disproportionate payout to "feeder" funds or finders, who are then examined for knowledge or willful blindness.</p>
+
+<h2 id="s4">4 Worked examples</h2>
+<p>The figures below are illustrative, not drawn from a real case.</p>
+<p><b>Example A: net investment versus statement balance.</b> Investor 1 deposited $1,000,000 in 2015 and withdrew $400,000 in 2019. The scheme's final statement shows $1,800,000 (fictitious gains). Net investment is $1,000,000 &minus; $400,000 = <b>$600,000</b>; that is the amount of any allowed customer claim under the "net investment" method used in the Madoff liquidation, not the $1.8 million on paper. Investor 2 deposited $500,000 and withdrew $700,000: net <b>&minus;$200,000</b>, a net winner who received $200,000 of other investors' principal. That $200,000 is the starting point for a fraudulent-transfer (clawback) demand.</p>
+<p><b>Example B: arithmetic of collapse.</b> A fund promises 1.5% per month. If every investor reinvests and no new money arrives, liabilities grow by 1.015<sup>12</sup> &minus; 1 &asymp; <b>19.6% per year</b>. With $40 million of investor claims, interest owed in year one is about $7.8 million, while real assets (say $4 million) are not growing. The funding gap rises each month, so the scheme must raise ever more new capital; any slowdown, such as a redemption wave of 10% of balances ($4 million), exhausts the real assets.</p>
+<p><b>Example C: LIBR.</b> A commingled account holds $2,000,000 on March 1 including $1,500,000 of victim funds. By March 15 the balance falls to $300,000 after the operator pays personal expenses. A deposit of $900,000 of new victim funds follows on March 20, bringing the balance to $1,200,000. Under LIBR, the traceable victim interest at the end of the month cannot exceed the lowest balance, <b>$300,000</b>, plus any later deposits that remain, here the $900,000 deposit: <b>$1,200,000</b> total. The earlier $1,200,000 of victim money dissipated before March 15 is not recoverable by tracing and falls to the general claims pool.</p>
+<p><b>Example D: clearing-record test.</b> A manager reports buying 40,000 shares of a stock at $50.00 on a day when the stock's high was $48.75 and total volume was 1.2 million shares. The price is outside the day's range, so the trade is impossible. If the same pattern appears on 30 of 100 sampled trade tickets, the sample supports an inference of fabricated confirmations, and evidence extrapolation can be documented with a sampling plan (see <a href="Analytical_Methods.html">Analytical Methods</a>).</p>
+
+<h2 id="s5">5 Crypto-investment scams (pig butchering)</h2>
+<p>The FBI's Internet Crime Complaint Center (IC3) 2025 report records investment fraud as the largest loss category in cyber-enabled crime: <b>72,984 complaints and $8.65 billion</b>, of which cryptocurrency investment scams accounted for about <b>$7.2 billion</b>, the largest source of loss to Americans that year. The report attributes these scams largely to organized criminal enterprises in Southeast Asia, using trafficked workers as forced labor, and says the FBI-led Operation Level Up has reduced potential losses by more than $500 million since 2024.<sup class="ref">[4]</sup> On October 14, 2025 the Department of Justice announced an indictment of the chairman of Prince Holding Group, a Cambodia-based conglomerate, and a civil forfeiture action against approximately 127,271 bitcoin valued at about $15 billion, described as the largest forfeiture in the Department's history.<sup class="ref">[5]</sup></p>
+<p><b>Investigative method.</b> (1) Collect the victim's transaction hashes, deposit addresses, platform URLs and chat logs; preserve them under <a href="Chain_of_Custody.html">chain-of-custody</a> discipline. (2) Use blockchain analytics to cluster addresses and follow funds through mixers, bridges and exchanges to off-ramps that perform customer due diligence; see <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>. (3) Identify the fake platform's hosting, domain registration and app-store footprint using <a href="OSINT_Tools.html">OSINT tools</a>. (4) Serve preservation and freeze requests quickly: the IC3 Recovery Asset Team's Financial Fraud Kill Chain froze about $679 million of $1.16 billion attempted theft (58%) in 3,900 incidents in 2025, but speed is decisive.<sup class="ref">[4]</sup> (5) Pool victim complaints by wallet cluster; this converts scattered small losses into a prosecutable aggregate. The forced-labor dimension links this work to <a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a> and <a href="Money_Laundering.html">money laundering</a> typologies.</p>
+
+<h2 id="s6">6 Clawbacks, receiverships and distributions</h2>
+<p><b>Receiverships and trustees.</b> The SEC commonly seeks an asset freeze and a court-appointed receiver in civil enforcement actions; broker-dealer failures like Madoff's may proceed under SIPA with a trustee. Both gather estate assets, marshal claims and sue recipients of fraudulent transfers.</p>
+<p><b>Fraudulent-transfer theory.</b> Under Bankruptcy Code &sect;548 a trustee may avoid transfers made within two years before the filing with actual intent to hinder, delay or defraud creditors; state fraudulent-transfer statutes (often the Uniform Voidable Transactions Act) extend the look-back, commonly to four years, and are used through &sect;544(b). Because a Ponzi operator is presumed to have actual intent, transfers of <i>fictitious profits</i> are recoverable from net winners even if they were innocent, while a good-faith investor generally may retain return of principal. Courts in the Madoff litigation applied this distinction to hold that "profits" paid from other investors' money were not value given in exchange for the investor's claim.</p>
+<p><b>Forensic role in distribution.</b> The forensic accountant prepares claims analysis (net-investment method versus "last statement" method), identifies net winners and net losers, computes pro rata or interim distribution percentages, and defends the methodology in court. In the Madoff case, interim distributions have ranged from small percentage tranches against allowed claims, for example 1.302% on a February 2026 distribution of $253.6 million, until the cumulative distribution is complete.<sup class="ref">[2]</sup></p>
+
+<h2 id="s7">7 Detection and red flags</h2>
+<ul>
+<li><b>Returns too consistent</b> for the stated strategy; very few down months.</li>
+<li><b>Secrecy</b> about methodology ("proprietary") and no independent custodian or administrator.</li>
+<li><b>Small or unknown auditor</b> relative to the assets under management.</li>
+<li><b>Payments from other investors' accounts</b> or from a pooled account that investors do not recognize.</li>
+<li><b>Redemption friction:</b> delays, new fees, "lock-up" extensions, or pressure to roll over.</li>
+<li><b>Unlicensed sellers</b> and unregistered offerings; check the SEC's Investment Adviser Public Disclosure database and FINRA BrokerCheck.</li>
+<li><b>Affinity-based marketing</b> and referral rewards.</li>
+<li><b>Online grooming:</b> unsolicited contact by text or dating app, quick move to an encrypted messaging platform, and a "mentor" who shows early profits.</li>
+</ul>
+<p>Analytics-based detection is discussed in <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a> and <a href="AI_Fraud_Detection_Platforms.html">AI Fraud Detection Platforms</a>; seniors are a disproportionate target, covered in <a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a>. For general warning signs see <a href="Red_Flags.html">Red Flags</a>.</p>
+
+<p class="hatnote">See also: <a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, <a href="Asset_Tracing.html">Asset Tracing</a>, <a href="Money_Laundering.html">Money Laundering</a>, <a href="Federal_Enforcement_Agencies.html">Federal Enforcement Agencies</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>U.S. Securities and Exchange Commission, Office of Investor Education. "Ponzi Schemes" and "Affinity Fraud" investor bulletins. <a class="external" href="https://www.investor.gov/protect-your-investments/fraud/types-fraud/ponzi-scheme">investor.gov</a></li>
+<li>Irving H. Picard, Trustee. Madoff Recovery Initiative, "Recoveries and distributions" (site content as of Sept. 29, 2026). <a class="external" href="https://www.madofftrustee.com/">madofftrustee.com</a></li>
+<li>Markopolos, H. <i>No One Would Listen</i>, Wiley, 2010; Bollen, N. &amp; Pool, V. "Suspicious Patterns in Hedge Fund Returns and the Risk of Fraud," <i>Review of Financial Studies</i>, 2012.</li>
+<li>FBI Internet Crime Complaint Center. <i>2025 Internet Crime Report</i>. <a class="external" href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf">ic3.gov</a></li>
+<li>U.S. Department of Justice. Prince Holding Group indictment and $15 billion bitcoin forfeiture complaint, Oct. 14, 2025 (summarized by <a class="external" href="https://blockchain.bakermckenzie.com/2025/10/17/department-of-justice-seizes-about-15-billion-in-bitcoin-relating-to-pig-butchering-scheme/">Baker McKenzie</a>).</li>
+<li>11 U.S.C. &sect;&sect;544(b), 548; Uniform Voidable Transactions Act; Securities Investor Protection Act, 15 U.S.C. &sect;78aaa et seq.</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Fraud_Schemes.html">Fraud Schemes</a> | <a href="Category_Financial_Crime.html">Financial Crime</a> | <a href="Category_Investigation_Methods.html">Investigation Methods</a> | <a href="Category_Asset_Recovery.html">Asset Recovery</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

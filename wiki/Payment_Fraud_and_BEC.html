@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Business email compromise, wire and check fraud, romance scams and deepfake-enabled impersonation: FBI IC3 data and the forensic methods used to trace and recall funds.">
+<title>Payment Fraud and BEC - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li class="active-page"><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Payment Fraud and BEC</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Payment Fraud and Business Email Compromise</th></tr>
+<tr><td class="iblabel">BEC losses (IC3)</td><td>2023: $2.95B; 2024: $2.77B; 2025: $3.05B</td></tr>
+<tr><td class="iblabel">BEC complaints (IC3)</td><td>2024: 21,442; 2025: 24,768</td></tr>
+<tr><td class="iblabel">All IC3 losses, 2025</td><td>$20.877B on 1,008,597 complaints</td></tr>
+<tr><td class="iblabel">Recovery mechanism</td><td>FBI IC3 Recovery Asset Team / Financial Fraud Kill Chain (FFKC)</td></tr>
+<tr><td class="iblabel">Related fraud types</td><td>Check fraud; romance/confidence; authorized push payment; vendor-impersonation; deepfake CEO fraud</td></tr>
+</table>
+
+<p><b>Business email compromise (BEC)</b> is a scam targeting businesses and individuals who regularly make wire or other payments, in which the criminal compromises or impersonates a trusted email account, supplier, executive, attorney or title company to induce a payment to an account the criminal controls.<sup class="ref">[1]</sup> <b>Payment fraud</b> is the umbrella for losses arising from payment instruments and channels themselves: wires, ACH, checks, cards, peer-to-peer transfers and cryptocurrency. Unlike the internal frauds of the <a href="Fraud_Tree.html">fraud tree</a>, most of these schemes are committed by outsiders; the control failure is usually a verification step that was skipped. The FBI Internet Crime Complaint Center (IC3) 2025 report records BEC as the second-highest-loss category in cyber-enabled crime after investment fraud.<sup class="ref">[1]</sup> This article stresses the examination techniques for reconstructing a payment fraud and recovering funds.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Scale and trends (FBI IC3)</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Typologies</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Forensic techniques: email and identity</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Forensic techniques: payment tracing and recall</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Check fraud examination</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Worked examples</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Romance scams, APP fraud and deepfakes</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Red flags and controls</a></li>
+<li><span class="tocnumber">9</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Scale and trends (FBI IC3)</h2>
+<p>IC3's <i>2025 Internet Crime Report</i> records 1,008,597 complaints and $20.877 billion in reported losses, a 26% rise over 2024. Selected categories follow.<sup class="ref">[1]</sup></p>
+<table class="wikitable">
+<tr><th>Category</th><th>2025 complaints</th><th>2025 loss</th><th>2024 loss</th><th>2023 loss</th></tr>
+<tr><td>Investment</td><td>72,984</td><td>$8.65B</td><td>$6.57B</td><td>$4.57B</td></tr>
+<tr><td><b>Business email compromise</b></td><td>24,768</td><td>$3.05B</td><td>$2.77B</td><td>$2.95B</td></tr>
+<tr><td>Tech/customer support</td><td>47,794</td><td>$2.13B</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>Confidence/romance</td><td>23,159</td><td>$929M</td><td>$672M</td><td>$653M</td></tr>
+<tr><td>Credit card/check fraud</td><td>18,774</td><td>$283M</td><td>$200M</td><td>$174M</td></tr>
+</table>
+<p>Two points matter for interpretation. First, IC3 data are <i>self-reported</i> and include only complaints filed, so true totals are higher. Second, BEC losses are lumpy: a few large wires drive the annual total, so year-to-year changes should be read with caution. The report also records 22,364 complaints mentioning artificial intelligence, with adjusted losses above $893 million; businesses reported more than $30 million in BEC losses with a likely AI nexus, and victims reported over $19 million in romance-scam losses with a likely AI nexus.<sup class="ref">[1]</sup></p>
+
+<h2 id="s2">2 Typologies</h2>
+<ul>
+<li><b>Executive impersonation ("CEO fraud")</b>: a spoofed or compromised executive account instructs finance to wire funds urgently and confidentially.</li>
+<li><b>Vendor email compromise / invoice redirection</b>: the criminal, often after compromising a supplier's mailbox, sends genuine-looking invoices with changed bank details.</li>
+<li><b>Real-estate and escrow BEC</b>: a buyer receives "wiring instructions" from a spoofed title company or attorney. IC3 describes a March 2025 case in which a senior citizen attempted to wire over $1.3 million to a fraudulent account before the Recovery Asset Team froze the funds.<sup class="ref">[1]</sup></li>
+<li><b>Payroll diversion</b>: a fake employee request changes direct-deposit details.</li>
+<li><b>Account takeover (ATO)</b>: criminals take over bank or payment-platform logins and move funds through many transactions; IC3 notes ATO cases can involve 50 or more simultaneous ACH transfers to different banks.<sup class="ref">[1]</sup></li>
+<li><b>Deepfake-enabled impersonation</b>: synthetic voice or video in place of email; see section 7.</li>
+</ul>
+
+<h2 id="s3">3 Forensic techniques: email and identity</h2>
+<ol>
+<li><b>Preserve first.</b> Take a forensic copy of the relevant mailboxes, mail-server logs and the originals of the fraudulent emails (as .eml or .msg with full headers), recording hash values and custodian; see <a href="Chain_of_Custody.html">Chain of Custody</a> and <a href="Digital_Forensics.html">Digital Forensics</a>. Screenshots are not sufficient.</li>
+<li><b>Analyze message headers.</b> Read the <code>Received</code> chain from the bottom up to find the originating server; compare <code>From</code>, <code>Reply-To</code>, <code>Return-Path</code> and <code>Message-ID</code> domains; read <code>Authentication-Results</code> for SPF, DKIM and DMARC outcomes. A critical caution: a lookalike domain registered by the criminal will often <i>pass</i> its own SPF, DKIM and DMARC checks, because authentication only proves that the sender controls the domain it claims, not that the domain is the one you expect.</li>
+<li><b>Detect lookalike domains.</b> Compare sender domains to legitimate ones by edit distance, homoglyphs (the digit 1 for the letter l; Cyrillic characters), added hyphens and alternate top-level domains. Look up registration date and registrar with WHOIS/RDAP; domains registered days before the fraud are strong indicators. Use passive DNS and certificate-transparency logs to find sibling domains from the same infrastructure; see <a href="OSINT_Tools.html">OSINT Tools</a>.</li>
+<li><b>Hunt for mailbox compromise.</b> In Microsoft 365 or Google Workspace, review audit logs for: new inbox rules that forward, delete or move mail containing words such as "invoice," "payment" or "wire"; forwarding addresses; OAuth app consents; unusual sign-in IPs and impossible travel; legacy-protocol logins; and MFA changes. Mailbox rules that hide replies are a hallmark of a compromised account, as opposed to a mere spoof.</li>
+<li><b>Reconstruct the timeline.</b> Build a minute-by-minute schedule: first malicious login, rule creation, lure email, payment instruction, bank release, and discovery. Time zones must be normalized to UTC.</li>
+<li><b>Verify identities out-of-band</b> during the investigation: call known numbers (not those in the email), and interview the payer's employees (<a href="Interviewing.html">Interviewing</a>) to establish who approved, what verification was attempted, and what policy was in force.</li>
+</ol>
+
+<h2 id="s4">4 Forensic techniques: payment tracing and recall</h2>
+<p><b>Speed is the primary variable.</b> The victim should contact its bank immediately, request a wire recall and any necessary indemnification documents, and file an IC3 complaint with full transaction details. The IC3 Recovery Asset Team (RAT), established in 2018, streamlines communications between financial institutions and FBI field offices to freeze funds through the <b>Financial Fraud Kill Chain (FFKC)</b>. In 2025 it handled 3,900 incidents involving $1.164 billion in attempted theft and froze about $679 million, a 58% success rate; domestic incidents numbered 3,574 ($507 million frozen) and international 326 ($172 million frozen). For the 655 incidents involving critical-infrastructure organizations, $146.6 million of $261.5 million (56%) was frozen.<sup class="ref">[1]</sup> IC3 also describes a case in which an Oregon city government office lost over $6 million in a BEC attack and the originating bank was able to issue a recall after the recipient account had been flagged through an earlier FFKC freeze.<sup class="ref">[1]</sup></p>
+<h3>4.1 Following the funds</h3>
+<ol>
+<li>Obtain the wire confirmation: originator and beneficiary account numbers, routing numbers, Fedwire IMAD/OMAD or SWIFT UETR/reference, and timestamps.</li>
+<li>Send preservation letters and subpoenas or legal process to the beneficiary bank for account-opening documents, signature cards, IDs, KYC data, IP logs from online banking, and statements showing onward transfers (the "second hop").</li>
+<li>Build a flow chart of each hop: amount, date, destination, and what remains. Apply the same tracing rules used in <a href="Asset_Tracing.html">Asset Tracing</a>. Recipients are frequently money mules or victims of other scams (the FFKC case above found the recipient account owner had been told to send $1 million to a Hong Kong account in an overpayment scam).</li>
+<li>For funds converted to cryptocurrency, follow on-chain with <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a> to an exchange that can freeze.</li>
+<li>Pool complaints sharing the same beneficiary account or wallet: multiple victims strengthen probable cause and recovery claims (see <a href="Money_Laundering.html">Money Laundering</a>).</li>
+</ol>
+<h3>4.2 Bank-side analytics</h3>
+<p>Financial institutions screen for BEC and mule activity with: (a) <i>beneficiary-change analytics</i>, flagging a payment to a vendor within a short window after a bank-detail change; (b) <i>first-time payee and amount outlier</i> tests; (c) <i>name-to-account mismatch</i> checks (confirmation-of-payee style); (d) <i>pass-through ratio</i> for recipient accounts (outflows divided by inflows within 24&ndash;48 hours); (e) <i>velocity and fan-in</i> patterns, where many unrelated payers send to one new account. See <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a> and <a href="AI_Fraud_Detection_Platforms.html">AI Fraud Detection Platforms</a>.</p>
+
+<h2 id="s5">5 Check fraud examination</h2>
+<p>Check fraud remains significant despite digital payments. FinCEN's alert FIN-2023-Alert003 (February 27, 2023) described a nationwide surge in <b>mail-theft-related check fraud</b>; in the six months to August 31, 2023 FinCEN received 15,417 Bank Secrecy Act reports on such activity associated with more than $688 million, and asked institutions to use the key term "FIN-2023-MAILTHEFT" in suspicious activity reports.<sup class="ref">[2]</sup> IC3's 2025 credit-card/check category shows 18,774 complaints and $282.7 million.<sup class="ref">[1]</sup></p>
+<table class="wikitable">
+<tr><th>Technique</th><th>What the examiner does</th><th>Evidence produced</th></tr>
+<tr><td>Image examination</td><td>Compare the presented item with the account's signature card, prior checks, paper stock; look for washing (chemical alteration of payee and amount), overwritten fields, mismatched ink and fonts</td><td>Document-examiner opinion; see <a href="Document_Examination.html">Document Examination</a></td></tr>
+<tr><td>MICR and routing data</td><td>Verify the MICR line, check number sequence, and routing numbers; test for counterfeit checks with valid account numbers but out-of-sequence numbers</td><td>Exception report showing number gaps and duplicates</td></tr>
+<tr><td>Positive pay / payee positive pay</td><td>Match presented checks to the issued-check file by number, amount and payee</td><td>Unmatched-item report, issue file timestamps</td></tr>
+<tr><td>Remote deposit review</td><td>Detect duplicate deposits of the same check at different banks or through mobile and teller channels; compare deposit device IDs</td><td>Duplicate presentment analysis</td></tr>
+<tr><td>Kiting analysis</td><td>Chart deposits and withdrawals between two or more accounts to find circular check float</td><td>Float schedule; ratio of checks drawn on affiliated accounts</td></tr>
+<tr><td>Endorsement review</td><td>Study back-of-check endorsements for chain of custody and deposit-account owner mismatches</td><td>Endorsement chain exhibit</td></tr>
+</table>
+
+<h2 id="s6">6 Worked examples</h2>
+<p>Illustrative figures; domain names are fictitious.</p>
+<p><b>Example A: lookalike domain.</b> The company's supplier domain is <code>example-corp.com</code>. The fraud emails come from <code>ap@examp1e-corp.com</code> (digit 1 replacing the letter l). Edit distance is 1 (one substitution). WHOIS shows registration 6 days before the first message, while the real domain has been registered for 14 years. Headers show <code>spf=pass smtp.mailfrom=examp1e-corp.com</code> and <code>dmarc=pass header.from=examp1e-corp.com</code>. The passes confirm only that the criminal controls the lookalike. The examiner reports that the sender was <i>not</i> the supplier, which defeats any argument that the payer's email-security tools should have blocked an "authenticated" message. A reply-to difference and a first-time sender flag are additional indicators.</p>
+<p><b>Example B: vendor-change analytics.</b> The accounts-payable system's change log shows a bank-detail change for Vendor V on May 3, submitted by an email request, with no callback recorded. The next payment run on May 8 pays Vendor V $184,300, versus a historical median payment of $41,000, so the payment is 4.5 times the median ($184,300 / $41,000 = 4.5) and the first to the new account. Rule: flag any payment released within 10 days of a bank-detail change that exceeds 2 times the vendor's median. This case triggers on both conditions. On May 9 the real vendor asks about its unpaid invoice; the loss is $184,300 and the clock on a recall request has already run for one day.</p>
+<p><b>Example C: mule pass-through.</b> Recipient account R receives three transfers totaling $18,500 from three unrelated payers over two days and sends out $17,950 within 24 hours of the last credit. Pass-through ratio = 17,950 / 18,500 = <b>97%</b>; retained balance $550 (3%). The account was opened 11 days earlier with a deposit of $100. These indicators justify a freeze request and a review of other inflows to R for additional victims.</p>
+<p><b>Example D: check kiting.</b> Accounts A (Bank 1) and B (Bank 2) belong to the same owner. On day 1 a $50,000 check drawn on B is deposited to A; before it clears, on day 2 a $55,000 check drawn on A is deposited to B; day 3, $60,000 on B to A; day 4, $65,000 on A to B; and so on with each cycle $5,000 larger. By the sixth cycle the outstanding float is a $75,000 check. If 100% of deposits in the period are checks drawn on the owner's other account, and no external deposits fund either account, ledger balances are fictitious. The examiner charts deposits against collected balances by day; the pattern of rising, alternating amounts is the evidentiary signature.</p>
+
+<h2 id="s7">7 Romance scams, APP fraud and deepfakes</h2>
+<p><b>Romance (confidence) scams.</b> IC3 recorded 23,159 complaints and $929 million in 2025. The offender builds a relationship with a fabricated persona, then solicits funds for emergencies, travel or investments. Examination: reverse-image search of profile photos; metadata and account-creation analysis of social profiles; message-language analysis; payment-trail tracing to the beneficiary accounts or crypto wallets; and a victim interview that preserves the complete chat history. Many romance scams blend into investment fraud (see <a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a>) and target older adults (<a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a>).</p>
+<p><b>Authorized push payment (APP) fraud.</b> In APP fraud the victim themselves initiates a real payment but is deceived about its purpose or recipient. In the United Kingdom, from October 7, 2024 the Payment Systems Regulator's mandatory reimbursement requirement applies to faster payments: sending firms must reimburse in-scope victims within five business days (with a possible "stop the clock" investigation pause), reimbursement is capped at &pound;85,000 per claim, and the cost is split 50:50 between the sending and receiving firms.<sup class="ref">[3]</sup> In the United States, Regulation E (12 C.F.R. part 1005) protects against <i>unauthorized</i> electronic fund transfers; a transfer the consumer was tricked into authorizing is generally treated differently, which is why recall and freeze mechanisms matter so much.</p>
+<p><b>Deepfake-enabled CEO fraud.</b> In the best-known reported case, Arup confirmed in 2024 that a Hong Kong employee was deceived by a video call in which fake versions of colleagues appeared, resulting in 15 transfers totaling HK$200 million (about US$25 million).<sup class="ref">[4]</sup> Forensic response: secure the meeting recording and platform logs; extract the participants' account identifiers and join IP addresses; analyze audio and video for synthesis artifacts and compression anomalies (see <a href="Video_Forensics.html">Video Forensics</a>); and trace the payments as in section 4. Preventive controls are procedural, since detection of synthetic media is unreliable: out-of-band callback to a known number, dual authorization for payments above a threshold, pre-agreed code words for executives, and a rule that no video or voice instruction alone can change payee details. See <a href="Emerging_Trends.html">Emerging Trends</a>.</p>
+
+<h2 id="s8">8 Red flags and controls</h2>
+<ul>
+<li>Urgent, confidential payment requests that bypass normal approval; requests to change bank details by email.</li>
+<li>Sender domain subtly different from the correct one; reply-to that differs from sender.</li>
+<li>First-time payee, new account in a different bank or country, or payee name that does not match the account.</li>
+<li>Mailbox forwarding or deletion rules; sign-ins from unusual locations.</li>
+<li>Checks presented out of sequence; payee or amount altered; duplicate deposits.</li>
+<li>Controls: verified callback to a number on file; dual approval; vendor-master change control with independent verification; positive pay; DMARC enforcement and external-sender banners; MFA; immediate incident playbook (call bank, request recall, file IC3 complaint, preserve logs).</li>
+</ul>
+<p>General warning signs are collected in <a href="Red_Flags.html">Red Flags</a>; legal reporting duties tie to <a href="AML_Law.html">AML Law</a> and the <a href="AML_Statutory_Framework.html">AML Statutory Framework</a>; agencies are described in <a href="Federal_Enforcement_Agencies.html">Federal Enforcement Agencies</a>.</p>
+
+<p class="hatnote">See also: <a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a>, <a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a>, <a href="Digital_Forensics.html">Digital Forensics</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>FBI Internet Crime Complaint Center. <i>2025 Internet Crime Report</i>. <a class="external" href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf">ic3.gov</a></li>
+<li>FinCEN. "FinCEN Alert on Nationwide Surge in Mail Theft-Related Check Fraud Schemes Targeting the U.S. Mail," FIN-2023-Alert003, Feb. 27, 2023. <a class="external" href="https://www.fincen.gov/sites/default/files/shared/FinCEN%20Alert%20Mail%20Theft-Related%20Check%20Fraud%20FINAL%20508.pdf">fincen.gov</a></li>
+<li>Payment Systems Regulator (UK). APP fraud mandatory reimbursement requirement, effective Oct. 7, 2024 (summarized by <a class="external" href="https://twobirds.com/en/insights/2024/uk/new-uk-app-fraud-rules-latest-developments">Bird &amp; Bird</a>).</li>
+<li>CNN Business. "British engineering giant Arup revealed as $25 million deepfake scam victim," May 16, 2024. <a class="external" href="https://abc17news.com/money/cnn-business-consumer/2024/05/16/british-engineering-giant-arup-revealed-as-25-million-deepfake-scam-victim/">abc17news.com (syndicated)</a></li>
+<li>12 C.F.R. part 1005 (Regulation E); Uniform Commercial Code Articles 3 and 4; Electronic Fund Transfer Act, 15 U.S.C. &sect;1693 et seq.</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Fraud_Schemes.html">Fraud Schemes</a> | <a href="Category_Financial_Crime.html">Financial Crime</a> | <a href="Category_Digital_Evidence.html">Digital Evidence</a> | <a href="Category_Investigation_Methods.html">Investigation Methods</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

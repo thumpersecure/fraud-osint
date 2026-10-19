@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Using the Wayback Machine, RDAP/WHOIS, passive DNS and certificate transparency to reconstruct websites, and how to preserve them as evidence.">
+<title>Web Archives and Domain Intelligence - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li class="active-page"><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Web Archives and Domain Intelligence</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Web Archives and Domain Intelligence</th></tr>
+<tr><td class="iblabel">Field</td><td>OSINT; digital evidence preservation</td></tr>
+<tr><td class="iblabel">Archives</td><td>Wayback Machine (1 trillion+ pages); archive.today (contested)</td></tr>
+<tr><td class="iblabel">Registration data</td><td>RDAP (RFC 9082/9083), replacing WHOIS for gTLDs since 28 Jan 2025</td></tr>
+<tr><td class="iblabel">Infrastructure data</td><td>Passive DNS; Certificate Transparency (RFC 9162)</td></tr>
+<tr><td class="iblabel">Evidentiary concern</td><td>Authentication, completeness, chain of custody</td></tr>
+</table>
+
+<p><b>Web archives</b> preserve past states of websites, and <b>domain intelligence</b> is the analysis of domain registration, DNS, certificate and hosting records to identify who operates a site and what else they run. In fraud work the pair answers: what did this site claim before it was edited or taken down, when did it appear, and what other sites share its infrastructure? Fraudulent investment platforms, fake charities and phishing kits are short-lived and frequently rewritten, so a site that cannot be revisited tomorrow must be captured today. This article treats methods and evidence handling; it supports work on entities and fraud infrastructure, not on private individuals (see <a href="OSINT_Ethics.html">OSINT Ethics</a>).</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Web archives</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Registration data: WHOIS and RDAP</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Passive DNS and certificate transparency</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Forensic examination techniques</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Preservation and evidentiary capture</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Limits</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Web archives</h2>
+<p>The Internet Archive&rsquo;s <b>Wayback Machine</b> has operated since 1996 and in October 2025 announced that it had archived more than one trillion web pages, preserving hundreds of millions more each day.<sup class="ref">[1]</sup> Captures are made by its crawlers, by partner and user-submitted jobs, and on demand by the &ldquo;Save Page Now&rdquo; feature. Coverage is uneven: popular pages are captured often, obscure ones rarely; some assets (scripts, images, embedded frames) may be missing or captured at different times from the page, so a rendered snapshot can mix content from different dates. Pages blocked by robots rules, login walls or JavaScript-heavy applications may be incomplete.</p>
+<p><b>archive.today</b> (archive.is and sibling domains) takes on-demand snapshots and is widely used for paywalled or rapidly changing pages. Its reliability is now contested: in 2026 English Wikipedia deprecated it, citing evidence that its operators had embedded code used in a distributed denial-of-service attack and had altered content of archived pages, and the domains were globally blacklisted by Wikimedia stewards in June 2026.<sup class="ref">[2]</sup> For an evidentiary file, prefer multiple independent captures (Wayback plus your own forensic capture) and do not rely on archive.today alone.</p>
+
+<h2 id="s2">2 Registration data: WHOIS and RDAP</h2>
+<p>Domain registration data historically came from the WHOIS protocol. On 28 January 2025 the contractual requirement for most generic top-level domain registries and all gTLD registrars to offer WHOIS service was removed, making the Registration Data Access Protocol (RDAP), defined in RFC 9082/9083, the definitive source: it returns structured JSON over HTTPS and supports differentiated access.<sup class="ref">[3]</sup> Since the GDPR era, most registrant names, emails and phone numbers are redacted, so current records usually yield the registrar, creation and expiry dates, name servers, status codes and sometimes an organisation field. Country-code TLD registries follow their own policies. Historical WHOIS snapshots held by commercial providers can reveal pre-redaction registrant details, but their accuracy and licensing should be checked, and registrant data of individuals should be handled with care.</p>
+
+<h2 id="s3">3 Passive DNS and certificate transparency</h2>
+<p><b>Passive DNS</b> databases record DNS answers observed by sensors over time, letting an investigator see which IP addresses a domain has resolved to, which other domains have shared an IP, and when changes occurred, without touching the target. <b>Certificate Transparency (CT)</b>, specified in RFC 9162, requires publicly trusted TLS certificates to be recorded in public append-only logs; browsers such as Chrome require Signed Certificate Timestamps from approved logs.<sup class="ref">[4]</sup> Search interfaces such as crt.sh let anyone list every certificate issued for a domain, including subdomains that were never linked publicly, with issuance dates that often precede a site&rsquo;s launch.</p>
+<p><b>Hosting and analytics pivots.</b> Websites leak shared identifiers: the hosting IP and ASN, name servers, favicon hash, page title, HTML structure, Google Analytics or tag-manager IDs, advertising IDs, contact emails, payment-processor and chat-widget keys. Searching for a shared ID across crawled datasets can reveal a family of sites run by one operator, which is how many scam networks are mapped. Shared hosting and CDN fronting produce false links, so a shared IP alone is weak.</p>
+
+<h2 id="s4">4 Forensic examination techniques</h2>
+<p><b>Technique 1: Capture-history timeline.</b> List every Wayback capture of a URL (the CDX index returns timestamps, status codes and content digests). Compare digests: identical digests mean unchanged content; changes mark edits. <i>Worked example:</i> 140 captures of a &ldquo;trading platform&rdquo; homepage from 12 March to 30 September show the same digest until 17 June, when the claimed licence number, address and &ldquo;since 2012&rdquo; founding claim all change. Output: a table of capture dates, digest changes and what changed, showing when claims were altered.</p>
+<p><b>Technique 2: Claim-versus-infrastructure test.</b> A site claiming a decade of operation should show an old domain. <i>Example:</i> the site says &ldquo;established 2012&rdquo;, but RDAP shows creation 21 days before the first CT certificate and first Wayback capture 9 days later. The domain age (creation date) is checked against the claim, and also against the first appearance in passive DNS and the earliest certificate: three independent clocks. Disagreement between claim and clocks is a documented finding. Note that a domain can be bought aged, so age alone does not prove history.</p>
+<p><b>Technique 3: Certificate-based discovery.</b> Query CT for the domain and for the organisation name, then extract subdomains and the dates of issuance. Look at issuance clustering: 30 certificates for different brand-themed domains issued within one week from the same issuer account pattern suggests a templated deployment. Output: a subdomain and certificate inventory with log IDs.</p>
+<p><b>Technique 4: Infrastructure pivot with a confidence score.</b> Build a table of candidate domains and for each record shared attributes: IP (weak), name server (weak to moderate), analytics ID (strong), unique contact email (strong), favicon hash (moderate), identical code or text (moderate). Score each pair by the number of strong independent links. <i>Example:</i> Site A and Site B share a name server and an IP (weak, hosting overlap), but also an identical analytics ID and an identical refund-policy text: two independent strong links, so assess them as probably operated together. Document negative checks too.</p>
+<p><b>Technique 5: Content diffing.</b> Save two captures and compare their text and HTML sources line by line to see exactly what was removed, such as risk disclaimers, named staff, or a regulator-registration claim; then verify the claim at the named regulator&rsquo;s own register. Output: a diff exhibit with hashes of both captures.</p>
+<p><b>Technique 6: Lifecycle correlation.</b> Align domain registration, CT issuance, first capture, advertising activity, complaint dates and takedown. Fraud sites cluster in a short life cycle; repeated registration of successor domains with the same template is a recidivism indicator.</p>
+
+<h2 id="s5">5 Preservation and evidentiary capture</h2>
+<p>Capture must be done before the page changes and must be reproducible. A defensible procedure:</p>
+<ol>
+<li><b>Record the context:</b> date and time with time zone, examiner, workstation, network, browser version, the exact URL and how it was found.</li>
+<li><b>Capture several forms:</b> a full-page screenshot, the saved HTML and assets (for example a WARC file made with a recognised capture tool), a PDF print, and the HTTP response headers.</li>
+<li><b>Hash each file</b> (SHA-256) at capture and record the hashes in a log; store the originals read-only and work on copies.</li>
+<li><b>Submit an independent archive copy</b> to the Wayback Machine, noting that a public capture is not private and may alert the operator.</li>
+<li><b>Keep a log</b> of every step so another examiner can repeat it; this is the heart of <a href="Chain_of_Custody.html">chain of custody</a> and the <a href="Digital_Forensic_Lifecycle.html">digital forensic lifecycle</a>.</li>
+<li><b>Capture from a controlled, clean environment</b> so the operator&rsquo;s tracking of the visit does not compromise the investigation; prefer passive sources first.</li>
+</ol>
+<p>On admissibility, US federal evidence rules allow certain electronic records to be authenticated by a qualified person&rsquo;s certification (Fed. R. Evid. 902(13) and 902(14)), but courts differ about archive captures, and it is common to supplement with a witness who can testify to how the capture was made; see <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>. Consult counsel for the jurisdiction. A hashed forensic capture made by the investigator is usually stronger than a third-party archive link.</p>
+<table class="wikitable">
+<tr><th>Source</th><th>Shows</th><th>Weight / caveat</th></tr>
+<tr><td>Wayback capture</td><td>Past page state, date</td><td>Independent third party; mixed-date assets possible</td></tr>
+<tr><td>archive.today</td><td>On-demand snapshot</td><td>Contested reliability after 2026 findings</td></tr>
+<tr><td>RDAP record</td><td>Registrar, dates, name servers</td><td>Registrant usually redacted</td></tr>
+<tr><td>CT log entry</td><td>Certificate issuance date and names</td><td>Strong timestamp; shows names, not owners</td></tr>
+<tr><td>Passive DNS</td><td>Historical resolution</td><td>Sensor coverage limited; shared hosting false links</td></tr>
+<tr><td>Own forensic capture</td><td>State at time of capture</td><td>Strongest if hashed and logged</td></tr>
+</table>
+
+<h2 id="s6">6 Limits</h2>
+<ul>
+<li><b>Attribution.</b> Infrastructure links show common technical control, not identity; avoid naming individuals without corroboration from lawful process such as registrar or hosting-provider disclosure.</li>
+<li><b>Privacy.</b> Redaction exists for a reason; do not attempt to unmask private registrants.</li>
+<li><b>Tool lock-in and opacity.</b> Commercial passive-DNS data cannot always be independently verified; state the vendor and date.</li>
+<li><b>Manipulation.</b> Operators can forge analytics IDs, use privacy proxies, hide behind CDNs and request archive exclusion.</li>
+<li><b>Active contact.</b> Visiting a site is a form of contact (see <a href="OSINT_Ethics.html">passive versus active reconnaissance</a>); logging in, submitting forms or probing for vulnerabilities is outside OSINT.</li>
+</ul>
+
+<p class="hatnote">See also: <a href="OSINT_Tools.html">OSINT Tools</a>, <a href="Digital_Forensics.html">Digital Forensics</a>, <a href="Cloud_IoT_Forensics.html">Cloud and IoT Forensics</a>, <a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a>, <a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Internet Archive. &ldquo;One Trillion Web Pages Archived.&rdquo; 31 October 2025. <a class="external" href="https://blog.archive.org/2025/10/31/one-trillion-web-pages-archived-internet-archive-celebrates-a-civilization-scale-milestone/">blog.archive.org</a></li>
+<li>Wikimedia Meta-Wiki. &ldquo;Archive.today incident.&rdquo; <a class="external" href="https://meta.wikimedia.org/wiki/Archive.today_incident">meta.wikimedia.org</a></li>
+<li>ICANN. &ldquo;Launching RDAP; sunsetting WHOIS.&rdquo; 27 January 2025. <a class="external" href="https://www.icann.org/en/announcements/details/icann-update-launching-rdap-sunsetting-whois-27-01-2025-en">icann.org</a></li>
+<li>Certificate Transparency (RFC 9162 overview). <a class="external" href="https://en.wikipedia.org/wiki/Certificate_Transparency">en.wikipedia.org</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_OSINT.html">OSINT</a> | <a href="Category_Digital_Evidence.html">Digital Evidence</a> | <a href="Category_Investigation_Methods.html">Investigation Methods</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

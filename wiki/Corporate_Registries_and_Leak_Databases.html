@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Using company registries, LEI data, sanctions lists and leaked-document databases to trace ownership, with tests for verification and limits.">
+<title>Corporate Registries and Leak Databases - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li class="active-page"><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Corporate Registries and Leak Databases</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Corporate Registries and Leak Databases</th></tr>
+<tr><td class="iblabel">Field</td><td>Beneficial-ownership and corporate-structure research</td></tr>
+<tr><td class="iblabel">Aggregators</td><td>OpenCorporates; OCCRP Aleph; OpenSanctions</td></tr>
+<tr><td class="iblabel">Official registries</td><td>UK Companies House; US state filing offices; GLEIF (LEI)</td></tr>
+<tr><td class="iblabel">Leak data</td><td>ICIJ Offshore Leaks Database (810,000+ offshore entities)</td></tr>
+<tr><td class="iblabel">Core risk</td><td>Name matching, stale data, nominee owners</td></tr>
+</table>
+
+<p><b>Corporate registries</b> are government-maintained records of legal entities, and <b>leak databases</b> are searchable collections of documents obtained from offshore service providers and similar sources and published by journalists. Used together they let an examiner move from a company name seen on an invoice, deed or <a href="Money_Laundering.html">wire</a> to its directors, shareholders, addresses, affiliates and, with luck, ultimate beneficial owners. They are the main OSINT front end of <a href="Asset_Tracing.html">asset tracing</a> and <a href="Anti_Corruption_OSINT.html">anti-corruption due diligence</a>. This article covers major sources, their limits, and the examination procedures built on them. It is a methods guide: legitimate subjects are entities, public officials in their official capacity, and sanctioned or convicted parties, not private individuals (see <a href="OSINT_Ethics.html">OSINT Ethics</a>).</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Official registries</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Aggregators: OpenCorporates, Aleph, OpenSanctions</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">GLEIF and the Legal Entity Identifier</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Leak databases</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Forensic examination techniques</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Limits and verification</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Official registries</h2>
+<p>The primary evidence of a company's existence is its official registry entry. In the <b>United Kingdom</b>, Companies House publishes free online records of incorporated companies, including officers, persons with significant control (PSCs), registered office, accounts and charges (secured borrowing). The Economic Crime and Corporate Transparency Act 2023 expands the registrar's powers and introduces identity verification: from 18 November 2025 verification began to become mandatory for directors and LLP members, with other categories phased in during 2026.<sup class="ref">[1]</sup> The practical effect for investigators is that post-2025 officer records should be more reliable than historical ones, while pre-reform filings remain unverified self-declarations.</p>
+<p>In the <b>United States</b> there is no national company registry; each state's secretary of state maintains formation records, which vary widely in what they disclose. Delaware, Wyoming and others permit minimal public information, often only the registered agent. Federal beneficial-ownership reporting under the Corporate Transparency Act has been sharply curtailed by a FinCEN rule of August 2026 (see <a href="Money_Laundering.html">Money Laundering</a>), so U.S. investigators generally cannot rely on a national ownership register and instead assemble ownership from state filings, <a href="Public_Records_and_Court_Dockets.html">UCC and court records</a>, and bank <abbr title="know your customer">KYC</abbr> files obtained in discovery. Many other jurisdictions (EU member states, with the post-2022 court ruling limiting public access to some registers, and offshore centres) have registers with differing public access, and the legal position changes often, so confirm access rules for the jurisdiction at the time of the search.</p>
+
+<h2 id="s2">2 Aggregators: OpenCorporates, Aleph, OpenSanctions</h2>
+<p><b>OpenCorporates</b> is a large open database of company records compiled from official registries, searchable across jurisdictions and useful for finding entities that share an officer name or address. Its value is breadth; its limitation is that each record is a copy of a registry entry of variable age, so findings must be re-verified at the source registry.</p>
+<p><b>OCCRP Aleph</b> is a search platform operated by the Organized Crime and Corruption Reporting Project that indexes company registries, leaked and public documents, court records, sanctions lists and journalist-contributed datasets. Access is tiered, with the public interface available to registered users and expanded access aimed at journalists and investigators. Searching it returns cross-referenced entities, which can reveal that a name in a leak also appears in a procurement record.</p>
+<p><b>OpenSanctions</b> aggregates sanctions lists, politically exposed persons (PEP) data and other watchlists into a unified, deduplicated dataset. Its data are released under CC BY-NC 4.0; non-commercial use is free, but any use within a for-profit business, including compliance screening, requires a licence, with exemptions for qualifying journalism and non-profits.<sup class="ref">[2]</sup> Anyone using it professionally must check the licence terms. A match against a sanctions or PEP list is a screening hit to be adjudicated, not a finding.</p>
+
+<h2 id="s3">3 GLEIF and the Legal Entity Identifier</h2>
+<p>The <b>Legal Entity Identifier (LEI)</b>, standardised as ISO 17442, is a 20-character code assigned to legal entities, mainly those transacting in financial markets. The Global Legal Entity Identifier Foundation (GLEIF) publishes the Global LEI Index free of charge. By the second quarter of 2026 the active LEI population exceeded 3.1 million, and registrants representing 99% of the population reported direct and ultimate parent information (&ldquo;Level 2&rdquo; data, answering &ldquo;who owns whom&rdquo;).<sup class="ref">[3]</sup> Reporting exceptions are permitted, for example where disclosure is legally restricted, so an exception code is itself a datum. The LEI is useful because it is a persistent unique identifier that is independent of name spelling and can be matched to registry numbers, and because parent relationships are self-reported but validated by the issuing organisation. It does not reveal individuals; parent chains typically end at a corporate or fund entity.</p>
+
+<h2 id="s4">4 Leak databases</h2>
+<p>The <b>ICIJ Offshore Leaks Database</b> is the best known leak resource. It consolidates the Offshore Leaks, Panama Papers, Bahamas Leaks, Paradise Papers and Pandora Papers investigations and holds information on more than 810,000 offshore entities, linked to people and companies in over 200 countries and territories.<sup class="ref">[4]</sup> It publishes structured data on officers, intermediaries, addresses and entities, not the underlying emails and documents, and ICIJ states that appearing in it is not evidence of wrongdoing; offshore structures can be lawful. The Pandora Papers additions (December 2021, April and May 2022) added beneficial-owner data from providers including Alcogal and Fidelity Corporate Services.</p>
+<table class="wikitable">
+<tr><th>Source</th><th>Type</th><th>Best for</th><th>Main limit</th></tr>
+<tr><td>Official registry</td><td>Primary</td><td>Legal existence, officers, filings</td><td>Self-declared; few show real owners</td></tr>
+<tr><td>OpenCorporates</td><td>Aggregator</td><td>Cross-jurisdiction name and address search</td><td>Lag; copies of registry data</td></tr>
+<tr><td>OCCRP Aleph</td><td>Aggregator / archive</td><td>Linking entities across records and leaks</td><td>Access tiers; coverage uneven</td></tr>
+<tr><td>OpenSanctions</td><td>Watchlist aggregator</td><td>Sanctions and PEP screening</td><td>Licence; false positives</td></tr>
+<tr><td>GLEIF</td><td>Identifier registry</td><td>Entity disambiguation, parent chains</td><td>Self-reported parents; financial-sector bias</td></tr>
+<tr><td>ICIJ Offshore Leaks</td><td>Leak data</td><td>Offshore officers, intermediaries</td><td>Snapshots through about 2020; not proof of wrongdoing</td></tr>
+</table>
+<p>Leaked data raise their own legal and ethical issues: provenance is uncertain, material may include private data, and use in litigation requires authentication. Stay within the public, journalist-curated tables, and do not seek out or republish raw leaked personal data.</p>
+
+<h2 id="s5">5 Forensic examination techniques</h2>
+<p><b>Technique 1: Ownership-chain reconstruction.</b> Start from the target entity and record, per level: legal name, registry number, jurisdiction, status, formation date, officers, shareholders, registered agent and address. Proceed upward until you reach (a) a natural person, (b) a listed company or state body, (c) a nominee, trust or bearer structure, or (d) a registry that discloses nothing. Then compute effective ownership by multiplying percentages. <i>Worked example:</i> Target Ltd is 60% owned by Holdco A, which is 50% owned by Trust B and 50% by Holdco C; Holdco C is 80% owned by an individual. The individual's effective stake in Target is 0.60 &times; 0.50 &times; 0.80 = 24%, below a 25% PSC threshold, so a naive PSC screen could miss them. The examiner also tests control separate from ownership (voting agreements, board appointment rights). Output: an ownership diagram with every edge sourced to a registry extract, and each break in the chain stated explicitly.</p>
+<p><b>Technique 2: Address and agent concentration analysis.</b> Export all entities matching a registered address or agent from an aggregator. Compute the count and the share that were formed within 12 months, are dissolved, or have no filed accounts. <i>Example:</i> 212 entities at one suite address, of which 160 (75%) formed within two years and 140 show no officers: that address is a formation-agent location and is no evidence of common ownership; but if 6 of the 212 share an officer, those six are the lead. Over-reading shared addresses is the commonest error.</p>
+<p><b>Technique 3: Officer-network pivot with disambiguation.</b> For each officer, collect date of birth (month/year where published), nationality, service address and prior roles, then assess whether two records are the same person using at least two identifiers beyond the name. Record a confidence level (confirmed, probable, possible). Output: a person-to-company table that distinguishes confirmed links from name-only matches.</p>
+<p><b>Technique 4: Timeline and lifecycle tests.</b> Plot formation, name change, officer change, accounts, charge registration and dissolution dates against transaction dates. Shells commonly show formation shortly before first payment, officers resigning immediately after a payment or audit, and dissolution after receipt of funds. <i>Example:</i> an entity formed 4 January, invoicing from 20 January, three invoices totalling $480,000 paid by 28 February, officer resignation 3 March: a 48-day active life with no filed accounts.</p>
+<p><b>Technique 5: Charges and filings as financial evidence.</b> UK charge registers and US UCC filings show who lent to the company; accounts filed at Companies House show turnover bands, employee numbers and director loans. A company claiming $20 million of sales but filing micro-entity accounts with two employees is internally inconsistent and warrants a <a href="Fraud_Detection_Analytics.html">reasonableness test</a>.</p>
+<p><b>Technique 6: Screening protocol.</b> Run entities and officers against sanctions and PEP datasets with documented fuzzy-matching thresholds. Adjudicate each hit using date of birth, nationality and role: a name hit with a mismatched birth year is closed as false positive with the reason recorded; unresolved hits are escalated. Keep the query log and dataset version/date. <i>Example:</i> 400 officers screened, 23 hits, 19 closed on mismatched identifiers, 3 confirmed PEP associations, 1 unresolved: the report states these numbers and the method rather than only the confirmed hits.</p>
+<p><b>Technique 7: Leak cross-match.</b> Search each target name, address and intermediary in the Offshore Leaks Database. A match establishes an appearance in a source dataset; to establish relevance, confirm identity through independent identifiers and ask whether the structure was disclosed to the relevant tax and regulatory authorities. Output: a documented match with source node ID and a statement of what the match does and does not show. Findings then feed <a href="Cryptocurrency_Tracing.html">tracing</a> and <a href="Net_Worth_Method.html">net-worth</a> work.</p>
+
+<h2 id="s6">6 Limits and verification</h2>
+<ul>
+<li><b>Nominees.</b> Nominee directors and shareholders sit on the register in place of real owners; look for professional nominees who hold hundreds of directorships.</li>
+<li><b>Stale and self-declared data.</b> Most registries accept filings without verifying them; note the filing date of every datum.</li>
+<li><b>Transliteration and name matching.</b> Names rendered from Cyrillic, Arabic or Chinese scripts vary; search variants and use identifiers instead of names.</li>
+<li><b>Coverage bias.</b> Leak and sanctions datasets reflect what was leaked or listed, not the universe of wrongdoing; absence of a name is not exoneration.</li>
+<li><b>Licensing.</b> Check terms for each dataset before using it commercially or republishing it.</li>
+<li><b>Fairness.</b> Present links as links; do not infer guilt from an offshore appearance or a PEP relationship.</li>
+</ul>
+
+<p class="hatnote">See also: <a href="Asset_Tracing.html">Asset Tracing</a>, <a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a>, <a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a>, <a href="OSINT_Tools.html">OSINT Tools</a>, <a href="AML_Law.html">AML Law</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>DWF Group. "Economic Crime and Corporate Transparency Act" (August 2025), on mandatory identity verification from 18 November 2025. <a class="external" href="https://dwfgroup.com/en/news-and-insights/insights/2025/8/economic-crime-and-corporate-transparency-act">dwfgroup.com</a></li>
+<li>OpenSanctions. "Free and non-commercial use." <a class="external" href="https://www.opensanctions.org/docs/commercial/exemption/">opensanctions.org</a></li>
+<li>GLEIF. "The LEI in Numbers: Q2 2026." <a class="external" href="https://www.gleif.org/en/newsroom/blog/the-lei-in-numbers-q2-2026-signals-growing-regional-momentum-for-the-lei">gleif.org</a></li>
+<li>ICIJ. "Offshore Leaks Database: About." <a class="external" href="https://offshoreleaks.icij.org/pages/about">offshoreleaks.icij.org</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_OSINT.html">OSINT</a> | <a href="Category_Following_the_Money.html">Following the Money</a> | <a href="Category_Anti-Corruption.html">Anti-Corruption</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

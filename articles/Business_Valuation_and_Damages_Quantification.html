@@ -1,0 +1,120 @@
+<!--meta title="Business Valuation and Damages Quantification" desc="DCF and lost-profit models, but-for analysis, discount rates, insurance claims, divorce and shareholder disputes, standards and a worked example." cats="Forensic Accounting Core, Analytical Methods, Expert Testimony"-->
+<table class="infobox">
+<tr><th class="ibtitle" colspan="2">Valuation &amp; Damages</th></tr>
+<tr><td class="iblabel">Approaches</td><td>Income, market, asset (cost)</td></tr>
+<tr><td class="iblabel">Core income model</td><td>Discounted cash flow (DCF)</td></tr>
+<tr><td class="iblabel">Damages model</td><td>But-for (actual versus counterfactual)</td></tr>
+<tr><td class="iblabel">Standards</td><td>IVS (effective 31 Jan 2025); AICPA VS Section 100; Rev. Rul. 59-60</td></tr>
+<tr><td class="iblabel">Standards of value</td><td>Fair market value; fair value; investment value</td></tr>
+<tr><td class="iblabel">Related</td><td><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></td></tr>
+</table>
+
+<p><b>Business valuation</b> estimates what a business or ownership interest is worth under a stated definition of value at a stated date; <b>damages quantification</b> estimates the monetary difference between what happened and what would have happened but for a wrongful act. The two disciplines share their tools: the lost profits of a business are often measured by comparing its value, or its cash flows, in the actual world with the same measures in a counterfactual world. For the forensic accountant they matter in fraud and commercial cases (what did the victim lose?), in <a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">divorce and bankruptcy</a> (what is the business worth, and is the owner understating it?), in shareholder disputes and in insurance claims. This article concentrates on the valuation methods; the wider practice of expert work, discovery and testimony is in <a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a>, and admissibility in <a href="Daubert_Standard.html">Daubert Standard</a>.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Standards and premises of value</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">The three approaches</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">DCF and the discount rate</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">But-for analysis and lost profits</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Business-interruption insurance claims</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Matrimonial and shareholder disputes</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Worked numeric example</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Fraud-sensitive review of a valuation</a></li>
+<li><span class="tocnumber">9</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Standards and premises of value</h2>
+<p>A valuation is meaningless until the <b>standard of value</b> is fixed. In U.S. tax practice, <i>fair market value</i> is defined in Revenue Ruling 59-60 as the price at which property would change hands between a willing buyer and a willing seller, neither under compulsion and both having reasonable knowledge of relevant facts; the ruling lists eight factors to consider, including the nature and history of the business, the economic and industry outlook, book value and financial condition, earning capacity, dividend-paying capacity, goodwill and other intangibles, prior sales of the stock, and the market price of comparable public companies.<sup class="ref">[1]</sup> <i>Fair value</i> is a statutory or legal standard, used in shareholder appraisal and oppression statutes and in some divorce jurisdictions, and may exclude marketability or minority discounts. <i>Investment value</i> reflects the benefits to a particular buyer. Choosing the wrong standard is the most common source of disagreement between experts. The <b>premise of value</b> (going concern versus liquidation) and the <b>level of value</b> (controlling versus minority, marketable versus non-marketable) must also be stated.</p>
+<p>Professional standards govern the work. The AICPA's Statement on Standards for Valuation Services (VS Section 100, issued 2007 and effective for engagements accepted on or after 1 January 2008) applies to CPA members performing engagements that estimate value, and distinguishes a <i>valuation engagement</i>, which results in a conclusion of value (a single amount or a range), from a <i>calculation engagement</i>, where the client and valuer agree in advance on limited procedures.<sup class="ref">[2]</sup> The International Valuation Standards Council's IVS, effective 31 January 2025, contain seven general standards (IVS 100 Valuation Framework, 101 Scope of Work, 102 Bases of Value, 103 Valuation Approaches, 104 Data and Inputs, 105 Valuation Models, 106 Documentation and Reporting) and asset-specific standards.<sup class="ref">[3]</sup> Other credentialing bodies publish their own standards, and courts weigh compliance with them when assessing an expert's reliability.</p>
+
+<h2 id="s2">2 The three approaches</h2>
+<table class="wikitable">
+<tr><th>Approach</th><th>Idea</th><th>Common methods</th><th>Typical weaknesses</th></tr>
+<tr><td><b>Income</b></td><td>Value equals the present value of future economic benefits</td><td>DCF; capitalisation of earnings or cash flow</td><td>Sensitive to forecasts and the discount rate; forecasts may be prepared by interested parties</td></tr>
+<tr><td><b>Market</b></td><td>Value is inferred from prices of comparable businesses or transactions</td><td>Guideline public companies; precedent transactions; industry rules of thumb</td><td>Comparables rarely identical; private-company data thin; size and liquidity adjustments needed</td></tr>
+<tr><td><b>Asset (cost)</b></td><td>Value equals adjusted value of assets less liabilities</td><td>Adjusted net asset value; replacement cost</td><td>Poor for earnings-driven businesses; may omit unrecorded intangibles</td></tr>
+</table>
+<p>Valuers normally apply more than one approach and reconcile the results, with the reasoning for weighting disclosed. The <b>normalisation</b> of historical financial statements precedes all three: adjusting for owner compensation above or below market, one-off items, personal expenses run through the business, related-party transactions at non-market prices, and accounting-policy differences. In a dispute, normalisation adjustments are often the most contested part of the analysis, because each adjustment moves the earnings base on which the final value rests. For the quality-of-earnings review that precedes it, see <a href="Analytical_Methods.html">Analytical Methods</a>.</p>
+
+<h2 id="s3">3 DCF and the discount rate</h2>
+<p>A <b>discounted cash flow</b> model projects free cash flow to the firm (FCFF) &mdash; operating profit after tax, plus non-cash charges, minus capital expenditure and increases in working capital &mdash; for an explicit forecast period (commonly five years), adds a <b>terminal value</b> capturing cash flows beyond that period, and discounts all amounts to the valuation date. The terminal value is usually calculated with the Gordon growth formula, TV = FCF<sub>n</sub> &times; (1 + g) / (r &minus; g), where g is the long-run growth rate and r the discount rate. Because terminal value often supplies more than half of the enterprise value, the choice of g (normally bounded by long-run nominal growth in the economy) and of r drives the conclusion.</p>
+<p>The <b>discount rate</b> must match the cash flow being discounted. For FCFF it is the weighted average cost of capital (WACC): the cost of equity weighted by the equity share of capital plus the after-tax cost of debt weighted by the debt share. The cost of equity for a private company is commonly estimated with a <b>build-up</b> or CAPM approach: risk-free rate plus beta times the equity risk premium, plus a size premium and a company-specific risk premium for factors such as customer concentration, key-person dependence and forecast risk. Each premium requires documentary support; unsupported company-specific premiums are a standard target of cross-examination. The discount rate also has to be consistent with the forecast: an optimistic management forecast with a mid-range discount rate overstates value, while a haircut forecast with an additional risk premium double counts risk.</p>
+<p><b>Capitalisation of earnings</b> is a single-period shortcut: value equals normalised sustainable cash flow divided by (r &minus; g). It suits stable businesses and is also the usual way damages experts convert a permanent loss of annual profit into a lump sum.</p>
+<p><b>Discounts and premiums.</b> A <i>discount for lack of marketability</i> (DLOM) reflects the difficulty of selling a private interest; a <i>minority discount</i> reflects lack of control; a <i>control premium</i> reflects the added value of control. Courts differ on their application. In Delaware statutory appraisal, for example, the Supreme Court has held in <i>DFC Global Corp. v. Muirfield Value Partners</i> (2017) and <i>Dell, Inc. v. Magnetar Global Event Driven Master Fund</i> (2017) that the deal price from a robust sale process in an efficient market deserves heavy, if not dispositive, weight in determining fair value, without creating a presumption in its favour.<sup class="ref">[4]</sup> Divorce courts in many states exclude marketability and minority discounts when valuing a spouse's interest in a business that will be retained, and some distinguish <i>enterprise goodwill</i> (attached to the business, divisible) from <i>personal goodwill</i> (attached to the individual, treated differently by state); both rules are jurisdiction-specific and should be checked locally.</p>
+
+<h2 id="s4">4 But-for analysis and lost profits</h2>
+<p>The <b>but-for</b> (or <i>before-and-after</i>, <i>yardstick</i>) method compares the plaintiff's actual financial results with a reconstructed counterfactual: what would revenue, costs and profits have been without the wrongful act? The damages expert follows a disciplined sequence:</p>
+<ol>
+<li><b>Define the wrong and the period.</b> Identify the breach, fraud or interference, its start date, the end of the loss period and the valuation date.</li>
+<li><b>Build the counterfactual revenue.</b> Use pre-event trend, backlog and contracts, market growth, comparable firms (a yardstick or control group unaffected by the wrong), and customer-level evidence. Growth assumptions must be consistent with the company's capacity and the market.</li>
+<li><b>Measure the actual outcome</b> from audited or reliably reconstructed accounts, and adjust for unrelated factors (recession, supply shocks) so that the model isolates the damage from the wrong.</li>
+<li><b>Deduct avoided costs.</b> Lost <i>profit</i>, not lost revenue, is the usual measure: subtract the variable costs the plaintiff did not incur because the sales never occurred, and consider whether fixed costs are truly fixed.</li>
+<li><b>Mitigation.</b> Credit amounts the plaintiff earned, or reasonably could have earned, by mitigating.</li>
+<li><b>Discount and add interest.</b> Express past losses with prejudgment interest where permitted and future losses at present value using a rate that reflects the risk of the lost cash flows. Where the loss is permanent, a diminution-in-value approach (value before minus value after) may be used instead, taking care not to double count lost profits and lost value.</li>
+</ol>
+<p>The model has to measure only the harm attributable to the liability theory. In <i>Comcast Corp. v. Behrend</i>, 569 U.S. 27 (2013), the Supreme Court refused class certification because the plaintiffs' damages model measured damages from four theories of antitrust impact when only one had survived, so it could not show damages were measurable on a class-wide basis for that theory.<sup class="ref">[5]</sup> The principle applies broadly: an expert whose counterfactual is not tied to the legal theory risks exclusion (see <a href="Daubert_Standard.html">Daubert Standard</a>).</p>
+<p>In a fraud case, the loss of the victim is often measured differently: <i>out-of-pocket</i> loss (what was paid minus value received), <i>benefit-of-the-bargain</i> (value as represented minus value received) or, for the perpetrator's gain, disgorgement. Tracing and quantification of gain use the <a href="Net_Worth_Method.html">net worth method</a> and <a href="Asset_Tracing.html">asset tracing</a>.</p>
+
+<h2 id="s5">5 Business-interruption insurance claims</h2>
+<p>Business-interruption (BI) coverage indemnifies an insured for lost income following insured physical damage. Claims commonly turn on three policy concepts: the <b>measure of loss</b> (a "gross earnings" or "profits" form), the <b>indemnity period</b> (generally commencing on the date of the damage and ending when the property is repaired, rebuilt or replaced, or at the end of a stated maximum), and <b>extra expense</b> incurred to reduce the loss.<sup class="ref">[6]</sup> The forensic accountant's job is to quantify the difference between projected and actual sales during the indemnity period, deduct non-continuing (avoided) expenses, add covered continuing expenses and extra expenses, and test the claim against policy language.</p>
+<p>The standard steps are:</p>
+<ul>
+<li>Establish the <b>baseline</b> from at least two to three years of monthly history, adjusting for seasonality, trend and known pending contracts.</li>
+<li>Project <b>but-for sales</b> over the indemnity period and subtract actual sales; where a recovery period (an "extended period of indemnity") is bought, estimate the ramp-up back to normal.</li>
+<li>Apply the <b>gross-profit margin</b> or the policy's formula, then adjust for expenses that stopped.</li>
+<li>Reconcile with <b>mitigation</b>: make-up production, alternative sites and sales recaptured after reopening reduce the loss.</li>
+<li>Test the claim for <b>fraud indicators</b>: inflated pre-loss forecasts, growth stories that appear after the event, personal expenses claimed as continuing costs, backdated contracts, and customers that cannot be traced.</li>
+</ul>
+<p>Disputes about proper baseline and about the point at which the loss ceased to be caused by the insured event are the most common causes of litigation. Insurers' fraud units apply the same <a href="Red_Flags.html">red-flag</a> logic used in other contexts.</p>
+
+<h2 id="s6">6 Matrimonial and shareholder disputes</h2>
+<h3>Divorce</h3>
+<p>Valuation of a closely held business in a divorce serves equitable or community-property distribution. The central contested questions are the standard of value (fair market value or fair value), the treatment of marketability and minority discounts, whether goodwill is personal or enterprise, the normalisation of owner compensation (a spouse who pays himself $80,000 when a replacement manager would cost $200,000 is increasing apparent profits, while the reverse understates them), and the avoidance of <i>double dipping</i>, where the same stream of earnings is counted once as business value and again as income for support. The valuer must also be alert to manipulation, discussed in <a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a>: deferral of revenue, acceleration of expenses, and loans to related parties shortly before the valuation date.</p>
+<h3>Shareholder disputes</h3>
+<p>Minority shareholders may seek relief through statutory appraisal (dissenting shareholders in a merger), oppression or dissolution statutes, or derivative suits. Most of these use "fair value", typically defined by statute and case law rather than by the valuation profession. Statutory buy-out valuations require a valuer to separate the value of the company from the conduct complained of, to establish the correct valuation date (e.g. the date of the filing, or the date before the oppressive act), and to consider whether discounts apply. Evidence of manipulation of results by controlling shareholders, such as excessive compensation, related-party charges and diversion of opportunities, is quantified as an addback to normalised earnings, a step closely linked to <a href="Occupational_Fraud.html">occupational fraud</a> and conflict-of-interest analysis (see the <a href="Fraud_Tree.html">fraud tree</a>).</p>
+
+<h2 id="s7">7 Worked numeric example</h2>
+<p>The following illustrates mechanics only; every input is hypothetical.</p>
+<h3>A. Enterprise value by DCF</h3>
+<p>A services company has forecast free cash flow to the firm of $1.00M, $1.10M, $1.20M, $1.30M and $1.40M in years 1&ndash;5. The cost of equity is built up as 4.0% risk-free + (1.10 beta &times; 5.5% equity risk premium) + 3.0% size premium + 1.5% company-specific premium = 14.55%. After-tax cost of debt is 7.0% &times; (1 &minus; 25%) = 5.25%. With 70% equity and 30% debt, WACC = 0.70 &times; 14.55% + 0.30 &times; 5.25% = 11.76%, rounded to 11.8%. Long-term growth is 3%.</p>
+<table class="wikitable">
+<tr><th>Year</th><th>FCFF ($M)</th><th>Discount factor at 11.8%</th><th>Present value ($M)</th></tr>
+<tr><td>1</td><td>1.00</td><td>0.894</td><td>0.894</td></tr>
+<tr><td>2</td><td>1.10</td><td>0.800</td><td>0.880</td></tr>
+<tr><td>3</td><td>1.20</td><td>0.716</td><td>0.859</td></tr>
+<tr><td>4</td><td>1.30</td><td>0.640</td><td>0.832</td></tr>
+<tr><td>5</td><td>1.40</td><td>0.573</td><td>0.802</td></tr>
+<tr><td colspan="3"><b>Sum of explicit-period PV</b></td><td><b>4.267</b></td></tr>
+<tr><td colspan="3">Terminal value = 1.40 &times; 1.03 / (0.118 &minus; 0.03) = 16.386; PV = 16.386 &times; 0.573</td><td>9.382</td></tr>
+<tr><td colspan="3"><b>Enterprise value</b></td><td><b>13.65</b></td></tr>
+</table>
+<p>Terminal value contributes about 69% of enterprise value. Sensitivity (same cash flows): at 10.8% and 3% growth, EV is about $15.45M; at 12.8% and 3%, $12.21M; at 11.8% and 2% growth, $12.61M; and at 11.8% and 4%, $14.95M. A one-point movement in the discount rate or the growth rate therefore changes the answer by roughly $1.2M to $1.8M, which is why the support for those inputs matters more than the arithmetic.</p>
+<h3>B. From enterprise value to equity</h3>
+<p>If the company has $2.0M of debt net of cash, equity value is 13.65 &minus; 2.00 = $11.65M for a controlling interest. If a 15% discount for lack of marketability is applicable under the governing standard, the non-marketable equity value is $11.65M &times; 0.85 &asymp; $9.90M. Under a standard that excludes discounts, the figure stays at $11.65M. The $1.75M gap is entirely a legal question.</p>
+<h3>C. But-for lost profits</h3>
+<p>A manufacturer had $10.0M of revenue in the year before a supplier's breach. The but-for forecast grows revenue at 8% (the pre-breach trend, confirmed by industry growth): $10.80M, $11.66M and $12.60M over the three-year loss period. Actual revenue was $9.0M, $9.5M and $10.2M. Lost revenue is $1.80M, $2.16M and $2.40M, totalling $6.36M. Variable costs avoided equal 55% of revenue, so the incremental margin is 45% and lost profit is $0.81M, $0.97M and $1.08M, totalling $2.86M. Discounting at 10% at year-ends gives a present value of about $0.74M + $0.81M + $0.81M = $2.35M. If the defendant shows that a quarter of the shortfall resulted from an unrelated market downturn, the opposing expert would reduce the loss accordingly. This is the sort of adjustment that <i>Comcast</i> requires to be modelled explicitly.</p>
+
+<h2 id="s8">8 Fraud-sensitive review of a valuation</h2>
+<p>Investigators reviewing another expert's valuation, or a party's financial statements for a valuation, check for these signs of manipulation or error:</p>
+<ul>
+<li>Forecasts prepared by an interested party after the dispute began, with growth far from history and no backlog support.</li>
+<li>Owner compensation, related-party rent or management fees changed shortly before the valuation date.</li>
+<li>Unusual timing: revenue deferred, customer deposits increased, bonuses accelerated, large capital expenditures just before the date.</li>
+<li>Terminal growth near or above the economy's long-run growth, or discount rates with large unsupported company-specific premiums.</li>
+<li>Comparable companies of very different size or business mix, or a lone "rule of thumb" used without reconciliation.</li>
+<li>Gaps between the tax returns, bank deposits and financial statements, tested with <a href="Bank_Statement_and_Cash_Analysis.html">bank statement analysis</a> and, where necessary, the <a href="Net_Worth_Method.html">net worth method</a>.</li>
+<li>Undisclosed entities or accounts, found through <a href="Shell_Companies_and_Beneficial_Ownership.html">beneficial-ownership</a> research.</li>
+</ul>
+<p>A valuation report should also state its limiting conditions, the information relied on, and the extent of independent verification, consistent with <a href="Report_Writing.html">Report Writing</a> and <a href="Forensic_Accountant_Ethics.html">ethical</a> standards on objectivity.</p>
+
+<p class="hatnote">See also: <a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a>, <a href="Net_Worth_Method.html">Net Worth Method</a>, <a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a>, <a href="Daubert_Standard.html">Daubert Standard</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>, <a href="Forensic_Accounting.html">Forensic Accounting</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Internal Revenue Service. Revenue Ruling 59-60, 1959-1 C.B. 237 (valuation of closely held stock); summary of the eight factors at <a class="external" href="https://www.rosen.com/uncategorized/business-valuation-need-know-irs-revenue-ruling-59-60/">rosen.com</a> (secondary).</li>
+<li>AICPA. Statement on Standards for Valuation Services, VS Section 100. <a class="external" href="https://www.aicpa-cima.com/resources/article/statement-on-standards-for-valuation-services-vs-section-100">aicpa-cima.com</a></li>
+<li>International Valuation Standards Council. <i>International Valuation Standards</i>, effective 31 January 2025.; overview at <a class="external" href="https://acumentis.com.au/news/new-international-valuation-standards-ivs-effective-january-2025">acumentis.com.au</a>.</li>
+<li><i>Dell, Inc. v. Magnetar Global Event Driven Master Fund Ltd.</i>, 177 A.3d 1 (Del. 2017); <i>DFC Global Corp. v. Muirfield Value Partners, L.P.</i>, 172 A.3d 346 (Del. 2017); see Davis Polk client update. <a class="external" href="https://www.davispolk.com/insights/client-update/delaware-supreme-courts-rulings-re-establish-importance-deal-price-and-sale">davispolk.com</a>; Skadden analysis. <a class="external" href="https://www.skadden.com/insights/publications/2018/05/insights-the-delaware-edition/dell-and-fair-value-in-statutory-appraisal-actions">skadden.com</a></li>
+<li><i>Comcast Corp. v. Behrend</i>, 569 U.S. 27 (2013). <a class="external" href="https://www.govinfo.gov/content/pkg/USREPORTS-569/pdf/USREPORTS-569-27.pdf">govinfo.gov</a></li>
+<li>Canadian Underwriter. "Understanding business interruption losses," 2018 (indemnity period and gross-earnings forms). <a class="external" href="https://canadianunderwriter.ca/2018/04/11/understanding-business-interruption-losses/">canadianunderwriter.ca</a> (Canadian market; U.S. forms differ in wording).</li>
+</ol>

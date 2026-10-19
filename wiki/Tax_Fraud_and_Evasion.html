@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Criminal tax offenses, IRS-CI investigation, indirect proof methods, offshore reporting, employment-tax and refund fraud, and red flags.">
+<title>Tax Fraud and Evasion - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li class="active-page"><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Tax Fraud and Evasion</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Tax Fraud and Evasion</th></tr>
+<tr><td class="iblabel">Principal statutes</td><td>26 U.S.C. &sect;&sect; 7201 (evasion), 7202, 7203, 7206, 7212(a)</td></tr>
+<tr><td class="iblabel">Investigators</td><td>IRS Criminal Investigation (IRS-CI)</td></tr>
+<tr><td class="iblabel">Prosecution</td><td>DOJ Criminal Division Tax Section (since Dec 2025) and U.S. Attorneys</td></tr>
+<tr><td class="iblabel">Tax gap (TY2022)</td><td>$696 billion gross; $606 billion net</td></tr>
+<tr><td class="iblabel">IRS-CI FY2025</td><td>$10.59 billion financial crime identified; $4.5 billion tax fraud</td></tr>
+<tr><td class="iblabel">Offshore reporting</td><td>FBAR (FinCEN 114), Form 8938 (FATCA)</td></tr>
+</table>
+
+<p><b>Tax evasion</b> is the willful, illegal attempt to defeat the assessment or payment of tax, as distinct from <b>tax avoidance</b>, the lawful use of the Code to reduce liability. <b>Tax fraud</b> is the broader category of false returns, false documents, schemes to misuse the refund system and employment-tax non-payment. Tax crimes are rarely the lead offense of an investigation in the way that securities fraud is; they are frequently the charge that is easiest to prove, as in the prosecution of Al Capone in 1931. For forensic accountants, the tax return is both a target of fraud and a document that can show unreported income.<sup class="ref">[1]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Evasion versus avoidance; the statutes</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Scale and enforcement landscape</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Proof methods: direct and indirect</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Worked examples</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Offshore accounts: FBAR and FATCA</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Employment tax and refund fraud</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Red flags and data tests</a></li>
+<li><span class="tocnumber">8</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Evasion versus avoidance; the statutes</h2>
+<p>The Internal Revenue Code's principal criminal provisions are:</p>
+<table class="wikitable">
+<tr><th>Section</th><th>Offense</th><th>Maximum penalty</th></tr>
+<tr><td>&sect; 7201</td><td>Attempt to evade or defeat tax (felony)</td><td>5 years; $100,000 individuals, $500,000 corporations</td></tr>
+<tr><td>&sect; 7202</td><td>Willful failure to collect or pay over tax</td><td>5 years; $10,000 fine under the statute (higher under 18 U.S.C. &sect; 3571)</td></tr>
+<tr><td>&sect; 7203</td><td>Willful failure to file, pay, keep records (misdemeanor)</td><td>1 year</td></tr>
+<tr><td>&sect; 7206(1)</td><td>Fraud and false statements under penalty of perjury</td><td>3 years</td></tr>
+<tr><td>&sect; 7206(2)</td><td>Aiding or assisting false returns (preparers, promoters)</td><td>3 years</td></tr>
+<tr><td>&sect; 7212(a)</td><td>Corrupt interference with the administration of the Code</td><td>3 years</td></tr>
+<tr><td>18 U.S.C. &sect; 371</td><td>Conspiracy to defraud the United States (Klein conspiracy)</td><td>5 years</td></tr>
+</table>
+<p>Evasion requires three elements: a tax deficiency, an affirmative act of evasion or attempt, and willfulness. <i>Spies v. United States</i> (1943) lists affirmative acts such as keeping a double set of books, making false entries, concealing assets, covering up sources of income, and handling affairs to avoid usual records. Willfulness is the &ldquo;voluntary, intentional violation of a known legal duty&rdquo; (<i>United States v. Pomponio</i>, 1976), and under <i>Cheek v. United States</i> (1991) a good-faith misunderstanding of the law, even if unreasonable, negates it, though a disagreement with the law's validity does not. Civil fraud under &sect; 6663 imposes a 75% penalty on the underpayment attributable to fraud, and there is no statute of limitations on assessment for a fraudulent return (&sect; 6501(c)); the criminal limitation period is generally six years (&sect; 6531).</p>
+
+<h2 id="s2">2 Scale and enforcement landscape</h2>
+<p>The IRS estimated the gross tax gap for tax year 2022 at $696 billion, of which $539 billion (77%) was underreporting, $94 billion underpayment and $63 billion non-filing; about $90 billion is expected to be paid late, leaving a net gap of $606 billion and a voluntary compliance rate of 85%.<sup class="ref">[2]</sup> Individual income-tax underreporting is concentrated in business income that has little third-party reporting; wages, which are reported on W-2s, show compliance above 99%, while non-farm proprietor income is under-reported by a large share. This is the intellectual basis for the indirect methods below.</p>
+<p>IRS-CI's FY2025 annual report records $10.59 billion in financial crime identified (up 15.7%), of which $4.5 billion was tax fraud (up 111.8% from FY2024), with nearly 64% of investigative time spent on tax crimes, a 25% increase in search warrants and a 14% increase in prosecution referrals; it seized more than $800 million in assets and about 2.35 petabytes of digital data.<sup class="ref">[3]</sup> Cases are typically developed with analytics and from referrals from IRS civil examination, the IRS Whistleblower Office (&sect; 7623(b): 15&ndash;30% of collected proceeds in cases where tax, penalties and interest exceed $2 million), banks' SARs and other agencies (see <a href="Federal_Enforcement_Agencies.html">Federal Enforcement Agencies</a> and <a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a>).</p>
+<p>The DOJ Tax Division, the historic gatekeeper that had to authorize most criminal tax prosecutions, was eliminated as a standalone component: the proposal appeared in the June 2025 budget, its website was archived in September 2025, dissolution was finalized on 30 November 2025 and the implementing rule took effect on 9 December 2025. Roughly 300 attorneys moved to a Tax Litigation Branch in the Civil Division and about 100 to a Tax Section in the Criminal Division.<sup class="ref">[4]</sup> Further reorganizations followed in 2026; defense and investigative practitioners should check current authorization procedures.</p>
+
+<h2 id="s3">3 Proof methods: direct and indirect</h2>
+<p><b>Specific-items method.</b> Used when the government can identify particular unreported receipts or false deductions: deposits traced to unreported sources, checks from customers not entered in the books, and personal expenses deducted as business costs. It proves the deficiency item by item and is the preferred method where records exist.</p>
+<p><b>Indirect methods</b> are used when books are missing, unreliable, or the taxpayer deals in cash. All rely on the principle that income must equal what the taxpayer applied to expenditures or accumulated, and are upheld in <i>Holland v. United States</i> (1954) (net worth) and <i>United States v. Johnson</i> (1943) (expenditures). The three principal methods are:</p>
+<ol>
+<li><b><a href="Net_Worth_Method.html">Net worth plus nondeductible expenditures</a>:</b> compare year-end net worth (assets minus liabilities, at cost) with the prior year, add living expenses and nondeductible outlays, subtract known nontaxable income, and compare to reported income. Foundations require an established opening net worth, a likely source of the income, and negation of reasonable explanations such as cash hoards, loans, gifts and inheritances (<i>Holland</i>).</li>
+<li><b>Sources and applications of funds (expenditures method):</b> used when net worth is stable but spending is high. Total expenditures plus increases in assets and decreases in liabilities (applications) minus known sources (decreases in assets, increases in liabilities, nontaxable receipts) equals required income.</li>
+<li><b>Bank deposits method:</b> compute total deposits to all accounts; subtract transfers between the taxpayer's accounts, redeposited items, loans, gifts and other nontaxable sources; add cash expenditures paid from undeposited receipts; the result is gross receipts.</li>
+<li><b>Markup and percentage methods</b> for retail and service businesses: apply an industry markup to cost of goods sold, or a standard ratio (e.g., tips-to-sales or gallons per vehicle) to estimate sales.</li>
+</ol>
+<p>Each method produces a schedule that becomes the core exhibit, supported by summary testimony under Federal Rule of Evidence 1006 and bank, title and third-party records (see <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>). Defense experts attack the opening net worth, undeposited cash and the thoroughness of leads followed. Good practice documents the leads run to ground, the taxpayer's explanations (typically through <a href="Interviewing.html">interview</a> or the tax-return preparer file), and a sensitivity analysis showing the deficiency under a range of assumptions.</p>
+
+<h2 id="s4">4 Worked examples</h2>
+<h3>4.1 Bank deposits method (hypothetical restaurant owner)</h3>
+<table class="wikitable">
+<tr><th>Line</th><th>Amount ($)</th></tr>
+<tr><td>Total deposits, all accounts, year</td><td>612,000</td></tr>
+<tr><td>Less: transfers between own accounts</td><td>(95,000)</td></tr>
+<tr><td>Less: loan proceeds (documented bank loan)</td><td>(40,000)</td></tr>
+<tr><td>Less: redeposited returned check</td><td>(2,000)</td></tr>
+<tr><td>Add: cash expenditures from undeposited receipts (payroll, produce)</td><td>71,000</td></tr>
+<tr><td><b>Gross receipts</b></td><td><b>546,000</b></td></tr>
+<tr><td>Less: reported gross receipts</td><td>(410,000)</td></tr>
+<tr><td><b>Unreported receipts</b></td><td><b>136,000</b></td></tr>
+<tr><td>Less: additional deductible costs identified in the records (e.g., 30% food cost)</td><td>(40,800)</td></tr>
+<tr><td><b>Understated net income</b></td><td><b>95,200</b></td></tr>
+</table>
+<p>Tax shown at a hypothetical 24% marginal bracket would be about $22,850 before penalties; the criminal "tax due and owing" threshold in the U.S. Sentencing Guidelines (&sect; 2T4.1) increases the offense level with the amount of loss (for example, more than $250,000 raises the base level from 16 to 18; more than $550,000 to 20). The examiner confirms each reduction with documents; unsupported subtractions are the most common defense attack.</p>
+<h3>4.2 Net worth method (hypothetical individual)</h3>
+<table class="wikitable">
+<tr><th>Item</th><th>Year 0 ($)</th><th>Year 1 ($)</th></tr>
+<tr><td>Assets at cost (cash, real estate, vehicles, accounts)</td><td>300,000</td><td>720,000</td></tr>
+<tr><td>Liabilities</td><td>(180,000)</td><td>(310,000)</td></tr>
+<tr><td>Net worth</td><td>120,000</td><td>410,000</td></tr>
+</table>
+<p>Increase in net worth = $290,000. Add non-deductible living expenses of $64,000 = $354,000. Less known nontaxable sources (documented inheritance $50,000, gifts $10,000) = $294,000 of corrected income. If the filed return reported $85,000 in income, the apparent understatement is $209,000, but the government must also dispose of the "cash hoard" defense, that is, show the opening net worth did not omit cash on hand, usually through bank cash-withdrawal histories, safe-deposit records, prior statements to lenders on credit applications, and the absence of prior hoard-like behavior.</p>
+
+<h2 id="s5">5 Offshore accounts: FBAR and FATCA</h2>
+<p>U.S. persons with a financial interest in or signature authority over foreign financial accounts whose aggregate value exceeds $10,000 at any time in the year must file a <b>Report of Foreign Bank and Financial Accounts</b> (FinCEN Form 114) under the Bank Secrecy Act (31 U.S.C. &sect; 5314), due 15 April with an automatic extension to 15 October. Willful failure carries a civil penalty of the greater of about $100,000 (inflation-adjusted) or 50% of the account balance at the time of the violation, and criminal exposure of up to five years. Separately, the Foreign Account Tax Compliance Act (FATCA, 2010; IRC &sect; 6038D) requires individuals with specified foreign financial assets above thresholds (for single U.S. residents, generally $50,000 at year-end or $75,000 at any time) to attach <b>Form 8938</b> to the return, and requires foreign financial institutions to report U.S. account holders to the IRS, directly or through intergovernmental agreements. The OECD Common Reporting Standard supplies similar automatic exchange for non-U.S. residents of participating countries, which is useful for tax investigators abroad.</p>
+<p>Enforcement history: the 2009 UBS deferred prosecution agreement ($780 million and disclosure of about 4,450 accounts) and the Department of Justice's Swiss Bank Program (2013&ndash;2016) broke bank secrecy for U.S. clients. Practical examination procedures include: (1) compare the foreign-account indicators on Schedule B and the return with the FBAR database and Form 8938; (2) review U.S. bank records for wires to or from foreign banks and for checks drawn on foreign institutions; (3) examine credit-card and ATM use abroad, cross-border travel, and foreign property ownership (see <a href="Asset_Tracing.html">Asset Tracing</a>); (4) search for offshore entities in leak data and registries (see <a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a>); and (5) for crypto, trace exchange accounts and wallets (see <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>). </p>
+
+<h2 id="s6">6 Employment tax and refund fraud</h2>
+<p><b>Employment-tax evasion.</b> Employers withhold income tax and the employee share of FICA from wages, and hold these funds in trust for the government. Failure to remit is a felony under &sect; 7202, and responsible persons face a civil <b>trust fund recovery penalty</b> equal to 100% of the unpaid trust-fund taxes under &sect; 6672. Schemes include pyramiding (filing but not paying, then closing the business and opening a new entity), paying workers off-book in cash, misclassifying employees as independent contractors, and use of professional employer organizations (PEOs) or payroll agents that collect and keep the tax. Detection tests: compare Forms 941 with W-2/W-3 totals and state unemployment wage reports; compare payroll deposits with bank outflows labelled as payroll; compare reported wages with industry ratios (revenue per employee); and check Form 1099-NEC payments to workers who function as employees.</p>
+<p><b>Refund fraud.</b> Typical schemes are stolen-identity refund fraud (filing early in the season with a victim's data and routing the refund to a prepaid card or bank account), inflated withholding credits, false Schedule C and Earned Income Tax Credit claims, fuel-tax-credit abuse, and Employee Retention Credit (ERC) claims for pandemic-era periods, which prompted an IRS moratorium on new claims in September 2023 and a wave of prosecutions of promoters. Data tests include duplicate bank accounts or addresses receiving many refunds, refunds routed to accounts not in the taxpayer's name, W-2 and withholding data that do not match employer filings, return preparers with abnormal refund-per-return profiles, and returns filed from the same device or IP address.</p>
+
+<h2 id="s7">7 Red flags and data tests</h2>
+<ul>
+<li>Lifestyle inconsistent with reported income (compare a property, vehicle and tax-return profile against a <a href="Net_Worth_Method.html">net-worth</a> estimate).</li>
+<li>Cash-intensive business with margins that differ from industry norms, or with deposits that change after a competitor opens.</li>
+<li>Deposits structured just below $10,000 (see <a href="Money_Laundering.html">Money Laundering</a>).</li>
+<li>Two sets of books; backdated or missing records; frequent changes of accountants.</li>
+<li>Large, round or unsupported deductions; &ldquo;consulting&rdquo; fees to related shells (see <a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a>).</li>
+<li>Transfers to nominee entities or foreign accounts, particularly if followed by reacquisition of the asset or loans back (a &ldquo;round trip&rdquo;).</li>
+<li>Payroll tax liabilities that grow while the owner draws personal expenses.</li>
+<li>Preparer-specific anomalies: identical deductions across clients, EIC claims for most clients.</li>
+</ul>
+<p>Analytics such as <a href="Benfords_Law.html">Benford's Law</a> on Schedule C line items, ratio analysis, and the techniques in <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a> identify candidates; they are not evidence of willfulness. Investigators must also respect the limits on use of tax return information (26 U.S.C. &sect; 6103), under which private examiners generally cannot obtain returns without the taxpayer's consent or a court order, and professional standards covered in <a href="Forensic_Accountant_Ethics.html">Forensic Accountant Ethics</a>.</p>
+
+<p class="hatnote">See also: <a href="Net_Worth_Method.html">Net Worth Method</a>, <a href="Forensic_Accounting.html">Forensic Accounting</a>, <a href="Money_Laundering.html">Money Laundering</a>, <a href="AML_Law.html">AML Law</a>, <a href="Asset_Tracing.html">Asset Tracing</a>, <a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>IRS. <i>Criminal Investigation Annual Report</i> (Publication 3583). <a class="external" href="https://www.irs.gov/pub/irs-pdf/p3583.pdf">irs.gov</a></li>
+<li>IRS. "IRS releases 2022 tax gap projections; voluntary compliance rate among taxpayers remains steady." Oct 2024. <a class="external" href="https://www.irs.gov/newsroom/irs-releases-2022-tax-gap-projections-voluntary-compliance-rate-among-taxpayers-remains-steady">irs.gov</a></li>
+<li>IRS. "IRS-CI issues Fiscal Year 2025 Annual Report showcasing banner investigative results." <a class="external" href="https://www.irs.gov/node/153186">irs.gov</a></li>
+<li>American Bar Association. "Federal Tax Prosecutions: Department of Justice Tax Division Eliminated." <a class="external" href="https://www.americanbar.org/groups/litigation/resources/newsletters/criminal/federal-tax-prosecutions-department-justice-tax-division-eliminated/">americanbar.org</a></li>
+<li><i>Holland v. United States</i>, 348 U.S. 121 (1954); <i>Spies v. United States</i>, 317 U.S. 492 (1943); <i>Cheek v. United States</i>, 498 U.S. 192 (1991).</li>
+<li>FinCEN. FBAR guidance. <a class="external" href="https://www.fincen.gov/report-foreign-bank-and-financial-accounts">fincen.gov</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Tax_and_AML.html">Tax and AML</a> | <a href="Category_Financial_Investigation.html">Financial Investigation</a> | <a href="Category_Fraud_Schemes.html">Fraud Schemes</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

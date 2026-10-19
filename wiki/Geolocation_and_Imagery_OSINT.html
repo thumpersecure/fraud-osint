@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Methods for locating, dating and authenticating photographs and video: satellite imagery, chronolocation, reverse image search and metadata.">
+<title>Geolocation and Imagery OSINT - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li class="active-page"><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Geolocation and Imagery OSINT</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Geolocation and Imagery OSINT</th></tr>
+<tr><td class="iblabel">Discipline</td><td>GEOINT / IMINT within open-source intelligence</td></tr>
+<tr><td class="iblabel">Core questions</td><td>Where was it taken? When? Is it authentic?</td></tr>
+<tr><td class="iblabel">Reference cases</td><td>Bellingcat&rsquo;s MH17 Buk investigation (2014&ndash;2015)</td></tr>
+<tr><td class="iblabel">Typical tools</td><td>Google Earth, Sentinel Hub EO Browser, SunCalc, reverse image search</td></tr>
+<tr><td class="iblabel">Key risk</td><td>Stripped metadata; AI-generated and recycled imagery</td></tr>
+</table>
+
+<p><b>Geolocation</b> is the process of determining where a photograph or video was captured, and <b>chronolocation</b> the process of determining when. Together with media verification they form the imagery branch of <a href="OSINT_Disciplines.html">OSINT disciplines</a> (GEOINT and IMINT). In financial-crime and <a href="Human_Trafficking_Finance.html">trafficking</a> work they are used to confirm that a facility exists and operates, that goods or assets are where documents say, that a claimed site visit or inspection occurred, and that images offered as evidence are what they claim to be. The approach is the one popularised by Bellingcat and by the Verification Handbook: treat every image as a claim, extract every observable clue, and corroborate with independent sources.<sup class="ref">[1]</sup> It is a methods discipline; locating private individuals' homes or movements is outside the scope of <a href="OSINT_Ethics.html">ethical OSINT</a>, and the examples here involve public events, infrastructure and commercial sites.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Satellite and aerial imagery sources</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">The Bellingcat approach</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Forensic examination techniques</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">AI-generated imagery and provenance</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Documentation, limits and ethics</a></li>
+<li><span class="tocnumber">6</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Satellite and aerial imagery sources</h2>
+<p>Free sources include Google Earth (whose desktop version has a historical-imagery slider showing earlier captures), Sentinel Hub EO Browser with Copernicus Sentinel-2 imagery at roughly 10 metre resolution and a revisit of a few days, and mapping services with street-level coverage. Commercial providers such as Planet Labs and Maxar offer sub-metre to daily-revisit products at a cost. Resolution drives what is answerable: 10 m imagery shows a field or a large warehouse but not a vehicle; 30&ndash;50 cm imagery shows vehicles, shipping containers and building details. Bellingcat&rsquo;s Online Investigations Toolkit catalogues these tools with their limitations.<sup class="ref">[2]</sup> Always record the capture date shown by the viewer, because map tiles blend imagery of different ages.</p>
+
+<h2 id="s2">2 The Bellingcat approach</h2>
+<p>Bellingcat&rsquo;s investigation of the Buk missile launcher linked to the downing of MH17 is the standard teaching case. Using videos and photographs shared on social media, the team matched distinctive features in the background, such as buildings, road layout and signage, to satellite imagery to fix where each image of the convoy was recorded, and used shadow analysis with SunCalc to estimate the time of day.<sup class="ref">[3]</sup> The method generalises to any chain of images: each geolocated and dated image becomes a point on a timeline, and the chain&rsquo;s strength comes from many independent images that agree. Public sources of this kind later informed formal findings, but a reader should treat each open-source claim as only as strong as its documented steps, which is why the method emphasises showing the work.</p>
+
+<h2 id="s3">3 Forensic examination techniques</h2>
+<p><b>Technique 1: Clue inventory and ranking.</b> Before searching, list every observable feature and rank it by how location-specific it is: (1) unique landmarks and skyline; (2) road geometry, intersections, bridges; (3) signage, language, script, phone-number formats; (4) utility poles, bollards, road-marking style, driving side, licence-plate format; (5) vegetation, soil, climate; (6) vehicles and architecture style. Highly specific features are searched first. Output: a clue table that lets another analyst reproduce the reasoning.</p>
+<p><b>Technique 2: Progressive narrowing.</b> Country (driving side, language, plate style), then region (climate, architecture), then city or district (landmarks), then the exact vantage point (match skyline and building edges to satellite and street-level views). Confirm by matching at least three fixed features whose relative geometry agrees: a bend, a building footprint and a utility pole line, say. A single matching feature is only a candidate.</p>
+<p><b>Technique 3: Shadow-based chronolocation.</b> Measure an object&rsquo;s height H and its shadow length L in the image, in the same plane. The sun&rsquo;s elevation angle is arctan(H/L). <i>Worked example:</i> a 6.0 m pole casts a 9.0 m shadow, so elevation = arctan(0.667) &asymp; 33.7 degrees. At a known location and date, a sun calculator such as SunCalc lists the times of day when the sun reaches that elevation, typically one morning and one afternoon time; shadow direction then selects which. Conversely, with a known time the date can be estimated, since at mid-latitudes elevation at the same clock time changes with season by tens of degrees. Uncertainty is substantial where height or the ground plane is estimated, so report a time window, not a minute.</p>
+<p><b>Technique 4: Imagery-date bracketing.</b> Compare historical satellite imagery to find when a feature appeared or disappeared (new construction, a cleared field, a vessel at a berth). If the feature is absent on 2 March and present on 18 April, the photograph showing it is no earlier than 2 March and the build occurred in that 47-day window. Cross-check with seasonal cues (leaf cover, snow, crops) and weather records for the claimed date.</p>
+<p><b>Technique 5: Reverse image search and earliest-appearance analysis.</b> Run the image through several engines (Google Images, Yandex, TinEye, Bing) and crop to distinctive regions. TinEye is useful for finding the earliest indexed instance; Yandex is often effective for places and faces, but searching for faces raises privacy questions that <a href="OSINT_Ethics.html">OSINT Ethics</a> addresses. For video, extract keyframes and search those. If an image predates the claimed event, it is recycled. Output: a log of engines, queries, dates and earliest dated hit.</p>
+<p><b>Technique 6: Metadata (EXIF) examination.</b> Inspect Exchangeable Image File Format fields: capture timestamp, device make/model, software, GPS coordinates, lens and orientation, and thumbnail. Compare them with the visible content: a file claimed as phone photography whose software field shows an editor, a thumbnail that differs from the main image, or a capture time that conflicts with shadows are warning signs. Most social platforms and messaging apps strip or rewrite metadata on upload, so absent EXIF is normal, not suspicious, while intact EXIF on a file obtained directly from a source is high-value but also trivially editable. Treat metadata as a lead, never as proof, and hash the original file before examining a copy (see <a href="Digital_Forensics_Tools.html">Digital Forensics Tools</a> and <a href="Chain_of_Custody.html">Chain of Custody</a>).</p>
+<p><b>Technique 7: Image-integrity analysis.</b> Look for inconsistent lighting and shadow directions, repeated texture (clone stamping), edge halos, and mismatched noise or compression between regions; error-level analysis and noise-residual views assist but produce false positives on recompressed images, so they support but do not decide. For video, see <a href="Video_Forensics.html">Video Forensics</a>, which covers frame analysis and authentication in more depth.</p>
+<p><b>Technique 8: Corroboration matrix.</b> For each conclusion record location confidence, time confidence and authenticity confidence separately, with the independent items supporting each (satellite match, shadow estimate, second angle of the same event, local weather, eyewitness or official statement). A claim supported by one line of evidence is reported as unconfirmed.</p>
+
+<h2 id="s4">4 AI-generated imagery and provenance</h2>
+<p>Generative models can produce photorealistic scenes, which means the question &ldquo;is this real?&rdquo; now comes before &ldquo;where is this?&rdquo;. Visual tells (malformed hands, garbled text, inconsistent reflections, implausible architecture) are unreliable as models improve. Provenance technologies help but have gaps: C2PA Content Credentials are cryptographically signed metadata recording a file&rsquo;s origin and edits, while SynthID is an invisible watermark embedded in pixels at generation; in May 2026 OpenAI and Google jointly endorsed pairing the two because each alone is insufficient.<sup class="ref">[4]</sup> Platforms commonly strip embedded metadata on upload, so credentials usually survive only on files obtained from the source, and the absence of a credential or watermark proves nothing. Detection classifiers produce both false positives and false negatives and should not be cited as conclusive. The robust approach is to geolocate and chronolocate: a fabricated scene will usually fail to match real satellite and street-level geometry, and a real one will match in several independent respects. Authenticity findings for court use belong with a qualified examiner (see <a href="Evidence_and_Testimony.html">Evidence and Testimony</a> and the <a href="Daubert_Standard.html">Daubert standard</a>).</p>
+
+<h2 id="s5">5 Documentation, limits and ethics</h2>
+<ul>
+<li><b>Preserve first.</b> Save the original file and the page it came from, hash it, and capture the URL and time; sources vanish (see <a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a>).</li>
+<li><b>Show the work.</b> Annotated side-by-side comparisons, coordinates, imagery dates and calculation steps let others reproduce the finding.</li>
+<li><b>State uncertainty.</b> Use confidence levels and time windows.</li>
+<li><b>Confirmation bias.</b> Try to disprove the hypothesis; a peer reviewer should repeat the geolocation blind where possible.</li>
+<li><b>Do not target individuals.</b> Do not geolocate private residences or track private persons; blur faces and licence plates in anything published; consider that publication can place people in danger.</li>
+<li><b>Imagery limits.</b> Cloud cover, old tiles, seasonal change and low resolution can produce wrong matches; satellite imagery shows a surface, not intent.</li>
+</ul>
+
+<p class="hatnote">See also: <a href="OSINT_Disciplines.html">OSINT Disciplines</a>, <a href="Video_Forensics.html">Video Forensics</a>, <a href="Digital_Forensics.html">Digital Forensics</a>, <a href="OSINT_Tools.html">OSINT Tools</a>, <a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Silverman, C. (ed.). <i>Verification Handbook</i>, Chapter 6, &ldquo;Building expertise through UGC verification.&rdquo; <a class="external" href="https://verificationhandbook.com/book2/chapter6.php">verificationhandbook.com</a></li>
+<li>Bellingcat. Online Investigations Toolkit and &ldquo;Searching the Earth: Essential Geolocation Tools for Verification&rdquo; (2015). <a class="external" href="https://www.bellingcat.com/resources/2015/07/25/searching-the-earth-essential-geolocation-tools-for-verification/">bellingcat.com</a></li>
+<li>Bellingcat. &ldquo;MH17 &ndash; The Open Source Evidence.&rdquo; 8 October 2015. <a class="external" href="https://www.bellingcat.com/news/2015/10/08/mh17-the-open-source-evidence/">bellingcat.com</a></li>
+<li>SoftwareSeni. &ldquo;How C2PA Content Credentials Work and What Their Limits Are&rdquo;; coverage of the May 2026 OpenAI/Google dual-layer endorsement (secondary source). <a class="external" href="https://www.softwareseni.com/how-c2pa-content-credentials-work-and-what-their-limits-are/">softwareseni.com</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_OSINT.html">OSINT</a> | <a href="Category_Intelligence.html">Intelligence</a> | <a href="Category_Digital_Evidence.html">Digital Evidence</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!--meta title="Bank Statement and Cash Analysis" desc="Hands-on procedures for proof of cash, kiting and lapping detection, check-tampering examination, and the expenditures method." cats="Forensic Accounting Core, Investigation Methods, Fraud Detection"-->
+<table class="infobox">
+<tr><th class="ibtitle" colspan="2">Bank Statement and Cash Analysis</th></tr>
+<tr><td class="iblabel">Discipline</td><td>Forensic accounting; fraud examination</td></tr>
+<tr><td class="iblabel">Core tests</td><td>Proof of cash; bank reconciliation review; deposit-in-transit and outstanding-check tests; kiting and lapping tests; check examination</td></tr>
+<tr><td class="iblabel">Indirect methods</td><td>Source and application of funds; expenditures method</td></tr>
+<tr><td class="iblabel">Typical inputs</td><td>Bank statements, check images, deposit slips, cash receipts journal, general ledger</td></tr>
+<tr><td class="iblabel">Fraud-tree branches</td><td>Skimming; cash larceny; check tampering; fraudulent disbursements</td></tr>
+</table>
+
+<p><b>Bank statement and cash analysis</b> is the family of procedures a <a href="Forensic_Accounting.html">forensic accountant</a> uses to test whether the cash an organization (or a person) reports agrees with what actually passed through its bank accounts. Because almost every <a href="Fraud_Tree.html">asset-misappropriation</a> scheme eventually touches cash, the bank is the one independent, third-party record that a fraudster cannot easily rewrite. This article is a working guide: it sets out step-by-step procedures, formulas and worked numeric examples, followed by the evidence each test produces and the pitfalls that commonly trap examiners. For the theory of why such schemes occur see <a href="Fraud_Triangle.html">Fraud Triangle</a>; for the person-level equivalent of the indirect methods, see <a href="Net_Worth_Method.html">Net Worth Method</a>.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Acquiring and preparing bank evidence</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Reviewing bank reconciliations for manipulation</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">The proof of cash</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Deposit-in-transit and outstanding-check tests</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Kiting</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Lapping and skimming</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Check-tampering examination</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Source and application of funds; expenditures method</a></li>
+<li><span class="tocnumber">9</span> <a href="#s9">Pitfalls and documentation</a></li>
+<li><span class="tocnumber">10</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Acquiring and preparing bank evidence</h2>
+<p>Every test below depends on a complete, authentic set of bank records, so acquisition comes first. The procedure is:</p>
+<ol>
+<li><b>Inventory every account.</b> Request a list of all accounts, including dormant, payroll, sweep, petty-cash and savings accounts, from the bank (via the entity's signatory or by subpoena or document request in litigation). Omitted accounts are the commonest way a scheme escapes testing. Cross-check against signature cards, the general ledger chart of accounts and Forms 1099-INT.</li>
+<li><b>Obtain statements directly from the bank</b>, not from the suspect or from the accounting department, wherever practicable. Statements held by the suspect may have been altered. Preserve the request, the transmission and the receipt under <a href="Chain_of_Custody.html">chain-of-custody</a> discipline.</li>
+<li><b>Obtain images, not just totals.</b> Request front-and-back images of every paid check and every deposit item, plus deposit slips. The back of a check (endorsements, bank stamps, the depositary institution) frequently contains the evidence.</li>
+<li><b>Cover a continuous period</b> that includes at least one full month before the suspected start and the whole period to date, so that the first and last periods of each test have valid opening balances.</li>
+<li><b>Convert to a working dataset.</b> Load transactions into a spreadsheet or database with one row per item: date, amount, check number, payee, depositor, account. Reconcile the total of the dataset to each statement's printed totals before analysing anything (a control total check).</li>
+</ol>
+<p>Where records are voluminous, the same dataset supports the analytics described in <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a> and <a href="Benfords_Law.html">Benford's Law</a> testing of disbursement amounts.</p>
+
+<h2 id="s2">2 Reviewing bank reconciliations for manipulation</h2>
+<p>A monthly bank reconciliation is the primary internal control over cash, and it is also the usual place where a custodian hides a theft. Review the reconciliations for the period under investigation against the bank statements, not against each other. Look for the following manipulation patterns:<sup class="ref">[1]</sup></p>
+<ul>
+<li><b>Reconciler is the custodian.</b> The same person who handles receipts, writes checks and reconciles the bank account has the opportunity to conceal anything. Segregation-of-duties failure is a root red flag (see <a href="Red_Flags.html">Red Flags</a>).</li>
+<li><b>Fictitious reconciling items.</b> Deposits in transit that never clear, or outstanding checks that are not on the check register, used as plugs to force agreement.</li>
+<li><b>Forced balances.</b> An unexplained "adjustment" or "miscellaneous" line, or a book balance that was changed at the last minute to equal the bank balance.</li>
+<li><b>Altered statements.</b> The reconciler works from a photocopied, retyped or electronically edited statement. Compare the copy held internally with a statement obtained directly from the bank, checking balances, check numbers and fonts (see <a href="Document_Examination.html">Document Examination</a>).</li>
+<li><b>Stale items carried forward.</b> Outstanding checks or deposits in transit that remain open for many months (checks rarely stay uncashed beyond 90 to 180 days, and a deposit in transit should clear within one to three business days).</li>
+<li><b>Reconciliations prepared late or unsigned,</b> or reconciliations missing for specific months (often the months in which the scheme was most active).</li>
+</ul>
+<p>The practical test: re-perform one month's reconciliation from scratch using the bank statement, the cash receipts journal and the check register. Then trace every reconciling item to a subsequent-period statement (see section 4).</p>
+
+<h2 id="s3">3 The proof of cash</h2>
+<p>The <b>proof of cash</b> (four-column reconciliation) is the most powerful single test of bank-versus-book cash because it reconciles not only balances but also the receipts and disbursements that flow between them, which exposes both unrecorded transactions and cut-off errors. It uses four columns: the beginning balance, receipts, disbursements and the ending balance. The same adjusting items (deposits in transit and outstanding checks at both ends of the period) are carried across the columns.<sup class="ref">[1]</sup></p>
+<p><b>Procedure.</b></p>
+<ol>
+<li>Choose the period (usually one month; for investigations, test several months, including months you suspect and months you do not).</li>
+<li>Enter the balance per bank at the start and end of the period, and total deposits and total withdrawals per the bank statement.</li>
+<li>List deposits in transit (DIT) and outstanding checks (OC) at the beginning and at the end of the period.</li>
+<li>Adjust the receipts column: <i>subtract</i> beginning DIT (already counted by the bank this month but booked last month) and <i>add</i> ending DIT.</li>
+<li>Adjust the disbursements column: <i>subtract</i> beginning OC and <i>add</i> ending OC.</li>
+<li>Compare the adjusted bank totals to the book totals from the cash receipts and cash disbursements journals. Any difference is an unreconciled item to investigate.</li>
+</ol>
+<p><b>Worked example.</b> An illustrative nonprofit shows these figures for a month:</p>
+<table class="wikitable">
+<tr><th>Line</th><th>Beginning balance</th><th>Receipts</th><th>Disbursements</th><th>Ending balance</th></tr>
+<tr><td>Per bank statement</td><td>$40,000</td><td>$300,000</td><td>$290,000</td><td>$50,000</td></tr>
+<tr><td>Deposits in transit, beginning</td><td>+5,000</td><td>&minus;5,000</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>Deposits in transit, ending</td><td>&mdash;</td><td>+9,000</td><td>&mdash;</td><td>+9,000</td></tr>
+<tr><td>Outstanding checks, beginning</td><td>&minus;8,000</td><td>&mdash;</td><td>&minus;8,000</td><td>&mdash;</td></tr>
+<tr><td>Outstanding checks, ending</td><td>&mdash;</td><td>&mdash;</td><td>+12,000</td><td>&minus;12,000</td></tr>
+<tr><td><b>Adjusted (true) cash</b></td><td><b>$37,000</b></td><td><b>$304,000</b></td><td><b>$294,000</b></td><td><b>$47,000</b></td></tr>
+<tr><td>Per books (ledger)</td><td>$37,000</td><td>$296,500</td><td>$294,000</td><td>$39,500</td></tr>
+<tr><td>Difference</td><td>0</td><td>$7,500</td><td>0</td><td>$7,500</td></tr>
+</table>
+<p>Check: $37,000 + $304,000 &minus; $294,000 = $47,000, so the adjusted bank columns foot across. The books, however, recorded $7,500 less in receipts than the bank actually received, leaving book cash $7,500 too low. In this fact pattern the discrepancy is in the books, not the bank, and it must be explained: unrecorded donations or loan proceeds, a transfer from another account, or a receipt that the bookkeeper recorded as a net amount after pulling cash. The inverse pattern, where <i>book</i> receipts exceed bank receipts, suggests fictitious entries or deposits that were never made; if the shortfall is concentrated in cash (currency) receipts, <a href="#s6">skimming or lapping</a> becomes the leading hypothesis.</p>
+<p><b>What the test cannot do.</b> The proof of cash shows that recorded and banked amounts differ; it does not tell you whether revenue that was never recorded <i>or</i> banked (pure off-book skimming) exists. That requires the indirect methods in section 8 or comparison to independent sales evidence (see <a href="Analytical_Methods.html">Analytical Methods</a>).</p>
+
+<h2 id="s4">4 Deposit-in-transit and outstanding-check tests</h2>
+<p>Both reconciling items rely on the reconciler's say-so, so test them directly against the <i>following</i> period's bank statement (a "subsequent clearing" test).</p>
+<p><b>Deposit-in-transit test.</b></p>
+<ol>
+<li>List all DIT at period end from the reconciliation.</li>
+<li>Obtain the bank statement for the next month and the deposit slips.</li>
+<li>Confirm each DIT cleared the bank within the first one to three business days. Tolerate weekends and holidays, but flag any item that took longer.</li>
+<li>Confirm the DIT amount and the make-up of the deposit (cash versus checks) agree to the cash receipts journal and the deposit slip.</li>
+<li>Flag a DIT that does not clear, clears for a smaller amount, or clears in a differently composed deposit. A common concealment is to record a "deposit in transit" on the last day of the month that is later offset with the next month's receipts.</li>
+</ol>
+<p><b>Outstanding-check test.</b></p>
+<ol>
+<li>List outstanding checks at period end from the reconciliation.</li>
+<li>Trace each to the check register and to the date and amount in the following statements.</li>
+<li>Flag outstanding checks that are listed on the reconciliation but are missing from the register, that have been outstanding more than six months, or that were issued for round amounts at the period end. A check recorded as outstanding but actually cashed (the paid check is in the next statement dated <i>before</i> the period end) shows a deliberately false reconciling item.</li>
+<li>Test the reverse: checks dated in the period that cleared in the first days of the next month but are <i>not</i> listed as outstanding. This understates outstanding checks and overstates cash, one signature of window dressing.</li>
+</ol>
+<p><b>Cut-off arithmetic.</b> Adjusted cash equals balance per bank + DIT &minus; OC. If the entity delayed recording $25,000 of checks written in the last days of the month, the book cash balance is overstated by $25,000 at period end, which can hide a loan covenant breach or a negative working-capital position. The proof of cash catches this because the same $25,000 appears in the disbursements column of the following period.</p>
+
+<h2 id="s5">5 Kiting</h2>
+<p><b>Check kiting</b> exploits the <i>float</i>, the time between a check being deposited and the funds being collected from the drawee bank, to create a fictitious balance that does not exist. Typically two or more accounts at different banks are used: a check drawn on Account A is deposited in Account B, which is credited provisionally, and the funds are drawn out before the check clears; a check on Account B is then deposited back into Account A to cover the first overdraft, and the cycle repeats and grows. Each bank sees only its own side. A related variant, <b>kiting with wire transfers</b>, uses same-day wires in place of checks to move apparent funds between accounts.</p>
+<p>A well-documented example is E.F. Hutton &amp; Co., which in 1985 pleaded guilty to 2,000 counts of mail and wire fraud for a 1980&ndash;1982 scheme in which it deliberately overdrew accounts at many banks and covered the overdrafts with checks drawn on other banks, obtaining in effect interest-free loans. Hutton agreed to a $2 million fine and the costs of the investigation, and to restitution to the affected banks.<sup class="ref">[2]</sup> The case shows that kiting is not limited to small businesses; it is a form of unauthorized borrowing.</p>
+<p><b>Detection procedure.</b></p>
+<ol>
+<li>Obtain statements for all accounts held by the entity and by related parties for at least a month on either side of the suspect period.</li>
+<li>Build a <b>transfer schedule</b>: list every deposit of a check drawn on another of the entity's accounts, and every check that clears an account and was deposited into another. Fields: drawn-on account, check number, amount, date written, date deposited, date cleared.</li>
+<li>Calculate the <b>float days</b> for each item (date cleared minus date deposited). Kites rely on a sustained gap of 2 to 5 days.</li>
+<li>Compute the <b>kite balance</b>: the total of items in float on each date. Compare it to the ledger balance of the accounts; a kite shows as a large "balance" supported by uncleared items.</li>
+<li>Run statistical screens: deposits and checks of near-equal amounts between the same accounts; check numbers that appear sequentially across the accounts; account balances that hover near zero with large gross activity ("high turnover, low balance"); total debits and credits that are many multiples of the real business revenue.</li>
+<li>Reconcile the schedule to the proof of cash. A kite appears as large reconciling items in both DIT and outstanding checks that net to a small number.</li>
+</ol>
+<p><b>Worked example (illustrative).</b> Account A at Bank 1 and Account B at Bank 2 each carry a true balance near $0. On day 1 the owner writes check #101 for $50,000 on A and deposits it in B; B shows $50,000 provisional. On day 2, he writes check #5001 for $50,000 on B (available because of the provisional credit) and deposits it into A so that check #101 clears. On day 3, #5001 clears at B only if another check covers it, and so a larger check on A is deposited in B. The kite grows by the amount needed each time to stay ahead of the float. At the point of collapse the apparent balance, perhaps hundreds of thousands of dollars, vanishes and the banks hold the loss. The statements show check #101 deposited on day 1 but not cleared until day 3, and the equal-amount cross-deposits are the fingerprint.</p>
+<p>Criminal exposure arises mainly under 18 U.S.C. 1344 (bank fraud) and the wire and mail fraud statutes. Banks themselves monitor for kiting using &ldquo;uncollected funds&rdquo; and large-item reports, so the bank&rsquo;s own investigation file is a useful source.</p>
+
+<h2 id="s6">6 Lapping and skimming</h2>
+<p><b>Skimming</b> is theft of receipts before they are recorded. <b>Lapping</b> is the cover-up method for stealing a customer's payment in an accounts-receivable system: the thief pockets customer A's payment, then applies customer B's later payment to A's account to keep A current, then applies customer C's payment to B, and so on. The &ldquo;lap&rdquo; must be sustained indefinitely, since stopping reveals the shortfall.</p>
+<p><b>Detection procedure.</b></p>
+<ol>
+<li><b>Match deposits to remittances.</b> For a sample of days, compare the deposit slip, the lockbox or mail log and the postings in the receivables ledger by customer name and amount. In lapping, the name on the check (customer B) differs from the account credited (A).</li>
+<li><b>Check dating.</b> Compare the date of the check with the date it was deposited and the date it was posted. Lapping produces a growing delay between receipt and posting.</li>
+<li><b>Run an aging analysis</b> by clerk. Accounts handled by the suspect show frequent short delays and late payments with partial aging; ones that are always &ldquo;just current.&rdquo;</li>
+<li><b>Send confirmations</b> (positive, with the statement balance and the date of last payment) to a sample of customers, and have the replies go directly to the examiner, not to the clerk. A mismatch in last-payment date or amount is the best single indicator.</li>
+<li><b>Examine credit memos and write-offs</b> approved or posted by the suspect: they may be used to clear a lapped balance.</li>
+<li><b>Look at the endorsement side of checks.</b> Checks cashed or deposited into a non-company account carry a different bank stamp.</li>
+</ol>
+<p><b>Worked numeric example.</b> The suspect steals Customer A's $1,200 check on 3 March. On 12 March he applies Customer B's $1,500 check (actually owed on B's account) to A's account for $1,200 and records the other $300 as an unapplied credit. On 20 March he applies Customer C's $900 check to B's account, with a further $600 now needed from a later payment. Over months the amount of the lap, the sum of stolen receipts not yet covered, accumulates, so the number of &ldquo;borrowed&rdquo; payments climbs. A trace of March deposits shows B's remittance advice dated 12 March but B's account credited on 20 March, and customer B's confirmation shows a balance that disagrees with the ledger.</p>
+<p>For skimming of cash sales, there is no ledger entry to trace; compare recorded sales volume to independent measures (inventory depletion, customer counts, utility use, industry gross margin) and run a proof of cash (section 3), looking at a drop in the ratio of cash-to-credit receipts. The ACFE classifies skimming as an &ldquo;off-book&rdquo; scheme, which is why its detection depends on indirect evidence.<sup class="ref">[3]</sup></p>
+
+<h2 id="s7">7 Check-tampering examination</h2>
+<p>Check tampering is a fraudulent disbursement in which an employee forges or alters a check to pay himself or an accomplice. The ACFE identifies five principal forms:<sup class="ref">[3]</sup></p>
+<table class="wikitable">
+<tr><th>Form</th><th>Method</th><th>What to look for on the paid-check image</th></tr>
+<tr><td>Forged maker</td><td>Employee signs the authorized signer&rsquo;s name</td><td>Signature differing from the signature card; hesitation, tremor; &ldquo;traced&rdquo; look; signature stamp used by an unauthorized person</td></tr>
+<tr><td>Forged endorsement</td><td>Employee intercepts a legitimate check to a third party and endorses it</td><td>Endorsement not matching payee; deposited to an account not belonging to the payee; second endorsement by an unknown person</td></tr>
+<tr><td>Altered payee</td><td>Payee changed (often to the employee) after signing</td><td>Different ink or pen pressure; payee line spaced irregularly; residue from chemical removal; payee inconsistent with the vendor master</td></tr>
+<tr><td>Authorized maker</td><td>An employee with signing authority writes checks for personal use</td><td>Payees not in the vendor file; round amounts; documentation missing; approvals missing</td></tr>
+<tr><td>Concealed check</td><td>A check is slipped into a stack the signer approves with an invoice bundle</td><td>Check without supporting invoice or purchase order; payee unfamiliar to the signer</td></tr>
+</table>
+<p><b>Examination procedure.</b></p>
+<ol>
+<li><b>Obtain the paid-check images</b> (front and back) in the highest available resolution; the original instrument if litigation is likely, since images lose ink and indentation detail.</li>
+<li><b>Sort the population</b> by payee, amount, signer and endorsement. Flag payees that are the employee&rsquo;s name, near matches, or that appear nowhere in the vendor master or purchase-order system.</li>
+<li><b>Check the endorsement chain.</b> Trace the depositary bank&rsquo;s routing number and account stamp on the back of each suspect check, and request the deposit account&rsquo;s signature card and statements through legal process.</li>
+<li><b>Compare check numbers to the check register.</b> Gaps, out-of-sequence numbers, voided checks that nonetheless cleared, and checks cleared but not recorded are all indicators.</li>
+<li><b>Refer questioned documents</b> to a qualified document examiner for handwriting, ink and alteration analysis. See <a href="Document_Examination.html">Document Examination</a> and <a href="Daubert_Standard.html">Daubert Standard</a> for the reliability standards to which such testimony is held.</li>
+<li><b>Quantify.</b> Total the fraudulent checks by month; this is the loss figure for the <a href="Report_Writing.html">report</a>.</li>
+</ol>
+<p><b>Legal timing.</b> Under UCC &sect; 4-406(f), a customer who fails to discover and report an unauthorized signature or alteration within one year after the statement or items are made available loses the right to assert the claim against the bank.<sup class="ref">[4]</sup> The practical consequence is that account statements should be reviewed promptly, and that an investigation which finds forged items must preserve the claim by notifying the bank in writing well inside that window; shorter periods can be fixed by account agreement. The &ldquo;positive pay&rdquo; service, in which the company transmits its issued-check file and the bank matches presented items, is the leading preventive control.</p>
+
+<h2 id="s8">8 Source and application of funds; expenditures method</h2>
+<p>When books are missing, destroyed or untrustworthy, the examiner reconstructs income indirectly from how money was spent. The <b>source and application of funds</b> analysis (also called cash-flow analysis) lists every identified source of cash and every identified use over a period, and treats the difference as unexplained.</p>
+<p><b>Formula.</b></p>
+<pre>Unexplained funds  =  Total applications of funds  &minus;  Total identified sources of funds
+Applications  =  living expenses + purchases of assets + debt repayments + deposits to savings
+Sources       =  known (reported) income + loan proceeds + asset sales + decrease in cash on hand + gifts
+</pre>
+<p>The <b>expenditures method</b> is the same logic applied to a person: if expenditures exceed known sources of funds, the excess is attributed to unreported income. It is the cash-based sibling of the <a href="Net_Worth_Method.html">net worth method</a>, which compares changes in net worth instead.</p>
+<p><b>Worked example (illustrative).</b></p>
+<table class="wikitable">
+<tr><th>Item</th><th>Amount</th></tr>
+<tr><td>Living expenses (rent, utilities, food, travel, from bank and card records)</td><td>$86,000</td></tr>
+<tr><td>Vehicle purchased for cash</td><td>$42,000</td></tr>
+<tr><td>Mortgage principal repaid</td><td>$18,000</td></tr>
+<tr><td>Increase in savings and brokerage balances</td><td>$30,000</td></tr>
+<tr><td><b>Total applications</b></td><td><b>$176,000</b></td></tr>
+<tr><td>Reported salary after tax</td><td>$95,000</td></tr>
+<tr><td>Loan proceeds</td><td>$10,000</td></tr>
+<tr><td>Sale of old vehicle</td><td>$8,000</td></tr>
+<tr><td>Decrease in cash on hand (beginning less ending)</td><td>$5,000</td></tr>
+<tr><td><b>Total identified sources</b></td><td><b>$118,000</b></td></tr>
+<tr><td><b>Unexplained funds (possible unreported income)</b></td><td><b>$58,000</b></td></tr>
+</table>
+<p>Because the result is an inference, the examiner must (1) establish an opening position (cash on hand and net worth at the start; in tax prosecutions, the courts have required the government to establish an opening net worth with reasonable certainty and to investigate leads offered by the taxpayer), (2) rule out non-income sources, such as gifts, inheritances, loans and prior savings, and (3) show a likely source, such as the business. Without this, the figure proves only that spending exceeded recorded income. For large cases see <a href="Asset_Tracing.html">Asset Tracing</a>, and for laundering-related uses of the same logic, <a href="Money_Laundering.html">Money Laundering</a>.</p>
+<p>For a business, the equivalent is a <b>cash-flow reconstruction</b>: total bank deposits less transfers, loan proceeds and other non-income deposits gives net business receipts; compare it with reported revenue. <b>Bank deposits method</b> is the common name when the reconstruction starts from deposits. Adjustments needed: remove inter-account transfers (double-counting), refunds, redeposited items (a returned check redeposited), and add cash expenses paid from receipts before deposit.</p>
+
+<h2 id="s9">9 Pitfalls and documentation</h2>
+<ul>
+<li><b>Double-counting transfers.</b> Failing to eliminate transfers between the entity&rsquo;s own accounts is the most common error and inflates apparent receipts.</li>
+<li><b>Incomplete account coverage.</b> A missing account breaks the proof of cash and makes the unexplained amount meaningless.</li>
+<li><b>Cut-off drift.</b> Unless beginning DIT and outstanding checks are carried across, a proof of cash will always show a difference.</li>
+<li><b>Treating anomalies as proof.</b> A mismatch is a lead. Interview the preparer (see <a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a>) before concluding that it is fraud; legitimate causes include timing, bank errors and foreign-exchange.</li>
+<li><b>Confirmation bias.</b> Run the tests on months you do <i>not</i> suspect as a control; a method that flags every month is measuring noise.</li>
+<li><b>Documentation.</b> Keep a working-paper trail: source documents, who obtained them and when, formulas used, reconciling items traced and the conclusion. Reproducible work is what survives cross-examination (see <a href="Evidence_and_Testimony.html">Evidence and Testimony</a> and <a href="Forensic_Accountant_Ethics.html">Forensic Accountant Ethics</a>).</li>
+</ul>
+
+<p class="hatnote">See also: <a href="Net_Worth_Method.html">Net Worth Method</a>, <a href="Occupational_Fraud.html">Occupational Fraud</a>, <a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a>, <a href="Link_and_Network_Analysis.html">Link and Network Analysis</a>, <a href="Red_Flags.html">Red Flags</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Crain, M., Hopwood, W., Pacini, C. &amp; Young, G. <i>Essentials of Forensic Accounting</i> (AICPA), 2015; Wells, J. T. <i>Principles of Fraud Examination</i> (Wiley), proof-of-cash and reconciliation procedures.</li>
+<li>Securities Historical Society. &ldquo;Hutton Guilty&rdquo; (1985 news record of E.F. Hutton&rsquo;s plea).</li>
+<li>Association of Certified Fraud Examiners. <i>Occupational Fraud 2024: A Report to the Nations</i> (scheme definitions: skimming, check tampering). <a class="external" href="https://www.acfe.com/-/media/files/acfe/pdfs/rttn/2024/2024-report-to-the-nations.pdf">acfe.com</a></li>
+<li>Uniform Commercial Code &sect; 4-406, &ldquo;Customer&rsquo;s Duty to Discover and Report Unauthorized Signature or Alteration.&rdquo; Cornell Legal Information Institute. <a class="external" href="https://www.law.cornell.edu/ucc/4/4-406">law.cornell.edu</a></li>
+</ol>

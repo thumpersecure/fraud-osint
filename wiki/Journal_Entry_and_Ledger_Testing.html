@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How to extract, validate and test general-ledger journal entries for fraud: criteria, SQL/Excel/Python recipes, Benford second-digit and sampling.">
+<title>Journal Entry and Ledger Testing - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li class="active-page"><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Journal Entry and Ledger Testing</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Journal Entry and Ledger Testing</th></tr>
+<tr><td class="iblabel">Purpose</td><td>Detect management override and fraudulent postings in the general ledger</td></tr>
+<tr><td class="iblabel">Audit basis</td><td>PCAOB AS 2401; ISA 240; AU-C 240</td></tr>
+<tr><td class="iblabel">Core tests</td><td>Round-amount, weekend/holiday, after-close, duplicate, gap, rare-user, Benford</td></tr>
+<tr><td class="iblabel">Tools</td><td>SQL, Excel, Python (pandas), audit analytics packages</td></tr>
+<tr><td class="iblabel">Key risk</td><td>Incomplete or altered data extract</td></tr>
+</table>
+
+<p><b>Journal entry testing</b> is the examination of the general ledger&rsquo;s postings to find entries that are unusual in timing, amount, preparer or account combination, and therefore more likely to be fraudulent or erroneous. It is a required response to the risk of management override of controls in financial-statement audits: PCAOB Auditing Standard 2401 notes that fraud often involves recording inappropriate or unauthorized journal entries throughout the year or at period end, and requires the auditor to test journal entries and other adjustments.<sup class="ref">[1]</sup> For a forensic examiner the same techniques apply at larger scale and with more freedom: the ledger is the place where <a href="Financial_Statement_Fraud.html">financial-statement fraud</a> must eventually be recorded and where many <a href="Occupational_Fraud.html">occupational-fraud</a> schemes leave a trace. This article is a hands-on guide; for the statistical foundation, see <a href="Benfords_Law.html">Benford&rsquo;s Law</a> and <a href="Analytical_Methods.html">Analytical Methods</a>.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Data acquisition and completeness</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Selection criteria</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">SQL recipes</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Excel and Python recipes</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Duplicate and gap tests</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Benford first- and second-digit tests</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Sampling approaches</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Following up flagged entries</a></li>
+<li><span class="tocnumber">9</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Data acquisition and completeness</h2>
+<p>PCAOB inspections have repeatedly found that auditors failed to test the completeness of the population of journal entries.<sup class="ref">[2]</sup> A flawless analysis of an incomplete extract is worthless, so validate before testing.</p>
+<ol>
+<li><b>Define the sources.</b> The population should include the general ledger, subledgers that post by interface (AR, AP, payroll, fixed assets, inventory), manual top-side entries, consolidation and elimination entries, and post-closing adjustments. Fraudulent entries are frequently made in the last category, outside the ERP.</li>
+<li><b>Obtain the extract yourself or witness it.</b> Have IT run the query under your direction, record the query text, server, run time and user, and take a hash of the output file (for example, SHA-256). Preserve it as evidence (see <a href="Chain_of_Custody.html">Chain of Custody</a>).</li>
+<li><b>Required fields.</b> Journal ID, line number, posting date, entry (document) date, period, account, amount debit/credit, description, preparer user ID, approver user ID, source/module, manual versus automated flag, reversal flag, and timestamp.</li>
+<li><b>Control totals.</b> Verify (a) total debits equal total credits for every journal and for the file; (b) record count equals the count reported by the system; (c) the opening balance of each account plus the net activity equals the closing balance on the trial balance; (d) the trial balance agrees to the financial statements. Any unreconciled difference means missing or altered data.</li>
+<li><b>Sequence check.</b> Entry numbers should run without gaps (see section 5); gaps may mean deleted or unextracted entries.</li>
+<li><b>Cross-source tie-out.</b> Reconcile subledger totals to control accounts, and sample entries from the source documents <i>to</i> the ledger, to test whether entries outside the extract exist (a &ldquo;reverse&rdquo; completeness test).</li>
+<li><b>Document everything</b> so the work is reproducible (see <a href="Report_Writing.html">Report Writing</a>).</li>
+</ol>
+
+<h2 id="s2">2 Selection criteria</h2>
+<p>AS 2401 and the ACFE both list characteristics of entries associated with override. A practical criteria set, with the logic for each, is below.<sup class="ref">[1]</sup><sup class="ref">[2]</sup></p>
+<table class="wikitable">
+<tr><th>Test</th><th>Criterion</th><th>Rationale / typical false positives</th></tr>
+<tr><td>Round amounts</td><td>Amount divisible by 1,000 (or ends in 000); entries ending in 999</td><td>Estimates and plugs are round; genuine invoices rarely are. Rent, loan payments and accruals are legitimate.</td></tr>
+<tr><td>Weekend / holiday</td><td>Posting date on Saturday, Sunday or a company holiday</td><td>Override usually avoids supervision. Batch jobs and overseas offices are false positives.</td></tr>
+<tr><td>After close</td><td>Entry date after period end but posted to the closed period; entries in the last 3 days of the period or the first days after close</td><td>Used to meet targets. Normal close adjustments create many hits.</td></tr>
+<tr><td>Rare users</td><td>Posted by an executive, an IT/administrator ID, or a user who posts fewer than N entries per year</td><td>Management should rarely post directly.</td></tr>
+<tr><td>Unusual account pairs</td><td>Debit to expense and credit to revenue; debit to cash and credit to an unusual liability; entries to seldom-used, suspense or intercompany accounts</td><td>Revenue overstatement often debits receivables and credits revenue with an unusual offset.</td></tr>
+<tr><td>Missing or vague description</td><td>Blank, &ldquo;adjustment,&rdquo; &ldquo;per CFO&rdquo;</td><td>Concealment.</td></tr>
+<tr><td>Large and manual</td><td>Manual entry above materiality threshold</td><td>High-value manual entries have the greatest impact.</td></tr>
+<tr><td>Round-trip / reversals</td><td>Entry reversed in the next period</td><td>Window dressing across the period end.</td></tr>
+<tr><td>Approval</td><td>Preparer = approver; no approver; approval after posting</td><td>Segregation of duties failure.</td></tr>
+<tr><td>Near-threshold</td><td>Amounts just below an approval limit (for example, $9,900 with a $10,000 limit)</td><td>Avoiding review.</td></tr>
+</table>
+<p>No single criterion is conclusive. The skill is to <b>combine</b> them: an entry that is manual, round, posted on a Sunday by an executive and described as &ldquo;adjustment&rdquo; deserves attention in a way that any one of those features does not. A simple scoring approach assigns one point to each criterion met and sorts by score and amount; see also <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a> and <a href="ML_Forensics_Explainability.html">ML Forensics Explainability</a> for model-based ranking.</p>
+
+<h2 id="s3">3 SQL recipes</h2>
+<p>Assume a table <code>gl_lines(je_id, line_no, post_date, entry_date, period_end, account, debit, credit, descr, preparer, approver, source)</code>. Standard SQL (adapt date functions to your engine).</p>
+<pre>-- Control total: every journal must balance
+SELECT je_id, SUM(debit) - SUM(credit) AS diff
+FROM gl_lines GROUP BY je_id HAVING ROUND(SUM(debit) - SUM(credit), 2) &lt;&gt; 0;
+
+-- Round-amount entries (divisible by 1,000, nonzero)
+SELECT * FROM gl_lines
+WHERE (debit &gt; 0 AND MOD(debit, 1000) = 0) OR (credit &gt; 0 AND MOD(credit, 1000) = 0);
+
+-- Weekend postings (SQL Server style: Saturday=7, Sunday=1 under default DATEFIRST)
+SELECT * FROM gl_lines WHERE DATEPART(weekday, post_date) IN (1, 7);
+
+-- Entries posted after period end
+SELECT * FROM gl_lines WHERE post_date &gt; period_end;
+
+-- Self-approved entries
+SELECT * FROM gl_lines WHERE preparer = approver OR approver IS NULL;
+
+-- Rare posters
+SELECT preparer, COUNT(DISTINCT je_id) AS n FROM gl_lines
+GROUP BY preparer HAVING COUNT(DISTINCT je_id) &lt; 10;
+</pre>
+
+<h2 id="s4">4 Excel and Python recipes</h2>
+<p><b>Excel.</b> With dates in column B and amounts in column C: round amounts, <code>=IF(AND(C2&lt;&gt;0, MOD(ABS(C2),1000)=0),1,0)</code>; weekend, <code>=IF(WEEKDAY(B2,2)&gt;5,1,0)</code>; second digit of the amount, <code>=MID(TEXT(ABS(C2),"0.00"),2,1)</code> (use with care for amounts with a leading zero or decimal point; a more robust approach is to strip the decimal and read characters 1&ndash;2); duplicates, <code>=COUNTIFS(D:D,D2,C:C,C2)&gt;1</code>. Sort by a composite score column and filter.</p>
+<p><b>Python (pandas).</b></p>
+<pre>import pandas as pd
+gl = pd.read_csv("gl_lines.csv", parse_dates=["post_date"])
+gl["amt"] = gl["debit"].fillna(0) + gl["credit"].fillna(0)
+gl["round"]   = (gl["amt"] % 1000 == 0) &amp; (gl["amt"] &gt; 0)
+gl["weekend"] = gl["post_date"].dt.dayofweek &gt;= 5
+gl["selfappr"]= gl["preparer"] == gl["approver"]
+gl["score"]   = gl[["round","weekend","selfappr"]].sum(axis=1)
+flag = gl[gl["score"] &gt;= 2].sort_values(["score","amt"], ascending=False)
+</pre>
+<p>Keep the script and the input file hash with the working papers so a second analyst can reproduce the result.</p>
+
+<h2 id="s5">5 Duplicate and gap tests</h2>
+<p><b>Duplicates.</b> Duplicate payments and duplicated journal lines are a common error and a common fraud (a paid-twice invoice where the second refund goes to the employee). Run three levels of test, from strict to loose:</p>
+<ul>
+<li><b>Exact:</b> same vendor, invoice number and amount.</li>
+<li><b>Near:</b> same vendor and amount, different invoice number or dates within 30 days; or same invoice number and different amount.</li>
+<li><b>Transposed or formatted variants:</b> invoice numbers differing only by leading zeros, dashes or case (&ldquo;INV-0045&rdquo; versus &ldquo;INV45&rdquo;); amounts with transposed digits (for example, $4,580 versus $4,850, a difference divisible by 9).</li>
+</ul>
+<pre>SELECT vendor_id, invoice_no, amount, COUNT(*) AS n
+FROM ap_payments GROUP BY vendor_id, invoice_no, amount HAVING COUNT(*) &gt; 1;
+</pre>
+<p><b>Gaps.</b> A sequence of document numbers, such as journal IDs or check numbers, should be continuous. In SQL, find the missing ranges with a window function:</p>
+<pre>SELECT je_id AS gap_after, next_id AS gap_before
+FROM (SELECT je_id, LEAD(je_id) OVER (ORDER BY je_id) AS next_id
+      FROM (SELECT DISTINCT je_id FROM gl_lines) t) s
+WHERE next_id - je_id &gt; 1;
+</pre>
+<p>Gaps are explained by voided entries, system-reserved numbers or skipped batches, but each needs an explanation from the preparer or the IT audit log. Conversely, a gap that falls inside a period end, or a sudden block of consecutive entries by one user, are leads.</p>
+
+<h2 id="s6">6 Benford first- and second-digit tests</h2>
+<p>Benford&rsquo;s Law gives the expected frequency of leading digits in many naturally occurring financial data sets (see <a href="Benfords_Law.html">Benford&rsquo;s Law</a>). The <b>first-digit test</b> reads the leading digit, expected frequencies running from 30.1% for digit 1 down to 4.6% for digit 9. The <b>second-digit test</b> uses the second digit, whose distribution is much flatter but still non-uniform:</p>
+<table class="wikitable">
+<tr><th>Second digit</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+<tr><td>Expected %</td><td>11.97</td><td>11.39</td><td>10.88</td><td>10.43</td><td>10.03</td><td>9.67</td><td>9.34</td><td>9.04</td><td>8.76</td><td>8.50</td></tr>
+</table>
+<p>The second-digit test is more sensitive to rounding and to numbers invented by people (who tend to favour 0 and 5) than the first-digit test, because a made-up number tends to have a plausible first digit but a patterned second.</p>
+<p><b>Procedure.</b></p>
+<ol>
+<li>Extract the field (for example, invoice amounts for one account) and drop zeros, negatives (or analyse separately) and amounts under a floor of, say, $10.</li>
+<li>Count the observed frequency of each digit; compute the observed proportion <i>p<sub>o</sub></i>.</li>
+<li>For each digit compute the z-statistic with the continuity correction:
+<pre>z = ( |p_o &minus; p_e| &minus; 1/(2n) ) / sqrt( p_e (1 &minus; p_e) / n )</pre>
+A z above 1.96 is significant at 5%, and above 2.58 at 1% (two-sided).</li>
+<li>Compute the overall chi-square (9 degrees of freedom for the second digit; critical value 16.92 at 5%) and the <b>mean absolute deviation</b> (MAD).</li>
+<li>Drill into any digit that deviates. Do not stop at the chart.</li>
+</ol>
+<p><b>Worked example.</b> A population of n = 2,000 payments shows a second digit of 0 in 15.5% of cases, against an expected 11.97%.<br>
+z = (0.155 &minus; 0.1197 &minus; 0.00025) / sqrt(0.1197 &times; 0.8803 / 2000) = 0.03505 / 0.00726 &asymp; <b>4.83</b>, well above 2.58. The excess is about 71 payments (310 observed versus about 239 expected). Extracting the amounts whose second digit is 0 reveals what they share: for example, many payments between $1,000 and $1,099 clustering to one approver, where a $1,000 approval threshold is being targeted.</p>
+<p>Nigrini&rsquo;s MAD conformity bands for the first-digit test are about 0.006 or below for close conformity, 0.006 to 0.012 acceptable, 0.012 to 0.015 marginal, and above 0.015 nonconformity.<sup class="ref">[3]</sup> Remember that with very large n almost any data set rejects the null; use MAD and the digit-specific z, and use judgment.</p>
+<p><b>Limits.</b> Benford tests are not appropriate for assigned numbers (check numbers, policy numbers), data with built-in minimums or maximums, small populations (n below about 300), or amounts set by price lists. A deviation shows where to look; it proves nothing about intent. See the literature review in <a href="Benfords_Law.html">Benford&rsquo;s Law</a>.</p>
+
+<h2 id="s7">7 Sampling approaches</h2>
+<p>Journal-entry testing generates a large exception list and usually a sample is needed. There are three approaches:</p>
+<ul>
+<li><b>Targeted (judgmental) selection.</b> Select all entries meeting the highest-risk combination. This is the primary approach in fraud work, since the point is to look at the suspicious items, not to estimate a rate. The results cannot be extrapolated.</li>
+<li><b>Monetary-unit sampling (MUS / PPS).</b> Every dollar in the population has an equal chance of selection, so large entries are naturally more likely. Sampling interval = tolerable misstatement &divide; reliability factor. For example, population $50,000,000, tolerable misstatement $1,000,000, 95% confidence, expected zero errors (reliability factor 3.0): interval = $1,000,000 &divide; 3.0 = $333,333; sample size = $50,000,000 &divide; $333,333 = 150 items. Entries larger than the interval are selected with certainty.</li>
+<li><b>Stratified random sampling.</b> Divide the population into strata (for example, by size, user or source) and sample each, so that a rare high-risk stratum is not diluted. Useful when you want a statistically valid estimate of an error rate by group.</li>
+</ul>
+<p>For a <a href="Forensic_Accounting.html">forensic engagement</a> a discovery sample (to find at least one instance of a fraud when it is thought to exist at a stated rate) is also used: with an expected occurrence rate of 1% and a desired 95% chance of seeing at least one item, the required sample is about 299 items (ln 0.05 &divide; ln 0.99). Note that a clean discovery sample reduces, but does not eliminate, the likelihood of fraud.</p>
+
+<h2 id="s8">8 Following up flagged entries</h2>
+<ol>
+<li><b>Pull the support.</b> For each flagged entry obtain the source document (invoice, contract, approval email), and the underlying business reason.</li>
+<li><b>Trace both sides.</b> Follow the debit and the credit to subledgers, bank statements (see <a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a>) and later reversals.</li>
+<li><b>Review the system audit trail.</b> Login records, user-ID changes and edit logs show who actually keyed or changed an entry; shared or generic IDs are themselves a finding.</li>
+<li><b>Interview the preparer</b> and approver using open questions (see <a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a>). Legitimate explanations are common and should be recorded.</li>
+<li><b>Quantify and conclude.</b> Quantify confirmed misstatements by account and period and describe the evidence as confirmed, unexplained, or explained.</li>
+</ol>
+<p>Pitfalls: analysing a sample of the data rather than the full population; ignoring reversed entries (a fraud that is booked and reversed leaves no net effect, but changes the interim numbers); testing only the ERP while top-side adjustments live in a spreadsheet; and reporting hit counts without a baseline (compare to prior years and peer entities).</p>
+
+<p class="hatnote">See also: <a href="Benfords_Law.html">Benford&rsquo;s Law</a>, <a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a>, <a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a>, <a href="Red_Flags.html">Red Flags</a>, <a href="Digital_Forensics.html">Digital Forensics</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Public Company Accounting Oversight Board. AS 2401, <i>Consideration of Fraud in a Financial Statement Audit</i>. <a class="external" href="https://pcaobus.org/oversight/standards/auditing-standards/details/AS2401">pcaobus.org</a></li>
+<li>PCAOB. <i>Audit Focus: Journal Entries</i> (staff publication, January 2025). <a class="external" href="https://pcaobus.org/resources/staff-publications/audit-focus-journal-entries">pcaobus.org</a></li>
+<li>Nigrini, M. J. <i>Benford&rsquo;s Law: Applications for Forensic Accounting, Auditing, and Fraud Detection</i> (Wiley), 2012.</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Forensic_Accounting_Core.html">Forensic Accounting Core</a> | <a href="Category_Analytical_Methods.html">Analytical Methods</a> | <a href="Category_Fraud_Detection.html">Fraud Detection</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

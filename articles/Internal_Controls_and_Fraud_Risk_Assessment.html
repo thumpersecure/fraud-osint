@@ -1,0 +1,98 @@
+<!--meta title="Internal Controls and Fraud Risk Assessment" desc="COSO internal control and fraud-risk frameworks, segregation of duties, ACFE control-effectiveness data, and the concrete tests used to find control failures." cats="Fraud Detection, Forensic Accounting Core, Fraud Theory"-->
+<table class="infobox">
+<tr><th class="ibtitle" colspan="2">Internal Controls &amp; Fraud Risk Assessment</th></tr>
+<tr><td class="iblabel">Core frameworks</td><td>COSO <i>Internal Control &mdash; Integrated Framework</i> (2013); COSO/ACFE <i>Fraud Risk Management Guide</i> (2016)</td></tr>
+<tr><td class="iblabel">Structure</td><td>5 components, 17 principles; 5 fraud-risk principles</td></tr>
+<tr><td class="iblabel">Related standard</td><td>ISO 37001:2025 (anti-bribery management systems)</td></tr>
+<tr><td class="iblabel">Benchmark data</td><td>ACFE <i>Occupational Fraud 2024</i> (1,921 cases)</td></tr>
+<tr><td class="iblabel">Forensic use</td><td>Control testing, segregation-of-duties analysis, scheme-by-scheme risk matrices</td></tr>
+</table>
+
+<p><b>Internal control</b> is the set of policies, procedures and structures that give management reasonable assurance an organization will meet its operating, reporting and compliance objectives. A <b>fraud risk assessment</b> applies that lens to deliberate wrongdoing: it identifies who could commit which scheme, which controls would stop or reveal it, and where residual exposure remains. For the <a href="Forensic_Accounting.html">forensic accountant</a>, controls matter twice: before a loss, as the thing to be designed and tested; after a loss, as the map of what failed and who was positioned to exploit the gap.<sup class="ref">[1]</sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">COSO 2013 and the Fraud Risk Management Guide</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Segregation of duties</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">What the ACFE data say about controls</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Fraud risk assessment: steps</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Forensic techniques: testing controls and finding their failures</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">ISO 37001 and anti-bribery controls</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Limits of controls</a></li>
+<li><span class="tocnumber">8</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 COSO 2013 and the Fraud Risk Management Guide</h2>
+<p>The Committee of Sponsoring Organizations of the Treadway Commission (COSO) issued its original <i>Internal Control &mdash; Integrated Framework</i> in 1992 and an updated version in May 2013. The 2013 framework is the one most U.S. issuers use to evaluate internal control over financial reporting under SOX Section 404 (see <a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a>). It organizes control into <b>five components</b>&mdash;control environment, risk assessment, control activities, information and communication, and monitoring activities&mdash;supported by <b>17 principles</b>.<sup class="ref">[2]</sup> Principle 8 explicitly requires the organization to "consider the potential for fraud in assessing risks to the achievement of objectives."</p>
+<p>COSO and the ACFE jointly published the <i>Fraud Risk Management Guide</i> (first edition 2008; second edition 2016) to expand that single principle into a program. Its <b>five fraud-risk principles</b> map onto the five components:<sup class="ref">[3]</sup></p>
+<table class="wikitable">
+<tr><th>Fraud risk principle</th><th>Practical content</th><th>Artifact an examiner requests</th></tr>
+<tr><td>1. Governance</td><td>Board/management commitment, fraud risk policy, roles</td><td>Code of conduct, board minutes, policy sign-offs</td></tr>
+<tr><td>2. Risk assessment</td><td>Scheme inventory, likelihood/impact scoring, anti-fraud-control mapping</td><td>Risk register, prior assessment workpapers</td></tr>
+<tr><td>3. Control activities</td><td>Preventive and detective controls tied to each scheme</td><td>Control matrix, procedure manuals, access lists</td></tr>
+<tr><td>4. Investigation and corrective action</td><td>Intake, triage, remediation, discipline</td><td>Hotline log, case files, root-cause memos</td></tr>
+<tr><td>5. Monitoring</td><td>Ongoing evaluation, metrics, reporting of deficiencies</td><td>Internal audit reports, KPI dashboards</td></tr>
+</table>
+<p>The framework treats the <a href="Fraud_Triangle.html">fraud triangle</a> elements as drivers to be managed: controls reduce <i>opportunity</i>, tone at the top and fair compensation reduce <i>pressure</i> and <i>rationalization</i>. It also cross-references the <a href="Fraud_Tree.html">fraud tree</a> for scheme inventories.</p>
+
+<h2 id="s2">2 Segregation of duties</h2>
+<p><b>Segregation of duties (SoD)</b> divides a transaction cycle so that no single person can initiate, authorize, record and keep custody of the asset. The classic four incompatible functions are <i>authorization</i>, <i>custody</i>, <i>recordkeeping</i> and <i>reconciliation</i>. Typical incompatible pairs include:</p>
+<ul>
+<li>Creating vendors in the vendor master file <i>and</i> approving or releasing payments (the root of fictitious-vendor <a href="Occupational_Fraud.html">billing schemes</a>).</li>
+<li>Receiving cash <i>and</i> posting receipts to accounts receivable (skimming and lapping).</li>
+<li>Adding employees to payroll <i>and</i> approving timesheets or distributing paychecks (ghost employees).</li>
+<li>Preparing bank reconciliations <i>and</i> having check-signing authority.</li>
+</ul>
+<p>Small organizations cannot always staff separate roles; the substitutes are <b>compensating controls</b> such as owner review of bank statements delivered unopened, mandatory vacation or job rotation, and periodic surprise counts. Because a determined insider with two incompatible roles can override a design, SoD should be combined with detective controls.</p>
+
+<h2 id="s3">3 What the ACFE data say about controls</h2>
+<p>The ACFE's <i>Occupational Fraud 2024</i> study (see <a href="ACFE_Report_to_Nations.html">ACFE Report to the Nations</a>) reports that the presence of each of 18 anti-fraud controls was associated with lower median losses (reductions of roughly 23% to 63%) and shorter fraud duration (roughly 14% to 50%). Four controls&mdash;surprise audits, external audit of financial statements, hotlines, and proactive data monitoring/analysis&mdash;were associated with reductions of at least 50% in both loss and duration. On the cause side, 32% of cases were attributed to a lack of internal controls and 19% to an override of existing controls. On detection, 43% of schemes were found by tips, 14% by internal audit and 13% by management review, while external audit detected about 3%.<sup class="ref">[4]</sup></p>
+<p>These are correlations from self-selected cases investigated by CFEs, not controlled experiments, and the ACFE itself cautions that the data cannot prove causation. Even so, the pattern is consistent across editions: the most effective controls are those that surface information (tips, analytics, surprise tests) rather than only those that document approval.</p>
+
+<h2 id="s4">4 Fraud risk assessment: steps</h2>
+<ol>
+<li><b>Scope and team.</b> Include finance, operations, compliance, IT and legal; interview people who actually run the processes.</li>
+<li><b>Inventory schemes.</b> Use the fraud tree to list what could happen in each business cycle (procure-to-pay, order-to-cash, payroll, treasury, financial close), including management override and bribery.</li>
+<li><b>Rate inherent risk.</b> Score likelihood and impact (for example 1&ndash;5 each) before considering controls.</li>
+<li><b>Map existing controls</b> to each scheme and judge whether they would prevent or detect it.</li>
+<li><b>Test the controls</b> (section 5) to separate controls that exist on paper from those that operate.</li>
+<li><b>Rate residual risk</b>, rank, and assign response: add controls, increase monitoring, transfer risk (insurance), or accept.</li>
+<li><b>Document and refresh</b> at least annually and on triggers such as acquisitions, system migrations or restructurings.</li>
+</ol>
+<p>Illustrative scoring: a fictitious-vendor scheme in a company with unrestricted vendor-master access might score likelihood 4 and impact 4 (inherent 16). If a monthly independent review of new vendors exists and operates, residual might fall to 2 &times; 4 = 8; if the review is only on paper, residual stays at 16. The test in step 5 decides which.</p>
+
+<h2 id="s5">5 Forensic techniques: testing controls and finding their failures</h2>
+<h3>5.1 Walkthroughs and design versus operating effectiveness</h3>
+<p>A <b>walkthrough</b> follows one transaction from initiation to the general ledger, inspecting each document, approval and system screen, and interviewing the person who performs each step. It tests <i>design</i>. Operating effectiveness is tested by sampling: a common attribute-sampling convention for a control performed daily is 25&ndash;40 items, with any deviation requiring analysis. The evidence produced is a deviation list that states precisely which approvals were missing, late, or by the wrong person.</p>
+<h3>5.2 User-access and SoD conflict analysis</h3>
+<p>Export user-role assignments and the audit log from the ERP and build a conflict matrix (roles as rows and columns, incompatible pairs flagged). Then go beyond permissions to <i>actual use</i>: join the vendor-creation log to the payment-approval log on user ID. Example: if user U117 created 22 vendors in the year and approved payments to 9 of them totaling $318,400, that is a documented SoD breach with a quantified exposure and a ready list of transactions to vouch.</p>
+<h3>5.3 Vendor master file analytics</h3>
+<ul>
+<li>Match vendor addresses, bank accounts and phone numbers to the employee master; any match is a conflict-of-interest lead.</li>
+<li>Flag P.O. Box-only addresses, vendors with no tax ID, and vendors with sequential invoice numbers (a vendor billing $4,100, $4,350 and $4,600 under invoices 0001, 0002 and 0003 has no other customers).</li>
+<li>Fuzzy-match names to catch near-duplicates ("Acme Supply" versus "ACME Suply Inc").</li>
+</ul>
+<h3>5.4 Duplicate and threshold testing</h3>
+<p>Duplicate-payment tests join on vendor, invoice number, amount and date in progressively looser combinations: same vendor and amount within 30 days; same invoice number with transposed digits. For approval limits, compare the count of invoices just under a limit with adjacent bands. Illustration with a $10,000 limit: if 410 invoices fall between $9,000.00 and $9,499.99 but 1,260 fall between $9,500.00 and $9,999.99, a roughly threefold excess immediately below the limit suggests splitting or limit-avoidance, and the examiner then inspects those 1,260 for common approvers and vendors. The same logic underlies <a href="Benfords_Law.html">Benford's Law</a> digit tests (see <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a>).</p>
+<h3>5.5 Three-way match and override exceptions</h3>
+<p>Compare purchase order, receiving report and invoice. Count payments released with no receiving record, quantity or price variances approved manually, and manual overrides of system holds. A rising override rate (for example 0.8% to 4.1% of invoices over two quarters) is itself a red flag (see <a href="Red_Flags.html">Red Flags</a>). Evidence: exception report, user IDs, and the approver comments justifying each override.</p>
+<h3>5.6 Reconciliation and timing review</h3>
+<p>Re-perform bank reconciliations for sample months, tracing every reconciling item to clearing; reconciling items outstanding more than 90 days, or reconciliations prepared and approved by the same person or signed weeks late, point to concealment. Proof-of-cash and deposit-lapping tests (matching customer remittance dates against posting dates) detect skimming that leaves no entry (see <a href="Net_Worth_Method.html">Net Worth Method</a> for indirect methods when records are absent).</p>
+<h3>5.7 Behavioral and HR controls</h3>
+<p>Review leave records: employees who never take consecutive vacation in sensitive roles, or whose files show duplicate address or bank data with others. Surprise cash counts and inventory observations produce a first-hand count that can be compared with the book balance. Hotline logs should be analyzed for volume, time-to-triage and substantiation rate; a hotline that has received zero reports in several years is not evidence of honesty but of low awareness or low trust.</p>
+
+<h2 id="s6">6 ISO 37001 and anti-bribery controls</h2>
+<p><b>ISO 37001</b>, <i>Anti-bribery management systems</i>, is a certifiable management-system standard first issued in 2016. A second edition, <b>ISO 37001:2025</b>, was published in February 2025. Reported changes include requirements to consider climate-change effects on bribery risk, an explicit concept of anti-bribery culture, renaming the "anti-bribery compliance function" the "anti-bribery function" with clearer independence, a fuller treatment of conflicts of interest, and harmonization with ISO 37301 and ISO 37000.<sup class="ref">[5]</sup> It requires bribery risk assessment, due diligence on projects and business associates, financial and non-financial controls over gifts, hospitality and donations, and reporting and investigation procedures. Certification does not confer immunity under statutes such as the FCPA, but regulators have treated an effective program as relevant (see <a href="Anti_Bribery_Statutes.html">Anti-Bribery Statutes</a> and <a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a>). The forensic counterpart is testing third-party payments: agent commissions above benchmark percentages, payments to jurisdictions unrelated to services, and consultants with no deliverables.</p>
+
+<h2 id="s7">7 Limits of controls</h2>
+<p>Controls reduce, but do not eliminate, fraud. Collusion defeats segregation; <b>management override</b> (19% of ACFE cases above) bypasses the control environment entirely, which is why auditing standards treat override as a presumed risk in every audit. Controls also decay: staff turnover, system upgrades and workarounds erode design over time. An assessment should therefore be paired with continuous monitoring and independent testing, and findings should be documented in a form that can support later <a href="Report_Writing.html">reporting</a> if an investigation follows.</p>
+
+<p class="hatnote">See also: <a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a>, <a href="Occupational_Fraud.html">Occupational Fraud</a>, <a href="Fraud_Triangle.html">Fraud Triangle</a>, <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a>, <a href="Red_Flags.html">Red Flags</a>, <a href="Forensic_Accounting.html">Forensic Accounting</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Association of Certified Fraud Examiners. Fraud examination and prevention literature.</li>
+<li>COSO (2013). <i>Internal Control &mdash; Integrated Framework</i>. <a class="external" href="https://www.coso.org/_files/ugd/3059fc_02c01fde6552479196535bcfee8ea60e.pdf">coso.org</a></li>
+<li>COSO &amp; ACFE (2016). <i>Fraud Risk Management Guide</i>, 2nd ed. <a class="external" href="https://www.coso.org/_files/ugd/3059fc_02c01fde6552479196535bcfee8ea60e.pdf">coso.org (executive summary)</a></li>
+<li>ACFE (2024). <i>Occupational Fraud 2024: A Report to the Nations</i>. <a class="external" href="https://www.acfe.com/-/media/files/acfe/pdfs/rttn/2024/2024-report-to-the-nations.pdf">acfe.com</a></li>
+<li>ISO 37001:2025, <i>Anti-bribery management systems</i>. <a class="external" href="https://www.iso.org/standard/65034.html">iso.org</a>; summary of changes: <a class="external" href="https://www.dqsglobal.com/en/learn/blog/revision-2025-of-iso-37001">DQS</a></li>
+</ol>

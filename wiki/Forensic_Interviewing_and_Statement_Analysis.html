@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Practical interview procedures for fraud investigations: cognitive interview, PEACE, baselines, statement analysis, admission-seeking sequence, Upjohn and other legal limits, and what deception-detection research shows.">
+<title>Forensic Interviewing and Statement Analysis - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li class="active-page"><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Forensic Interviewing and Statement Analysis</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Forensic Interviewing and Statement Analysis</th></tr>
+<tr><td class="iblabel">Scope</td><td>Procedures for planning, conducting, analysing and documenting interviews in fraud inquiries</td></tr>
+<tr><td class="iblabel">Models covered</td><td>Cognitive interview; PEACE; strategic use of evidence; admission-seeking sequence</td></tr>
+<tr><td class="iblabel">Analysis tools</td><td>Baselines; CBCA and reality monitoring; verbal-content review</td></tr>
+<tr><td class="iblabel">Legal limits</td><td>Upjohn warnings; Miranda; Garrity; Weingarten; recording-consent laws</td></tr>
+<tr><td class="iblabel">Evidence base</td><td>Average lie-detection accuracy about 54% (Bond &amp; DePaulo, 2006)</td></tr>
+</table>
+
+<p><b>Forensic interviewing</b> is the structured questioning of witnesses, custodians, informants and suspects in a fraud or financial-crime inquiry, together with the analysis and documentation of what they say. The general principles (rapport, active listening, open questions) are set out in <a href="Interviewing.html">Investigative Interviewing</a>. This article goes deeper into the <i>how</i>: the step-by-step structure of the main evidence-based methods, the practical use of baselines and verbal-content analysis, the admission-seeking sequence used in internal fraud cases, the written record, the legal limits on each step, and what the research says about the limits of detecting deception. The overarching message is that interviews are an evidence-gathering tool whose products must be tested against documents (see <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>), not a lie detector.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Planning an interview</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">The cognitive interview</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">The PEACE model in practice</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Strategic use of evidence</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Baselines and verbal-content analysis</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">The admission-seeking sequence</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Documentation and written statements</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Legal limits</a></li>
+<li><span class="tocnumber">9</span> <a href="#s9">What the research says about detecting deception</a></li>
+<li><span class="tocnumber">10</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Planning an interview</h2>
+<ol>
+<li><b>Sequence.</b> Interview from the periphery to the centre: third-party witnesses and records custodians first, then process owners, then people with direct involvement, and last the principal subject. Each earlier interview yields facts and documents which narrow the subject&rsquo;s room for manoeuvre.</li>
+<li><b>Know the documents.</b> Prepare an exhibit binder with copies (not originals) of every document you may show, ordered by the interview agenda. Prepare a timeline and a list of points the subject can confirm, correct or explain.</li>
+<li><b>Define objectives.</b> Write them as questions the interview should answer (&ldquo;Who authorised vendor X?&rdquo;, &ldquo;What is the subject&rsquo;s access to the payment system?&rdquo;), not as the confession sought.</li>
+<li><b>Decide who attends and what status applies.</b> Two interviewers (one leads, one records and watches); legal counsel involvement; whether the person is a witness, a subject or in custody, because the status determines the warnings and rights that apply (section 8).</li>
+<li><b>Logistics.</b> Neutral, private room; no interruptions; a clear record plan (recording, notes). Agree on breaks, and do not hold interviews so long that they become coercive.</li>
+</ol>
+
+<h2 id="s2">2 The cognitive interview</h2>
+<p>The <b>cognitive interview</b> (CI) was developed by Ronald Fisher and Edward Geiselman in the 1980s to improve witness recall using principles of memory research, and the &ldquo;enhanced&rdquo; version adds communication and rapport components. A meta-analysis of 57 articles (65 experiments) by Memon, Meissner and Fraser (2010) found a large and significant increase in correct details compared with standard interviews, with only a small increase in errors and no difference in confabulation rates.<sup class="ref">[1]</sup> It is the method of choice for cooperative witnesses, such as a clerk who watched the controller override a control, and for victims.</p>
+<table class="wikitable">
+<tr><th>Step</th><th>What the interviewer does</th><th>Example in a fraud inquiry</th></tr>
+<tr><td>1. Build rapport and set the ground rules</td><td>Explain that the witness is the expert on what happened; instruct the witness to say &ldquo;I don&rsquo;t know&rdquo; and to correct the interviewer; ask the witness not to guess</td><td>&ldquo;I wasn&rsquo;t there, so I need you to tell me. If I get something wrong, tell me.&rdquo;</td></tr>
+<tr><td>2. Context reinstatement</td><td>Ask the witness to mentally recreate the setting (place, mood, sounds, what they were doing) before recalling</td><td>&ldquo;Think back to the Friday close. Where were you sitting, who was around, what was on your screen?&rdquo;</td></tr>
+<tr><td>3. Open narrative / report everything</td><td>Invite a free account without interruption; encourage reporting of partial or trivial details</td><td>&ldquo;Tell me everything about how that invoice was approved, even small details.&rdquo;</td></tr>
+<tr><td>4. Probing</td><td>Follow up on images and details the witness mentioned, using the witness&rsquo;s own words, and open questions</td><td>&ldquo;You mentioned a phone call. Tell me more about that call.&rdquo;</td></tr>
+<tr><td>5. Reverse order / change perspective</td><td>Ask for the events in a different order or from another person&rsquo;s point of view (use with caution; perspective-taking can raise error)</td><td>&ldquo;Start with the last thing that happened and walk backwards.&rdquo;</td></tr>
+<tr><td>6. Summary and close</td><td>Summarise the account and invite corrections; ask whether anything was left out; leave contact details</td><td>&ldquo;Is there anything I should have asked but did not?&rdquo;</td></tr>
+</table>
+<p>Pitfalls: leading or suggestive questions during probing contaminate memory; interrupting the narrative reduces the amount recalled; showing a document too early replaces recollection with recognition.</p>
+
+<h2 id="s3">3 The PEACE model in practice</h2>
+<p>PEACE was introduced in England and Wales in 1992 to replace confession-oriented questioning following a series of miscarriages of justice, and is now the basis of non-accusatory interviewing in many jurisdictions.<sup class="ref">[2]</sup> It stands for Planning and preparation, Engage and explain, Account, Closure, and Evaluation. Its principle is that the interviewer&rsquo;s job is to obtain an accurate and complete account, not a confession.</p>
+<ol>
+<li><b>Planning and preparation:</b> aims, legal framework, evidence, topics, and a plan for each stage (section 1).</li>
+<li><b>Engage and explain:</b> greet, build rapport, state the purpose, explain the process and the person&rsquo;s status and rights, and explain the ground rules.</li>
+<li><b>Account:</b> obtain the person&rsquo;s own account using the cognitive interview (free recall first), then probe for detail and clarify, then challenge any inconsistency with evidence (&ldquo;help me understand&rdquo;), never with accusation or deception.</li>
+<li><b>Closure:</b> summarise, check for corrections, give the person an opportunity to add anything, explain what happens next.</li>
+<li><b>Evaluation:</b> assess what the interview achieved against the objectives and against other evidence; identify follow-up work; review the interviewer&rsquo;s own performance.</li>
+</ol>
+<p>The strength of the evidence for the information-gathering approach comes from comparative research. A meta-analytic review by Meissner and colleagues in the <i>Journal of Experimental Criminology</i> (2014) concluded that the available data support the effectiveness of an information-gathering style of interviewing suspects, while cautioning that the number of independent samples was small.<sup class="ref">[3]</sup> That is a more modest claim than that accusatorial methods always produce false confessions, but it supports a practical conclusion: where reliability matters more than speed, as in fraud cases that will be tested in court, the information-gathering approach is the safer default. The UN Special Rapporteur&rsquo;s 2021 &ldquo;Principles on Effective Interviewing for Investigations and Information Gathering&rdquo; (the Mendez Principles) make the same recommendation a matter of international standards (see also <a href="International_Forensic_Standards.html">International Forensic Standards</a>).</p>
+
+<h2 id="s4">4 Strategic use of evidence</h2>
+<p>The <b>Strategic Use of Evidence</b> (SUE) technique, developed by Par Anders Granhag and Maria Hartwig, manages <i>when</i> the interviewer discloses documents. Guilty and innocent subjects differ in how they respond to a question when they do not know what evidence exists: a person trying to hide something tends to avoid statements the evidence might contradict, whereas an innocent person tends to describe events freely.<sup class="ref">[4]</sup> The procedure:</p>
+<ol>
+<li>List the key pieces of evidence (an email, an access log, a bank record) and decide the order in which to disclose them.</li>
+<li><b>Ask open questions about the topic first</b> (&ldquo;Tell me about your dealings with Vendor X&rdquo;) and commit the subject to a version of events without revealing the document.</li>
+<li><b>Ask specific, evidence-related questions</b> that pin down details the document can test (&ldquo;Did you ever visit their office? When was the last time you spoke with the owner?&rdquo;).</li>
+<li><b>Disclose the evidence gradually,</b> least incriminating first, and then ask the subject to explain any contradiction.</li>
+<li>Record the shifts in the account (admits, changes, denies) and compare them to the documents afterwards.</li>
+</ol>
+<p>The value is in producing <i>checkable</i> statements. A subject who denies knowing a vendor and is later shown a phone log has produced a contradiction with physical evidence, which is worth far more than an impression of nervousness.</p>
+
+<h2 id="s5">5 Baselines and verbal-content analysis</h2>
+<p><b>Behavioural baseline.</b> At the start, spend five to ten minutes on neutral topics with known answers (job history, daily routine, how the department works). Note how the person speaks (fluency, detail, pace, directness) and behaves when relaxed. Later changes can mark topics for follow-up, but they are never evidence of lying by themselves, since a topic may simply be more stressful, embarrassing or complicated.</p>
+<p><b>Verbal-content review (practical).</b> A defensible review looks at what is in the account, not how it &ldquo;sounds&rdquo;:</p>
+<ul>
+<li><b>Level of detail and verifiability:</b> does the account contain checkable specifics (names, times, locations, documents) and are they correct when checked?</li>
+<li><b>Consistency:</b> within the account, across repeated tellings, and with the documents. Over-consistent (word-for-word) repetition can reflect rehearsal; ordinary memory varies in peripheral details but is stable on central ones.</li>
+<li><b>Omissions and gaps:</b> events that are skipped, time that is not accounted for, or sudden compression (&ldquo;then I did the usual stuff&rdquo;).</li>
+<li><b>Changes in terms:</b> shifts in how the subject refers to a person, thing or action (from &ldquo;the vendor&rdquo; to &ldquo;my friend&rdquo;).</li>
+<li><b>Unsolicited information and spontaneous corrections</b>, which are characteristic of genuine memory.</li>
+</ul>
+<p>Two research-derived frameworks structure the review. <b>Criteria-Based Content Analysis (CBCA)</b>, originally developed for statements by child witnesses, scores a statement against about 19 content criteria (logical structure, unstructured production, quantity of details, contextual embedding, reproduction of conversation, unexpected complications, and others). <b>Reality monitoring</b> assumes that memories of real events contain more sensory, contextual and spatial details than imagined ones. Both produce better-than-chance classification in laboratory settings, but neither is accurate enough to decide a case, and both are affected by the narrator&rsquo;s verbal ability and the type of event.</p>
+<p><b>Cautions about &ldquo;statement analysis&rdquo; systems.</b> Popular schemes that rely on pronoun use, changes in tense or hedging words (such as Scientific Content Analysis, SCAN) have been tested and have not performed. In one controlled study of 117 participants who each wrote a true and a fabricated statement, SCAN criteria did not distinguish the two, leading the authors to say that its use in its current form should be discouraged.<sup class="ref">[5]</sup> A fair statement is that such indicators can prompt a question but cannot be reported as findings. Cognitive-load approaches (asking for a reverse-order account, or for unexpected questions, or asking the subject to draw a scene) are more promising because they increase the difference in the information that truthful and deceptive people produce.</p>
+
+<h2 id="s6">6 The admission-seeking sequence</h2>
+<p>In internal fraud investigations the ACFE&rsquo;s <i>Fraud Examiners Manual</i> teaches a graduated sequence in which the examiner moves from general questions to an admission-seeking stage only after the evidence has been gathered. The version below is summarised from that general approach; it is distinct from the confrontational Reid nine-step method discussed in <a href="Interviewing.html">Investigative Interviewing</a>, but its final stage is still accusatory, so it carries more false-confession risk than information-gathering and requires safeguards.</p>
+<table class="wikitable">
+<tr><th>Stage</th><th>Purpose</th><th>Typical content</th></tr>
+<tr><td>1. Introductory</td><td>Set tone, explain purpose, establish identity and baseline</td><td>Non-threatening questions; the interviewer&rsquo;s role; confidentiality limits</td></tr>
+<tr><td>2. Informational</td><td>Obtain facts about the process, controls and people</td><td>Open questions about the process, who has access, what changed</td></tr>
+<tr><td>3. Assessment</td><td>Test whether the person is likely to be involved; separate witnesses from suspects</td><td>Questions about control awareness, willingness to cooperate, who might have done it; observation against baseline</td></tr>
+<tr><td>4. Closing</td><td>Obtain the final account; rule in or out</td><td>Summary; &ldquo;is there anything else?&rdquo;</td></tr>
+<tr><td>5. Admission-seeking (only for a probable perpetrator)</td><td>Obtain a truthful admission and the details</td><td>Present the evidence; minimise the moral gravity without promising leniency; seek the admission; then obtain details only the culprit would know; scope (other involvement, others, amounts); then a written statement</td></tr>
+</table>
+<p><b>Safeguards.</b> (1) Never present fabricated evidence; courts in some jurisdictions tolerate limited police deception, but in a corporate setting it creates legal and credibility risks and is incompatible with the PEACE model. (2) Never promise leniency, threaten, or imply a promise of non-prosecution which the organization cannot grant. (3) Avoid lengthy sessions, sleep or food deprivation, and take extra care with juveniles, persons with intellectual disability, and people under the influence. (4) Get <b>corroborating detail</b>: a reliable admission contains information that was not given to the subject and that checks against independent evidence (the location of the cash, the account number). Research on false confessions shows that persuasion can yield confessions that are factually wrong, which is why the admission must be tested, not simply recorded.</p>
+
+<h2 id="s7">7 Documentation and written statements</h2>
+<ul>
+<li><b>Record or note-take.</b> Where lawful and appropriate, audio-record the entire interview with the subject informed; otherwise, a second interviewer takes verbatim notes. Keep original notes (see <a href="Chain_of_Custody.html">Chain of Custody</a>); a clean typed memorandum should be written as soon as possible and be reviewed against the notes.</li>
+<li><b>Memorandum of interview.</b> Contains date, time start and end, location, those present, status and warnings given, a summary of what was said (not a verbatim claim unless it is a transcript), the documents shown, any statements offered by the subject, and breaks. State the facts; leave out interviewer conclusions about credibility and personal opinions.</li>
+<li><b>Written statement (if taken).</b> In the subject&rsquo;s own words, in first person, covering who, what, when, where and how; each page initialled; corrections initialled; a closing line stating that it is voluntary and that it has been read and is true; signature and date, with the interviewer as a witness. Do not draft it for the subject unless needed, and have the subject read it aloud or silently in full.</li>
+<li><b>Preserve exhibits</b> shown to the subject, marked with an exhibit number and the subject&rsquo;s own comments.</li>
+<li><b>Report.</b> Feed the results into the <a href="Report_Writing.html">report</a> with the interview as one source among others, stating where the account was corroborated, where it was contradicted, and where it was not tested.</li>
+</ul>
+
+<h2 id="s8">8 Legal limits</h2>
+<table class="wikitable">
+<tr><th>Rule</th><th>When it matters</th><th>Practical consequence</th></tr>
+<tr><td><b>Upjohn warning</b> (<i>Upjohn Co. v. United States</i>, 449 U.S. 383 (1981))</td><td>Company counsel (or investigators acting for counsel) interviewing employees</td><td>The Supreme Court held that a company&rsquo;s privilege can cover communications between company counsel and non-management employees made to enable counsel to give legal advice; it is the company&rsquo;s privilege, not the employee&rsquo;s.<sup class="ref">[6]</sup> The interviewer should state that counsel represents the company and not the employee, that the interview is privileged but the privilege belongs to the company, which may waive it and disclose it to authorities, and that the employee must keep the discussion confidential. Record that the warning was given.</td></tr>
+<tr><td><b>Miranda warnings</b></td><td>Custodial interrogation by government officers</td><td>Private investigators are generally not bound, but their conduct can be attributed to the state if they act at the direction of law enforcement.</td></tr>
+<tr><td><b>Garrity / Kalkines</b></td><td>Public employees compelled to answer on pain of dismissal</td><td>Compelled statements may not be used in a later criminal prosecution; interviewers must know which warning applies before the interview.</td></tr>
+<tr><td><b>Weingarten rights</b> (<i>NLRB v. J. Weingarten, Inc.</i>, 1975)</td><td>Unionised employees in interviews that may lead to discipline</td><td>The employee may request union representation; ignoring the request creates labour-law exposure.</td></tr>
+<tr><td><b>Recording-consent laws</b></td><td>Any recording of telephone or in-person interviews</td><td>Some U.S. states and many countries require consent of all parties; follow the strictest applicable rule.</td></tr>
+<tr><td><b>Whistleblower and anti-retaliation provisions</b></td><td>Interviews of those who reported concerns</td><td>Do not discourage or retaliate against a reporter or ask the employee to waive protected disclosure rights.</td></tr>
+<tr><td><b>Data-protection and employment law</b></td><td>Cross-border and employee interviews</td><td>Notice, proportionality and right-of-access rules can apply to notes and recordings.</td></tr>
+</table>
+<p>Because these rules differ by jurisdiction and facts, engage counsel before interviewing in any matter that may lead to litigation or prosecution; see also <a href="Forensic_Accountant_Ethics.html">Forensic Accountant Ethics</a>.</p>
+
+<h2 id="s9">9 What the research says about detecting deception</h2>
+<p>Large bodies of research find that people, including professionals, are poor at telling lies from truths by watching and listening.</p>
+<ul>
+<li><b>Accuracy near chance.</b> Bond and DePaulo&rsquo;s 2006 meta-analysis of 206 documents and 24,483 judges found an average accuracy of 54%: lies were correctly classified as deceptive 47% of the time and truths as non-deceptive 61% of the time (a &ldquo;truth bias&rdquo;).<sup class="ref">[7]</sup></li>
+<li><b>Cues are weak.</b> Hartwig and Bond (2011), in <i>Psychological Bulletin</i>, argued that lie-catchers fail because the behavioural cues that actually differ between liars and truth-tellers are few and weak, and the cues that people believe indicate lying (gaze aversion, fidgeting) do not.<sup class="ref">[8]</sup></li>
+<li><b>Confidence does not track accuracy,</b> and experience in law enforcement or investigations does not reliably improve accuracy; training in cue-reading may increase confidence without improving it.</li>
+<li><b>Context effects.</b> Interviewers who expect guilt ask more guilt-presumptive questions, and then see confirming behaviour in the answers (&ldquo;self-fulfilling prophecy&rdquo;).</li>
+<li><b>Polygraphs.</b> They measure arousal and are not a direct measure of deception; U.S. courts largely exclude results, and a 2003 National Research Council review concluded that polygraph accuracy in screening is insufficient for security use (see <a href="Daubert_Standard.html">Daubert Standard</a> and <a href="Forensic_Validity_Crisis.html">Forensic Validity Crisis</a> for the admissibility framework).</li>
+</ul>
+<p>The implication for practice is to shift effort from detecting lies to <b>eliciting verifiable information</b> and then <b>checking it</b>. Methods that increase cognitive load, ask for detail and use evidence strategically give a better chance of identifying deception than demeanour does; the final test is always the document trail. For a discussion of cognitive and organizational biases in investigators themselves, see <a href="Forensic_Validity_Crisis.html">Forensic Validity Crisis</a> and <a href="CSI_Effect.html">CSI Effect</a>.</p>
+
+<p class="hatnote">See also: <a href="Interviewing.html">Investigative Interviewing</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>, <a href="Occupational_Fraud.html">Occupational Fraud</a>, <a href="Report_Writing.html">Report Writing</a>, <a href="Forensic_Practitioner_Burnout.html">Forensic Practitioner Burnout</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Memon, A., Meissner, C. A. &amp; Fraser, J. &ldquo;The Cognitive Interview: A meta-analytic review and study space analysis of the past 25 years.&rdquo; <i>Psychology, Public Policy, and Law</i> 16(4), 2010. <a class="external" href="https://repository.royalholloway.ac.uk/items/2f9938b0-c01b-7310-9ec8-e0aee92c9d17/2">repository.royalholloway.ac.uk</a></li>
+<li>Bull, R. et al. and Home Office/College of Policing materials on the PEACE model (introduced 1992); overview: &ldquo;Improving the Interviewing of Suspects Using the PEACE Model: A Comprehensive Overview.&rdquo; <a class="external" href="https://repository.derby.ac.uk/item/q0098/improving-the-interviewing-of-suspects-using-the-peace-model-a-comprehensive-overview">repository.derby.ac.uk</a></li>
+<li>Meissner, C. A., Redlich, A. D., Michael, S. W., Evans, J. R., Camilletti, C. R., Bhatt, S. &amp; Brandon, S. &ldquo;Accusatorial and information-gathering interrogation methods and their effects on true and false confessions: a meta-analytic review.&rdquo; <i>Journal of Experimental Criminology</i> 10, 2014. <a class="external" href="https://works.bepress.com/christian_meissner/60">works.bepress.com</a></li>
+<li>Granhag, P. A. &amp; Hartwig, M. &ldquo;A new theoretical perspective on deception detection: On the psychology of instrumental mind-reading&rdquo; and related work on the Strategic Use of Evidence technique (Lund/Gothenburg).</li>
+<li>Bogaard, G., Meijer, E. H., Vrij, A. &amp; Merckelbach, H. &ldquo;Scientific Content Analysis (SCAN) Cannot Distinguish Between Truthful and Fabricated Accounts of a Negative Event.&rdquo; <i>Frontiers in Psychology</i> 7:243, 2016. <a class="external" href="https://cris.maastrichtuniversity.nl/en/publications/scientific-content-analysis-scan-cannot-distinguish-between-truth/">cris.maastrichtuniversity.nl</a></li>
+<li><i>Upjohn Co. v. United States</i>, 449 U.S. 383 (1981). <a class="external" href="https://www.govinfo.gov/app/details/USREPORTS-449/USREPORTS-449-383">govinfo.gov</a></li>
+<li>Bond, C. F. &amp; DePaulo, B. M. &ldquo;Accuracy of deception judgments.&rdquo; <i>Personality and Social Psychology Review</i> 10(3), 2006. <a class="external" href="https://pubmed.ncbi.nlm.nih.gov/16859438/">pubmed.ncbi.nlm.nih.gov</a></li>
+<li>Hartwig, M. &amp; Bond, C. F. &ldquo;Why do lie-catchers fail? A lens model meta-analysis of human lie judgments.&rdquo; <i>Psychological Bulletin</i> 137(4), 2011. <a class="external" href="https://assets.aclu.org/live/uploads/document/foia/2011-07-Psychological-Bulletin-Why-Do-Lie-Catchers-Fail.pdf">assets.aclu.org (copy)</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Interviewing.html">Interviewing</a> | <a href="Category_Investigation_Methods.html">Investigation Methods</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

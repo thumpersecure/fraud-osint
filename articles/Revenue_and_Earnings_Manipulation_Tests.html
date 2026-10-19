@@ -1,0 +1,153 @@
+<!--meta title="Revenue and Earnings Manipulation Tests" desc="Worked procedures for the Beneish M-Score, Altman Z-Score, cut-off testing and detecting channel stuffing, bill-and-hold, percent-of-completion abuse and cookie-jar reserves." cats="Financial Statement Fraud, Forensic Accounting Core, Fraud Detection"-->
+<table class="infobox">
+<tr><th class="ibtitle" colspan="2">Revenue and Earnings Manipulation Tests</th></tr>
+<tr><td class="iblabel">Quantitative models</td><td>Beneish M-Score (1999); Altman Z-Score (1968)</td></tr>
+<tr><td class="iblabel">M-Score threshold</td><td>&gt; &minus;1.78 flags probable manipulator (Beneish&rsquo;s 8-variable model)</td></tr>
+<tr><td class="iblabel">Procedural tests</td><td>Cut-off, returns and credit memos, side-letter inquiry, percent-of-completion estimates, reserve rollforwards</td></tr>
+<tr><td class="iblabel">Accounting framework</td><td>ASC 606 / IFRS 15 (five-step revenue model)</td></tr>
+<tr><td class="iblabel">Named case</td><td>Sunbeam Corp. (1996&ndash;1998)</td></tr>
+</table>
+
+<p><b>Revenue and earnings manipulation tests</b> are the quantitative and procedural techniques used to decide whether a company&rsquo;s reported sales and profits have been inflated, smoothed or shifted between periods. Improper revenue recognition is the most common technique in <a href="Financial_Statement_Fraud.html">financial statement fraud</a>, and the ACFE reports that the median loss in such cases is far larger than in any other branch of the <a href="Fraud_Tree.html">fraud tree</a>. This article is a hands-on companion to the descriptive treatment in <a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a>: it gives formulas, a fully worked numerical example, thresholds, and the sequence of audit-style tests for each scheme. Models are screening tools. They produce a probability or a flag that directs where to look and do not establish intent, which is a matter for evidence and <a href="Forensic_Interviewing_and_Statement_Analysis.html">interviews</a>.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Beneish M-Score</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Worked M-Score example</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Altman Z-Score and pressure</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Revenue cut-off testing</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Channel stuffing</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Bill-and-hold</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Percent-of-completion and over-time revenue</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Cookie-jar reserves</a></li>
+<li><span class="tocnumber">9</span> <a href="#s9">Limits and pitfalls</a></li>
+<li><span class="tocnumber">10</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Beneish M-Score</h2>
+<p>Messod Beneish&rsquo;s <i>The Detection of Earnings Manipulation</i> (<i>Financial Analysts Journal</i>, September/October 1999) estimated a probit model on 74 manipulating firms from 1982 to 1992 against a larger matched population, using eight variables that capture either distortions in financial statements caused by manipulation or the preconditions that prompt it. At a cut-off of &minus;1.78 the model identified roughly half of the manipulators before public discovery.<sup class="ref">[1]</sup> The variables compare year <i>t</i> (the year under test) with year <i>t&minus;1</i>.</p>
+<table class="wikitable">
+<tr><th>Index</th><th>Formula</th><th>Coefficient</th><th>Meaning of a high value</th></tr>
+<tr><td><b>DSRI</b> Days sales in receivables</td><td>(Receivables<sub>t</sub> / Sales<sub>t</sub>) &divide; (Receivables<sub>t&minus;1</sub> / Sales<sub>t&minus;1</sub>)</td><td>+0.920</td><td>Receivables growing faster than sales: possible revenue inflation</td></tr>
+<tr><td><b>GMI</b> Gross margin</td><td>Gross margin<sub>t&minus;1</sub> &divide; Gross margin<sub>t</sub></td><td>+0.528</td><td>Margin deterioration (&gt;1): incentive to manipulate</td></tr>
+<tr><td><b>AQI</b> Asset quality</td><td>[1 &minus; (current assets + PP&amp;E) / total assets]<sub>t</sub> &divide; same<sub>t&minus;1</sub></td><td>+0.404</td><td>More assets in intangible or deferred costs: possible cost capitalization</td></tr>
+<tr><td><b>SGI</b> Sales growth</td><td>Sales<sub>t</sub> &divide; Sales<sub>t&minus;1</sub></td><td>+0.892</td><td>High growth creates pressure to sustain it</td></tr>
+<tr><td><b>DEPI</b> Depreciation</td><td>[Dep / (Dep + PP&amp;E)]<sub>t&minus;1</sub> &divide; same<sub>t</sub></td><td>+0.115</td><td>Slower depreciation rate: lengthened useful lives</td></tr>
+<tr><td><b>SGAI</b> SG&amp;A expense</td><td>(SG&amp;A / Sales)<sub>t</sub> &divide; same<sub>t&minus;1</sub></td><td>&minus;0.172</td><td>Rising overhead ratio (a negative coefficient in the model)</td></tr>
+<tr><td><b>LVGI</b> Leverage</td><td>[(Current liabilities + total debt) / total assets]<sub>t</sub> &divide; same<sub>t&minus;1</sub></td><td>&minus;0.327</td><td>Rising leverage</td></tr>
+<tr><td><b>TATA</b> Total accruals to total assets</td><td>(Income from continuing operations &minus; cash flow from operations) &divide; total assets<sub>t</sub></td><td>+4.679</td><td>Earnings not backed by cash</td></tr>
+</table>
+<p>The score is:</p>
+<pre>M = &minus;4.84 + 0.920&middot;DSRI + 0.528&middot;GMI + 0.404&middot;AQI + 0.892&middot;SGI
+        + 0.115&middot;DEPI &minus; 0.172&middot;SGAI + 4.679&middot;TATA &minus; 0.327&middot;LVGI</pre>
+<p><b>Thresholds.</b> A score above &minus;1.78 flags the firm as a probable manipulator under the cut-off Beneish used in the paper. Some practitioners use a more conservative cut-off such as &minus;2.22, which catches more manipulators at the cost of more false alarms; this is a convention that varies by source, so state the threshold used and why. A neutral company has all indices near 1.0 and TATA near zero, which gives M of about &minus;2.48 (see the worked example below for the arithmetic).</p>
+<p>The model has a five-variable reduced form in later academic work; this article uses the original eight-variable version.</p>
+
+<h2 id="s2">2 Worked M-Score example</h2>
+<p>The following data are fictitious, for one manufacturing company (in $ thousands).</p>
+<table class="wikitable">
+<tr><th>Item</th><th>Year t&minus;1</th><th>Year t</th></tr>
+<tr><td>Sales</td><td>1,000</td><td>1,300</td></tr>
+<tr><td>Receivables</td><td>120</td><td>208</td></tr>
+<tr><td>Cost of goods sold</td><td>600</td><td>830</td></tr>
+<tr><td>Current assets</td><td>400</td><td>520</td></tr>
+<tr><td>PP&amp;E</td><td>300</td><td>310</td></tr>
+<tr><td>Total assets</td><td>1,000</td><td>1,250</td></tr>
+<tr><td>Depreciation</td><td>40</td><td>38</td></tr>
+<tr><td>SG&amp;A</td><td>150</td><td>182</td></tr>
+<tr><td>Current liabilities</td><td>200</td><td>300</td></tr>
+<tr><td>Long-term debt</td><td>200</td><td>260</td></tr>
+<tr><td>Income from continuing ops</td><td>&mdash;</td><td>90</td></tr>
+<tr><td>Cash flow from operations</td><td>&mdash;</td><td>10</td></tr>
+</table>
+<p><b>Step 1: indices.</b></p>
+<ul>
+<li>DSRI = (208/1,300) &divide; (120/1,000) = 0.16 &divide; 0.12 = <b>1.333</b></li>
+<li>Gross margin: year t&minus;1 = 1 &minus; 600/1,000 = 0.400; year t = 1 &minus; 830/1,300 = 0.3615; GMI = 0.400 &divide; 0.3615 = <b>1.106</b></li>
+<li>AQI: t&minus;1 = 1 &minus; (400+300)/1,000 = 0.300; t = 1 &minus; (520+310)/1,250 = 0.336; AQI = <b>1.120</b></li>
+<li>SGI = 1,300 &divide; 1,000 = <b>1.300</b></li>
+<li>DEPI: t&minus;1 = 40/(300+40) = 0.1176; t = 38/(310+38) = 0.1092; DEPI = <b>1.077</b></li>
+<li>SGAI = (182/1,300) &divide; (150/1,000) = 0.14 &divide; 0.15 = <b>0.933</b></li>
+<li>LVGI: t&minus;1 = (200+200)/1,000 = 0.400; t = (300+260)/1,250 = 0.448; LVGI = <b>1.120</b></li>
+<li>TATA = (90 &minus; 10) &divide; 1,250 = <b>0.064</b></li>
+</ul>
+<p><b>Step 2: contributions.</b> 0.920 &times; 1.333 = 1.227; 0.528 &times; 1.106 = 0.584; 0.404 &times; 1.120 = 0.452; 0.892 &times; 1.300 = 1.160; 0.115 &times; 1.077 = 0.124; &minus;0.172 &times; 0.933 = &minus;0.161; 4.679 &times; 0.064 = 0.299; &minus;0.327 &times; 1.120 = &minus;0.366.</p>
+<p><b>Step 3: sum.</b> M = &minus;4.84 + 1.227 + 0.584 + 0.452 + 1.160 + 0.124 &minus; 0.161 + 0.299 &minus; 0.366 = <b>&minus;1.52</b>. This exceeds both &minus;1.78 and &minus;2.22, so the company is flagged.</p>
+<p><b>Step 4: interpret.</b> The biggest drivers are DSRI (receivables up 73% on sales up 30%), SGI (30% growth) and the accruals term (net income of $90 versus cash from operations of only $10). Together these point the examiner to <i>revenue recognition and receivables</i>. The next steps are the procedural tests below: confirm the large receivables, test year-end cut-off, review post-period returns and credit memos, and read the sales contracts for side terms. For neutral comparison, if all indices equal 1.0 and TATA = 0, M = &minus;4.84 + 0.92 + 0.528 + 0.404 + 0.892 + 0.115 &minus; 0.172 &minus; 0.327 = &minus;2.48.</p>
+<p>A spreadsheet implementation takes about a dozen formulas; keep each input traceable to the filed financial statements (for example, SEC EDGAR 10-K data) and recompute from restated figures where restatements exist. See <a href="Analytical_Methods.html">Analytical Methods</a> and <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a> for the wider toolkit.</p>
+
+<h2 id="s3">3 Altman Z-Score and pressure</h2>
+<p>Edward Altman&rsquo;s Z-Score (1968) predicts financial distress, not manipulation, but distress is a classic pressure element of the <a href="Fraud_Triangle.html">fraud triangle</a>, and firms near the grey zone have strong incentives to inflate earnings or avoid covenant breaches. For a public manufacturer:</p>
+<pre>Z = 1.2&middot;X1 + 1.4&middot;X2 + 3.3&middot;X3 + 0.6&middot;X4 + 1.0&middot;X5
+X1 = working capital / total assets        X2 = retained earnings / total assets
+X3 = EBIT / total assets                   X4 = market value of equity / total liabilities
+X5 = sales / total assets</pre>
+<p>Zones: Z above 2.99 is &ldquo;safe,&rdquo; 1.81 to 2.99 the grey zone, below 1.81 distress. Altman also published variants: Z&prime; for private firms (coefficients 0.717, 0.847, 3.107, 0.420, 0.998 with book value of equity in X4; cut-offs 2.9 and 1.23) and Z&Prime; for non-manufacturers and emerging markets (6.56, 3.26, 6.72, 1.05 plus a constant of 3.25; cut-offs 2.6 and 1.1).</p>
+<p><b>Example</b> using the same fictitious company in year t with retained earnings of 300, EBIT of 110 and a market value of equity of 600: working capital = 520 &minus; 300 = 220, so X1 = 0.176; X2 = 300/1,250 = 0.240; X3 = 110/1,250 = 0.088; total liabilities = 560, so X4 = 600/560 = 1.071; X5 = 1,300/1,250 = 1.040. Z = 0.211 + 0.336 + 0.290 + 0.643 + 1.040 = <b>2.52</b>, in the grey zone. Combined with an M-Score above threshold, this profile (growth, rising leverage, weak cash conversion and a score that is not safely above 2.99) is the profile that most justifies a detailed look.</p>
+
+<h2 id="s4">4 Revenue cut-off testing</h2>
+<p>Under ASC 606 (and IFRS 15) revenue is recognized when control of goods or services transfers to the customer, applying a five-step model: identify the contract, identify performance obligations, determine the transaction price, allocate it, and recognize revenue as obligations are satisfied. <b>Cut-off testing</b> checks that transactions are recorded in the right period. Procedure:</p>
+<ol>
+<li>Identify the period-end date and the control point for the product (shipment, delivery or acceptance, according to contract terms such as FOB shipping point or FOB destination).</li>
+<li>Select the last 10 to 20 shipments recorded before period end and the first 10 to 20 recorded after (or a stratified sample covering a window of several days either side).</li>
+<li>Trace each to the bill of lading, carrier record, proof of delivery and the invoice; compare shipment date and invoice date to the revenue-recognition date in the ledger.</li>
+<li>Flag revenue booked before shipment or delivery as required by the terms, shipments dated after year-end but invoiced before, and invoices backdated.</li>
+<li>Reverse-test: review shipments in the first weeks of the next period for revenue that belongs in the closing period (understatement), and for credit memos, returns and cancellations that reverse the sales recorded in the last days.</li>
+<li>Analyse the <b>distribution of sales by day</b> in the last month. A hockey-stick spike (for example, 40% of the quarter&rsquo;s sales in the last three days) is a red flag; compare with prior periods and seasonality.</li>
+<li>Quantify cut-off error: error amount = sales recorded early &times; margin (for profit effect).</li>
+</ol>
+<p>Related analytical tests: gross margin by month, DSO trend (DSO = receivables &divide; sales &times; days in period), and sales returns as a percentage of sales in the 30 to 60 days after period end.</p>
+
+<h2 id="s5">5 Channel stuffing</h2>
+<p><b>Channel stuffing</b> is shipping more product to distributors or retailers than end customers demand, often with discounts, extended payment terms or return rights, to pull sales into the current period. It is not necessarily illegal if sales are genuine and fully disclosed; it is fraud when the revenue is not properly recognized (for example, rights of return or side agreements negate the sale) or its effect on future results is concealed. In the SEC&rsquo;s case against Sunbeam, executives were found to have used discounts and other inducements to pull merchandise sales into 1997 that otherwise would have occurred later, without disclosing that revenue growth was being achieved at the expense of future results; the SEC stated that at least $60 million of the $189 million in reported 1997 pre-tax earnings from continuing operations came from the accounting fraud.<sup class="ref">[2]</sup></p>
+<p><b>Detection tests.</b></p>
+<ul>
+<li><b>DSO and DSRI</b> jump in the stuffing quarter; receivables concentrated in a few distributors.</li>
+<li><b>Sell-in versus sell-through.</b> Compare shipments to distributors with the distributors&rsquo; sales to end customers (obtain third-party data or confirm directly). Channel inventory in days of sales rising well above prior levels is the core indicator.</li>
+<li><b>Returns and credits</b> spike in the next quarter; allowance for returns not increased in step with sales.</li>
+<li><b>Unusual terms:</b> extended payment terms, price protection, right-to-return, guaranteed sale, or consignment-like side letters. Read the contracts and email around quarter-end; ask sales staff, outside the manager&rsquo;s presence, about oral promises (see <a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a>).</li>
+<li><b>Customer confirmation</b> asking explicitly about side agreements, return rights and payment contingencies.</li>
+<li><b>Timing of shipments</b> concentrated in the last days; carriers&rsquo; pick-up logs and freight bills are independent evidence.</li>
+</ul>
+
+<h2 id="s6">6 Bill-and-hold</h2>
+<p>A <b>bill-and-hold</b> arrangement bills a customer for goods which the seller retains in its warehouse. Under ASC 606-10-55-83, revenue may be recognized only if all four criteria are met: the reason for the arrangement must be substantive (for example, the customer requested it); the product must be identified separately as belonging to the customer; the product must be ready for physical transfer to the customer; and the entity cannot have the ability to use the product or direct it to another customer.<sup class="ref">[3]</sup> The seller must also still evaluate whether it has other performance obligations, such as custodial services.</p>
+<p><b>Tests.</b> (1) Query the sales ledger for invoices with no shipping document, or with a carrier-pickup date after the invoice date. (2) Walk the warehouse (count and observe) and compare physical inventory with inventory records at year-end: finished goods that are on the books as sold but physically present. (3) Obtain the customer&rsquo;s written request and acknowledgement and check that it pre-dates the sale. (4) Confirm with the customer that the goods were ordered, accepted and are owned by it. (5) Check whether the goods shipped shortly after period end and whether the customer paid or returned them. In Sunbeam, the SEC found that bill-and-hold sales were recognized in violation of the applicable accounting rules.<sup class="ref">[2]</sup></p>
+
+<h2 id="s7">7 Percent-of-completion and over-time revenue</h2>
+<p>For long-term contracts, revenue is recognized over time as work is performed. Under ASC 606 the typical measure is an input method such as <b>cost-to-cost</b>:</p>
+<pre>% complete = costs incurred to date &divide; total estimated costs at completion
+Revenue to date = % complete &times; total contract price
+Revenue this period = revenue to date &minus; revenue recognised in prior periods</pre>
+<p><b>Worked example.</b> A $10.0 million contract has estimated total costs of $8.0 million. At year-end, costs to date are $4.0 million, so completion is 50% and revenue to date is $5.0 million, giving a gross profit of $1.0 million. If management understates the estimated total cost at $7.0 million, completion becomes 4.0/7.0 = 57.1% and revenue to date is $5.71 million, so profit recognized rises to $5.71 &minus; $4.0 = $1.71 million, an overstatement of $0.71 million from the estimate alone. The estimate is a judgment, which is why it is the favoured lever.</p>
+<p><b>Tests.</b> Compare the estimated cost to complete with actual cost-to-complete on finished similar contracts; analyse <b>margin fade</b> (profit recognized early, with margins declining as the contract closes); test whether claims and change orders were included in revenue before approval; examine whether costs were charged to the wrong contract to hit target percentages; inspect engineering and project-manager reports against the accounting estimate; and recalculate completion from independent physical progress measures. Large unbilled receivables (&ldquo;costs and estimated earnings in excess of billings&rdquo;) rising faster than billings point to over-recognition.</p>
+
+<h2 id="s8">8 Cookie-jar reserves</h2>
+<p>A <b>cookie-jar reserve</b> is an over-accrued liability (restructuring, returns, warranty, bad debts, litigation) built in good years and released into income in weak years to smooth earnings. The SEC&rsquo;s Sunbeam case also reported that executives used cookie-jar reserves among their earnings-management tactics.<sup class="ref">[2]</sup></p>
+<p><b>Tests.</b></p>
+<ol>
+<li><b>Reserve rollforward.</b> Beginning balance + provisions &minus; actual charges (utilization) &plusmn; releases = ending balance, for each reserve for several years. Persistent excess of provisions over charges, or a large release with no matching change in underlying exposure, is the indicator.</li>
+<li><b>Ratio trends.</b> Allowance for doubtful accounts as % of receivables; warranty reserve as % of sales; returns reserve as % of sales. A fall in the ratio without a change in experience is a release in disguise.</li>
+<li><b>Timing.</b> Releases in the quarter in which the company would otherwise miss analyst consensus; look at the effect on earnings per share relative to the miss.</li>
+<li><b>Restructuring charges</b> that include costs of future operations, or reserves for plans never carried out.</li>
+<li><b>Compare to peers</b> and to historical loss rates to see if the reserve at a given date was reasonable.</li>
+</ol>
+
+<h2 id="s9">9 Limits and pitfalls</h2>
+<ul>
+<li><b>False positives.</b> High-growth, acquisitive or restructuring firms often score high without any fraud; the M-Score was calibrated on a particular sample (manufacturers in 1982 to 1992), and misclassification of honest firms is substantial. Treat a flag as a reason to examine the specific accounts.</li>
+<li><b>Data quality.</b> Use as-originally-reported figures for detection and restated figures to validate; mismatched definitions across data providers change the indices.</li>
+<li><b>Sector fit.</b> Banks, insurers and firms without receivables or gross margin need modified models.</li>
+<li><b>Accounting changes.</b> The adoption of ASC 606 and changes in lease accounting alter ratios without any manipulation; adjust for them.</li>
+<li><b>Intent.</b> Error and aggressive-but-lawful accounting produce the same numbers as fraud. Establishing intent requires documents, communications and testimony (see <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>), and the scheme analysis in <a href="Case_Studies.html">Case Studies</a> and <a href="Major_Fraud_Case_Studies.html">Major Fraud Case Studies</a>.</li>
+</ul>
+<p>Pair these tests with ledger-level analytics (<a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a>) and with the red-flag catalogue in <a href="Red_Flags.html">Red Flags</a>.</p>
+
+<p class="hatnote">See also: <a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a>, <a href="Fraud_Triangle.html">Fraud Triangle</a>, <a href="Benfords_Law.html">Benford&rsquo;s Law</a>, <a href="Forensic_Accounting.html">Forensic Accounting</a>, <a href="Report_Writing.html">Report Writing</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Beneish, M. D. &ldquo;The Detection of Earnings Manipulation.&rdquo; <i>Financial Analysts Journal</i> 55(5), 24&ndash;36, 1999. <a class="external" href="https://rpc.cfainstitute.org/research/financial-analysts-journal/1999/the-detection-of-earnings-manipulation">cfainstitute.org</a></li>
+<li>U.S. Securities and Exchange Commission. Litigation Release No. 17710, SEC v. Sunbeam executives (Dunlap and Kersh settlement). <a class="external" href="https://www.sec.gov/enforcement-litigation/litigation-releases/lr-17710">sec.gov</a></li>
+<li>Financial Accounting Standards Board. ASC 606, <i>Revenue from Contracts with Customers</i>, including 606-10-55-83 (bill-and-hold arrangements).</li>
+<li>Altman, E. I. &ldquo;Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy.&rdquo; <i>Journal of Finance</i> 23(4), 1968.</li>
+</ol>

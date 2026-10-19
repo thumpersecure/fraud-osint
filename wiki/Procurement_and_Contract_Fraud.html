@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bid rigging, kickbacks, change-order abuse and shell vendors in public and corporate purchasing, with the screens and tests used to detect them.">
+<title>Procurement and Contract Fraud - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li class="active-page"><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Procurement and Contract Fraud</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Procurement and Contract Fraud</th></tr>
+<tr><td class="iblabel">Fraud-tree branches</td><td>Corruption (bribery, kickbacks, bid rigging); asset misappropriation (billing schemes)</td></tr>
+<tr><td class="iblabel">U.S. statutes</td><td>Sherman Act &sect;1; Anti-Kickback Act (41 U.S.C. &sect;&sect;8701&ndash;8707); False Claims Act (31 U.S.C. &sect;&sect;3729&ndash;3733); 18 U.S.C. &sect;&sect;201, 666, 1343, 371</td></tr>
+<tr><td class="iblabel">Enforcement</td><td>DOJ Antitrust Division; Procurement Collusion Strike Force (since Nov. 2019); agency Inspectors General</td></tr>
+<tr><td class="iblabel">Core evidence</td><td>Bid files, vendor master data, invoices, change orders, emails, bank records</td></tr>
+</table>
+
+<p><b>Procurement fraud</b> is any deliberate deception in the acquisition of goods, services or construction, whether by a supplier (false claims, defective pricing, substitution), by an insider (kickbacks, steering to a favored vendor, fictitious vendors), or by a group of suppliers acting together (<b>bid rigging</b>). It sits across two branches of the <a href="Fraud_Tree.html">fraud tree</a>: <i>corruption</i>, when an insider and a vendor collude, and <i>asset misappropriation</i>, when the "vendor" exists only to extract payments. Public procurement is a large and attractive target; the ACFE reports that corruption is present in nearly half of occupational-fraud cases and that billing schemes are among the most common asset-misappropriation methods.<sup class="ref">[1]</sup> This article emphasizes how examiners test purchasing records rather than recount individual cases.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Scheme typology</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Law and enforcement</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Forensic techniques</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Worked examples</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Open-source and relationship analysis</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Red flags and controls</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Scheme typology</h2>
+<p>Procurement fraud is easiest to analyze by lifecycle phase.<sup class="ref">[2]</sup></p>
+<table class="wikitable">
+<tr><th>Phase</th><th>Scheme</th><th>Mechanism</th></tr>
+<tr><td>Needs definition</td><td>Tailored specifications; need creation</td><td>An insider writes requirements only one vendor can meet, or buys things that are not needed</td></tr>
+<tr><td>Solicitation</td><td>Split purchases; sole-source abuse; leaked bid information</td><td>Orders divided to stay under approval or competition thresholds; "emergency" justification without emergency</td></tr>
+<tr><td>Bidding</td><td>Bid rigging: bid suppression, complementary (cover) bids, bid rotation, market allocation</td><td>Competitors agree who wins; others bid higher, withdraw, or subcontract afterward</td></tr>
+<tr><td>Award</td><td>Bribery; conflict of interest; shell vendor</td><td>Insider is paid by, or owns, the winning vendor</td></tr>
+<tr><td>Performance</td><td>Change-order abuse; "low-ball and amend"; product substitution; defective pricing</td><td>Winner bids low, then recovers margin through approved scope changes; cheaper materials supplied than invoiced</td></tr>
+<tr><td>Payment</td><td>Duplicate or inflated invoices; false billing for services not rendered; kickbacks</td><td>Part of the overcharge is returned to the insider, in cash, goods, or payments to a relative's firm</td></tr>
+</table>
+
+<h2 id="s2">2 Law and enforcement</h2>
+<p><b>Antitrust.</b> Bid rigging is a per se criminal violation of Section 1 of the Sherman Act (15 U.S.C. &sect;1); the maximum penalty is imprisonment up to 10 years and criminal fines up to $100 million for corporations and $1 million for individuals, with an alternative fine of twice the gain or loss. In November 2019 the Antitrust Division launched the <b>Procurement Collusion Strike Force (PCSF)</b>, an interagency partnership of Antitrust Division prosecutors, U.S. Attorneys' Offices, the FBI, the Department of Defense and Offices of Inspector General, to deter, detect, investigate and prosecute antitrust crimes in government procurement, grants and other public funding.<sup class="ref">[3]</sup> Reported PCSF-era outcomes include the Korean military fuel supply conspiracy (corporate guilty pleas, roughly $82 million in criminal fines and a $154 million civil settlement reported in connection with the matter) and the 2021 Contech Engineered Solutions plea (a $7 million criminal fine and more than $1.5 million restitution for bid rigging and conspiracy to commit mail and wire fraud).<sup class="ref">[3]</sup></p>
+<p><b>Kickbacks and bribery.</b> The Anti-Kickback Act prohibits kickbacks to prime contractors or subcontractors to obtain favorable treatment under a federal contract. For public officials, 18 U.S.C. &sect;201 criminalizes bribery and gratuities, and &sect;666 reaches bribery involving programs receiving federal funds. Foreign-official payments are covered by the FCPA (see <a href="Anti_Bribery_Statutes.html">Anti-Bribery Statutes</a>).</p>
+<p><b>False claims.</b> The civil False Claims Act imposes treble damages plus a per-claim penalty, adjusted annually for inflation, on those who knowingly submit or cause false claims; the <i>qui tam</i> provisions let private relators sue on behalf of the government. Federal contractors are also bound by the mandatory-disclosure rule at FAR 52.203-13, requiring timely disclosure of credible evidence of fraud, bribery or gratuities. See <a href="Federal_Enforcement_Agencies.html">Federal Enforcement Agencies</a>.</p>
+
+<h2 id="s3">3 Forensic techniques</h2>
+<h3>3.1 Document and file review</h3>
+<ol>
+<li><b>Reconstruct the procurement file</b> for each selected award: needs justification, specification drafts (with metadata and revision history), solicitation, bidder list, bids as received (with time stamps), evaluation sheets, award memo, contract, modifications, invoices and payment approvals. Missing items are findings in themselves.</li>
+<li><b>Compare the specification to the winner's literature.</b> Phrases copied from a vendor brochure or product part numbers inside "generic" specifications indicate tailoring. Document metadata (author, creation date, tracked-change history) can show who drafted the spec; see <a href="Document_Examination.html">Document Examination</a> and <a href="Digital_Forensics.html">Digital Forensics</a>.</li>
+<li><b>Compare bid documents across bidders</b> for common typographical errors, identical formatting, the same arithmetic mistake, shared fonts, matching handwriting, same fax/IP/metadata origin, or sequential bond or insurance certificate numbers. Handwriting and typography comparison belongs to the document examiner.</li>
+<li><b>Review evaluation scoring</b>: scores changed after opening, unexplained re-scoring of a rival, or evaluators who scored only one bidder.</li>
+<li><b>Interview</b> evaluators, contracting officers, and losing bidders using non-leading, sequenced questions; see <a href="Interviewing.html">Interviewing</a>.</li>
+</ol>
+<h3>3.2 Data analytics on bids</h3>
+<p>Economists and competition agencies use <b>bid-rigging screens</b> that flag suspicious tenders for review (they are not proof). Common ones:</p>
+<ul>
+<li><b>Coefficient of variation (CV)</b> of bids in a tender = standard deviation divided by mean. Collusive tenders often show unusually low CV (cover bids bunched together).</li>
+<li><b>Relative distance (RD)</b> = (second-lowest bid &minus; lowest bid) divided by the standard deviation of the losing bids. A winner far below tightly clustered losers yields a high RD.</li>
+<li><b>Winner patterns</b>: a fixed group of bidders always participates; winners rotate in a regular sequence; one firm wins in a region and others never bid there (market allocation); losers later appear as subcontractors to the winner.</li>
+<li><b>Price relationships</b>: bids that move together with no cost explanation, or winning bids that rise when a particular rival drops out.</li>
+<li><b>Withdrawal and no-bid behavior</b>: firms that qualify but do not bid, or withdraw after submission.</li>
+</ul>
+<p>Screens should be calibrated against a baseline of known-competitive tenders from the same agency and product category, as thresholds are market-specific.<sup class="ref">[4]</sup></p>
+<h3>3.3 Vendor master-file and accounts-payable analytics</h3>
+<ol>
+<li><b>Vendor master to employee master match</b>: compare vendor and employee addresses, phone numbers, bank accounts, tax ID, and emails. A match is a primary conflict-of-interest indicator and the classic test for a shell company.</li>
+<li><b>Vendor attributes</b>: PO-box or residential addresses; no website or phone; incorporation shortly before the first award; registered-agent addresses shared with many entities; no physical capacity.</li>
+<li><b>Invoice patterns</b>: sequential invoice numbers (suggesting the vendor has no other customers), round-dollar amounts, invoices just under an approval limit, duplicate invoice numbers or amounts across dates, and invoices without purchase orders or receiving reports. Digit analysis (<a href="Benfords_Law.html">Benford's Law</a>) applied to a vendor's invoices exposes a cluster of leading or second digits near the limit.</li>
+<li><b>Three-way match failures</b>: purchase order, receiving report and invoice that disagree on quantity or price.</li>
+<li><b>Price benchmarking</b>: compare unit prices against contemporaneous competitive awards, GSA schedule prices, or index data. Persistent premiums indicate overcharge or kickback loading.</li>
+<li><b>Split-purchase test</b>: group purchases by vendor and approver over a rolling window; flag clusters where individual amounts fall below a threshold but the aggregate exceeds it.</li>
+</ol>
+<h3>3.4 Following the money</h3>
+<p>Kickbacks are proven through bank and corporate records: subpoena the vendor's disbursements and the insider's accounts, then match amounts and dates. Payments are often routed through relatives, consulting firms, or offshore accounts; <a href="Asset_Tracing.html">asset tracing</a> and the <a href="Net_Worth_Method.html">net-worth method</a> identify unexplained wealth. Typical patterns include a payment to the insider (or a related entity) within days after the government pays the vendor, and a recurring percentage of invoice value. Cash-deposit structuring around reporting thresholds can also surface in suspicious activity reports; see <a href="AML_Law.html">AML Law</a> and <a href="Money_Laundering.html">Money Laundering</a>.</p>
+
+<h2 id="s4">4 Worked examples</h2>
+<p>All numbers are illustrative.</p>
+<p><b>Example A: bid screens.</b> Four bids are received for a road-resurfacing contract: $960,000 (Firm W), $1,042,000, $1,045,000 and $1,049,000. The mean of all bids is $1,024,000; the sample standard deviation is about $42,760, so CV = 42,760 / 1,024,000 &asymp; <b>4.2%</b>. The three losing bids have a mean of $1,045,333 and a sample standard deviation of $3,512. RD = (1,042,000 &minus; 960,000) / 3,512 &asymp; <b>23.4</b>. The losing bids are packed within $7,000 of each other (0.7% of value) while the winner is $82,000 lower. If the agency's baseline tenders show typical CV of 10&ndash;15% and RD under 3, this tender is a statistical outlier worth a file review. The follow-up step is to examine whether the three losers share document metadata, addresses or subcontract relationships with Firm W.</p>
+<p><b>Example B: low-ball and amend.</b> Firm W's $960,000 bid undercut the next bid by $82,000. During performance, nine change orders totaling $120,000 are approved without competition. Revised contract value = $1,080,000, which is <b>$38,000 higher</b> than the second-place bid. Change-order growth = 120,000 / 960,000 = 12.5%. Reviewers test whether each change order was foreseeable from the original specification, whether the same approver signed all nine, and whether quantities were measured against field inspection records. The conclusion that the award would have gone elsewhere had the true price been known is the core "materiality" evidence.</p>
+<p><b>Example C: shell vendor.</b> An accounts-payable extract shows Vendor X with 24 invoices in a year, each between $9,000 and $9,950 against a $10,000 approval limit, totaling $230,400 (average $9,600). Invoice numbers run 1001 to 1024 with no gaps; the vendor's address matches a residential address in the employee master file; all invoices were approved by one manager and none has a receiving report. Four independent red flags support a referral. Quantified loss = $230,400 minus the value of any documented goods actually received. Corroboration: the vendor's bank statements, state corporate filing date, and the manager's deposit records.</p>
+<p><b>Example D: kickback detection.</b> A purchasing agent approves invoices from Supplier S. Unit price for a standard component is $41.80 against a competitive benchmark of $36.00, a 16.1% premium. On 52,000 units the overcharge is (41.80 &minus; 36.00) &times; 52,000 = <b>$301,600</b>. If the supplier returns 50% of the overcharge, the expected kickback stream is about $150,800, which can be compared to deposits in the agent's accounts (for example, 11 deposits clustered within five days after each payment run) to test the hypothesis.</p>
+
+<h2 id="s5">5 Open-source and relationship analysis</h2>
+<p>Public-contract portals (USAspending.gov, SAM.gov, state and municipal e-procurement sites) allow award histories to be built for any vendor: number and size of awards, awarding offices, and timing relative to incorporation. Corporate registries show officers and registered agents; campaign-finance and lobbying disclosures show donations to officials who control awards; property records and court dockets expose family links. Link-analysis charts that connect vendors, officers, agents and officials are standard working papers; see <a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a>, <a href="OSINT_Tools.html">OSINT Tools</a> and <a href="OSINT.html">OSINT</a>. Limitations: names are often common, registries differ by jurisdiction, and a relationship is a lead, not proof of collusion.</p>
+
+<h2 id="s6">6 Red flags and controls</h2>
+<ul>
+<li>Repeated awards to one vendor without competition, or frequent "emergency" or sole-source justifications.</li>
+<li>Specifications that match one vendor; unusually short bid windows; amendments issued to only some bidders.</li>
+<li>Bidders that win in rotation, share addresses or personnel, or subcontract to each other.</li>
+<li>Winning price much lower than the field, followed by large change orders.</li>
+<li>Insider lifestyle inconsistent with salary; refusal to take leave or delegate vendor contact (see <a href="Red_Flags.html">Red Flags</a> and <a href="Fraud_Triangle.html">Fraud Triangle</a>).</li>
+<li>Controls: segregation between requisitioner, approver and receiver; vendor onboarding verification (independent address and ownership check); periodic vendor-master clean-up; rotation of buyers; conflict-of-interest disclosures; hotline and whistleblower channels; use of the screens above on every competitive tender.</li>
+</ul>
+<p>Procurement fraud in the context of other corruption schemes is also summarized in <a href="Occupational_Fraud.html">Occupational Fraud</a> and <a href="ACFE_Report_to_Nations.html">ACFE Report to the Nations</a>; the analytic methods connect to <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a> and <a href="Analytical_Methods.html">Analytical Methods</a>.</p>
+
+<p class="hatnote">See also: <a href="Fraud_Tree.html">Fraud Tree</a>, <a href="Anti_Bribery_Statutes.html">Anti-Bribery Statutes</a>, <a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Association of Certified Fraud Examiners. <i>Occupational Fraud 2024: A Report to the Nations</i>. <a class="external" href="https://www.acfe.com/report-to-the-nations/2024">acfe.com</a></li>
+<li>U.S. Department of Justice, Antitrust Division. "Procurement Collusion Strike Force" and "Price Fixing, Bid Rigging, and Market Allocation Schemes." <a class="external" href="https://www.justice.gov/atr/procurement-collusion-strike-force">justice.gov</a></li>
+<li>U.S. Attorney's Office, N.D. Ill. "Justice Department Announces Strike Force to Combat Crimes in Government Procurement, Grant and Program Spending," Nov. 2019. <a class="external" href="https://www.justice.gov/usao-ndil/pr/justice-department-announces-strike-force-combat-crimes-government-procurement-grant">justice.gov</a>; Arnold &amp; Porter, "DOJ Collusion Strike Force Earns Conviction," 2021. <a class="external" href="https://www.arnoldporter.com/en/perspectives/blogs/enforcement-edge/2021/06/doj-collusion-strike-force-earns-conviction">arnoldporter.com</a></li>
+<li>OECD. <i>Guidelines for Fighting Bid Rigging in Public Procurement</i>, 2009; Imhof, D., Karagok&ouml;z, Y. &amp; Rutz, S. "Screening for Bid Rigging&mdash;Does It Work?" <i>Journal of Competition Law &amp; Economics</i>, 2018.</li>
+<li>15 U.S.C. &sect;1; 41 U.S.C. &sect;&sect;8701&ndash;8707; 31 U.S.C. &sect;&sect;3729&ndash;3733; FAR 52.203-13.</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Fraud_Schemes.html">Fraud Schemes</a> | <a href="Category_Anti-Corruption.html">Anti-Corruption</a> | <a href="Category_Fraud_Detection.html">Fraud Detection</a> | <a href="Category_Investigation_Methods.html">Investigation Methods</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

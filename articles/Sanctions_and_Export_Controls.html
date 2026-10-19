@@ -1,0 +1,88 @@
+<!--meta title="Sanctions and Export Controls" desc="OFAC sanctions, the 50 percent rule, BIS export controls, evasion typologies and the screening and tracing methods investigators use." cats="Following the Money, Financial Investigation, Law"-->
+<table class="infobox">
+<tr><th class="ibtitle" colspan="2">Sanctions and Export Controls</th></tr>
+<tr><td class="iblabel">Sanctions authority</td><td>IEEPA (50 U.S.C. &sect; 1701 et seq.), TWEA, country statutes</td></tr>
+<tr><td class="iblabel">Administrator</td><td>Treasury OFAC</td></tr>
+<tr><td class="iblabel">Export controls</td><td>Export Control Reform Act 2018; Export Administration Regulations (EAR), Commerce BIS</td></tr>
+<tr><td class="iblabel">Liability standard</td><td>Civil: strict liability; criminal: willfulness</td></tr>
+<tr><td class="iblabel">Max civil penalty (IEEPA)</td><td>$377,700 per violation or twice transaction value, whichever is greater (2025 figure)</td></tr>
+<tr><td class="iblabel">Key list</td><td>Specially Designated Nationals and Blocked Persons (SDN) List</td></tr>
+</table>
+
+<p><b>Economic sanctions</b> are legal prohibitions on dealing with designated persons, sectors or jurisdictions, used as an instrument of foreign policy. <b>Export controls</b> restrict the transfer of specific goods, software and technology, regardless of the counterparty's identity. The two regimes overlap in practice: a front company that buys dual-use chips for a sanctioned military end-user will violate both, and the concealment methods are those described in <a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a>. For financial investigators, sanctions evasion is also a predicate for <a href="Money_Laundering.html">money laundering</a>, and the same <a href="Asset_Tracing.html">tracing</a> and OSINT techniques apply.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Legal framework</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">The 50 percent rules</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Evasion typologies</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Forensic and OSINT examination methods</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Worked example: ownership aggregation and trade-data test</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Enforcement and screening</a></li>
+<li><span class="tocnumber">7</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Legal framework</h2>
+<p>OFAC administers programs under the International Emergency Economic Powers Act (IEEPA), the Trading with the Enemy Act and program statutes (for example CAATSA for Russia, Iran and North Korea). Designated persons appear on the <b>SDN List</b>; U.S. persons, which include U.S. entities, U.S. citizens and permanent residents wherever located, and anyone in the United States, must block their property and generally may not deal with them. Liability is <b>strict</b> in civil matters: no knowledge is required for OFAC to assess a penalty, though knowledge, voluntary self-disclosure and an effective compliance program affect the amount under OFAC's Enforcement Guidelines. Criminal penalties under IEEPA require a willful violation (up to 20 years' imprisonment and $1 million per violation).</p>
+<p><b>Secondary sanctions</b> threaten non-U.S. persons who engage in specified transactions with designated targets, such as significant transactions with listed Russian or Iranian financial institutions, with exclusion from the U.S. financial system. <b>Primary</b> sanctions bind U.S. persons directly. Dollar clearing, U.S.-origin goods and U.S. correspondent accounts create jurisdiction over non-U.S. actors; several European banks have paid multi-billion-dollar settlements on that basis (for example BNP Paribas, which in 2014 pleaded guilty and forfeited $8.9 billion).</p>
+<p><b>Export controls.</b> The Bureau of Industry and Security (BIS) administers the EAR and the Commerce Control List, including the Entity List, Military End-User List and Unverified List. Items are classified by Export Control Classification Number (ECCN), and licence requirements depend on item, destination, end-user and end-use. Criminal violations of the Export Control Reform Act carry up to 20 years and $1 million per violation. The Department of Justice and BIS also run the Disruptive Technology Strike Force, and the DOJ Corporate Whistleblower Awards Pilot (see <a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a>) now lists sanctions offenses among its priority areas.<sup class="ref">[1]</sup></p>
+
+<h2 id="s2">2 The 50 percent rules</h2>
+<p>OFAC's <b>50 Percent Rule</b> (revised guidance of 13 August 2014) holds that any entity owned, directly or indirectly, 50% or more in the <i>aggregate</i> by one or more blocked persons is itself blocked by operation of law, even if the entity does not appear on the SDN List. Three points matter in analysis:</p>
+<ul>
+<li><b>Aggregation:</b> ownership by multiple blocked persons adds together. Two SDNs each holding 25% make the company blocked; one SDN at 49% and a non-blocked party at 51% does not.</li>
+<li><b>Ownership, not control:</b> a blocked person who controls an entity without owning 50% does not automatically block it, but dealing with the entity may still be risky, since OFAC may treat it as acting for a blocked person, and non-ownership indicia can support a designation. OFAC advises caution with entities controlled by SDNs.</li>
+<li><b>Indirect chains:</b> A 50% owner of B, owner of 50% of C, results in C being blocked (each link is tested separately at 50%).</li>
+</ul>
+<p>OFAC stresses that the 50 Percent Rule is a floor and not a ceiling for diligence. On 31 March 2026 it issued an advisory on <b>sham transactions</b>: transfers in which a blocked person gives up property on paper while keeping a continuing interest. Red flags include commercially unreasonable transfers, transfers to family members or close associates, unduly complex structures, and continued involvement of the blocked person in managing the property.<sup class="ref">[2]</sup> OFAC enforcement in 2025 shows the rule in action, including a $215,988,868 penalty (announced 12 June 2025) against GVA Capital Ltd. for managing investments for a designated Russian oligarch after his designation, and a $1,092,000 settlement (9 December 2025) with an individual who served as fiduciary of a U.S. trust tied to a sanctioned oligarch.<sup class="ref">[3]</sup></p>
+<p>BIS adopted a parallel <b>Affiliates Rule</b> on 29 September 2025 extending Entity List, Military End-User List and some SDN-related restrictions to entities 50% or more owned by listed parties. On 10 November 2025 BIS suspended it for one year, until 9 November 2026, after a U.S.&ndash;China trade arrangement; during the suspension the EAR reverts to the prior &ldquo;legally distinct entity&rdquo; approach.<sup class="ref">[4]</sup> Because that date falls three weeks after this article, readers should check whether it was extended or reinstated. Other regimes (the EU, UK) use a &ldquo;control&rdquo; test in addition to a more-than-50% ownership test, so one structure can be blocked in one jurisdiction and not another.</p>
+
+<h2 id="s3">3 Evasion typologies</h2>
+<table class="wikitable">
+<tr><th>Typology</th><th>How it works</th><th>Footprint</th></tr>
+<tr><td>Front and shell companies</td><td>Newly formed third-country firms (Hong Kong, UAE, Turkey, Central Asia, Caucasus) buy for the sanctioned end-user</td><td>Recent formation, nominee directors, thin staff, shared address</td></tr>
+<tr><td>Ownership fragmentation</td><td>SDN reduces stake below 50% or splits among relatives and associates</td><td>Transfers just before or after designation; same family names; sham transaction indicators</td></tr>
+<tr><td>Transshipment and re-export</td><td>Goods routed through intermediary country with falsified end-user certificates</td><td>Customs data showing sudden volume surges to neighbors of the target; HS codes of controlled items</td></tr>
+<tr><td>Trade-based misinvoicing</td><td>Over- or under-invoicing and phantom shipments to move value</td><td>Unit-price outliers vs. market benchmark</td></tr>
+<tr><td>Maritime evasion</td><td>AIS switch-off or spoofing, ship-to-ship transfers, flag hopping, falsified bills of lading, shadow fleets</td><td>AIS gaps near loading zones, vessel name/IMO changes, single-ship owners</td></tr>
+<tr><td>Payment obfuscation</td><td>Third-country payers, netting, cash couriers, informal value transfer, stablecoins and virtual-asset exchanges</td><td>Payer not party to contract; payment in unusual currency; blockchain exposure to sanctioned addresses</td></tr>
+<tr><td>Professional enablers</td><td>Trust companies, lawyers, fiduciaries who hold property for designees</td><td>Fee flows; trustee for multiple designees</td></tr>
+</table>
+<p>Typologies are periodically updated in joint advisories from OFAC, BIS and FinCEN, and in guidance from the FATF on proliferation financing. FinCEN SAR filings reference these through key terms specified in its advisories.</p>
+
+<h2 id="s4">4 Forensic and OSINT examination methods</h2>
+<h3>4.1 Screening and name resolution</h3>
+<ol>
+<li><b>Build the party list:</b> every counterparty, bank, intermediary, vessel, beneficial owner, director and address in a transaction file.</li>
+<li><b>Screen against SDN, Consolidated Sanctions List, EU, UK OFSI, UN and Entity List data</b> using fuzzy matching tuned for transliteration (e.g. Cyrillic to Latin variants), word-order inversion, and abbreviations. Document each hit as true match, false positive or unresolved, with the identifiers used (date of birth, passport, IMO number, address, registration number) that distinguish them.</li>
+<li><b>Resolve ownership upward</b> using the procedures in <a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a>, and apply the 50% aggregation arithmetic in a written schedule. List each owner, percentage, source document and date.</li>
+<li><b>Re-screen on a schedule.</b> A clean screen on the date of onboarding says nothing about a designation next month; investigators examining historical transactions must screen as of the transaction date, not today.</li>
+</ol>
+<h3>4.2 Transaction and trade-data analytics</h3>
+<ul>
+<li><b>Unit-price testing:</b> compute price per kilogram or per unit from customs and invoice data and compare with commodity benchmarks; deviations beyond, say, two standard deviations flag misinvoicing.</li>
+<li><b>Mirror-statistics:</b> compare exports reported by country A to country B with imports reported by B from A; large gaps suggest diversion.</li>
+<li><b>Network analysis:</b> link shippers, consignees, banks and notify parties through shared addresses, phones, and bank accounts (see <a href="Analytical_Methods.html">Analytical Methods</a>). Newly active consignees buying the same controlled HS codes as a previously designated buyer are a standard lead.</li>
+<li><b>Payment-chain review:</b> in SWIFT message data, check ordering and beneficiary fields, intermediary banks, and remittance text for references to listed parties or vessels; examine whether the payer is the contracting party.</li>
+<li><b>Vessel tracking:</b> reconstruct the voyage from AIS positions, flag and ownership history (IMO number persists when names change), and port-call records; look for AIS gaps exceeding 24 hours near terminals and ship-to-ship rendezvous.</li>
+<li><b>Blockchain analysis:</b> trace exposure to addresses attributed to designated persons or exchanges (see <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>); OFAC has listed wallet addresses on SDN entries.</li>
+</ul>
+<h3>4.3 Documents and open sources</h3>
+<p>Examine end-user certificates, bills of lading, commercial invoices and packing lists for inconsistencies (end-user name or address differing across documents, ports inconsistent with route, signatures reused). Open sources include corporate registries, customs-data vendors, satellite imagery of premises, vessel registries, court filings and news (see <a href="OSINT.html">OSINT</a>, <a href="OSINT_Tools.html">OSINT Tools</a>). Findings must be recorded with source, access date and archive copy to preserve admissibility (<a href="Chain_of_Custody.html">Chain of Custody</a>).</p>
+
+<h2 id="s5">5 Worked example: ownership aggregation and trade-data test</h2>
+<p>This is a hypothetical case. A distributor, Company C, is owned 30% by an SDN, 25% by Company B and 45% by an unrelated investor. Company B is owned 60% by the same SDN. The test: the SDN's indirect interest in C through B is not 60% &times; 25%, because under OFAC's rule B is itself tested first. B is owned 60% by an SDN, so B is blocked (60% &ge; 50%). B's 25% of C therefore counts as blocked-person ownership. Aggregate blocked ownership of C = 30% (SDN) + 25% (B) = 55%, so C is blocked even though the SDN holds only 30% directly. A naive multiplication (30% + 0.6 &times; 25% = 45%) would wrongly clear it.</p>
+<p>Now the trade-data screen. Company C imported 4,000 units of a controlled component at an invoice price of $12 per unit; customs and market benchmarks put the price at $48, so the invoices are 75% below benchmark (($48 &minus; $12) / $48). Across the year the undervaluation totals 4,000 &times; ($48 &minus; $12) = $144,000, and the examiner asks who settled the difference and where. Cross-checking, the supplier's country reports exporting 5,200 units to C's country while C's customs shows 4,000 received; the 1,200-unit gap is a lead for diversion. None of these is proof; they define document requests (contracts, payments, warehouse records) and interview topics.</p>
+
+<h2 id="s6">6 Enforcement and screening</h2>
+<p>Compliance programs follow OFAC's <i>Framework for OFAC Compliance Commitments</i> (2019): management commitment, risk assessment, internal controls, testing and training. Banks screen customers and payments; exporters screen end-users, review red flags in BIS's &ldquo;Know Your Customer&rdquo; guidance, and file voluntary self-disclosures. Violations are reported to OFAC within 10 business days for blocked property and annually for rejected transactions. Investigators should assume that penalties are driven by egregiousness, harm to program objectives, and compliance culture, and that willfulness is usually proven by concealment (altered fields, stripped references, shell intermediaries). Related frameworks include <a href="AML_Law.html">AML Law</a>, <a href="AML_Statutory_Framework.html">AML Statutory Framework</a> and <a href="Anti_Bribery_Statutes.html">Anti-Bribery Statutes</a>.</p>
+
+<p class="hatnote">See also: <a href="Money_Laundering.html">Money Laundering</a>, <a href="Asset_Tracing.html">Asset Tracing</a>, <a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a>, <a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>, <a href="Federal_Enforcement_Agencies.html">Federal Enforcement Agencies</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Foley &amp; Lardner. "DOJ Criminal Division Updates Part 2: Corporate Criminal Whistleblower Awards Pilot." 2025. <a class="external" href="https://www.foley.com/insights/publications/2025/05/doj-criminal-division-updates-part-2-corporate-criminal-whistleblower-awards-pilot/">foley.com</a></li>
+<li>OFAC. "Sham Transactions and Sanctions Evasion" advisory, 31 March 2026; summary at <a class="external" href="https://www.jdsupra.com/legalnews/ofac-issues-guidance-on-sham-9195294/">JD Supra</a>. Agency site: <a class="external" href="https://ofac.treasury.gov/">ofac.treasury.gov</a></li>
+<li>Jenner &amp; Block. "The 50% Rule Is Dead; Long Live the 50% Rule." 2026 (discusses 2025 OFAC actions). <a class="external" href="https://www.jenner.com/en/news-insights/client-alerts/the-50-rule-is-dead-long-live-the-50-rule">jenner.com</a></li>
+<li>Paul Weiss. "White House Announces One-Year Suspension of Export Controls Affiliates Rule." November 2025. <a class="external" href="https://www.paulweiss.com/insights/client-memos/white-house-announces-one-year-suspension-of-export-controls-affiliates-rule">paulweiss.com</a></li>
+<li>OFAC. "Revised Guidance on Entities Owned by Persons Whose Property and Interests in Property Are Blocked," 13 Aug 2014. <a class="external" href="https://ofac.treasury.gov/faqs/topic/1521">ofac.treasury.gov FAQs</a></li>
+</ol>

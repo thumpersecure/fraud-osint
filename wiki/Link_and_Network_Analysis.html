@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Entity resolution, fuzzy matching, link charts and graph metrics for finding hidden relationships, vendor-employee conflicts and shell vendors.">
+<title>Link and Network Analysis - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li class="active-page"><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Link and Network Analysis</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Link and Network Analysis</th></tr>
+<tr><td class="iblabel">Purpose</td><td>Reveal relationships among people, companies, accounts and events</td></tr>
+<tr><td class="iblabel">Core steps</td><td>Collect, standardize, resolve entities, link, visualize, measure, verify</td></tr>
+<tr><td class="iblabel">Typical outputs</td><td>Link chart, relationship (association) matrix, graph metrics, match report</td></tr>
+<tr><td class="iblabel">Common tools</td><td>Spreadsheet/SQL joins, Python (networkx, rapidfuzz), Neo4j, Gephi, Maltego, i2 Analyst&rsquo;s Notebook</td></tr>
+<tr><td class="iblabel">Frequent use</td><td>Vendor-employee conflicts, shell vendors, bid rigging, beneficial ownership</td></tr>
+</table>
+
+<p><b>Link and network analysis</b> is the investigative discipline of turning scattered records into a structured map of who or what is connected to whom, and then reading the map for patterns that the individual records do not show. In fraud work it is the standard method for finding undisclosed conflicts of interest, <a href="Fraud_Tree.html">corruption</a> and fictitious-vendor schemes; in <a href="OSINT.html">OSINT</a> it connects public-record entities across registries. The method has three layers: (1) <b>entity resolution</b>, deciding that two records describe the same real-world person, company or account; (2) <b>linking</b>, recording relationships such as shared addresses, phone numbers, officers or payments; and (3) <b>analysis</b>, using charts, matrices and graph metrics to find clusters, bridges and anomalies. This article is a practical guide. The examples below use invented data; real investigations must confine analysis to lawful data sources (see <a href="OSINT_Ethics.html">OSINT Ethics</a>).</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">The workflow</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Entity resolution</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Fuzzy-matching techniques</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Vendor-employee matching</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Shell vendor detection</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Relationship matrices and link charts</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Graph analysis</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Open-source data for links</a></li>
+<li><span class="tocnumber">9</span> <a href="#s9">Pitfalls and verification</a></li>
+<li><span class="tocnumber">10</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 The workflow</h2>
+<ol>
+<li><b>Define the question.</b> &ldquo;Does any employee have a financial interest in a vendor?&rdquo; or &ldquo;Which shell companies share control with this contractor?&rdquo; A defined question prevents an unreadable &ldquo;hairball&rdquo; chart.</li>
+<li><b>Collect structured data.</b> Employee master, vendor master, accounts-payable history, bank account files, corporate registry extracts, procurement records, phone and email logs, public filings.</li>
+<li><b>Standardize</b> fields (section 2).</li>
+<li><b>Resolve entities</b> and create a link table with one row per relationship, including its source and the date it was observed.</li>
+<li><b>Visualize and measure</b> (sections 6 and 7).</li>
+<li><b>Verify</b> each link with an independent source, and grade confidence. A link is a lead until corroborated (the same discipline as the <a href="Intelligence_Cycle.html">intelligence cycle</a>).</li>
+<li><b>Report</b> with the evidence trail, not just the picture.</li>
+</ol>
+
+<h2 id="s2">2 Entity resolution</h2>
+<p><b>Entity resolution</b> (also called record linkage or deduplication) decides whether records refer to the same entity. The standard pipeline has five stages:<sup class="ref">[1]</sup></p>
+<ol>
+<li><b>Standardize.</b> Uppercase; strip punctuation; expand or contract abbreviations consistently; split names into parts; drop legal suffixes (LLC, INC, CORP, LTD) into a separate field; normalize addresses to postal standards (for example, &ldquo;1200 North Market Street, Suite 400&rdquo; becomes &ldquo;1200 N MARKET ST STE 400&rdquo;); convert phone numbers to digits only, then to a single format (E.164); remove spaces and hyphens from bank account and tax identifier fields.</li>
+<li><b>Block.</b> Comparing every record with every other is quadratic. Group candidate pairs by a cheap key (the first three letters of the name, postal code, last four digits of phone) so that only records in the same block are compared.</li>
+<li><b>Compare.</b> For each candidate pair, compute similarity per field (section 3).</li>
+<li><b>Score and decide.</b> Combine the field scores with weights (for example, tax ID 0.4, bank account 0.3, address 0.2, name 0.1), and classify as match, possible match or non-match using thresholds. The possible-match band goes to a human reviewer.</li>
+<li><b>Cluster.</b> Link matched pairs transitively (if A=B and B=C then A=B=C) into entity clusters, with care: transitive closure can chain unrelated entities together through one false match.</li>
+</ol>
+<p><b>Strong versus weak identifiers.</b> Treat unique identifiers (government tax ID, bank account and routing number, registered company number) as <i>strong</i>; names and addresses are <i>weak</i>. A match on a strong identifier is much more probative than a name match: a name match can be a common surname, while a shared bank account number is extremely unlikely to be a coincidence between an employee and a vendor.</p>
+
+<h2 id="s3">3 Fuzzy-matching techniques</h2>
+<table class="wikitable">
+<tr><th>Technique</th><th>What it measures</th><th>Best for</th><th>Weakness</th></tr>
+<tr><td>Exact match after standardization</td><td>Equality</td><td>Tax ID, account number, phone</td><td>Misses typos</td></tr>
+<tr><td>Levenshtein (edit) distance</td><td>Number of single-character insertions, deletions, substitutions</td><td>Typos in names and addresses</td><td>Sensitive to word order</td></tr>
+<tr><td>Jaro-Winkler</td><td>Similarity weighted toward matching prefixes (0 to 1)</td><td>Personal names</td><td>Over-scores short strings</td></tr>
+<tr><td>Token set / Jaccard</td><td>Overlap of words, ignoring order</td><td>Company names, addresses</td><td>Common words dominate</td></tr>
+<tr><td>Phonetic (Soundex, Metaphone)</td><td>Sound-alike codes</td><td>Spelling variants of names</td><td>English-centred; coarse</td></tr>
+<tr><td>N-gram / TF-IDF cosine</td><td>Shared character sequences, weighted by rarity</td><td>Large-scale name search</td><td>Needs tuning</td></tr>
+</table>
+<p><b>Worked example.</b> Vendor master lists &ldquo;ACME CONSULTING LLC&rdquo; (19 characters) and the employee&rsquo;s spouse&rsquo;s business registry entry reads &ldquo;ACME CONSULTNG LLC&rdquo; (18 characters). The Levenshtein distance is 1 (one missing letter), so normalized similarity = 1 &minus; 1/19 = <b>0.947</b>. After removing the legal suffix the strings are &ldquo;ACME CONSULTING&rdquo; and &ldquo;ACME CONSULTNG&rdquo;, with distance still 1, similarity 1 &minus; 1/15 = 0.933. A token-set Jaccard score on {ACME, CONSULTING} and {ACME, CONSULTNG} is 1/3 = 0.33 because one token mismatches, which shows why character-level and token-level measures are combined. A reasonable rule: character similarity of 0.90 or higher on a name <i>and</i> an exact match on a second field goes to review.</p>
+<p>In Python:</p>
+<pre>from rapidfuzz import fuzz
+fuzz.ratio("ACME CONSULTING", "ACME CONSULTNG")         # ~96.6
+fuzz.token_set_ratio("ACME CONSULTING", "CONSULTING ACME")  # 100
+</pre>
+<p>Remember that a high name similarity is common among legitimate businesses (&ldquo;Smith &amp; Sons Plumbing&rdquo; appears across the country). Set the threshold from a labelled sample, not from a guess.</p>
+
+<h2 id="s4">4 Vendor-employee matching</h2>
+<p>The classic internal-fraud application. The Association of Certified Fraud Examiners reports that billing schemes through shell or conflicted vendors are among the most common asset-misappropriation and corruption forms (see <a href="ACFE_Report_to_Nations.html">ACFE Report to the Nations</a>). The test is a series of joins between the employee master and the vendor master (and the remit-to files):</p>
+<table class="wikitable">
+<tr><th>Match field</th><th>Join rule</th><th>Strength</th></tr>
+<tr><td>Bank account number</td><td>Vendor account = employee payroll direct-deposit account</td><td>Very strong</td></tr>
+<tr><td>Tax ID / SSN / EIN</td><td>Vendor TIN = employee SSN or an employee-controlled EIN</td><td>Very strong</td></tr>
+<tr><td>Street address (normalized)</td><td>Vendor address = employee home address; including unit-less variants</td><td>Strong</td></tr>
+<tr><td>Phone number</td><td>Vendor phone = employee home or mobile, or the same number shared among several vendors</td><td>Strong</td></tr>
+<tr><td>Email</td><td>Same email, or same domain registered to a personal address</td><td>Medium</td></tr>
+<tr><td>Surname / name</td><td>Fuzzy name match to vendor owner or officer</td><td>Weak (relatives are named differently)</td></tr>
+<tr><td>PO Box / mail drop</td><td>Vendor address = known mail-drop or registered-agent address</td><td>Weak; use in combination</td></tr>
+</table>
+<pre>-- Vendors whose address matches an employee address (after both are standardized)
+SELECT v.vendor_id, v.vendor_name, e.employee_id
+FROM vendor_master v
+JOIN employee_master e ON v.addr_std = e.addr_std;
+
+-- Vendors sharing a bank account with any other vendor or employee
+SELECT acct_no, COUNT(DISTINCT payee_id) AS n_payees
+FROM (SELECT acct_no, vendor_id AS payee_id FROM vendor_bank
+      UNION SELECT acct_no, employee_id FROM payroll_bank) t
+GROUP BY acct_no HAVING COUNT(DISTINCT payee_id) &gt; 1;
+</pre>
+<p><b>Dates matter.</b> A vendor created three days after an employee changed address, or paid only while the employee held an approval role, is a stronger indicator than a standing match. Also compare the vendor-creation user with the approver of the first payment. Matches should be tested against employee relationship-disclosure forms, since a disclosed and approved interest is a control success, not a fraud. Relatives often have different surnames, so extend to emergency-contact and beneficiary data only where lawful and permitted by the employer&rsquo;s policy and local privacy law.</p>
+
+<h2 id="s5">5 Shell vendor detection</h2>
+<p>A <b>shell (fictitious) vendor</b> is an entity created to receive payments for goods or services never delivered. The detection approach combines master-data attributes with payment behaviour:<sup class="ref">[2]</sup></p>
+<ul>
+<li><b>Master-data signals:</b> PO box or residential address; no phone, or a phone that goes to a mobile or voice-over-IP number; missing tax ID or a TIN that fails validation; generic names with initials or sequential names (&ldquo;ABC Services,&rdquo; &ldquo;ABD Services&rdquo;); address shared with several vendors or with a registered-agent address; recently incorporated; no website or a template website; vendor name resembling a legitimate supplier with a minor change.</li>
+<li><b>Payment signals:</b> invoice numbers that are sequential with no gaps (a real vendor with other customers skips numbers); invoices just below the approval limit; round-dollar invoices; a single customer; vague service descriptions (&ldquo;consulting,&rdquo; &ldquo;professional services&rdquo;); invoices on weekends; payments approved by the same person, or sequenced right after vendor creation; no purchase order or receiving report.</li>
+<li><b>Behaviour signals:</b> payments drawn out quickly with the vendor account later closed; payments to a bank account in a different state or country from the vendor address; vendors with payments and no contact history.</li>
+</ul>
+<p><b>Test procedure.</b> (1) Run the master-data screens; (2) run Benford and duplicate screens on the vendor&rsquo;s invoices (see <a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a>); (3) check the vendor against corporate registry, tax authority status and sanctions lists; (4) site-visit or confirm the vendor&rsquo;s existence by independent contact details (not those on the invoice); (5) trace payments to the receiving account and to the ultimate beneficiary (see <a href="Asset_Tracing.html">Asset Tracing</a>). Bid rigging yields analogous patterns: bidders sharing addresses, phone numbers, typos, or document metadata (see <a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a>).</p>
+
+<h2 id="s6">6 Relationship matrices and link charts</h2>
+<p>An <b>association (relationship) matrix</b> is a grid with entities on both axes; a cell records whether a link exists, or its type or strength. It is the oldest link-analysis tool and still the best for dense data because it shows every pair, including the absences. A <b>link chart</b> draws entities as nodes and relationships as lines; it communicates better but becomes unreadable above a few dozen nodes.</p>
+<table class="wikitable">
+<tr><th></th><th>Vendor V1</th><th>Vendor V2</th><th>Vendor V3</th><th>Employee E1</th></tr>
+<tr><td><b>Vendor V1</b></td><td>&mdash;</td><td>Same phone</td><td>&mdash;</td><td>Same address</td></tr>
+<tr><td><b>Vendor V2</b></td><td>Same phone</td><td>&mdash;</td><td>Same bank acct</td><td>&mdash;</td></tr>
+<tr><td><b>Vendor V3</b></td><td>&mdash;</td><td>Same bank acct</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><b>Employee E1</b></td><td>Same address</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+</table>
+<p>Read the matrix: V1 is tied to employee E1 by address, and to V2 by phone, while V2 is tied to V3 by bank account, so all three vendors are a single connected cluster reaching an employee, although no direct E1 to V3 link exists. That transitive chain is the finding a flat vendor-versus-employee join misses. Best practice for charts: use different edge types or colours for different link types, show confidence (solid for verified, dashed for inferred), keep a source reference on every edge, and filter to the cluster of interest.</p>
+
+<h2 id="s7">7 Graph analysis</h2>
+<p>Once relationships are stored as a graph (a node table and an edge table), standard network measures give investigators a prioritized view:</p>
+<ul>
+<li><b>Connected components.</b> Groups of nodes reachable from one another. Each component with a mixture of employees and vendors is a lead.</li>
+<li><b>Degree.</b> The number of links of a node. A bank account used by 14 &ldquo;different&rdquo; vendors has degree 14.</li>
+<li><b>Betweenness centrality.</b> The share of shortest paths between other nodes that pass through a node; high values identify brokers, controllers or intermediaries.</li>
+<li><b>Community detection</b> (for example, the Louvain algorithm). Splits a large graph into densely connected groups, helpful in large data sets such as money-flow networks.</li>
+<li><b>Shortest path.</b> The minimum chain of links between two named entities, answering &ldquo;how is X connected to Y?&rdquo;</li>
+<li><b>Bipartite projection.</b> From a vendor-to-address graph, derive a vendor-to-vendor graph in which vendors sharing an address are linked.</li>
+</ul>
+<pre>import networkx as nx
+G = nx.Graph()
+G.add_edge("V1","E1", kind="address"); G.add_edge("V1","V2", kind="phone")
+G.add_edge("V2","V3", kind="bank")
+for comp in nx.connected_components(G):
+    if any(n.startswith("E") for n in comp) and any(n.startswith("V") for n in comp):
+        print("mixed cluster:", sorted(comp))
+nx.betweenness_centrality(G)   # V1 and V2 score highest
+</pre>
+<p>Graph databases such as Neo4j make the same queries (for example, a path of up to four hops between an employee node and a vendor node) declarative, and are useful when the graph runs to millions of edges, as in <a href="Money_Laundering.html">money-laundering</a> transaction analysis and <a href="Cryptocurrency_Tracing.html">cryptocurrency tracing</a>. Machine-learning link prediction extends the approach; see <a href="AI_Fraud_Detection_Platforms.html">AI Fraud Detection Platforms</a>, but explainability requirements in court (see <a href="ML_Forensics_Explainability.html">ML Forensics Explainability</a>) mean the underlying links must always be shown.</p>
+
+<h2 id="s8">8 Open-source data for links</h2>
+<p>External data lets an examiner extend links beyond internal records: corporate registries and their open aggregations (for example, OpenCorporates), securities filings on SEC EDGAR for officers and directors, court dockets, property and UCC filings, domain registration and archive data, and leaked-data collections such as the ICIJ Offshore Leaks Database, which links entities, officers, intermediaries and addresses from published investigations.<sup class="ref">[3]</sup> Treat leak-derived records as leads: appearing in a database does not itself show wrongdoing, and the ICIJ itself states this on the database. Methods and tool inventories are covered in <a href="OSINT_Tools.html">OSINT Tools</a>, <a href="OSINT_Disciplines.html">OSINT Disciplines</a> and <a href="Asset_Tracing.html">Asset Tracing</a>.</p>
+
+<h2 id="s9">9 Pitfalls and verification</h2>
+<ul>
+<li><b>False positives from common values.</b> Shared addresses at apartment buildings, shared registered-agent addresses, shared call-centre phone numbers and common surnames produce spurious links. Exclude high-frequency values (an address shared by hundreds of entities) or down-weight them.</li>
+<li><b>Transitive chaining.</b> One wrong merge can fuse two unrelated clusters. Review cluster merges and keep the pairwise evidence.</li>
+<li><b>Stale data.</b> Links must be dated; an address that matched in 2019 may not be current.</li>
+<li><b>Confirmation bias and over-reading.</b> A tidy chart feels like proof. Record confidence ratings and look actively for disconfirming links.</li>
+<li><b>Privacy and legal limits.</b> Restrict to lawful, authorized data; handle personal data of private individuals with care; follow employment and data-protection law (see <a href="OSINT_Ethics.html">OSINT Ethics</a>).</li>
+<li><b>Presentation.</b> Courts and boards need the underlying records. Attach each edge to its source document (see <a href="Evidence_and_Testimony.html">Evidence and Testimony</a> and <a href="Report_Writing.html">Report Writing</a>).</li>
+</ul>
+
+<p class="hatnote">See also: <a href="Occupational_Fraud.html">Occupational Fraud</a>, <a href="Red_Flags.html">Red Flags</a>, <a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a>, <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a>, <a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Christen, P. <i>Data Matching: Concepts and Techniques for Record Linkage, Entity Resolution, and Duplicate Detection</i> (Springer), 2012; Fellegi, I. &amp; Sunter, A. &ldquo;A Theory for Record Linkage,&rdquo; <i>Journal of the American Statistical Association</i> 64 (1969).</li>
+<li>Association of Certified Fraud Examiners. <i>Occupational Fraud 2024: A Report to the Nations</i> (billing and corruption schemes). <a class="external" href="https://www.acfe.com/-/media/files/acfe/pdfs/rttn/2024/2024-report-to-the-nations.pdf">acfe.com</a></li>
+<li>International Consortium of Investigative Journalists. Offshore Leaks Database. <a class="external" href="https://offshoreleaks.icij.org/">offshoreleaks.icij.org</a></li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Investigation_Methods.html">Investigation Methods</a> | <a href="Category_Analytical_Methods.html">Analytical Methods</a> | <a href="Category_Fraud_Detection.html">Fraud Detection</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

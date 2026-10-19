@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How forensic accountants find concealed assets: lifestyle analysis, net worth tie-in, tracing, fraudulent-transfer law, bankruptcy fraud and trustee techniques.">
+<title>Hidden Assets in Divorce and Bankruptcy - Fraud-OSINT Wiki</title>
+<link rel="stylesheet" href="../skin/monobook.css">
+</head>
+<body>
+<div id="globalWrapper">
+<div id="siteTitle">
+  <a href="../wiki/index.html"><span class="logo">Fraud-OSINT Wiki</span></a>
+  <span class="tagline">&mdash; the open handbook of forensic accounting &amp; open-source intelligence</span>
+</div>
+<div id="layout">
+  <div id="column-one">
+    <div class="portlet" id="p-logo"><a href="../wiki/index.html">FRAUD&middot;OSINT</a></div>
+    <div class="portlet"><h5>navigation</h5><ul><li><a href="index.html">Main Page</a></li><li><a href="About.html">About this wiki</a></li><li><a href="Full_Report.html">Full report (one page)</a></li><li><a href="Index.html">Index of articles</a></li><li><a href="Glossary.html">Glossary</a></li><li><a href="References.html">References</a></li></ul></div>
+    <div class="portlet"><h5>forensic accounting</h5><ul><li><a href="Forensic_Accounting.html">Forensic Accounting</a></li><li><a href="Fraud_Triangle.html">Fraud Triangle</a></li><li><a href="Fraud_Tree.html">Fraud Tree</a></li><li><a href="Occupational_Fraud.html">Occupational Fraud</a></li><li><a href="Financial_Statement_Fraud.html">Financial Statement Fraud</a></li><li><a href="Red_Flags.html">Red Flags</a></li><li><a href="Analytical_Methods.html">Analytical Methods</a></li><li><a href="Benfords_Law.html">Benford&#x27;s Law</a></li><li><a href="Net_Worth_Method.html">Net Worth Method</a></li><li><a href="ACFE_Report_to_Nations.html">The ACFE Report to the Nations and Fraud Benchmark Surveys</a></li><li><a href="Fraud_Detection_Analytics.html">Analytical Fraud-Detection Techniques: Benford&#x27;s Law and Journal Entry Testing</a></li><li><a href="AML_Statutory_Framework.html">The AML Statutory Framework: BSA, MLCA, FinCEN, and FATF</a></li><li><a href="Anti_Bribery_Statutes.html">Anti-Bribery Law: The FCPA and UK Bribery Act</a></li><li><a href="Forensic_Accountant_Ethics.html">Professional Ethics Standards for Forensic Accountants</a></li><li><a href="Federal_Enforcement_Agencies.html">U.S. Federal Financial Crime Enforcement Agencies</a></li></ul></div>
+    <div class="portlet"><h5>following the money</h5><ul><li><a href="Money_Laundering.html">Money Laundering</a></li><li><a href="Asset_Tracing.html">Asset Tracing</a></li><li><a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a></li><li><a href="AML_Law.html">AML Law</a></li></ul></div>
+    <div class="portlet"><h5>OSINT</h5><ul><li><a href="OSINT.html">OSINT</a></li><li><a href="Intelligence_Cycle.html">Intelligence Cycle</a></li><li><a href="OSINT_Tools.html">OSINT Tools</a></li><li><a href="OSINT_Disciplines.html">OSINT Disciplines</a></li><li><a href="OSINT_Ethics.html">OSINT Ethics</a></li></ul></div>
+    <div class="portlet"><h5>investigation</h5><ul><li><a href="Digital_Forensics.html">Digital Forensics</a></li><li><a href="Chain_of_Custody.html">Chain of Custody</a></li><li><a href="Document_Examination.html">Document Examination</a></li><li><a href="Interviewing.html">Interviewing</a></li><li><a href="Evidence_and_Testimony.html">Evidence and Testimony</a></li><li><a href="Report_Writing.html">Report Writing</a></li><li><a href="Trafficking_Financial_Investigation.html">Digital Forensics in Human Trafficking Financial Investigations</a></li></ul></div>
+    <div class="portlet"><h5>forensic science standards</h5><ul><li><a href="Forensic_Validity_Crisis.html">The Forensic Science Validity Crisis</a></li><li><a href="Daubert_Standard.html">Daubert, Frye, and Expert Testimony Admissibility</a></li><li><a href="Brandon_Mayfield_Case.html">The Brandon Mayfield Misidentification</a></li><li><a href="CSI_Effect.html">The CSI Effect</a></li><li><a href="SWG_Standards_Bodies.html">The Scientific Working Groups (SWGDE, SWGDAM, SWGFAST, and More)</a></li><li><a href="NIST_OSAC.html">NIST OSAC and the Modern Forensic Standards Ecosystem</a></li><li><a href="International_Forensic_Standards.html">International Digital Forensics Standards: ISO, ENFSI, and INTERPOL</a></li></ul></div>
+    <div class="portlet"><h5>digital forensics</h5><ul><li><a href="Digital_Forensic_Lifecycle.html">The Digital Forensic Investigation Lifecycle</a></li><li><a href="Data_Standards_Cyber_Investigation.html">Data Standards for Cyber-Investigation: CASE, UCO, and WANDA</a></li><li><a href="Digital_Forensics_Tools.html">Named Digital Forensics Tools: EnCase, Cellebrite, AXIOM, and Bulk Extractor</a></li><li><a href="Video_Forensics.html">Video and Multimedia Forensics: Tools and Certification</a></li><li><a href="ML_Forensics_Explainability.html">Machine Learning in Digital Forensics and the Explainability Problem</a></li><li><a href="Cloud_IoT_Forensics.html">Cloud, IoT, and Mobile Forensics Challenges</a></li></ul></div>
+    <div class="portlet"><h5>forensic techniques</h5><ul><li><a href="Forensic_Investigation_Planning.html">Forensic Investigation Planning</a></li><li><a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a></li><li><a href="Journal_Entry_and_Ledger_Testing.html">Journal Entry and Ledger Testing</a></li><li><a href="Link_and_Network_Analysis.html">Link and Network Analysis</a></li><li><a href="Revenue_and_Earnings_Manipulation_Tests.html">Revenue and Earnings Manipulation Tests</a></li><li><a href="Forensic_Interviewing_and_Statement_Analysis.html">Forensic Interviewing and Statement Analysis</a></li><li><a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a></li><li><a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a></li><li class="active-page"><a href="Hidden_Assets_in_Divorce_and_Bankruptcy.html">Hidden Assets in Divorce and Bankruptcy</a></li></ul></div>
+    <div class="portlet"><h5>fraud schemes</h5><ul><li><a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a></li><li><a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a></li><li><a href="Healthcare_and_Insurance_Fraud.html">Healthcare and Insurance Fraud</a></li><li><a href="Payment_Fraud_and_BEC.html">Payment Fraud and BEC</a></li><li><a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a></li><li><a href="Public_Sector_Fraud_and_Improper_Payments.html">Public Sector Fraud and Improper Payments</a></li><li><a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a></li><li><a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a></li></ul></div>
+    <div class="portlet"><h5>law and controls</h5><ul><li><a href="Internal_Controls_and_Fraud_Risk_Assessment.html">Internal Controls and Fraud Risk Assessment</a></li><li><a href="Auditing_Standards_and_Fraud.html">Auditing Standards and Fraud</a></li><li><a href="Whistleblowers_and_the_False_Claims_Act.html">Whistleblowers and the False Claims Act</a></li><li><a href="Sanctions_and_Export_Controls.html">Sanctions and Export Controls</a></li><li><a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a></li></ul></div>
+    <div class="portlet"><h5>OSINT methods</h5><ul><li><a href="Public_Records_and_Court_Dockets.html">Public Records and Court Dockets</a></li><li><a href="Corporate_Registries_and_Leak_Databases.html">Corporate Registries and Leak Databases</a></li><li><a href="Geolocation_and_Imagery_OSINT.html">Geolocation and Imagery OSINT</a></li><li><a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></li></ul></div>
+    <div class="portlet"><h5>applied</h5><ul><li><a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a></li><li><a href="Human_Trafficking_Finance.html">Human Trafficking Finance</a></li><li><a href="Anti_Corruption_OSINT.html">Anti-Corruption OSINT</a></li><li><a href="Case_Studies.html">Case Studies</a></li><li><a href="Emerging_Trends.html">Emerging Trends</a></li><li><a href="Forensic_Practitioner_Burnout.html">Occupational Stress and Burnout in Forensic Practice</a></li><li><a href="AI_Fraud_Detection_Platforms.html">AI and the Future of Fraud Detection Technology</a></li></ul></div>
+    <div class="portlet"><h5>case studies</h5><ul><li><a href="Major_Fraud_Case_Studies.html">Major Financial Fraud Case Studies: Enron to Archegos</a></li></ul></div>
+    <div class="portlet">
+      <h5>search</h5>
+      <form id="searchform" onsubmit="return jump()">
+        <input id="searchInput" type="text" placeholder="page name...">
+        <div><input id="searchGo" type="submit" value="Go"></div>
+      </form>
+    </div>
+  </div>
+  <div id="content">
+    <h1 id="firstHeading">Hidden Assets in Divorce and Bankruptcy</h1>
+    <div class="subtitle">From the Fraud-OSINT Wiki, the free forensic-accounting &amp; OSINT reference</div>
+    <table class="infobox">
+<tr><th class="ibtitle" colspan="2">Hidden Assets</th></tr>
+<tr><td class="iblabel">Settings</td><td>Divorce (equitable distribution); bankruptcy; judgment enforcement</td></tr>
+<tr><td class="iblabel">Core techniques</td><td>Lifestyle analysis; net worth tie-in; tracing; discovery and third-party subpoenas</td></tr>
+<tr><td class="iblabel">Criminal law</td><td>18 U.S.C. &sect;&sect; 152, 157 (up to 5 years each)</td></tr>
+<tr><td class="iblabel">Civil recovery</td><td>11 U.S.C. &sect;&sect; 544, 548, 727; Uniform Voidable Transactions Act</td></tr>
+<tr><td class="iblabel">Bankruptcy tools</td><td>Rule 2004 examination; &sect; 341 meeting; examiner (&sect; 1104(c))</td></tr>
+</table>
+
+<p><b>Hidden assets</b> are property, income or ownership interests that a party conceals from a court, a spouse, a trustee or creditors in order to reduce what they must pay or share. Concealment occurs wherever someone's financial disclosure decides an outcome: in <b>divorce</b>, where the marital estate is divided; in <b>bankruptcy</b>, where the estate is distributed to creditors; and in <b>judgment enforcement</b>, where a debtor moves assets beyond reach. The forensic accountant's task is to test the disclosed picture against independent evidence. The methods are those of <a href="Asset_Tracing.html">Asset Tracing</a> and the <a href="Net_Worth_Method.html">Net Worth Method</a>, applied under the distinct legal rules summarised below. This article is general information about U.S. law and practice and is not legal advice; family-law rules in particular vary by state.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Common concealment methods</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Lifestyle analysis</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">The net worth tie-in</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Tracing transfers</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Fraudulent transfer law</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Bankruptcy fraud and denial of discharge</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Trustee and examiner techniques</a></li>
+<li><span class="tocnumber">8</span> <a href="#s8">Business-valuation manipulation</a></li>
+<li><span class="tocnumber">9</span> <a href="#s9">Red-flag checklist</a></li>
+<li><span class="tocnumber">10</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Common concealment methods</h2>
+<ul>
+<li><b>Understating income</b> &mdash; unreported cash receipts, deferred bonuses and commissions, paying personal expenses through a business, or routing pay to a relative.</li>
+<li><b>Moving assets</b> &mdash; transfers to relatives or friends ("holding" arrangements), to new entities, trusts or foreign accounts, or conversion into hard-to-trace assets such as cash, jewellery, art, collectibles or <a href="Cryptocurrency_Tracing.html">cryptocurrency</a>.</li>
+<li><b>Inflating liabilities</b> &mdash; fictitious or related-party loans, backdated notes and overpayment of friendly creditors, so that net worth looks smaller.</li>
+<li><b>Prepaying or overpaying</b> &mdash; large payments to tax authorities or lenders that will be refunded or returned after the case.</li>
+<li><b>Business manipulation</b> &mdash; delaying contracts and receivables, accelerating expenses, or diverting opportunities to a related entity (section 8).</li>
+<li><b>Titling and nominee ownership</b> &mdash; holding property in the name of another person or a <a href="Shell_Companies_and_Beneficial_Ownership.html">shell company</a>; the same techniques seen in <a href="Money_Laundering.html">money laundering</a>.</li>
+<li><b>Dissipation</b> &mdash; spending marital funds on a paramour, gambling or extravagant items before or during the dispute, sometimes called marital waste.</li>
+</ul>
+
+<h2 id="s2">2 Lifestyle analysis</h2>
+<p>A <b>lifestyle analysis</b> (also called a lifestyle or standard-of-living analysis) reconstructs what a household actually spends and compares it with its disclosed income. It tabulates income and expenses from bank, credit-card and brokerage statements, then examines the discrepancy: spending that exceeds known after-tax income points to unreported income, to withdrawals from undisclosed accounts, or to borrowing that should be visible as a liability.<sup class="ref">[1]</sup> Typical steps are:</p>
+<ol>
+<li><b>Define the baseline period</b>, usually the two to five years before the filing, and a comparison period after separation or filing.</li>
+<li><b>Collect statements</b> for every account, card and loan, including those in the names of children, parents or entities, as far as discovery permits.</li>
+<li><b>Categorise spending</b> (housing, travel, education, gifts, cash withdrawals, luxury purchases) and annualise it.</li>
+<li><b>Compare with sources</b>: pay stubs, tax returns, K-1s, distributions and loan proceeds. Spending in excess of sources equals the "unexplained" amount.</li>
+<li><b>Test the sudden changes</b>: new accounts, higher cash use, large single purchases, changes in who pays for shared expenses, and a falling lifestyle that coincides with the dispute while real quality of life seems unaffected.</li>
+</ol>
+<p>The analysis is persuasive in court because it uses the party's own financial footprint and, where the spouse shared household finances, the opposing party's own recollection of living standards. Its limit is that gifts, inheritances, prior savings and loans may legitimately explain gaps, so the unexplained amount is a lead and not a finding. See also <a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a>.</p>
+
+<h2 id="s3">3 The net worth tie-in</h2>
+<p>The <a href="Net_Worth_Method.html">net worth method</a>, developed in tax-evasion prosecutions, supplies the arithmetic that lifestyle analysis lacks. The examiner computes a person's net worth (assets minus liabilities) at the beginning and end of a period, adds non-deductible living expenses, and subtracts known legitimate income. A remainder is unexplained income. In a divorce or bankruptcy context the "tie-in" is a reconciliation between the net worth statement or financial affidavit the party filed and the net worth implied by the records:</p>
+<table class="wikitable">
+<tr><th>Step</th><th>Source</th><th>Question</th></tr>
+<tr><td>Opening net worth</td><td>Prior loan applications, tax returns, financial statements given to banks</td><td>Did the party claim assets to a lender that are absent from the court filing?</td></tr>
+<tr><td>Closing net worth</td><td>Sworn disclosure (financial affidavit; bankruptcy schedules)</td><td>Does it reconcile to account balances and public records?</td></tr>
+<tr><td>Income</td><td>Tax returns, 1099s, W-2s, K-1s, deposits</td><td>Do deposits equal reported income?</td></tr>
+<tr><td>Expenditures</td><td>Statements, lifestyle analysis</td><td>Can reported income fund observed spending?</td></tr>
+<tr><td>Difference</td><td>Computed</td><td>What is the unexplained increase, and where could it be held?</td></tr>
+</table>
+<p>One of the most useful sources is the party's own <b>loan applications and personal financial statements</b>. A person who told a bank a year ago that he owned an investment account or a stake in a company, and then fails to list it in a bankruptcy schedule or a divorce affidavit, has given two inconsistent sworn or signed statements. The inconsistency alone often satisfies the threshold for deeper discovery and, in bankruptcy, may support a false-oath finding (sections 6 and 7). The net worth approach requires a reliable opening balance and the elimination of alternative explanations; its weaknesses are discussed in <a href="Net_Worth_Method.html">Net Worth Method</a>.</p>
+
+<h2 id="s4">4 Tracing transfers</h2>
+<p><b>Tracing</b> follows value from a source account to its current form. Two techniques are used. <i>Direct tracing</i> follows a specific payment or asset (a wire to a named recipient, the title history of a vehicle). <i>Indirect tracing</i> infers movement from changes in balances and flows when records are incomplete: monthly cash-flow reconstruction, comparison of deposits with known income, and identification of round-sum outflows with no counterpart in the schedules. When funds are commingled, courts apply tracing conventions such as the lowest-intermediate-balance rule or first-in-first-out; the choice of convention can change the result and should be agreed with counsel.</p>
+<p>A practical workflow for transfers:</p>
+<ol>
+<li>Build a <b>master ledger</b> of all outflows above a threshold from every known account for the review period.</li>
+<li>Classify each by <b>payee type</b>: related party, new payee, individual, entity, financial institution, cash.</li>
+<li>For payees that are entities, check <a href="Corporate_Registries_and_Leak_Databases.html">corporate registries</a> and <a href="Public_Records_and_Court_Dockets.html">public records</a> for ownership and filing dates; an entity formed shortly before the transfer is a red flag.</li>
+<li>For property, check <b>deed, vehicle, vessel and aircraft registries</b>, UCC filings, and recorded mortgages.</li>
+<li>Identify <b>round-trip patterns</b> (funds that leave and return from a friendly party after the case) and <b>gift-then-loan</b> patterns (the transferee "lends" the money back at no interest).</li>
+<li>Use <b>third-party subpoenas</b> (banks, brokers, accountants, payment processors, exchanges) to obtain what the party did not disclose; tax-return transcripts and preparer files supply income and depreciation information (<a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a>).</li>
+</ol>
+<p>International structures require cross-border requests and are slow; see the discussion of MLATs in <a href="Asset_Tracing.html">Asset Tracing</a>. Where the property has been converted to digital assets, blockchain analytics may be used (<a href="Cryptocurrency_Tracing.html">Cryptocurrency Tracing</a>).</p>
+
+<h2 id="s5">5 Fraudulent transfer law</h2>
+<p>When a debtor moves assets to avoid creditors, the law offers a remedy: the transfer can be unwound and the asset returned to reach creditors. Two overlapping regimes exist.</p>
+<h3>State law: the Uniform Voidable Transactions Act</h3>
+<p>Most states have enacted the Uniform Fraudulent Transfer Act (1984) or its 2014 update, the <b>Uniform Voidable Transactions Act (UVTA)</b>; more than twenty states had adopted the UVTA amendments at the last count found (2020).<sup class="ref">[2]</sup> The statute recognises two grounds for avoidance: <i>actual intent</i> to hinder, delay or defraud a creditor, and <i>constructive fraud</i>, where the debtor received less than reasonably equivalent value and was insolvent, left with unreasonably small assets, or was about to incur debts beyond ability to pay. Because intent is rarely admitted, the act lists non-exclusive <b>badges of fraud</b> from which intent may be inferred, including transfer to an insider, retention of possession or control after the transfer, concealment, a transfer made after the debtor was sued or threatened with suit, a transfer of substantially all assets, removal or concealment of assets, insolvency at or shortly after the transfer, and a transfer shortly before or after a substantial debt was incurred. The limitations period for most claims is four years after the transfer, with a shorter alternative for some claims measured from discovery; check the enacted version for each state.</p>
+<h3>Bankruptcy Code</h3>
+<p>Section 548 of the Bankruptcy Code allows a trustee to avoid transfers made within <b>two years</b> before the petition if the debtor acted with actual intent to hinder, delay or defraud, or if the debtor received less than reasonably equivalent value and was insolvent, undercapitalised, intended to incur debts beyond ability to pay, or benefited an insider outside the ordinary course. Section 548(e) extends the look-back to <b>ten years</b> for transfers to a self-settled trust or similar device where the debtor is a beneficiary and the transfer was made with actual intent to defraud. A transferee who takes for value and in good faith keeps protection to the extent of value given (section 548(c)).<sup class="ref">[3]</sup> Through section 544(b), a trustee can also use state law, borrowing the longer state period such as a four-year window. In practice trustees plead both.</p>
+<p>In divorce, equivalent remedies are found in state family-law statutes (reallocating property, awarding the innocent spouse a larger share to offset dissipation, adverse inferences, sanctions and fee awards), and a spouse may also bring a fraudulent-transfer claim against a third-party transferee. A judgment after a divorce that is later found to have been procured by concealed assets can be reopened in some states within time limits that vary widely.</p>
+
+<h2 id="s6">6 Bankruptcy fraud and denial of discharge</h2>
+<h3>Criminal law</h3>
+<p><b>18 U.S.C. &sect; 152</b> contains nine separate offences, including knowingly and fraudulently concealing property from the trustee, custodian, marshal or other officer of the court or from creditors (&sect; 152(1)); making a false oath or account (&sect; 152(2)); making a false declaration, certification, verification or statement under penalty of perjury (&sect; 152(3)); presenting a false claim (&sect; 152(4)); fraudulently receiving property from a debtor after filing (&sect; 152(5)); transferring or concealing property in contemplation of bankruptcy or with intent to defeat the Code (&sect; 152(7)); and concealing, destroying or falsifying records relating to the debtor's property or affairs (&sect; 152(8)). The maximum penalty is imprisonment for not more than five years, a fine, or both.<sup class="ref">[4]</sup> <b>18 U.S.C. &sect; 157</b> separately prohibits devising a scheme to defraud and, for the purpose of executing or concealing it, filing a petition, filing or making a document, or making a false or fraudulent representation, claim or promise in connection with a bankruptcy case; its penalty is also up to five years.<sup class="ref">[5]</sup> Typical prosecutions involve omitting accounts, income or property from schedules, false statements at the &sect; 341 meeting and transfers to relatives before filing. Prosecutors require proof that the concealment was knowing and fraudulent, which is why documented inconsistencies between the debtor's earlier statements and the schedules are so valuable.</p>
+<h3>Civil consequences</h3>
+<p>Fraud also has civil bankruptcy consequences. Section 727(a) denies a discharge to a debtor who, with intent to hinder, delay or defraud, transferred, removed or concealed property within one year before filing or after filing (&sect; 727(a)(2)); who concealed, destroyed or failed to keep records from which the debtor's financial condition could be ascertained (&sect; 727(a)(3)); who knowingly and fraudulently made a false oath or withheld records (&sect; 727(a)(4)); or who failed to explain satisfactorily any loss or deficiency of assets (&sect; 727(a)(5)).<sup class="ref">[6]</sup> A debt incurred by fraud may also be declared non-dischargeable under section 523(a), and a concealed asset discovered later can usually be administered by reopening the case.</p>
+
+<h2 id="s7">7 Trustee and examiner techniques</h2>
+<p>A bankruptcy trustee works under statutory duties to investigate the debtor's financial affairs and collect and liquidate estate property. The tools are formal and cheap relative to civil discovery:</p>
+<ul>
+<li><b>Schedules and Statement of Financial Affairs.</b> The debtor's sworn schedules and statements disclose assets, income, recent transfers (the individual form asks about transfers within a defined look-back), closed accounts and business interests. The trustee compares them with tax returns and the debtor's prior credit applications.</li>
+<li><b>Section 341 meeting of creditors.</b> The debtor is examined under oath by the trustee, and answers are used later as the foundation for false-oath claims.</li>
+<li><b>Document turnover.</b> The trustee can demand tax returns, bank statements, and business records, and a debtor's failure to produce them can support denial of discharge.</li>
+<li><b>Rule 2004 examination.</b> Bankruptcy Rule 2004 permits the court to order testimony and document production concerning the acts, conduct, property, liabilities and financial condition of the debtor, or any matter that may affect the administration of the estate or the debtor's right to a discharge, and the examination can reach third parties such as banks, accountants and relatives.<sup class="ref">[7]</sup> It is broader than ordinary discovery and is commonly described as a "fishing expedition" that courts nonetheless permit within limits (it generally cannot be used once an adversary proceeding is pending on the same matter).</li>
+<li><b>Forensic accountants</b> retained by the trustee reconstruct cash flows, run lifestyle and net worth analyses, and prepare the avoidance claims.</li>
+<li><b>Examiner.</b> In a larger reorganisation, section 1104(c) provides for an examiner to investigate the debtor's acts, conduct, assets, liabilities and financial condition, and the section requires appointment on request where the debtor's fixed, liquidated, unsecured debts (other than for goods, services or taxes, or owed to an insider) exceed $5,000,000.<sup class="ref">[8]</sup> The New Century examiner's 550-page report on that company's accounting is an example of the product (see <a href="Financial_Fraud_Case_Studies_Detection.html">Financial Fraud Case Studies in Detection</a>).</li>
+<li><b>Referral.</b> Evidence of fraud is referred to the U.S. Trustee and the U.S. Attorney. The Trustee Program's audits of debtors' disclosures are one source of such referrals.</li>
+</ul>
+
+<h2 id="s8">8 Business-valuation manipulation</h2>
+<p>Owners of closely held businesses have the most scope to depress apparent value. In a divorce, a spouse who runs the business controls the information, and the valuation expert depends on data supplied by that spouse. Typical manipulations, and the tests an examiner applies, are:</p>
+<table class="wikitable">
+<tr><th>Manipulation</th><th>Effect on value</th><th>Test</th></tr>
+<tr><td>Deferring revenue or delaying contract signing until after the valuation date</td><td>Lower earnings in the base period</td><td>Compare backlog and pipeline to post-date results; cutoff testing; sales-order dates versus invoices</td></tr>
+<tr><td>Accelerating or prepaying expenses; stockpiling inventory</td><td>Lower reported profit</td><td>Trend analysis of expense ratios; subsequent-period reversals</td></tr>
+<tr><td>Inflated owner or family compensation, bonuses and perquisites</td><td>Lower normalised earnings</td><td>Compare to market compensation for the role; look for family members with no function</td></tr>
+<tr><td>Related-party loans, fees and rent at non-market prices</td><td>Moves profit to hidden recipients</td><td>Related-party transaction schedule; registry check of landlords and lenders</td></tr>
+<tr><td>Diverting customers or contracts to a new entity</td><td>Strips goodwill</td><td>Customer-level revenue analysis; domain, phone and registry searches; see <a href="Web_Archives_and_Domain_Intelligence.html">Web Archives and Domain Intelligence</a></td></tr>
+<tr><td>Cash-intensive business: skimming and under-ringing</td><td>Lower reported revenue</td><td>Reconstruct revenue from purchases, markups, utilities, and capacity; deposits analysis</td></tr>
+<tr><td>Writing down assets or recognising impairments</td><td>Lower asset value</td><td>Independent appraisal; subsequent sale of the same assets</td></tr>
+<tr><td>Reducing book value via personal-goodwill arguments</td><td>Characterises value as the owner's personal asset</td><td>Test customer and employee relationships for transferability (jurisdiction-specific law)</td></tr>
+</table>
+<p>The valuation methods themselves are described in <a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a>. For the investigator, a few cross-checks are especially productive: reconcile business bank deposits to reported revenue; compare the business's tax returns with the financial statements submitted to lenders and insurers (people usually present the best version to lenders); and compare the value a party asserts in litigation with the value declared in recent applications, insurance schedules or buy-sell agreements. A mismatch between a lender-facing valuation and a litigation valuation is classic impeachment material.</p>
+
+<h2 id="s9">9 Red-flag checklist</h2>
+<ul>
+<li>Lifestyle spending that exceeds disclosed income, with no loans or savings to account for it.</li>
+<li>Financial affidavit or schedules that are late, incomplete, or amended repeatedly after discovery requests.</li>
+<li>Missing statements, accounts closed shortly before filing, or statements with pages omitted.</li>
+<li>Sudden transfers to relatives, friends or new entities; "loans" with no repayment terms; real property deeded for nominal consideration.</li>
+<li>Large cash withdrawals, safe-deposit box rentals, or purchase of portable valuables.</li>
+<li>Tax returns that show repeated Schedule C losses or a business that does not appear to need the owner's full-time attention; refunds that exceed expectations.</li>
+<li>Income that falls sharply at the start of the dispute and then recovers afterwards.</li>
+<li>Refusal or delay in providing business records; claims that records were lost, destroyed or are held by a third party.</li>
+<li>New digital-asset accounts, exchange activity or hardware wallets.</li>
+<li>Foreign accounts or entities that appear in earlier records or on tax forms (for example, foreign-account reporting) but not in the filed disclosure.</li>
+<li>Inconsistent statements across lenders, insurers, tax authorities and courts.</li>
+</ul>
+<p>Examiners should record each flag with its source and should consider an innocent explanation before escalating. Documentation must withstand challenge in <a href="Evidence_and_Testimony.html">court</a>, and expert methods must satisfy the reliability standard in <a href="Daubert_Standard.html">Daubert Standard</a>. The counterpart for tax-related concealment is covered in <a href="Tax_Fraud_and_Evasion.html">Tax Fraud and Evasion</a>, and for victims of investment frauds seeking recovery see <a href="Ponzi_and_Investment_Fraud.html">Ponzi and Investment Fraud</a>.</p>
+
+<p class="hatnote">See also: <a href="Asset_Tracing.html">Asset Tracing</a>, <a href="Net_Worth_Method.html">Net Worth Method</a>, <a href="Bank_Statement_and_Cash_Analysis.html">Bank Statement and Cash Analysis</a>, <a href="Business_Valuation_and_Damages_Quantification.html">Business Valuation and Damages Quantification</a>, <a href="Litigation_Support_and_Damages.html">Litigation Support and Damages</a>, <a href="Shell_Companies_and_Beneficial_Ownership.html">Shell Companies and Beneficial Ownership</a>, <a href="Fraudster_Psychology_and_Dark_Triad.html">Fraudster Psychology and the Dark Triad</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>Yeo &amp; Yeo. "How Forensic Accountants Use a Lifestyle Analysis to Find Hidden Assets." <a class="external" href="https://www.yeoandyeo.com/resource/how-forensic-accountants-use-a-lifestyle-analysis-to-find-hidden-assets">yeoandyeo.com</a>; American Bar Association GPSolo, "Finding Hidden Assets During Divorce." <a class="external" href="https://www.americanbar.org/groups/gpsolo/resources/magazine/archive/finding-hidden-assets-during-divorce/">americanbar.org</a></li>
+<li>Uniform Law Commission. Uniform Voidable Transactions Act (2014), amending the Uniform Fraudulent Transfer Act (1984); adoption status per Jones Day, "Uniform Voidable Transactions Act adopted in New York." <a class="external" href="https://jonesday.com/en/insights/2020/04/uniform-voidable-transactions-act-adopted-in-new-y">jonesday.com</a></li>
+<li>11 U.S.C. &sect; 548, Fraudulent transfers and obligations. <a class="external" href="https://www.law.cornell.edu/uscode/text/11/548">law.cornell.edu</a></li>
+<li>18 U.S.C. &sect; 152, Concealment of assets; false oaths and claims; bribery. <a class="external" href="https://www.law.cornell.edu/uscode/text/18/152">law.cornell.edu</a></li>
+<li>18 U.S.C. &sect; 157, Bankruptcy fraud. <a class="external" href="https://www.law.cornell.edu/uscode/text/18/157">law.cornell.edu</a></li>
+<li>11 U.S.C. &sect; 727, Discharge. <a class="external" href="https://www.law.cornell.edu/uscode/text/11/727">law.cornell.edu</a></li>
+<li>Fed. R. Bankr. P. 2004; see Upsolve, "What Is the Rule 2004 Bankruptcy Exam?" (secondary summary).</li>
+<li>11 U.S.C. &sect; 1104, Appointment of trustee or examiner. <a class="external" href="https://www.law.cornell.edu/uscode/text/11/1104">law.cornell.edu</a> (the $5,000,000 threshold in &sect; 1104(c)(2) was confirmed via case-law summaries, e.g. <a class="external" href="https://www.georgiabankruptcyblog.com/northern-district-cases/northern-district-cases-district-court-bankruptcy-court-must-appoint-examiner-if-requirements-of-%C2%A71104c2-are-established">Georgia Bankruptcy Blog</a>).</li>
+</ol>
+    <div class="catlinks"><b>Categories:</b> <a href="Category_Asset_Recovery.html">Asset Recovery</a> | <a href="Category_Following_the_Money.html">Following the Money</a> | <a href="Category_Financial_Investigation.html">Financial Investigation</a></div>
+  </div>
+</div>
+<div id="footer">
+  <p>Fraud-OSINT Wiki &middot; built from a 7-source literature review &amp; live 2024&ndash;2026 research.
+  Text is an educational synthesis; verify against primary sources before operational or legal use.</p>
+  <p>Static site, no trackers, no cookies, no JavaScript required to read. Hosted on GitHub Pages.</p>
+</div>
+</div>
+<script>
+/* the ONLY script: a tiny client-side "Go" box. Page works fully without it. */
+function jump(){var v=document.getElementById('searchInput').value.trim();
+if(!v)return false;var s=v.replace(/ /g,'_').replace(/[^A-Za-z0-9_'\-]/g,'');
+window.location.href=s+'.html';return false;}
+</script>
+</body>
+</html>

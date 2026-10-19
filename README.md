@@ -11,8 +11,8 @@ investigated, proven in court, and traced across the open internet.
 The wiki was built from a seven-document literature review (~1,142 pages of forensic-accounting
 and OSINT training material) and then **verified and updated against live 2024–2026 research** —
 the ACFE *Report to the Nations* (2024), the Nasdaq Verafin *Global Financial Crime Report* (2026),
-FATF/FinCEN materials, and court/regulator records. It is organized as ~30 interlinked encyclopedic
-articles that together read as a ~100-page report.
+FATF/FinCEN materials, and court/regulator records. It is organized as ~75 interlinked encyclopedic
+articles that together read as a ~300-page report.
 
 See **[About](https://thumpersecure.github.io/fraud-osint/wiki/About.html)** for sources and method,
 and **[References](https://thumpersecure.github.io/fraud-osint/wiki/References.html)** for the full

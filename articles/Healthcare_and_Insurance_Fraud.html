@@ -1,0 +1,102 @@
+<!--meta title="Healthcare and Insurance Fraud" desc="Upcoding, kickbacks, self-referral and other health and insurance fraud schemes, with the claims analytics and sampling methods used to prove them." cats="Fraud Schemes, Financial Crime, Fraud Detection, Investigation Methods"-->
+<table class="infobox">
+<tr><th class="ibtitle" colspan="2">Healthcare and Insurance Fraud</th></tr>
+<tr><td class="iblabel">Main statutes</td><td>Anti-Kickback Statute (42 U.S.C. &sect;1320a-7b(b)); Stark Law (42 U.S.C. &sect;1395nn); False Claims Act; Health Care Fraud, 18 U.S.C. &sect;1347</td></tr>
+<tr><td class="iblabel">Largest takedown (by intended loss)</td><td>2025: 324 defendants, $14.6 billion</td></tr>
+<tr><td class="iblabel">Latest takedown</td><td>June 23, 2026: 455 defendants, $6.5 billion in false claims</td></tr>
+<tr><td class="iblabel">Industry bodies</td><td>NHCAA (health); NICB (property/casualty); Coalition Against Insurance Fraud</td></tr>
+<tr><td class="iblabel">Key datasets</td><td>CMS provider utilization files; HHS-OIG LEIE; Open Payments</td></tr>
+</table>
+
+<p><b>Healthcare fraud</b> is the knowing submission, or causing the submission, of false or misleading claims to a public or private health plan to obtain payment that is not due; <b>insurance fraud</b> is the broader family of deceptions against insurers, including property, casualty, life and workers' compensation lines. Healthcare is the most data-rich of the two: payers hold millions of structured claims, so statistical analysis of billing behavior is the front door of most investigations. The National Health Care Anti-Fraud Association (NHCAA) estimates that at least 3% of health spending is lost to fraud, and some law-enforcement agencies put the figure as high as 10%; these are estimates rather than measured totals.<sup class="ref">[1]</sup> This article concentrates on how examiners test billing records and provider behavior. It extends the occupational frameworks in the <a href="Fraud_Tree.html">fraud tree</a> to external (vendor and provider) fraud.</p>
+
+<div class="toc"><div class="toctitle">Contents</div><ul>
+<li><span class="tocnumber">1</span> <a href="#s1">Common schemes</a></li>
+<li><span class="tocnumber">2</span> <a href="#s2">Legal framework</a></li>
+<li><span class="tocnumber">3</span> <a href="#s3">Enforcement scale: takedowns</a></li>
+<li><span class="tocnumber">4</span> <a href="#s4">Forensic techniques</a></li>
+<li><span class="tocnumber">5</span> <a href="#s5">Worked examples</a></li>
+<li><span class="tocnumber">6</span> <a href="#s6">Insurance fraud beyond health</a></li>
+<li><span class="tocnumber">7</span> <a href="#s7">Red flags</a></li>
+<li><span class="tocnumber">8</span> <a href="#refs">References</a></li>
+</ul></div>
+
+<h2 id="s1">1 Common schemes</h2>
+<table class="wikitable">
+<tr><th>Scheme</th><th>Description</th><th>Typical forensic signature</th></tr>
+<tr><td><b>Upcoding</b></td><td>Billing a higher-paying code than the service delivered (e.g., a level 5 office visit for a level 3 service)</td><td>Skewed distribution of evaluation-and-management (E/M) levels versus peers</td></tr>
+<tr><td><b>Unbundling</b></td><td>Billing separately for components covered by a single comprehensive code</td><td>Pairs of codes that payers' edits say should not be billed together; misuse of modifiers (e.g., modifier 25, 59)</td></tr>
+<tr><td><b>Phantom / billed-not-rendered</b></td><td>Billing for services never provided or to patients who never visited</td><td>Impossible schedules; services on dates of death, incarceration or hospitalization</td></tr>
+<tr><td><b>Medical necessity abuse</b></td><td>Unneeded tests, devices, genetic panels or wound products</td><td>High volume, uniform orders, no clinical record support</td></tr>
+<tr><td><b>Kickbacks and referral buying</b></td><td>Payments for patient or order referrals (telemarketing, "marketing fees," lab-order purchases)</td><td>Payments from billers to marketers that track referral volumes</td></tr>
+<tr><td><b>Self-referral</b></td><td>Physicians referring to entities in which they or family hold a financial interest</td><td>Referral concentration to a single owned entity; compensation tied to referrals</td></tr>
+<tr><td><b>Identity-based billing</b></td><td>Stolen provider or beneficiary identifiers; sham clinics</td><td>Many beneficiaries sharing addresses; sudden volume from a new enrollment</td></tr>
+<tr><td><b>Opioid and pill-mill diversion</b></td><td>Prescriptions issued without legitimate medical purpose</td><td>Outlier prescriber volume, cash payment, high morphine-milligram-equivalent doses</td></tr>
+</table>
+
+<h2 id="s2">2 Legal framework</h2>
+<p><b>Anti-Kickback Statute (AKS).</b> It makes it a felony to knowingly and willfully offer, pay, solicit or receive remuneration to induce or reward referrals of items or services payable by a federal health care program. Penalties are up to ten years' imprisonment and fines up to $100,000 per violation (as amended in 2018), plus exclusion from federal programs and civil monetary penalties. Since 2010 a claim "resulting from" an AKS violation is deemed false for False Claims Act purposes. Regulatory safe harbors (42 C.F.R. &sect;1001.952) protect arrangements that meet all conditions, such as bona fide employment or fair-market-value personal services contracts; fitting within a safe harbor is not required but gives certainty.</p>
+<p><b>Stark Law.</b> The physician self-referral law prohibits a physician from referring Medicare patients for designated health services to an entity with which the physician (or an immediate family member) has a financial relationship, unless an exception applies, and bars the entity from billing for the resulting services. Stark is a strict-liability civil statute: intent is not required for repayment, in contrast to the AKS, which requires intent. Many recent cases plead both together.</p>
+<p><b>False Claims Act (FCA)</b> exposes violators to treble damages plus per-claim penalties adjusted annually for inflation; <i>qui tam</i> whistleblowers can file on the government's behalf and receive a share of recoveries. <b>Criminal health care fraud</b> (18 U.S.C. &sect;1347) covers executing a scheme to defraud any health care benefit program; related counts include conspiracy, money laundering and aggravated identity theft. Federal agency roles are described in <a href="Federal_Enforcement_Agencies.html">Federal Enforcement Agencies</a>.</p>
+
+<h2 id="s3">3 Enforcement scale: takedowns</h2>
+<p>The Department of Justice's annual National Health Care Fraud Takedown is a coordinated nationwide charging announcement and a useful snapshot of prevailing schemes. The <b>2025 takedown</b> (announced June 30, 2025) charged <b>324 defendants</b>, including 96 licensed medical professionals, across 50 federal districts and 12 state offices for schemes involving over <b>$14.6 billion in intended loss</b>, more than doubling the prior record of about $6 billion. It included about $245 million in seizures, CMS's prevention of an estimated $4 billion in payments and revocation or suspension of 205 providers; the largest component was an alleged transnational scheme, Operation Gold Rush, tied to $10.6 billion in medical-equipment claims. Other categories included opioid diversion (74 defendants), telemedicine and genetic testing (49 defendants, about $1.17 billion), and wound care (about $1.1 billion).<sup class="ref">[2]</sup></p>
+<p>The <b>2026 takedown</b> (announced June 23, 2026) charged <b>455 defendants</b>, including 90 doctors and other licensed professionals, in schemes involving over <b>$6.5 billion in false claims</b>, across 56 federal districts with 50 state Medicaid Fraud Control Units participating. Public summaries emphasize wound-care allografts (including a case alleging over $4 billion billed for relabeled products at a 2,000% mark-up), behavioral health (a $67 million Illinois Medicaid scheme with claims of 500 or more counseling hours in a single day) and data-driven detection; CMS reported suspending 1,079 providers, revoking 1,403, and stopping $10 billion in payments.<sup class="ref">[3]</sup> Note the difference in headline metric: 2025 reports <i>intended loss</i>, 2026 reports <i>false claims</i>, so the two totals are not directly comparable. Treat all takedown figures as allegations until proven.</p>
+
+<h2 id="s4">4 Forensic techniques</h2>
+<h3>4.1 Claims-data profiling</h3>
+<ol>
+<li><b>Define the peer group</b> by specialty, geography, patient mix and setting. Public CMS datasets (Medicare Physician &amp; Other Practitioners; Part D prescriber files) provide benchmarks for provider-level volumes and mix.</li>
+<li><b>Compute outlier metrics</b>: percentage of visits at each E/M level; services per beneficiary; average payment per beneficiary; share of beneficiaries receiving a given service; and drug or device volume. Express each as a z-score or percentile against peers.</li>
+<li><b>Test impossibility</b>: sum billed time by provider and date; daily totals above 24 hours, or services overlapping in time and place, are objective red flags that need no statistical inference.</li>
+<li><b>Test patient plausibility</b>: services after death, during an inpatient stay or incarceration, or multiple providers billing the same patient the same service on the same day; beneficiary clusters with identical addresses.</li>
+<li><b>Network analysis</b>: link ordering physicians to billing labs, DME suppliers and marketers; unusual concentration or ring structures suggest referral arrangements. See <a href="Fraud_Detection_Analytics.html">Fraud Detection Analytics</a>.</li>
+<li><b>Digit tests</b> on charges and payment amounts and on units billed (see <a href="Benfords_Law.html">Benford's Law</a>) to find rounding or fabricated entries.</li>
+</ol>
+<h3>4.2 Medical-record and document review</h3>
+<p>Data flags a provider; records prove or disprove the claim. Pull a sample of medical records and compare each billed code to documentation of history, examination, decision-making and time; test for cloned notes (identical text across patients), missing signatures, late entries, and templates auto-populated by the electronic health record. Audit-trail logs from the EHR show who created and edited a note and when, a form of <a href="Digital_Forensics.html">digital forensics</a>. Verify patient existence and service receipt by interview or mailed attestation; see <a href="Interviewing.html">Interviewing</a> and <a href="Document_Examination.html">Document Examination</a>.</p>
+<h3>4.3 Statistical sampling and extrapolation</h3>
+<p>Because reviewing every claim is infeasible, auditors draw a probability sample, measure the overpayment in each sampled claim and extrapolate to the universe. CMS contractors commonly use the OIG's RAT-STATS software and, by convention, project from the <b>lower limit of a 90% one-sided confidence interval</b>, which is conservative for the provider. Documentation of the sampling frame, random-number seed, and handling of errors is essential for evidence admissibility under <a href="Daubert_Standard.html">Daubert</a>.</p>
+<h3>4.4 Financial tracing</h3>
+<p>To prove kickbacks, trace payments from the provider or biller to marketers, recruiters, or physicians and compare them against referral counts. Cross-reference the Open Payments database (manufacturer payments to physicians), corporate filings, and bank records; test whether compensation varies with referral volume, which is the legally critical fact. Use the <a href="Net_Worth_Method.html">net-worth method</a> for beneficial owners and <a href="Asset_Tracing.html">asset tracing</a> to identify transfers abroad. Check HHS-OIG's List of Excluded Individuals/Entities (LEIE) and state Medicaid exclusion lists for excluded persons on payroll or enrollment records.</p>
+
+<h2 id="s5">5 Worked examples</h2>
+<p>Figures are illustrative.</p>
+<p><b>Example A: E/M level outlier.</b> Among 200 internists in a region, the mean share of office visits billed at the highest level (CPT 99215) is 12% with a standard deviation of 5 points. Provider P bills 71% of visits at that level across 4,200 visits. z = (71 &minus; 12) / 5 = <b>11.8</b>, an extreme outlier. If the payment gap between 99215 and 99214 is, say, $45, and P had billed the peer-average 12% share at the top level (the excess visits being billed at the next level down), the difference is roughly 4,200 &times; (0.71 &minus; 0.12) &times; $45 &asymp; <b>$111,500</b> per year of potential overpayment, to be validated by record review rather than assumed.</p>
+<p><b>Example B: impossible day.</b> A behavioral-health provider bills 62 individual psychotherapy units of 30 minutes on one date: 62 &times; 30 / 60 = 31 hours. No single clinician can deliver 31 hours of face-to-face service in a day, and the claim is facially false or reflects group billing mischaracterized as individual. A scan across 365 days finds 87 days above 16 hours; those 87 days become the first audit sample.</p>
+<p><b>Example C: sampling.</b> A universe of 10,000 paid claims totals $1.8 million. An auditor draws a random sample of 100 claims and finds total overpayments of $4,600, a mean of $46 per claim with a sample standard deviation of $120. Point estimate = 10,000 &times; $46 = <b>$460,000</b>. Standard error of the mean = 120 / &radic;100 = $12 (the finite-population correction, about 0.995, is ignored here). The one-sided 90% lower bound is 46 &minus; 1.282 &times; 12 &asymp; $30.6 per claim, so the extrapolated demand is about 10,000 &times; 30.6 = <b>$306,000</b>. The wide gap between point estimate and lower bound shows why larger samples matter.</p>
+<p><b>Example D: kickback proof.</b> A lab pays a marketing company $400 for each patient specimen it delivers. The marketing company's 2025 monthly payments are $38,000, $41,200, $39,600 and $44,000 for 95, 103, 99 and 110 specimens. Dividing payment by specimens gives about $400 in each month (38,000/95 = 400; 41,200/103 = 400; 39,600/99 = 400; 44,000/110 = 400). Per-unit compensation that stays constant and scales with referrals is strong circumstantial evidence of payment for referrals, the central element of an AKS case; the intent evidence comes from emails, contracts and witness interviews.</p>
+
+<h2 id="s6">6 Insurance fraud beyond health</h2>
+<p>Industry classification separates <b>hard fraud</b> (deliberately staged or fabricated events: arson, staged collisions, faked theft) from <b>soft fraud</b> (padding or exaggerating a genuine claim, or misstating information on an application). The Coalition Against Insurance Fraud has estimated total U.S. insurance fraud at about $308.6 billion a year across all lines, a widely cited but modeled estimate.<sup class="ref">[4]</sup> The National Insurance Crime Bureau (NICB), a nonprofit funded by insurers, collects claim-index data and publishes indicators for auto theft, staged accidents, catastrophe-related contractor fraud and cargo theft.</p>
+<ul>
+<li><b>Staged accidents:</b> link analysis of claimants, attorneys, clinics, tow operators and body shops that recur across claims; vehicle telematics and event-data-recorder data; damage consistent with prior photographs.</li>
+<li><b>Arson-for-profit:</b> financial distress analysis of the insured, fire origin-and-cause reports (NFPA 921), accelerant detection, recent coverage increases.</li>
+<li><b>Workers' compensation:</b> premium fraud (underreported payroll or misclassified employees), claimant fraud (surveillance, social media), and provider fraud.</li>
+<li><b>Life insurance:</b> application misrepresentation, faked death (verify with death certificate source and registries), stranger-originated life insurance.</li>
+<li><b>Claims-data tools:</b> index searches across carriers, anomaly scoring, image forensics on submitted photos and invoices, and special investigation unit (SIU) referral thresholds. Many states require insurers to maintain SIUs and report suspected fraud to a state fraud bureau.</li>
+</ul>
+<p>The elderly are particular targets of health-related scams and billing abuse, covered in <a href="Elder_Financial_Exploitation.html">Elder Financial Exploitation</a>.</p>
+
+<h2 id="s7">7 Red flags</h2>
+<ul>
+<li>Billing patterns far from peers (high-level E/M share, unusually high per-patient spend) or impossible volumes.</li>
+<li>New enrollments that ramp quickly to high billing and then disappear (hit-and-run).</li>
+<li>Marketing or "management" payments that scale with orders, and consulting contracts with referral sources.</li>
+<li>Telemedicine encounters with no real clinician-patient relationship; brace, genetic test and allograft orders signed in bulk.</li>
+<li>Records that are identical across patients, lack supporting results, or are missing audit trails.</li>
+<li>Patients unaware of services billed in their name; compromised beneficiary numbers.</li>
+<li>Providers or owners appearing on exclusion lists, or with shared addresses and bank accounts among multiple billing entities.</li>
+</ul>
+<p>See also general guidance in <a href="Red_Flags.html">Red Flags</a>, <a href="Occupational_Fraud.html">Occupational Fraud</a> and AI-based claims scoring in <a href="AI_Fraud_Detection_Platforms.html">AI Fraud Detection Platforms</a>.</p>
+
+<p class="hatnote">See also: <a href="Procurement_and_Contract_Fraud.html">Procurement and Contract Fraud</a>, <a href="Money_Laundering.html">Money Laundering</a>, <a href="Evidence_and_Testimony.html">Evidence and Testimony</a>, <a href="Report_Writing.html">Report Writing</a>.</p>
+
+<h2 id="refs">References</h2>
+<ol class="references">
+<li>National Health Care Anti-Fraud Association. "The Challenge of Health Care Fraud." <a class="external" href="https://www.nhcaa.org/tools-insights/about-health-care-fraud/the-challenge-of-health-care-fraud/">nhcaa.org</a></li>
+<li>U.S. Department of Justice. "National Health Care Fraud Takedown Results in 324 Defendants Charged in Connection with Over $14.6 Billion in Alleged Fraud," June 30, 2025. <a class="external" href="https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146">justice.gov</a></li>
+<li>Arnold &amp; Porter. "DOJ Announces Record-Breaking 2026 Health Care Fraud Takedown," June 2026. <a class="external" href="https://www.arnoldporter.com/en/perspectives/blogs/enforcement-edge/2026/06/doj-announces-record-breaking-2026-health-care-fraud-takedown">arnoldporter.com</a>; Foley &amp; Lardner, "DOJ's 2026 Health Care Fraud Takedown: Details Behind the Headline Number." <a class="external" href="https://www.foley.com/insights/publications/2026/06/dojs-2026-health-care-fraud-takedown-details-behind-the-headline-number-and-what-it-means-for-health-care-providers/">foley.com</a></li>
+<li>Coalition Against Insurance Fraud. <i>The Impact of Insurance Fraud on the U.S. Economy</i>, 2022; National Insurance Crime Bureau. <a class="external" href="https://www.nicb.org/">nicb.org</a></li>
+<li>42 U.S.C. &sect;1320a-7b(b); 42 U.S.C. &sect;1395nn; 31 U.S.C. &sect;&sect;3729&ndash;3733; 18 U.S.C. &sect;1347; 42 C.F.R. &sect;1001.952.</li>
+</ol>
